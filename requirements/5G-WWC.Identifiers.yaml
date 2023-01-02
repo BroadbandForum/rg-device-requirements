@@ -1,0 +1,41 @@
+---
+5G-WWC.Identifiers:
+  name: |
+    5G WWC Identifiers
+
+  requirements:
+    1: |
+      The RG MUST be identified by 5G Subscription Permanent Identifier (SUPI)
+
+    2: |
+      The SUPI for the RG MUST contain an IMSI.
+
+    3: |
+      The SUPI format with IMSI for the RG MUST be as defined in 3GPP TS 23.003
+      [@3GPP-TS.23.003] clause 2.2A
+
+    4: |
+      When the RG needs to indicate its SUPI, for example during Registration
+      procedure, the 5G-RG MUST provide the Subscription Concealed Identifier
+      (SUCI)as defined in TS 33.501
+
+    5: |
+      The SUCI format provided by the RG MUST be as defined in 3GPP TS 23.003
+      [@3GPP-TS.23.003] clause 2.2B
+
+    6: |
+      The RG MUST support Permanent Equipment Identifier (PEI)
+
+    7: |
+      For an RG that only has a wireline WAN interface, the PEI MUST include
+      the MAC address of WAN interface and the format is defined in 3GPP TS 23.003
+      [@3GPP-TS.23.003]
+
+    8: |
+      For an RG that has a wireless WAN interface (and may also have a
+      wireline WAN interface), the PEI MUST include an IMEI. The format is
+      defined in 3GPP TS 23.003 [@3GPP-TS.23.003].
+
+    9: |
+      The PEI MUST be stored in secure and tamper proof location in the RG as
+      required by 3GPP TS 33.501 [@3GPP-TS.33.501].

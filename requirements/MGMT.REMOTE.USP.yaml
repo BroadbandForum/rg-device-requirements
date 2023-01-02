@@ -1,0 +1,13 @@
+---
+MGMT.REMOTE.USP:
+  name: |
+    Remote Management (USP)
+
+  requirements:
+    1: |
+      The RG MUST support the remote management protocol as defined in
+      Broadband Forum User Services Platform (USP) [@TR-369].
+
+    2: |
+      The RG MUST support the latest version of Broadband Forum Device:2 [@TR-181]
+      data model for USP.

@@ -1,0 +1,28 @@
+---
+LAN:
+  name: |
+    Local Area Networking
+
+  categories:
+    - !include LAN.GEN.yaml
+    - !include LAN.ADDRESS.yaml
+    - !include LAN.ADDRESSv6.yaml
+    - !include LAN.DHCPS.yaml
+    - !include LAN.DHCPv6S.yaml
+    - !include LAN.DNS.yaml
+    - !include LAN.DNSv6.yaml
+    - !include LAN.NAT.yaml
+    - !include LAN.PFWD.yaml
+    - !include LAN.PFWDv6.yaml
+    - !include LAN.ALG.yaml
+    - !include LAN.FWD.yaml
+    - !include LAN.IGMP.yaml
+    - !include LAN.MLD.yaml
+    - !include LAN.FW.yaml
+    - !include LAN.FILTER.yaml
+    - !include LAN.DIAGNOSTICS.yaml
+    - !include LAN.CAPTIVE.yaml
+    - !include LAN.QoS.yaml
+    - !include LAN.SIPserver.yaml
+    - !include LAN.SIPmixer.yaml
+    - !include LAN.Interworking.yaml

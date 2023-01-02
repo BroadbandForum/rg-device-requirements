@@ -1,0 +1,33 @@
+---
+IF.WAN.xDSL.SURGE:
+  name: |
+    AC Power Surge Protection
+
+  requirements:
+    1: |
+      The RG MUST tolerate an AC surge, as specified in EN 61000-4-5, test
+      level 3;
+
+      * Criterion 1: The RG MUST NOT -- as a result of the surge -- transmit
+      or receive bit errors for more than 2 seconds.
+
+      * Criterion 2: The RG MUST NOT -- as a result of the surge --
+      re-initialize.
+
+      * Criterion 3: The RG MUST NOT -- as a result of the surge -- transmit
+      a dying gasp message.
+
+    2: |
+      The RG MUST tolerate electrical fast transients on the AC mains, as
+      specified in EN 61000-4-4, test level 3:
+
+      * Criterion 1: The RG MUST NOT -- as a result of electrical fast
+      transients -- transmit or receive bit errors at a rate greater than
+      10E-7 (care should be taken to ensure that fast transients are not
+      coupled to the DSL pair).
+
+      * Criterion 2: The RG MUST NOT -- as a result of electrical fast
+      transients -- re-initialize.
+
+      * Criterion 3: The RG MUST NOT -- as a result of electrical fast
+      transients -- transmit a dying gasp message.

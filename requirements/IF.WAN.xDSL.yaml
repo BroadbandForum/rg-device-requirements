@@ -1,0 +1,36 @@
+---
+IF.WAN.xDSL:
+  name: |
+    xDSL General Requirements
+
+  categories:
+    - !include IF.WAN.xDSL.INP.yaml
+    - !include IF.WAN.xDSL.BOND.yaml
+    - !include IF.WAN.xDSL.REPORT.yaml
+    - !include IF.WAN.xDSL.SEALING.yaml
+    - !include IF.WAN.xDSL.SURGE.yaml
+
+  requirements:
+    1: |
+      Removing ac power from the RG MUST NOT prevent POTS from operating.
+
+    2: |
+      A failure in the RG MUST NOT affect the private intra-premises network
+      except for those functions provided by the RG (e.g. DHCP, DNS, L2
+      bridging).
+
+    3: |
+      The RG MUST NOT cause any failure in or interference with the xDSL
+      network.
+
+    4: |
+      Failure or removal of LAN CPE connected to the DSL RG MUST NOT prevent
+      POTS from operating.
+
+    5: |
+      The RG MUST only synchronize within the minimum and maximum line rate
+      parameters for a line as identified by the DSLAM or RT.
+
+    6: |
+      RG packet forwarding performance and throughput MUST keep up with the
+      DSL line rate.

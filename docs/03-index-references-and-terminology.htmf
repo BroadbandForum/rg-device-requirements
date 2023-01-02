@@ -1,0 +1,1238 @@
+<!-- <h1 class="new-page display-none" id="sec:references-and-terminology">2 References and Terminology<a class="headerlink" href="03-index-references-and-terminology.html#sec:references-and-terminology" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h1> -->
+
+<h2 id="sec:conventions">2.1 Conventions<a class="headerlink" href="03-index-references-and-terminology.html#sec:conventions" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>In this Technical Report, several words are used to signify the requirements of
+the specification. These words are always capitalized.</p>
+
+<table>
+<col width="20%" />
+<col width="77%" />
+<tr class="header">
+<th align="left"><strong>MUST</strong></th>
+<th align="left">This word, or the term &ldquo;REQUIRED&rdquo;, means that the
+definition is an absolute requirement of the
+specification.</th>
+</tr>
+<tr class="odd">
+<td align="left"><strong>MUST NOT</strong></td>
+<td align="left">This phrase means that the definition is an absolute
+prohibition of the specification.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>SHOULD</strong></td>
+<td align="left">This word, or the term &ldquo;RECOMMENDED&rdquo;, means that there
+could exist valid reasons in particular circumstances to
+ignore this item, but the full implications need to be
+understood and carefully weighed before choosing a
+different course.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>SHOULD NOT</strong></td>
+<td align="left">This phrase, or the phrase &ldquo;NOT RECOMMENDED&rdquo; means that
+there could exist valid reasons in particular
+circumstances when the particular behavior is acceptable
+or even useful, but the full implications need to be
+understood and the case carefully weighed before
+implementing any behavior described with this label.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>MAY</strong></td>
+<td align="left">This word, or the term &ldquo;OPTIONAL&rdquo;, means that this item
+is one of an allowed set of alternatives. An
+implementation that does not include this option MUST be
+prepared to inter-operate with another implementation
+that does include the option.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>By Default</strong></td>
+<td align="left">These words indicate that this is a default setting or
+operation of the unit that MUST be configurable if
+provided. This term is not included in RFC 2119 <span class="cite" data-citation-ids="RFC2119"><a href='03-index-references-and-terminology.html#ref-RFC2119' title=''>[59]</a></span>.</td>
+</tr>
+</table>
+
+<p>Other residential gateway type features not identified in this document
+may also be implemented in the device. An implementation that includes
+features not identified in this document must be prepared to
+inter-operate with implementations that do not include these features.</p>
+
+<p>References to CPE or LAN devices indicate other equipment such as hosts
+including PCs and workstations.</p>
+
+<p>In certain cases, TR-124 generically refers to new LAN or WAN
+interface performance monitoring data parameters that have not been
+specifically defined in the requirements at the time of the publishing
+of this document. As these requirements are not yet defined, it is
+expected that vendors may support parameter extensions and basic
+interface traffic performance statistics until such a time that the
+Broadband Forum defines further Technical Reports to support new
+interface parameter data models for possible use with TR-064i2, TR-069
+and the Web GUI.</p>
+
+<h2 class="new-page" id="sec:references">2.2 References<a class="headerlink" href="03-index-references-and-terminology.html#sec:references" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>The following references constitute provisions of this Technical Report. At the
+time of publication, the editions indicated were valid. All references
+are subject to revision; users of this Technical Report are therefore
+encouraged to investigate the possibility of applying the most recent
+edition of the references listed below.</p>
+
+<p>A list of currently valid Broadband Forum Technical Reports is published
+at <a href='http://www.broadband-forum.org' title=''>www.broadband-forum.org</a>.</p>
+
+<p>NOTE – A number of IETF drafts are cited in this document. Due to the
+fact that home networking standards and technology are still being
+rapidly developed, this was considered necessary. If subsequent drafts
+or RFCs are published, they will obsolete the draft cited in this
+document.</p>
+
+<div class="references csl-bib-body" id="refs">
+<div class="csl-entry" id="ref-3GPP-TS.22.011">
+<p><span class="csl-left-margin">[1] </span><span class="csl-right-inline"><a href='http://www.3gpp.org/ftp/Specs/html-info/22011.htm' title=''>3GPP TS 22.011</a>, <em>Service accessibility</em>, 3GPP, 2002</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.003">
+<p><span class="csl-left-margin">[2] </span><span class="csl-right-inline"><a href='http://www.3gpp.org/ftp/Specs/html-info/23003.htm' title=''>3GPP TS 23.003</a>, <em>Numbering, addressing and identification</em>, 3GPP, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.122">
+<p><span class="csl-left-margin">[3] </span><span class="csl-right-inline"><a href='http://www.3gpp.org/ftp/Specs/html-info/23122.htm' title=''>3GPP TS 23.122</a>, <em>Non-Access-Stratum (NAS) functions related to Mobile Station (MS) in idle mode</em>, 3GPP, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.211">
+<p><span class="csl-left-margin">[4] </span><span class="csl-right-inline"><a href='https://www.etsi.org/deliver/etsi_ts/123200_123299/123221/12.00.00_60/ts_123221v120000p.pdf' title=''>3GPP TS 23.211</a>, <em>Digital cellular telecommunications system (Phase 2+); Universal Mobile Telecommunications System (UMTS); LTE; Architectural requirements</em>, 3GPP, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.316">
+<p><span class="csl-left-margin">[5] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/23316.htm' title=''>3GPP TS 23.316</a>, <em>Wireless and wireline convergence access support for the 5G System
+(5GS)</em>, 3GPP SA WG2</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.401">
+<p><span class="csl-left-margin">[6] </span><span class="csl-right-inline"><a href='http://www.3gpp.org/ftp/Specs/html-info/23401.htm' title=''>3GPP TS 23.401</a>, <em>General Packet Radio Service (GPRS) enhancements for Evolved Universal Terrestrial Radio Access Network (E-UTRAN) access</em>, 3GPP, 2013</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.501">
+<p><span class="csl-left-margin">[7] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/23501.htm' title=''>3GPP TS 23.501</a>, <em>System architecture for the 5G System (5GS); Stage 2</em>, 3GPP SA WG2</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.502">
+<p><span class="csl-left-margin">[8] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/23502.htm' title=''>3GPP TS 23.502</a>, <em>Procedures for the 5G System (5GS)</em>, 3GPP SA WG2</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.23.503">
+<p><span class="csl-left-margin">[9] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/23503.htm' title=''>3GPP TS 23.503</a>, <em>Policy and charging control framework for the 5G System (5GS); Stage 2</em>, 3GPP CT WG4, 2019</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.24.193">
+<p><span class="csl-left-margin">[10] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/24193.htm' title=''>3GPP TS 24.193</a>, <em>5G System;Access Traffic Steering, Switching and Splitting (ATSSS); Stage 3</em>, 3GPP CT WG1</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.24.301">
+<p><span class="csl-left-margin">[11] </span><span class="csl-right-inline"><a href='http://www.3gpp.org/ftp/Specs/html-info/24301.htm' title=''>3GPP TS 24.301</a>, <em>Non-Access-Stratum (NAS) protocol for Evolved Packet System (EPS); Stage 3</em>, 3GPP, 2013</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.24.501">
+<p><span class="csl-left-margin">[12] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/24501.htm' title=''>3GPP TS 24.501</a>, <em>Non-Access-Stratum (NAS) protocol for 5G System (5GS); Stage 3</em>, 3GPP CT WG1</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.33.501">
+<p><span class="csl-left-margin">[13] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/html-info/33501.htm' title=''>3GPP TS 33.501</a>, <em>Security architecture and procedures for 5G System</em>, 3GPP SA WG3</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.36.300">
+<p><span class="csl-left-margin">[14] </span><span class="csl-right-inline"><a href='http://www.3gpp.org/ftp/Specs/html-info/36300.htm' title=''>3GPP TS 36.300</a>, <em>Evolved Universal Terrestrial Radio Access (E-UTRA) and Evolved Universal Terrestrial Radio Access Network (E-UTRAN); Overall description; Stage 2</em>, 3GPP, 2013</span></p></div>
+
+<div class="csl-entry" id="ref-3GPP-TS.38.300">
+<p><span class="csl-left-margin">[15] </span><span class="csl-right-inline"><a href='https://www.3gpp.org/ftp/Specs/archive/38_series/38.300/38300-h20.zip' title=''>3GPP TS 38.300</a>, <em>NR; NR and NG-RAN Overall Description; Stage 2</em>, 3GPP, 2022</span></p></div>
+
+<div class="csl-entry" id="ref-AF-TM-0121.000">
+<p><span class="csl-left-margin">[16] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/af-tm-0121.000.pdf' title=''>AF-TM-0121.000</a>, <em>Traffic Management Specification 4.1</em>, ATM Forum, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-G.9700">
+<p><span class="csl-left-margin">[17] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9700/en' title=''>G.9700</a>, <em>Fast access to subscriber terminals (G.fast) - Power spectral density specification</em>, ITU-T, 2019</span></p></div>
+
+<div class="csl-entry" id="ref-G.9701">
+<p><span class="csl-left-margin">[18] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9701-201412-P' title=''>G.9701</a>, <em>Fast access to subscriber terminals (G.fast)- Physical layer
+specification</em>, ITU-T, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-G.9807.1">
+<p><span class="csl-left-margin">[19] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9807.1-201606-I/en' title=''>G.9807.1</a>, <em>10-Gigabit-capable symmetric passive optical network (XGS-PON)</em>, ITU-T, 2016</span></p></div>
+
+<div class="csl-entry" id="ref-G.984.1">
+<p><span class="csl-left-margin">[20] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.984.1-200303-S/en' title=''>G.984.1</a>, <em>Gigabit-capable Passive Optical Networks (GPON)): General
+characteristics</em>, ITU-T, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-G.984.2">
+<p><span class="csl-left-margin">[21] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.984.2-200303-S/en' title=''>G.984.2</a>, <em>Gigabit-capable Passive Optical Networks (G-PON): Physical Media
+Dependent (PMD) layer specification</em>, ITU-T, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-G.984.3">
+<p><span class="csl-left-margin">[22] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.984.3-201401-I/en' title=''>G.984.3</a>, <em>Gigabit-capable passive optical networks (G-PON): Transmission
+convergence layer specification</em>, ITU-T, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-G.987.1">
+<p><span class="csl-left-margin">[23] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.987.1-201603-I/en' title=''>G.987.1</a>, <em>10-Gigabit-capable passive optical networks (XG-PON): General requirements</em>, ITU-T, 2016</span></p></div>
+
+<div class="csl-entry" id="ref-G.987.2">
+<p><span class="csl-left-margin">[24] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.987.2-201602-I/en' title=''>G.987.2</a>, <em>10-Gigabit-capable passive optical networks (XG-PON): Physical media
+dependent (PMD) layer specification</em>, ITU-T, 2016</span></p></div>
+
+<div class="csl-entry" id="ref-G.987.3">
+<p><span class="csl-left-margin">[25] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.987.3-201401-I/en' title=''>G.987.3</a>, <em>10-Gigabit-capable passive optical networks (XG-PON): Transmission
+convergence (TC) layer specification</em>, ITU-T, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-G.988">
+<p><span class="csl-left-margin">[26] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.988-201010-P/en' title=''>G.988</a>, <em>ONU management and control interface (OMCI) specification</em>, ITU-T, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-G.992.1">
+<p><span class="csl-left-margin">[27] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.992.1' title=''>G.992.1</a>, <em>Asymmetric digital subscriber line (ADSL) transceivers</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.992.3">
+<p><span class="csl-left-margin">[28] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.992.3' title=''>G.992.3</a>, <em>Asymmetric digital subscriber line transceivers 2 (ADSL2)</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.992.5">
+<p><span class="csl-left-margin">[29] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.992.5' title=''>G.992.5</a>, <em>Asymmetric Digital Subscriber Line (ADSL) transceivers - Extended
+bandwidth ADSL2 (ADSL2plus)</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.993.2">
+<p><span class="csl-left-margin">[30] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.993.2' title=''>G.993.2</a>, <em>Very high speed digital subscriber line transceivers 2 (VDSL2)</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.9954">
+<p><span class="csl-left-margin">[31] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9954/en' title=''>G.9954</a>, <em>Phoneline networking transceivers - Enhanced physical, media access,
+and link layer specifications (HPNA 3.0 and 3.1)</em>, ITU-T, 2007</span></p></div>
+
+<div class="csl-entry" id="ref-G.9960">
+<p><span class="csl-left-margin">[32] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9960-201006-P' title=''>G.9960</a>, <em>Unified high-speed wire-line based home networking transceivers -
+System architecture and physical layer specification</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.9961">
+<p><span class="csl-left-margin">[33] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9961-201006-P' title=''>G.9961</a>, <em>Unified high-speed wire-line based home networking transceivers - Data
+link layer specification</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.9964">
+<p><span class="csl-left-margin">[34] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.9962-201308-P' title=''>G.9964</a>, <em>Unified high-speed wire-line based home networking transceivers - Power
+spectral density specification</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.997.1">
+<p><span class="csl-left-margin">[35] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.997.1' title=''>G.997.1</a>, <em>Physical layer management for digital subscriber line (DSL)
+transceivers</em>, ITU-T</span></p></div>
+
+<div class="csl-entry" id="ref-G.998.1">
+<p><span class="csl-left-margin">[36] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.998.1' title=''>G.998.1</a>, <em>ATM-based Multi-Pair Bonding</em>, ITU-T, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-G.998.2">
+<p><span class="csl-left-margin">[37] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-G.998.2' title=''>G.998.2</a>, <em>Ethernet-based Multi-Pair Bonding</em>, ITU-T, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-I.610">
+<p><span class="csl-left-margin">[38] </span><span class="csl-right-inline"><a href='https://www.itu.int/rec/T-REC-I.610-199902-I/en' title=''>I.610</a>, <em>B-ISDN operation and maintenance principles and functions</em>, ITU-T, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-802.11">
+<p><span class="csl-left-margin">[39] </span><span class="csl-right-inline"><a href='http://ieeexplore.ieee.org/servlet/opac?punumber=6178209' title=''>IEEE Std 802.11-2012</a>, <em>IEEE Standard for Information technology--Telecommunications and information exchange between systems Local and metropolitan area networks--Specific requirements Part 11: Wireless LAN Medium Access Control (MAC) and Physical Layer (PHY) Specifications</em>, IEEE, 2012</span></p></div>
+
+<div class="csl-entry" id="ref-802.11ax">
+<p><span class="csl-left-margin">[40] </span><span class="csl-right-inline"><a href='https://standards.ieee.org/standard/802_11ax-2021.html' title=''>IEEE Std 802.11ax</a>, <em>Enhancements for High Efficiency WLAN</em>, IEEE, 2021</span></p></div>
+
+<div class="csl-entry" id="ref-802.1Q">
+<p><span class="csl-left-margin">[41] </span><span class="csl-right-inline"><a href='http://ieeexplore.ieee.org/servlet/opac?punumber=6991460' title=''>IEEE Std 802.1Q-2014</a>, <em>IEEE Standard for Local and metropolitan area networks--Bridges and Bridged Networks</em>, IEEE, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-802.3-2012">
+<p><span class="csl-left-margin">[42] </span><span class="csl-right-inline"><a href='http://ieeexplore.ieee.org/servlet/opac?punumber=6419733' title=''>IEEE Std 802.3-2012</a>, <em>802.3-2012</em>, IEEE, 2013</span></p></div>
+
+<div class="csl-entry" id="ref-OSGI-CORE-6">
+<p><span class="csl-left-margin">[43] </span><span class="csl-right-inline"><u>OSGI-CMPN-6</u>, <em>OSGi Core, Release 6</em>, OSGI Alliance, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1034">
+<p><span class="csl-left-margin">[44] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1034.html' title=''>RFC 1034</a>, <em>Domain names - concepts and facilities</em>, IETF, 1987</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1035">
+<p><span class="csl-left-margin">[45] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1035.html' title=''>RFC 1035</a>, <em>Domain names - implementation and specification</em>, IETF, 1987</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1042">
+<p><span class="csl-left-margin">[46] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1042.html' title=''>RFC 1042</a>, <em>Standard for the transmission of IP datagrams over IEEE 802 networks</em>, IETF, 1988</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1112">
+<p><span class="csl-left-margin">[47] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1112.html' title=''>RFC 1112</a>, <em>Host extensions for IP multicasting</em>, IETF, 1989</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1122">
+<p><span class="csl-left-margin">[48] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1122.html' title=''>RFC 1122</a>, <em>Requirements for Internet Hosts - Communication Layers</em>, IETF, 1989</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1123">
+<p><span class="csl-left-margin">[49] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1123.html' title=''>RFC 1123</a>, <em>Requirements for Internet Hosts - Application and Support</em>, IETF, 1989</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1191">
+<p><span class="csl-left-margin">[50] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1191.html' title=''>RFC 1191</a>, <em>Path MTU discovery</em>, IETF, 1990</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1256">
+<p><span class="csl-left-margin">[51] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1256.html' title=''>RFC 1256</a>, <em>ICMP Router Discovery Messages</em>, IETF, 1991</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1305">
+<p><span class="csl-left-margin">[52] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1305.html' title=''>RFC 1305</a>, <em>Network Time Protocol (Version 3) Specification, Implementation and Analysis</em>, IETF, 1992</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1332">
+<p><span class="csl-left-margin">[53] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1332.html' title=''>RFC 1332</a>, <em>The PPP Internet Protocol Control Protocol (IPCP)</em>, IETF, 1992</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1812">
+<p><span class="csl-left-margin">[54] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1812.html' title=''>RFC 1812</a>, <em>Requirements for IP Version 4 Routers</em>, IETF, 1995</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1918">
+<p><span class="csl-left-margin">[55] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1918.html' title=''>RFC 1918</a>, <em>Address Allocation for Private Internets</em>, IETF, 1996</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1928">
+<p><span class="csl-left-margin">[56] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1928.html' title=''>RFC 1928</a>, <em>SOCKS Protocol Version 5</em>, IETF, 1996</span></p></div>
+
+<div class="csl-entry" id="ref-RFC1990">
+<p><span class="csl-left-margin">[57] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc1990.html' title=''>RFC 1990</a>, <em>The PPP Multilink Protocol (MP)</em>, IETF, 1996</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2091">
+<p><span class="csl-left-margin">[58] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2091.html' title=''>RFC 2091</a>, <em>Triggered Extensions to RIP to Support Demand Circuits</em>, IETF, 1997</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2119">
+<p><span class="csl-left-margin">[59] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2119.html' title=''>RFC 2119</a>, <em>Key words for use in RFCs to Indicate Requirement Levels</em>, IETF, 1997</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2131">
+<p><span class="csl-left-margin">[60] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2131.html' title=''>RFC 2131</a>, <em>Dynamic Host Configuration Protocol</em>, IETF, 1997</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2132">
+<p><span class="csl-left-margin">[61] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2132.html' title=''>RFC 2132</a>, <em>DHCP Options and BOOTP Vendor Extensions</em>, IETF, 1997</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2181">
+<p><span class="csl-left-margin">[62] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2181.html' title=''>RFC 2181</a>, <em>Clarifications to the DNS Specification</em>, IETF, 1997</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2225">
+<p><span class="csl-left-margin">[63] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2225.html' title=''>RFC 2225</a>, <em>Classical IP and ARP over ATM</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2364">
+<p><span class="csl-left-margin">[64] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2364.html' title=''>RFC 2364</a>, <em>PPP Over AAL5</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2453">
+<p><span class="csl-left-margin">[65] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2453.html' title=''>RFC 2453</a>, <em>RIP Version 2</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2460">
+<p><span class="csl-left-margin">[66] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2460.html' title=''>RFC 2460</a>, <em>Internet Protocol, Version 6 (IPv6) Specification</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2473">
+<p><span class="csl-left-margin">[67] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2473.html' title=''>RFC 2473</a>, <em>Generic Packet Tunneling in IPv6 Specification</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2474">
+<p><span class="csl-left-margin">[68] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2474.html' title=''>RFC 2474</a>, <em>Definition of the Differentiated Services Field (DS Field) in the IPv4 and IPv6 Headers</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2475">
+<p><span class="csl-left-margin">[69] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2475.html' title=''>RFC 2475</a>, <em>An Architecture for Differentiated Services</em>, IETF, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2516">
+<p><span class="csl-left-margin">[70] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2516.html' title=''>RFC 2516</a>, <em>A Method for Transmitting PPP Over Ethernet (PPPoE)</em>, IETF, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2597">
+<p><span class="csl-left-margin">[71] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2597.html' title=''>RFC 2597</a>, <em>Assured Forwarding PHB Group</em>, IETF, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2661">
+<p><span class="csl-left-margin">[72] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2661.html' title=''>RFC 2661</a>, <em>Layer Two Tunneling Protocol <span>‘L2TP’</span></em>, IETF, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2663">
+<p><span class="csl-left-margin">[73] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2663.html' title=''>RFC 2663</a>, <em>IP Network Address Translator (NAT) Terminology and Considerations</em>, IETF, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2684">
+<p><span class="csl-left-margin">[74] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2684.html' title=''>RFC 2684</a>, <em>Multiprotocol Encapsulation over ATM Adaptation Layer 5</em>, IETF, 1999</span></p></div>
+
+<div class="csl-entry" id="ref-RFC2939">
+<p><span class="csl-left-margin">[75] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc2939.html' title=''>RFC 2939</a>, <em>Procedures and IANA Guidelines for Definition of New DHCP Options and Message Types</em>, IETF, 2000</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3022">
+<p><span class="csl-left-margin">[76] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3022.html' title=''>RFC 3022</a>, <em>Traditional IP Network Address Translator (Traditional NAT)</em>, IETF, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3027">
+<p><span class="csl-left-margin">[77] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3027.html' title=''>RFC 3027</a>, <em>Protocol Complications with the IP Network Address Translator</em>, IETF, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3046">
+<p><span class="csl-left-margin">[78] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3046.html' title=''>RFC 3046</a>, <em>DHCP Relay Agent Information Option</em>, IETF, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3145">
+<p><span class="csl-left-margin">[79] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3145.html' title=''>RFC 3145</a>, <em>L2TP Disconnect Cause Information</em>, IETF, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3203">
+<p><span class="csl-left-margin">[80] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3203.html' title=''>RFC 3203</a>, <em>DHCP reconfigure extension</em>, IETF, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3246">
+<p><span class="csl-left-margin">[81] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3246.html' title=''>RFC 3246</a>, <em>An Expedited Forwarding PHB (Per-Hop Behavior)</em>, IETF, 2002</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3260">
+<p><span class="csl-left-margin">[82] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3260.html' title=''>RFC 3260</a>, <em>New Terminology and Clarifications for Diffserv</em>, IETF, 2002</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3261">
+<p><span class="csl-left-margin">[83] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3261.html' title=''>RFC 3261</a>, <em>SIP: Session Initiation Protocol</em>, IETF, 2002</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3315">
+<p><span class="csl-left-margin">[84] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3315.html' title=''>RFC 3315</a>, <em>Dynamic Host Configuration Protocol for IPv6 (DHCPv6)</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3376">
+<p><span class="csl-left-margin">[85] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3376.html' title=''>RFC 3376</a>, <em>Internet Group Management Protocol, Version 3</em>, IETF, 2002</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3544">
+<p><span class="csl-left-margin">[86] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3544.html' title=''>RFC 3544</a>, <em>IP Header Compression over PPP</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3550">
+<p><span class="csl-left-margin">[87] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3550.html' title=''>RFC 3550</a>, <em>RTP: A Transport Protocol for Real-Time Applications</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3579">
+<p><span class="csl-left-margin">[88] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3579.html' title=''>RFC 3579</a>, <em>RADIUS (Remote Authentication Dial In User Service) Support For Extensible Authentication Protocol (EAP)</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3596">
+<p><span class="csl-left-margin">[89] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3596.html' title=''>RFC 3596</a>, <em>DNS Extensions to Support IP Version 6</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3633">
+<p><span class="csl-left-margin">[90] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3633.html' title=''>RFC 3633</a>, <em>IPv6 Prefix Options for Dynamic Host Configuration Protocol (DHCP) version 6</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3646">
+<p><span class="csl-left-margin">[91] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3646.html' title=''>RFC 3646</a>, <em>DNS Configuration options for Dynamic Host Configuration Protocol for IPv6 (DHCPv6)</em>, IETF, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3810">
+<p><span class="csl-left-margin">[92] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3810.html' title=''>RFC 3810</a>, <em>Multicast Listener Discovery Version 2 (MLDv2) for IPv6</em>, IETF, 2004</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3901">
+<p><span class="csl-left-margin">[93] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3901.html' title=''>RFC 3901</a>, <em>DNS IPv6 Transport Operational Guidelines</em>, IETF, 2004</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3925">
+<p><span class="csl-left-margin">[94] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3925.html' title=''>RFC 3925</a>, <em>Vendor-Identifying Vendor Options for Dynamic Host Configuration Protocol version 4 (DHCPv4)</em>, IETF, 2004</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3931">
+<p><span class="csl-left-margin">[95] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3931.html' title=''>RFC 3931</a>, <em>Layer Two Tunneling Protocol - Version 3 (L2TPv3)</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3947">
+<p><span class="csl-left-margin">[96] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3947.html' title=''>RFC 3947</a>, <em>Negotiation of NAT-Traversal in the IKE</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC3948">
+<p><span class="csl-left-margin">[97] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc3948.html' title=''>RFC 3948</a>, <em>UDP Encapsulation of IPsec ESP Packets</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4072">
+<p><span class="csl-left-margin">[98] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4072.html' title=''>RFC 4072</a>, <em>Diameter Extensible Authentication Protocol (EAP) Application</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4075">
+<p><span class="csl-left-margin">[99] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4075.html' title=''>RFC 4075</a>, <em>Simple Network Time Protocol (SNTP) Configuration Option for DHCPv6</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4191">
+<p><span class="csl-left-margin">[100] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4191.html' title=''>RFC 4191</a>, <em>Default Router Preferences and More-Specific Routes</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4193">
+<p><span class="csl-left-margin">[101] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4193.html' title=''>RFC 4193</a>, <em>Unique Local IPv6 Unicast Addresses</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4213">
+<p><span class="csl-left-margin">[102] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4213.html' title=''>RFC 4213</a>, <em>Basic Transition Mechanisms for IPv6 Hosts and Routers</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4241">
+<p><span class="csl-left-margin">[103] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4241.html' title=''>RFC 4241</a>, <em>A Model of IPv6/IPv4 Dual Stack Internet Access Service</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4301">
+<p><span class="csl-left-margin">[104] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4301.html' title=''>RFC 4301</a>, <em>Security Architecture for the Internet Protocol</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4303">
+<p><span class="csl-left-margin">[105] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4303.html' title=''>RFC 4303</a>, <em>IP Encapsulating Security Payload (ESP)</em>, IETF, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4330">
+<p><span class="csl-left-margin">[106] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4330.html' title=''>RFC 4330</a>, <em>Simple Network Time Protocol (SNTP) Version 4 for IPv4, IPv6 and OSI</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4361">
+<p><span class="csl-left-margin">[107] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4361.html' title=''>RFC 4361</a>, <em>Node-specific Client Identifiers for Dynamic Host Configuration Protocol Version Four (DHCPv4)</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4541">
+<p><span class="csl-left-margin">[108] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4541.html' title=''>RFC 4541</a>, <em>Considerations for Internet Group Management Protocol (IGMP) and Multicast Listener Discovery (MLD) Snooping Switches</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4605">
+<p><span class="csl-left-margin">[109] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4605.html' title=''>RFC 4605</a>, <em>Internet Group Management Protocol (IGMP) / Multicast Listener Discovery (MLD)-Based Multicast Forwarding (<span>‘IGMP/MLD Proxying’</span>)</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4632">
+<p><span class="csl-left-margin">[110] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4632.html' title=''>RFC 4632</a>, <em>Classless Inter-domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4638">
+<p><span class="csl-left-margin">[111] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4638.html' title=''>RFC 4638</a>, <em>Accommodating a Maximum Transit Unit/Maximum Receive Unit (MTU/MRU) Greater Than 1492 in the Point-to-Point Protocol over Ethernet (PPPoE)</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4681">
+<p><span class="csl-left-margin">[112] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4681.html' title=''>RFC 4681</a>, <em>TLS User Mapping Extension</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4704">
+<p><span class="csl-left-margin">[113] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4704.html' title=''>RFC 4704</a>, <em>The Dynamic Host Configuration Protocol for IPv6 (DHCPv6) Client Fully Qualified Domain Name (FQDN) Option</em>, IETF, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4861">
+<p><span class="csl-left-margin">[114] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4861.html' title=''>RFC 4861</a>, <em>Neighbor Discovery for IP version 6 (IPv6)</em>, IETF, 2007</span></p></div>
+
+<div class="csl-entry" id="ref-RFC4862">
+<p><span class="csl-left-margin">[115] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc4862.html' title=''>RFC 4862</a>, <em>IPv6 Stateless Address Autoconfiguration</em>, IETF, 2007</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5072">
+<p><span class="csl-left-margin">[116] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5072.html' title=''>RFC 5072</a>, <em>IP Version 6 over PPP</em>, IETF, 2007</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5172">
+<p><span class="csl-left-margin">[117] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5172.html' title=''>RFC 5172</a>, <em>Negotiation for IPv6 Datagram Compression Using IPv6 Control Protocol</em>, IETF, 2008</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5176">
+<p><span class="csl-left-margin">[118] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5176.html' title=''>RFC 5176</a>, <em>Dynamic Authorization Extensions to Remote Authentication Dial In User Service (RADIUS)</em>, IETF, 2008</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5280">
+<p><span class="csl-left-margin">[119] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5280.html' title=''>RFC 5280</a>, <em>Internet X.509 Public Key Infrastructure Certificate and Certificate Revocation List (CRL) Profile</em>, IETF, 2008</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5625">
+<p><span class="csl-left-margin">[120] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5625.html' title=''>RFC 5625</a>, <em>DNS Proxy Implementation Guidelines</em>, IETF, 2009</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5880">
+<p><span class="csl-left-margin">[121] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5880.html' title=''>RFC 5880</a>, <em>Bidirectional Forwarding Detection (BFD)</em>, IETF, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5881">
+<p><span class="csl-left-margin">[122] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5881.html' title=''>RFC 5881</a>, <em>Bidirectional Forwarding Detection (BFD) for IPv4 and IPv6 (Single Hop)</em>, IETF, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5969">
+<p><span class="csl-left-margin">[123] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5969.html' title=''>RFC 5969</a>, <em>IPv6 Rapid Deployment on IPv4 Infrastructures (6rd) -- Protocol Specification</em>, IETF, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-RFC5996">
+<p><span class="csl-left-margin">[124] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc5996.html' title=''>RFC 5996</a>, <em>Internet Key Exchange Protocol Version 2 (IKEv2)</em>, IETF, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6092">
+<p><span class="csl-left-margin">[125] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6092.html' title=''>RFC 6092</a>, <em>Recommended Simple Security Capabilities in Customer Premises Equipment (CPE) for Providing Residential IPv6 Internet Service</em>, IETF, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6106">
+<p><span class="csl-left-margin">[126] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6106.html' title=''>RFC 6106</a>, <em>IPv6 Router Advertisement Options for DNS Configuration</em>, IETF, 2010</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6333">
+<p><span class="csl-left-margin">[127] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6333.html' title=''>RFC 6333</a>, <em>Dual-Stack Lite Broadband Deployments Following IPv4 Exhaustion</em>, IETF, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6334">
+<p><span class="csl-left-margin">[128] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6334.html' title=''>RFC 6334</a>, <em>Dynamic Host Configuration Protocol for IPv6 (DHCPv6) Option for Dual-Stack Lite</em>, IETF, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6422">
+<p><span class="csl-left-margin">[129] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6422.html' title=''>RFC 6422</a>, <em>Relay-Supplied DHCP Options</em>, IETF, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6434">
+<p><span class="csl-left-margin">[130] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6434.html' title=''>RFC 6434</a>, <em>IPv6 Node Requirements</em>, IETF, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6440">
+<p><span class="csl-left-margin">[131] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6440.html' title=''>RFC 6440</a>, <em>The EAP Re-authentication Protocol (ERP) Local Domain Name DHCPv6 Option</em>, IETF, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6696">
+<p><span class="csl-left-margin">[132] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6696.html' title=''>RFC 6696</a>, <em>EAP Extensions for the EAP Re-authentication Protocol (ERP)</em>, IETF, 2012</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6704">
+<p><span class="csl-left-margin">[133] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6704.html' title=''>RFC 6704</a>, <em>Forcerenew Nonce Authentication</em>, IETF, 2012</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6731">
+<p><span class="csl-left-margin">[134] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6731.html' title=''>RFC 6731</a>, <em>Improved Recursive DNS Server Selection for Multi-Interfaced Nodes</em>, IETF, 2012</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6887">
+<p><span class="csl-left-margin">[135] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6887.html' title=''>RFC 6887</a>, <em>Port Control Protocol (PCP)</em>, IETF, 2013</span></p></div>
+
+<div class="csl-entry" id="ref-RFC6970">
+<p><span class="csl-left-margin">[136] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc6970.html' title=''>RFC 6970</a>, <em>Universal Plug and Play (UPnP) Internet Gateway Device - Port Control Protocol Interworking Function (IGD-PCP IWF)</em>, IETF, 2013</span></p></div>
+
+<div class="csl-entry" id="ref-RFC7078">
+<p><span class="csl-left-margin">[137] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc7078.html' title=''>RFC 7078</a>, <em>Distributing Address Selection Policy Using DHCPv6</em>, IETF, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-RFC7291">
+<p><span class="csl-left-margin">[138] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc7291.html' title=''>RFC 7291</a>, <em>DHCP Options for the Port Control Protocol (PCP)</em>, IETF, 2014</span></p></div>
+
+<div class="csl-entry" id="ref-RFC7597">
+<p><span class="csl-left-margin">[139] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc7597.html' title=''>RFC 7597</a>, <em>Mapping of Address and Port with Encapsulation (MAP-E)</em>, IETF, 2015</span></p></div>
+
+<div class="csl-entry" id="ref-RFC7598">
+<p><span class="csl-left-margin">[140] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc7598.html' title=''>RFC 7598</a>, <em>DHCPv6 Options for Configuration of Softwire Address and Port-Mapped Clients</em>, IETF, 2015</span></p></div>
+
+<div class="csl-entry" id="ref-RFC7648">
+<p><span class="csl-left-margin">[141] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc7648.html' title=''>RFC 7648</a>, <em>Port Control Protocol (PCP) Proxy Function</em>, IETF, 2015</span></p></div>
+
+<div class="csl-entry" id="ref-RFC768">
+<p><span class="csl-left-margin">[142] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc768.html' title=''>RFC 768</a>, <em>User Datagram Protocol</em>, IETF, 1980</span></p></div>
+
+<div class="csl-entry" id="ref-RFC7753">
+<p><span class="csl-left-margin">[143] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc7753.html' title=''>RFC 7753</a>, <em>Port Control Protocol (PCP) Extension for Port-Set Allocation</em>, IETF, 2016</span></p></div>
+
+<div class="csl-entry" id="ref-RFC791">
+<p><span class="csl-left-margin">[144] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc791.html' title=''>RFC 791</a>, <em>Internet Protocol</em>, IETF, 1981</span></p></div>
+
+<div class="csl-entry" id="ref-RFC792">
+<p><span class="csl-left-margin">[145] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc792.html' title=''>RFC 792</a>, <em>Internet Control Message Protocol</em>, IETF, 1981</span></p></div>
+
+<div class="csl-entry" id="ref-RFC793">
+<p><span class="csl-left-margin">[146] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc793.html' title=''>RFC 793</a>, <em>Transmission Control Protocol</em>, IETF, 1981</span></p></div>
+
+<div class="csl-entry" id="ref-RFC826">
+<p><span class="csl-left-margin">[147] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc826.html' title=''>RFC 826</a>, <em>An Ethernet Address Resolution Protocol: Or Converting Network Protocol Addresses to 48.bit Ethernet Address for Transmission on Ethernet Hardware</em>, IETF, 1982</span></p></div>
+
+<div class="csl-entry" id="ref-RFC8822">
+<p><span class="csl-left-margin">[148] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc8822.html' title=''>RFC 8822</a>, <em>5G Wireless Wireline Convergence User Plane Encapsulation (5WE)</em>, IETF, 2021</span></p></div>
+
+<div class="csl-entry" id="ref-RFC894">
+<p><span class="csl-left-margin">[149] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc894.html' title=''>RFC 894</a>, <em>A Standard for the Transmission of IP Datagrams over Ethernet Networks</em>, IETF, 1984</span></p></div>
+
+<div class="csl-entry" id="ref-RFC922">
+<p><span class="csl-left-margin">[150] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc922.html' title=''>RFC 922</a>, <em>Broadcasting Internet datagrams in the presence of subnets</em>, IETF, 1984</span></p></div>
+
+<div class="csl-entry" id="ref-RFC950">
+<p><span class="csl-left-margin">[151] </span><span class="csl-right-inline"><a href='https://www.rfc-editor.org/rfc/rfc950.html' title=''>RFC 950</a>, <em>Internet Standard Subnetting Procedure</em>, IETF, 1985</span></p></div>
+
+<div class="csl-entry" id="ref-T1.413-1998">
+<p><span class="csl-left-margin">[152] </span><span class="csl-right-inline"><a href='https://webstore.ansi.org/Standards/ATIS/ansit14131998' title=''>T1.413-1998</a>, <em>Telecommunications - Network and Customer Installation Interfaces - Asymmetric Digital Subscriber Line (ASDL) Metallic Interface</em>, ANSI, 1998</span></p></div>
+
+<div class="csl-entry" id="ref-T1.413a-2001">
+<p><span class="csl-left-margin">[153] </span><span class="csl-right-inline"><a href='https://webstore.ansi.org/Standards/ATIS/T1413a2001' title=''>T1.413a-2001</a>, <em>Supplement To T1.413-1998 - Network And Customer Installation Interfaces - Asymmetric Digital Subscriber Line (ADSL) Metallic Interface</em>, ANSI, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-T1.421-2001">
+<p><span class="csl-left-margin">[154] </span><span class="csl-right-inline"><a href='https://webstore.ansi.org/Standards/ATIS/T14212001' title=''>T1.421-2001</a>, <em>In-Line Filter For Use With Voiceband Terminal Equipment Operating On The Same Wire Pair With High Frequency (Up To 12 MHz) Devices</em>, ANSI, 2001</span></p></div>
+
+<div class="csl-entry" id="ref-T1.427.01">
+<p><span class="csl-left-margin">[155] </span><span class="csl-right-inline"><a href='https://webstore.ansi.org/Standards/ATIS/T1427012004' title=''>T1.427.01-2004</a>, <em>ATM-Based Multi-Pair Bonding</em>, ANSI, 2004</span></p></div>
+
+<div class="csl-entry" id="ref-T1.427.02">
+<p><span class="csl-left-margin">[156] </span><span class="csl-right-inline"><a href='https://webstore.ansi.org/Standards/ATIS/T1427022005' title=''>T1.427.02-2005</a>, <em>Ethernet-Based Multi-Pair Bonding</em>, ANSI, 2005</span></p></div>
+
+<div class="csl-entry" id="ref-TR-062">
+<p><span class="csl-left-margin">[157] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-062.pdf' title=''>TR-062</a>, <em>Auto-Config for the Connection Between the DSL Broadband Network
+Termination (B-NT) and the Network using ATM (TR-037 update)</em>, Broadband Forum, 2003</span></p></div>
+
+<div class="csl-entry" id="ref-TR-064i2">
+<p><span class="csl-left-margin">[158] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/technical/download/TR-064_Issue-2.pdf' title=''>TR-064 Issue 2</a>, <em>LAN-Side CPE Configuration</em>, Broadband Forum, 2015</span></p></div>
+
+<div class="csl-entry" id="ref-TR-067">
+<p><span class="csl-left-margin">[159] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-067.pdf' title=''>TR-067 Issue 2</a>, <em>ADSL Interoperability Test Plan</em>, Broadband Forum, 2004</span></p></div>
+
+<div class="csl-entry" id="ref-TR-069">
+<p><span class="csl-left-margin">[160] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/technical/download/TR-069.pdf' title=''>TR-069 Amendment 6</a>, <em>CPE WAN Management Protocol</em>, Broadband Forum, 2018</span></p></div>
+
+<div class="csl-entry" id="ref-TR-101">
+<p><span class="csl-left-margin">[161] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-101.pdf' title=''>TR-101 Issue 2</a>, <em>Migration to Ethernet-Based Broadband Aggregation</em>, Broadband Forum, 2011</span></p></div>
+
+<div class="csl-entry" id="ref-TR-114">
+<p><span class="csl-left-margin">[162] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-114.pdf' title=''>TR-114 Issue 3</a>, <em>VDSL2 Performance Test Plan</em>, Broadband Forum, 2018</span></p></div>
+
+<div class="csl-entry" id="ref-TR-115">
+<p><span class="csl-left-margin">[163] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-115.pdf' title=''>TR-115 Issue 3</a>, <em>VDSL2 Functionality Test Plan</em>, Broadband Forum, 2019</span></p></div>
+
+<div class="csl-entry" id="ref-TR-122">
+<p><span class="csl-left-margin">[164] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-122.pdf' title=''>TR-122</a>, <em>Base Requirements for Consumer-Oriented Analog Terminal Adapter Functionality</em>, Broadband Forum, 2006</span></p></div>
+
+<div class="csl-entry" id="ref-TR-142">
+<p><span class="csl-left-margin">[165] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-142.pdf' title=''>TR-142</a>, <em>Framework for TR-069 enabled PON devices</em>, Broadband Forum, 2017</span></p></div>
+
+<div class="csl-entry" id="ref-TR-156">
+<p><span class="csl-left-margin">[166] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-156.pdf' title=''>TR-156 Issue 4</a>, <em>Using GPON Access in the context of TR-101</em>, Broadband Forum, 2017</span></p></div>
+
+<div class="csl-entry" id="ref-TR-181">
+<p><span class="csl-left-margin">[167] </span><span class="csl-right-inline"><a href='https://usp-data-models.broadband-forum.org/' title=''>TR-181 Issue 2</a>, <em>Device Data Model for CWMP Endpoints and USP Agents</em>, Broadband Forum, 2022</span></p></div>
+
+<div class="csl-entry" id="ref-TR-328">
+<p><span class="csl-left-margin">[168] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/technical/download/TR-328.pdf' title=''>TR-328</a>, <em>Virtual Business Gateway</em>, Broadband Forum, 2017</span></p></div>
+
+<div class="csl-entry" id="ref-TR-369">
+<p><span class="csl-left-margin">[169] </span><span class="csl-right-inline"><a href='https://usp.technology/specification' title=''>TR-369 Issue 1 Amendment 2</a>, <em>User Services Platform</em>, Broadband Forum, 2022</span></p></div>
+
+<div class="csl-entry" id="ref-TR-456">
+<p><span class="csl-left-margin">[170] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-456.pdf' title=''>TR-456 Issue 2</a>, <em>AGF Functional Requirements</em>, Broadband Forum, 2022</span></p></div>
+
+<div class="csl-entry" id="ref-TR-470">
+<p><span class="csl-left-margin">[171] </span><span class="csl-right-inline"><a href='https://www.broadband-forum.org/download/TR-470.pdf' title=''>TR-470</a>, <em>5G Wireless Wireline Convergence Architecture</em>, Broadband Forum, 2020</span></p></div></div>
+
+<p>The following information is given for the convenience of users of this
+Technical Report and does not constitute an endorsement by the Broadband Forum
+of these products:</p>
+
+<ul>
+<li><p>Safari® is a registered trademark of Apple Computer, Inc.</p></li>
+<li><p>HomePlug® is a registered trademark of HomePlug Powerline Alliance,
+Inc.</p></li>
+<li><p>HomePNA® is a registered trademark of HomePNA, Inc.</p></li>
+<li><p>IEEE® is a registered trademark of the Institute of Electrical and
+Electronics Engineers, Inc. (IEEE). This publication is not endorsed
+by the IEEE.</p></li>
+<li><p>Internet Explorer® and Microsoft® are registered trademarks of
+Microsoft Corporation.</p></li>
+<li><p>Java® and JavaScript® are registered trademarks of Oracle, Inc.</p></li>
+<li><p>Mozilla® is a registered trademark of the Mozilla Foundation.</p></li>
+<li><p>Wi-Fi® is a registered trademark of the Wi-Fi Alliance</p></li>
+<li><p>WPA, WPA2,WPA3, Protected Setup, WMM and WMM-SA are trademarks of
+the Wi-Fi Alliance</p></li>
+</ul>
+
+<h2 id="sec:definitions">2.3 Definitions<a class="headerlink" href="03-index-references-and-terminology.html#sec:definitions" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<table>
+<col width="38%" />
+<col width="62%" />
+<tr class="header">
+<th align="left"><strong>Term</strong></th>
+<th align="left"><strong>Definition</strong></th>
+</tr>
+<tr class="odd">
+<td align="left">5G-RG</td>
+<td align="left">An RG acting as UE with regard to the 5G core. It holds a secure element and exchanges NAS signaling with the 5G core.</td>
+</tr>
+<tr class="even">
+<td align="left">5G Access Network (5GAN)</td>
+<td align="left">This comprises 5G radio ANs (RANs) and 5G wireline ANs connecting to a 5G core.</td>
+</tr>
+<tr class="odd">
+<td align="left">5G System (5GS)</td>
+<td align="left">A system consisting of 5G Access Network (AN), 5G Core Network and end-device.</td>
+</tr>
+<tr class="even">
+<td align="left">Access &amp; Mobility Function (AMF)</td>
+<td align="left">The AMF is a 5GC-CP function that terminates N1, the control interface with UEs, and N2, the control interface with access networks. It is responsible for mobility &amp; access related functions. It acts as the security anchor point for a given UE. At PDU session establishment, it selects the SMF corresponding to the requested slice and targeted DN, and relays session related messages to this SMF.</td>
+</tr>
+<tr class="odd">
+<td align="left">ACS</td>
+<td align="left">Auto-Configuration Server. This is a component in the broadband network responsible for CWMP auto-configuration of the CPE for advanced services.</td>
+</tr>
+<tr class="even">
+<td align="left">Agent</td>
+<td align="left">A generic term that refers (as appropriate) to either a CWMP Endpoint or to a USP Agent.</td>
+</tr>
+<tr class="odd">
+<td align="left">Allowed NSSAI</td>
+<td align="left">NSSAI provided by the serving PLMN network during e.g. a registration procedure, indicating the S-NSSAIs value that the UE could use in the serving PLMN of the current registration area. (definition from TS 23.501 [x])</td>
+</tr>
+<tr class="even">
+<td align="left">Backup</td>
+<td align="left">The ability to take over a task when a source becomes unavailable. Examples:<br/>- A web server becomes unavailable. For incoming traffic, backup provides another web server to take over the operation.<br/>- A communication link becomes unavailable. Via backup, another link takes over the communication task.</td>
+</tr>
+<tr class="odd">
+<td align="left">Configurable</td>
+<td align="left">A requirement for configurability does not imply any particular configuration interface. When specific user or TR-069 or other configurability is required, the requirement is stated explicitly.</td>
+</tr>
+<tr class="even">
+<td align="left">Configured NSSAI</td>
+<td align="left">An NSSAI that has been provisioned in the 5G-RG applicable to one or more PLMN (definition from TS 23.501 <span class="cite" data-citation-ids="3GPP-TS.23.501"><a href='03-index-references-and-terminology.html#ref-3GPP-TS.23.501' title=''>[7]</a></span>).</td>
+</tr>
+<tr class="odd">
+<td align="left">Connection</td>
+<td align="left">As used in this document, a connection is the continuing ability to communicate over a pair of IP addresses.</td>
+</tr>
+<tr class="even">
+<td align="left">Controller</td>
+<td align="left">A generic term that refers (as appropriate) to either a CWMP ACS or a USP Controller.</td>
+</tr>
+<tr class="odd">
+<td align="left">CPE</td>
+<td align="left">Customer Premises Equipment; refers (as appropriate) to any CWMP-enabled or USP-enabled device and therefore covers both Internet Gateway devices and LAN-side end devices.</td>
+</tr>
+<tr class="even">
+<td align="left">CWMP</td>
+<td align="left">CPE WAN Management Protocol. Defined in TR-069 <span class="cite" data-citation-ids="TR-069"><a href='03-index-references-and-terminology.html#ref-TR-069' title=''>[160]</a></span>, CWMP is a communication protocol between an ACS and CWMP-enabled CPE that defines a mechanism for secure auto-configuration of a CPE and other CPE management functions in a common framework.</td>
+</tr>
+<tr class="odd">
+<td align="left">CWMP Endpoint</td>
+<td align="left">A CWMP termination point used by a CWMP-enabled CPE for communication with the ACS.</td>
+</tr>
+<tr class="even">
+<td align="left">Device</td>
+<td align="left">Unless otherwise qualified, the term device refers to an RG.</td>
+</tr>
+<tr class="odd">
+<td align="left">Enabling</td>
+<td align="left">Likewise, controllability requirements, for example to enable or disable a feature, do not imply a control interface.</td>
+</tr>
+<tr class="even">
+<td align="left">Failover</td>
+<td align="left">The ability to automatically switch to another source when a source becomes unavailable. Examples:<br/>- A web server becomes unavailable. For incoming traffic, failover automatically provides another web server to take over the operation.<br/>- A communication link becomes unavailable. Via failover, another link automatically takes over the communication task.</td>
+</tr>
+<tr class="odd">
+<td align="left">GUI</td>
+<td align="left">The term GUI or web GUI implies access to the RG that is visible to the end user. The use of this term in a requirement is an assertion that control or information display is available to the end user.</td>
+</tr>
+<tr class="even">
+<td align="left">Load balancing</td>
+<td align="left">The ability to divide the working load of a task over multiple sources in an equal way. Examples:<br/>- A web service that is run by a web server. For incoming traffic this can be equally divided over multiple servers by a load balancer.<br/>- A communication link that is supporting a communication task. Various links can be used to equally divide the communication load by a load balancer. This can be for incoming and outgoing traffic.<br/>Thus, load balancing is only one form of load sharing: load balancing is load sharing where the load is equally divided over the sources. What defines &ldquo;equal&rdquo; depends on the use case and metrics used.</td>
+</tr>
+<tr class="odd">
+<td align="left">Load sharing</td>
+<td align="left">The ability to divide the working load of a task over multiple sources. Examples:<br/>- A web service that is run by a web server. For incoming traffic this can be divided over multiple servers by load sharing.<br/>- A communication link that is supporting a communication task. Various links can be used to divide the communication load by load sharing. This can be for incoming and outgoing traffic.</td>
+</tr>
+<tr class="even">
+<td align="left">Logs</td>
+<td align="left">Likewise, requirements for logging do not imply log configurability and retrieval on any particular interface unless stated explicitly.</td>
+</tr>
+<tr class="odd">
+<td align="left">Network Instance</td>
+<td align="left">Information identifying a domain. Used by the UPF for traffic detection and routing (definition from TS 23.501 <span class="cite" data-citation-ids="3GPP-TS.23.501"><a href='03-index-references-and-terminology.html#ref-3GPP-TS.23.501' title=''>[7]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left">Network Slice</td>
+<td align="left">A logical network that provides specific network capabilities and network characteristics (definition from TS 23.501 <span class="cite" data-citation-ids="3GPP-TS.23.501"><a href='03-index-references-and-terminology.html#ref-3GPP-TS.23.501' title=''>[7]</a></span>).</td>
+</tr>
+<tr class="odd">
+<td align="left">Network Slice Instance</td>
+<td align="left">A set of Network Function instances and the required resources (e.g. compute, storage and networking resources) which form a deployed Network Slice (definition from TS 23.501 [x]).</td>
+</tr>
+<tr class="even">
+<td align="left">NSI ID</td>
+<td align="left">An identifier for a Network Slice instance (definition from TS 23.501 <span class="cite" data-citation-ids="3GPP-TS.23.501"><a href='03-index-references-and-terminology.html#ref-3GPP-TS.23.501' title=''>[7]</a></span>).</td>
+</tr>
+<tr class="odd">
+<td align="left">Network Slice Selection Assistance Information (NSSAI)</td>
+<td align="left">The NSSAI is a collection of S-NSSAIs. An NSSAI may be a Configured NSSAI, a Requested NSSAI or an Allowed NSSAI. There can be at most eight S-NSSAIs in Allowed and Requested NSSAIs sent in signaling messages between the UE and the Network.</td>
+</tr>
+<tr class="even">
+<td align="left">NSSP (Network Slice Selection Policy)</td>
+<td align="left">It is the set of SM-NSSAI that a UE is authorized to access. It is stored in the UE and corresponds to the NSSAI in the subscriber information in the network database.</td>
+</tr>
+<tr class="odd">
+<td align="left">Operator-specific configuration</td>
+<td align="left">Many requirements specify defaults, but then add the phrase, &ldquo;or use an operator-specific configuration.&rdquo; This phrase recognizes that operators may override TR-124 requirements when necessary to satisfy their specific needs.</td>
+</tr>
+<tr class="even">
+<td align="left">PDU session</td>
+<td align="left">Temporal association between the UE and a Data Network that provides a PDU connectivity service. A session can be IP, Eth or unstructured.</td>
+</tr>
+<tr class="odd">
+<td align="left">Requested NSSAI</td>
+<td align="left">NSSAI provided by the UE to the Serving PLMN during registration (definition from TS 23.501 <span class="cite" data-citation-ids="3GPP-TS.23.501"><a href='03-index-references-and-terminology.html#ref-3GPP-TS.23.501' title=''>[7]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left">RG</td>
+<td align="left">A residential gateway (RG) is a device that interfaces between the WAN and LAN IP environment for a consumer broadband customer. It may route or bridge traffic, depending on its configuration and specifications. The term RG is retained for historical continuity, even though some features may be directed at business applications.</td>
+</tr>
+<tr class="odd">
+<td align="left">Smart RG</td>
+<td align="left">A smart residential gateway is a residential gateway with additional smart home services.</td>
+</tr>
+<tr class="even">
+<td align="left">Software application</td>
+<td align="left">A Software application consists of one or more software modules and configuration data, and provides specific function(s) using the open platform API of a Smart RG.</td>
+</tr>
+<tr class="odd">
+<td align="left">Software module</td>
+<td align="left">An installable software entity which includes executables, libraries, configuration and other data.</td>
+</tr>
+<tr class="even">
+<td align="left">Subscribed S-NSSAI</td>
+<td align="left">S-NSSAI based on subscriber information, which a UE is subscribed to use in a PLMN (definition from TS 23.501 <span class="cite" data-citation-ids="3GPP-TS.23.501"><a href='03-index-references-and-terminology.html#ref-3GPP-TS.23.501' title=''>[7]</a></span>).</td>
+</tr>
+<tr class="odd">
+<td align="left">USP</td>
+<td align="left">Universal Service Platform. Defined in TR-369 <span class="cite" data-citation-ids="TR-369"><a href='03-index-references-and-terminology.html#ref-TR-369' title=''>[169]</a></span>, USP is an evolution of CWMP that allows applications to manipulate Service Elements in a network of Controllers and Agents.</td>
+</tr>
+<tr class="even">
+<td align="left">USP Agent</td>
+<td align="left">A USP Agent is a USP Endpoint that exposes Service Elements to one or more USP Controllers</td>
+</tr>
+<tr class="odd">
+<td align="left">USP Controller</td>
+<td align="left">A USP Controller is a USP Endpoint that manipulates Service Elements through one or more USP Agents.</td>
+</tr>
+<tr class="even">
+<td align="left">Wireline 5G Access Network (W-5GAN)</td>
+<td align="left">This is a wireline AN that can connect to a 5G core via the AGF. The egress interfaces of a W-5GAN form the border between access and core. They are N2 for the control plane and N3 for the user plane.</td>
+</tr>
+</table>
+
+<h2 id="sec:abbreviations">2.4 Abbreviations<a class="headerlink" href="03-index-references-and-terminology.html#sec:abbreviations" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>This Technical Report defines the following abbreviations:</p>
+
+<table>
+<col width="18%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">5WE</th>
+<th align="left">5G WWC Encapsulation</th>
+</tr>
+<tr class="odd">
+<td align="left">AAA</td>
+<td align="left">Authentication, Authorization and Accounting</td>
+</tr>
+<tr class="even">
+<td align="left">AAL</td>
+<td align="left">ATM Adaptation Layer</td>
+</tr>
+<tr class="odd">
+<td align="left">ac</td>
+<td align="left">alternating current</td>
+</tr>
+<tr class="even">
+<td align="left">ADSL</td>
+<td align="left">Asynchronous Digital Subscriber Line</td>
+</tr>
+<tr class="odd">
+<td align="left">AFTR</td>
+<td align="left">Address family transition router</td>
+</tr>
+<tr class="even">
+<td align="left">AGF</td>
+<td align="left">Access Gateway Function</td>
+</tr>
+<tr class="odd">
+<td align="left">ALG</td>
+<td align="left">Application Layer Gateway</td>
+</tr>
+<tr class="even">
+<td align="left">AMF</td>
+<td align="left">Access Management Function</td>
+</tr>
+<tr class="odd">
+<td align="left">AN</td>
+<td align="left">Access Network</td>
+</tr>
+<tr class="even">
+<td align="left">ANSI</td>
+<td align="left">American National Standards Institute</td>
+</tr>
+<tr class="odd">
+<td align="left">AS</td>
+<td align="left">Access Stratum</td>
+</tr>
+<tr class="even">
+<td align="left">ASCII</td>
+<td align="left">American Standard Code for Information Interchange</td>
+</tr>
+<tr class="odd">
+<td align="left">ATA</td>
+<td align="left">Analog Terminal Adapter</td>
+</tr>
+<tr class="even">
+<td align="left">ATM</td>
+<td align="left">Asynchronous Transfer Mode</td>
+</tr>
+<tr class="odd">
+<td align="left">BFD</td>
+<td align="left">Bidirectional forwarding detection</td>
+</tr>
+<tr class="even">
+<td align="left">CP</td>
+<td align="left">Control Plane</td>
+</tr>
+<tr class="odd">
+<td align="left">CPE</td>
+<td align="left">Customer Premises Equipment</td>
+</tr>
+<tr class="even">
+<td align="left">CRC</td>
+<td align="left">Cyclic Redundancy Check</td>
+</tr>
+<tr class="odd">
+<td align="left">CSA</td>
+<td align="left">Canadian Standards Association</td>
+</tr>
+<tr class="even">
+<td align="left">DAD</td>
+<td align="left">Duplicate address detection</td>
+</tr>
+<tr class="odd">
+<td align="left">DHCP</td>
+<td align="left">Dynamic Host Configuration Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">DLNA</td>
+<td align="left">Digital living network alliance (www.dlna.org)</td>
+</tr>
+<tr class="odd">
+<td align="left">DNS</td>
+<td align="left">Domain Name Server</td>
+</tr>
+<tr class="even">
+<td align="left">DoS</td>
+<td align="left">Denial of Service</td>
+</tr>
+<tr class="odd">
+<td align="left">DSCP</td>
+<td align="left">Differentiated Services Code Point</td>
+</tr>
+<tr class="even">
+<td align="left">DSL</td>
+<td align="left">Digital Subscriber Line</td>
+</tr>
+<tr class="odd">
+<td align="left">DUID</td>
+<td align="left">DHCP Unique Identifier</td>
+</tr>
+<tr class="even">
+<td align="left">DUID-EN</td>
+<td align="left">DUID based Enterprise Number</td>
+</tr>
+<tr class="odd">
+<td align="left">FCC</td>
+<td align="left">Federal Communications Commission</td>
+</tr>
+<tr class="even">
+<td align="left">FQDN</td>
+<td align="left">Fully Qualified Domain Name</td>
+</tr>
+<tr class="odd">
+<td align="left">GMT</td>
+<td align="left">Greenwich Mean Time</td>
+</tr>
+<tr class="even">
+<td align="left">GUI</td>
+<td align="left">Graphical User Interface</td>
+</tr>
+<tr class="odd">
+<td align="left">HTML</td>
+<td align="left">Hypertext Markup Language</td>
+</tr>
+<tr class="even">
+<td align="left">HTTP</td>
+<td align="left">Hypertext Transfer Protocol</td>
+</tr>
+<tr class="odd">
+<td align="left">HTTPS</td>
+<td align="left">Secure Hypertext Transfer Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">Hz</td>
+<td align="left">Hertz</td>
+</tr>
+<tr class="odd">
+<td align="left">IAID</td>
+<td align="left">Identification Association Identifier</td>
+</tr>
+<tr class="even">
+<td align="left">IEEE®</td>
+<td align="left">The Institute of Electrical and Electronics Engineers</td>
+</tr>
+<tr class="odd">
+<td align="left">IETF</td>
+<td align="left">The Internet Engineering Task Force</td>
+</tr>
+<tr class="even">
+<td align="left">IMEI</td>
+<td align="left">International Mobile Equipment Identity</td>
+</tr>
+<tr class="odd">
+<td align="left">IMSI</td>
+<td align="left">International Mobile Subscriber Identity</td>
+</tr>
+<tr class="even">
+<td align="left">INP</td>
+<td align="left">Impulse noise protection</td>
+</tr>
+<tr class="odd">
+<td align="left">IP</td>
+<td align="left">Internet Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">IPCP</td>
+<td align="left">Internet Protocol Control Protocol</td>
+</tr>
+<tr class="odd">
+<td align="left">ISO</td>
+<td align="left">International Organization for Standardization</td>
+</tr>
+<tr class="even">
+<td align="left">ITU</td>
+<td align="left">International Telecommunication Union</td>
+</tr>
+<tr class="odd">
+<td align="left">Kbps</td>
+<td align="left">kilobits per second</td>
+</tr>
+<tr class="even">
+<td align="left">LAN</td>
+<td align="left">Local Area Network</td>
+</tr>
+<tr class="odd">
+<td align="left">LCP</td>
+<td align="left">Link Control Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">LPF</td>
+<td align="left">Low-pass filter</td>
+</tr>
+<tr class="odd">
+<td align="left">MAC</td>
+<td align="left">Medium Access Control</td>
+</tr>
+<tr class="even">
+<td align="left">MRU</td>
+<td align="left">Maximum Receive Unit</td>
+</tr>
+<tr class="odd">
+<td align="left">ms</td>
+<td align="left">millisecond</td>
+</tr>
+<tr class="even">
+<td align="left">MTBF</td>
+<td align="left">Mean Time Between Failure</td>
+</tr>
+<tr class="odd">
+<td align="left">MTU</td>
+<td align="left">Maximum Transit Unit</td>
+</tr>
+<tr class="even">
+<td align="left">NAS</td>
+<td align="left">Non-Access Stratum</td>
+</tr>
+<tr class="odd">
+<td align="left">NAT</td>
+<td align="left">Network Address Translation</td>
+</tr>
+<tr class="even">
+<td align="left">NTP</td>
+<td align="left">Network Time Protocol</td>
+</tr>
+<tr class="odd">
+<td align="left">ONU</td>
+<td align="left">Optical Network Unit</td>
+</tr>
+<tr class="even">
+<td align="left">PADI</td>
+<td align="left">PPPoE Active Discovery Initiation</td>
+</tr>
+<tr class="odd">
+<td align="left">PADO</td>
+<td align="left">PPPoE Active Discovery Offer</td>
+</tr>
+<tr class="even">
+<td align="left">PC</td>
+<td align="left">Personal Computer</td>
+</tr>
+<tr class="odd">
+<td align="left">PCP</td>
+<td align="left">Priority Code Point</td>
+</tr>
+<tr class="even">
+<td align="left">PD</td>
+<td align="left">Prefix Delegation</td>
+</tr>
+<tr class="odd">
+<td align="left">PDU</td>
+<td align="left">Protocol Data Unit</td>
+</tr>
+<tr class="even">
+<td align="left">POTS</td>
+<td align="left">Plain Old Telephone Service</td>
+</tr>
+<tr class="odd">
+<td align="left">PPP</td>
+<td align="left">Point to Point Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">PVC</td>
+<td align="left">Permanent Virtual Circuit</td>
+</tr>
+<tr class="odd">
+<td align="left">QFI</td>
+<td align="left">QoS Flow Identifier</td>
+</tr>
+<tr class="even">
+<td align="left">RA</td>
+<td align="left">Router Advertisement</td>
+</tr>
+<tr class="odd">
+<td align="left">RG</td>
+<td align="left">Residential Gateway</td>
+</tr>
+<tr class="even">
+<td align="left">RQI</td>
+<td align="left">Reflective QoS Indication</td>
+</tr>
+<tr class="odd">
+<td align="left">RTSP</td>
+<td align="left">Real time streaming protocol</td>
+</tr>
+<tr class="even">
+<td align="left">SIP</td>
+<td align="left">Session Initiation Protocol</td>
+</tr>
+<tr class="odd">
+<td align="left">SN</td>
+<td align="left">Serial Number</td>
+</tr>
+<tr class="even">
+<td align="left">SNTP</td>
+<td align="left">Simple Network Time Protocol</td>
+</tr>
+<tr class="odd">
+<td align="left">SSL</td>
+<td align="left">Secure Sockets Layer</td>
+</tr>
+<tr class="even">
+<td align="left">SUCI</td>
+<td align="left">Subscriber Concealed Identifier</td>
+</tr>
+<tr class="odd">
+<td align="left">SUPI</td>
+<td align="left">Subscriber Permanent Identifier</td>
+</tr>
+<tr class="even">
+<td align="left">TCP</td>
+<td align="left">Transmission Control Protocol</td>
+</tr>
+<tr class="odd">
+<td align="left">TLS</td>
+<td align="left">Transport Layer Security</td>
+</tr>
+<tr class="even">
+<td align="left">TR</td>
+<td align="left">Technical Report</td>
+</tr>
+<tr class="odd">
+<td align="left">UDP</td>
+<td align="left">User Datagram Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">UE</td>
+<td align="left">User Equipment</td>
+</tr>
+<tr class="odd">
+<td align="left">UL</td>
+<td align="left">Underwriters Laboratories</td>
+</tr>
+<tr class="even">
+<td align="left">ULA</td>
+<td align="left">User licensing agreement</td>
+</tr>
+<tr class="odd">
+<td align="left">ULC</td>
+<td align="left">Underwriters Laboratories Canada</td>
+</tr>
+<tr class="even">
+<td align="left">UP</td>
+<td align="left">User Plane</td>
+</tr>
+<tr class="odd">
+<td align="left">URSP</td>
+<td align="left">UE Route Selection Policy</td>
+</tr>
+<tr class="even">
+<td align="left">USB</td>
+<td align="left">Universal Serial Bus</td>
+</tr>
+<tr class="odd">
+<td align="left">Vac</td>
+<td align="left">Volts ac</td>
+</tr>
+<tr class="even">
+<td align="left">VCI</td>
+<td align="left">Virtual Circuit Identifier</td>
+</tr>
+<tr class="odd">
+<td align="left">Vdc</td>
+<td align="left">Volts dc</td>
+</tr>
+<tr class="even">
+<td align="left">VDSL</td>
+<td align="left">Very high-speed Digital Subscriber Line</td>
+</tr>
+<tr class="odd">
+<td align="left">VID</td>
+<td align="left">VLAN Identifier</td>
+</tr>
+<tr class="even">
+<td align="left">VLAN</td>
+<td align="left">Virtual LAN</td>
+</tr>
+<tr class="odd">
+<td align="left">VoIP</td>
+<td align="left">Voice over IP</td>
+</tr>
+<tr class="even">
+<td align="left">VPI</td>
+<td align="left">Virtual Path Identifier</td>
+</tr>
+<tr class="odd">
+<td align="left">VSO</td>
+<td align="left">Vendor Specific Option</td>
+</tr>
+<tr class="even">
+<td align="left">WAN</td>
+<td align="left">Wide Area Network</td>
+</tr>
+<tr class="odd">
+<td align="left">WEP</td>
+<td align="left">Wireless Encryption Protocol</td>
+</tr>
+<tr class="even">
+<td align="left">Wi-Fi®</td>
+<td align="left">Wi-Fi Alliance wireless standards organization</td>
+</tr>
+<tr class="odd">
+<td align="left">WPA</td>
+<td align="left">Wi-Fi Protected Access</td>
+</tr>
+<tr class="even">
+<td align="left">WWC</td>
+<td align="left">Wireline Wireless Convergence</td>
+</tr>
+</table>
+

@@ -1,0 +1,97 @@
+---
+WAN.DHCPC.BFDKA:
+  name: |
+    BFD Keep-alive
+
+  requirements:
+    1: |
+      RG MUST support the BFD protocol for IP Session Keep-alive. The BFD
+      implementation MUST be compliant with the BFD standard as described in
+      the RFC 5880 [@RFC5880] .
+
+    2: |
+      BFD MUST be initiated after both the RG and the IP Edge's IP addresses
+      are available on the RG.
+
+    3: |
+      The RG MUST take on the Passive role during BFD session initiation.
+
+    4: |
+      The RG MUST support BFD Demand mode
+
+    5: |
+      The RG MUST support BFD Asynchronous mode.
+
+    6: |
+      The RG MUST be able to process BFD echo packets in the data plane as
+      specified in RFC 5881 [@RFC5881].
+
+    7: |
+      The RG MUST be able to configure the DSCP bits of BFD packets.
+
+    8: |
+      The RG MUST be able to configure the Ethernet Priority bits of BFD
+      packets.
+
+    9: |
+      The RG SHOULD respond to IP Edge initiated BFD polls using the same DSCP
+      and Ethernet Priority values received in the packet
+
+    10: |
+      The RG MUST ignore IP packets arriving on the BFD UDP port other than
+      those originating on the IP Edge.
+
+    11: |
+      The BFD configuration on the RG MUST be configurable using Broadband Forum TR-069 [@TR-069].
+
+    12: |
+      When using BFD Demand mode, the RG MUST run an inactivity timer based on
+      the Detect Interval negotiated with the IP Edge.
+
+    13: |
+      When a BFD session on the RG receives a poll with a Diag code set to
+      "Path Down" it MUST perform the following actions:
+
+      * Transition into the Down state;
+
+      * Respond to the poll with the Diag code set to 3 ("Neighbor Signaled
+      BFD Session Down")
+
+      * Prompt the DHCP client to transition into the Init-Reboot state for
+      DHCPv4 initiated IP Sessions.
+
+      * Prompt the DHCP client to send a CONFIRM message for DHCPv6 initiated
+      IP Sessions.
+
+    14: |
+      The RG DHCP client MUST be able to enter DHCPv4 Init-Reboot state or
+      DHCPv6 Confirm state upon detecting that BFD has transitioned into
+      "Down" state.
+
+    15: |
+      The RG MUST use the IP Edge address as the destination for BFD Control
+      packets.
+
+    16: |
+      The RG MUST be able to be pre-provisioned with the following Broadband
+      Forum specified default configuration:
+
+      * Version (1)
+
+      * Control Plane Independent (0)
+
+      * Authentication Present (0)
+
+      * Demand (1)
+
+      * Detect Multiplier (3)
+
+      * Local Discriminator (a random 32-bit value)
+
+      * Desired Minimum Transmit Interval (1,000,000)
+
+      * Required Minimum Receive Interval (1,000,000)
+
+      * Required Minimum Echo Receive Interval (0)
+
+      * State (Down)

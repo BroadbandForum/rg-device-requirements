@@ -1,0 +1,118 @@
+---
+WAN.IPv6:
+  name: |
+    IPv6 WAN Connection
+
+  requirements:
+    1: |
+      The RG MUST support automated establishment of an IPv6 connection
+      according to the flow in Annex A.2.
+
+    2: |
+      The RG MUST support a dual stack of IPv4 and IPv6 running
+      simultaneously, as described in section 2 of RFC 4213 [@RFC4213].
+
+    3: |
+      The RG MUST allow the IPv6 stack to be enabled / disabled.
+
+    4: |
+      The RG MUST support DHCPv6 client messages and behavior per IETF RFC
+      []{} 3315. See WAN.DHCPC.5 for further specifics on IAID value.
+
+    5: |
+      The RG MUST support the role of the CPE requesting router in RFC 3633 [@RFC3633].
+
+    6: |
+      The RG MUST support specifying in its DHCPv6 prefix delegation request
+      an indication of the length of prefix it requires. If the RG supports
+      multiple LANs, or has PD requests from its LAN, it MUST indicate a
+      preferred prefix length that would at least enable the RG to assign a
+      /64 prefix to each LAN it supports. Note that the delegated prefix may
+      vary from the requested length.
+
+    7: |
+      When sending DHCPv6 messages, the RG MUST identify itself in
+      OPTION_CLIENTID (1) (client-identifier) using the same client identifier
+      as for IPv4 (see WAN.DHCPC.3 and .4).
+
+    8: |
+      The RG MUST support IPv6 node requirements as a host node, per RFC 6434
+      [@RFC6434].
+
+    9: |
+      The RG MUST support stateless address auto-configuration (SLAAC) as a
+      host, per RFC 4862 [@RFC4862].
+
+    10: |
+      The RG MUST support receipt of route information per RFC 4191 [@RFC4191]. If the RG
+      only has one WAN connection, it does not need to place this information
+      in its routing table, but it does need to save it (for possible
+      forwarding on the LAN interface).
+
+    11: |
+      If route information is provided (RFC 4191 [@RFC4191]) and the RG has multiple WAN
+      connections, it MUST place the route information in its routing table.
+
+    12: |
+      If the RG does not have a globally-scoped address on its WAN interface
+      after having been delegated a prefix, it MUST create addresses for
+      itself from the delegated prefix. It MUST have at least one address and
+      MAY have more.
+
+      There is currently no algorithm defined for address creation. It should
+      be assumed that different service providers will want different rules
+      for how to create the address, how many addresses to create, and in the
+      case of multiple addresses, how the different addresses are used.
+
+    13: |
+      *Requirement deleted; redundant with WAN.IPv6.3*
+
+    14: |
+      The RG MUST be able to request the following DHCPv6 options: IA_NA (RFC
+      3315), reconfigure accept (RFC 3315 [@RFC3315]), IA_PD (RFC 3633 [@RFC3633]), and DNS_SERVERS
+      ([@RFC3646]).
+
+    15: |
+      The RG SHOULD be able to request the following DHCPv6 options:
+      SNTP_SERVERS ([@RFC4075]), domain search list ([@RFC3646]), and Client FQDN
+      ([@RFC4704]).
+
+    16: |
+      The RG MUST be configurable as to which DHCPv6 options it requests via
+      DHCPv6.
+
+    17: |
+      The connectivity parameters (obtained via RA and DHCPv6) MUST persist
+      across loss of WAN connection (or lack of response from WAN connection).
+
+    18: |
+      The RG MUST continue to use the connectivity parameters (obtained via RA
+      or DHCP) and consider them valid until either they expire or the RG is
+      explicitly told to use different values.
+
+    19: |
+      The RG MUST NOT advertise any address prefixes on the WAN using the IPv6
+      neighbor discovery protocol, or advertise itself as a default router.
+
+    20: |
+      The RG MUST provide up to 4 instances of option-data within a single
+      OPTION_VENDOR_OPTS (17) (RFC 3315 [@RFC3315]) with IANA "ADSL Forum" Enterprise
+      Number as the enterprise-number. Each instance will have one of the 4
+      sub-options from WAN.DHCPC.7 as the vendor-specific opt-code, with the
+      corresponding value in the vendor-specific option-data. If the value of
+      a parameter is empty for the RG, then the sub-option MUST be omitted. If
+      there are no values to provide, the entire option MUST be omitted.
+
+    21: |
+      The RG SHOULD be able to request the following DHCPv6 options: address
+      selection policy ([@RFC7078]) and DNS selection policy ([@RFC6731]).
+
+    22: |
+      If route information is provided (draft-ietf-mif-dhcpv6-route-option)
+      and the RG has multiple WAN connections, it MUST place the route
+      information in its routing table.
+
+    23: |
+      The RG SHOULD generate address selection policy based on policies
+      obtained from each WAN link by DHCPv6 option
+      (draft-ietf-6man-addr-select-opt) or manually configured policy.

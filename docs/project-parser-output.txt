@@ -1,0 +1,24 @@
+make[1]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/BUSDM-DEVREQREL-JOB1/project/bbf'
+rm -f   
+rm -f  ./docs/PROJECT.yaml.outputs
+rm -f -r  ./docs/PROJECT
+make[1]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/BUSDM-DEVREQREL-JOB1/project/bbf'
+make[1]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/BUSDM-DEVREQREL-JOB1/project/bbf'
+PYTHONPATH=./../../install/python/ ./../../install/bin/project-parser.py --outdir=./docs --loglevel=1 PROJECT.yaml >docs/PROJECT.yaml.outputs || true
+INFO:project-parser:created WT-124 project (valid)
+INFO:project-parser:validated projects
+INFO:project-parser:wrote ./docs/README.md
+INFO:project-parser:wrote ./docs/CHANGELOG.md
+INFO:project-parser:wrote ./docs/METADATA.yaml
+INFO:project-parser:wrote ./docs/METADATA.md
+INFO:project-parser:wrote ./docs/METADATA.mk
+cp -p PROJECT.yaml docs/PROJECT/PROJECT.yaml.txt
+cp -p ./docs/README.md docs/PROJECT/README.md.txt
+LUA_PATH=./../../install/pandoc/?.lua;; pandoc --strip-comments --data-dir=./../../install/pandoc/ --defaults=bbf-defaults.yaml --metadata-file=./../../install/pandoc/bbf-metadata.yaml --metadata=PYTHONDIR:./../../install/python/ --metadata=citation-style:./../../install/pandoc/csl/bbf.csl --resource-path=.:./docs:./docs/:./../../install/pandoc/css/:./../../install/pandoc/ --bibliography=tr-069-biblio-csl.json --bibliography=ansi-biblio-csl.json --bibliography=iso-biblio-csl.json --bibliography=w3c-biblio-csl.json --bibliography=3gpp-biblio-csl.json --bibliography=ieee-biblio-csl.json --bibliography=ietf-biblio-csl.json --bibliography=itu-biblio-csl.json --css=bbf.css --css=extra.css --css=toc.css --css=release.css --standalone --template=default-template.html --lua-filter expand-macros.lua --lua-filter list-table.lua ./docs/README.md --output=docs/PROJECT/README.html
+cp -p ./docs/CHANGELOG.md docs/PROJECT/CHANGELOG.md.txt
+LUA_PATH=./../../install/pandoc/?.lua;; pandoc --strip-comments --data-dir=./../../install/pandoc/ --defaults=bbf-defaults.yaml --metadata-file=./../../install/pandoc/bbf-metadata.yaml --metadata=PYTHONDIR:./../../install/python/ --metadata=citation-style:./../../install/pandoc/csl/bbf.csl --resource-path=.:./docs:./docs/:./../../install/pandoc/css/:./../../install/pandoc/ --bibliography=tr-069-biblio-csl.json --bibliography=ansi-biblio-csl.json --bibliography=iso-biblio-csl.json --bibliography=w3c-biblio-csl.json --bibliography=3gpp-biblio-csl.json --bibliography=ieee-biblio-csl.json --bibliography=ietf-biblio-csl.json --bibliography=itu-biblio-csl.json --css=bbf.css --css=extra.css --css=toc.css --css=release.css --standalone --template=default-template.html --lua-filter expand-macros.lua --lua-filter list-table.lua ./docs/CHANGELOG.md --output=docs/PROJECT/CHANGELOG.html
+cp -p ./docs/METADATA.yaml docs/PROJECT/METADATA.yaml.txt
+cp -p ./docs/METADATA.md docs/PROJECT/METADATA.md.txt
+LUA_PATH=./../../install/pandoc/?.lua;; pandoc --strip-comments --data-dir=./../../install/pandoc/ --defaults=bbf-defaults.yaml --metadata-file=./../../install/pandoc/bbf-metadata.yaml --metadata=PYTHONDIR:./../../install/python/ --metadata=citation-style:./../../install/pandoc/csl/bbf.csl --resource-path=.:./docs:./docs/:./../../install/pandoc/css/:./../../install/pandoc/ --bibliography=tr-069-biblio-csl.json --bibliography=ansi-biblio-csl.json --bibliography=iso-biblio-csl.json --bibliography=w3c-biblio-csl.json --bibliography=3gpp-biblio-csl.json --bibliography=ieee-biblio-csl.json --bibliography=ietf-biblio-csl.json --bibliography=itu-biblio-csl.json --css=bbf.css --css=extra.css --css=toc.css --css=release.css --standalone --template=default-template.html --lua-filter expand-macros.lua --lua-filter list-table.lua ./docs/METADATA.md --output=docs/PROJECT/METADATA.html
+cp -p ./docs/METADATA.mk docs/PROJECT/METADATA.mk.txt
+make[1]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/BUSDM-DEVREQREL-JOB1/project/bbf'

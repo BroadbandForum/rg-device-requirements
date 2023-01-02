@@ -1,0 +1,7 @@
+---
+WAN.DHCPv6:
+  name: |
+    DHCP Client (DHCPv6)
+
+  categories:
+    - !include WAN.DHCPv6.ERP.yaml

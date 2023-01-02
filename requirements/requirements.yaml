@@ -1,0 +1,15 @@
+---
+requirements:
+  name: |
+    Residential Gateway Requirements
+
+  categories:
+    - !include GEN.yaml
+    - !include WAN.yaml
+    - !include LAN.yaml
+    - !include MGMT.yaml
+    - !include IF.yaml
+    - !include SEC.yaml
+    - !include RGSMART.yaml
+    - !include REGIONAL.yaml
+    - !include 5G-WWC.yaml

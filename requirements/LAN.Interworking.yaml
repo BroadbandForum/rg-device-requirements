@@ -1,0 +1,7 @@
+---
+LAN.Interworking:
+  name: |
+    3GPP Interworking
+
+  categories:
+    - !include LAN.Interworking.UE-Authentication.yaml

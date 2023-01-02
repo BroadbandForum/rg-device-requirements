@@ -1,0 +1,19 @@
+---
+WAN.QoS.VLAN:
+  name: |
+    VLAN based QoS
+
+  requirements:
+    1: |
+      The RG MUST support sending the following frame types: untagged frames,
+      priority-tagged frames, and VLAN-tagged frames in the upstream
+      direction. This satisfies Broadband Forum TR-101 [@TR-101] R-01.
+
+    2: |
+      The RG MUST support setting the priority tag and VLAN ID values. This
+      satisfies Broadband Forum TR-101 [@TR-101] R-03.
+
+    3: |
+      The RG MUST support receiving untagged and VLAN-tagged Ethernet frames
+      in the downstream direction, and MUST be able to strip the VLAN tagging
+      from the ones received tagged. This satisfies Broadband Forum TR-101 [@TR-101] R-04.

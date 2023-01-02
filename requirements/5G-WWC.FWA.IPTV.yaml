@@ -1,0 +1,14 @@
+---
+5G-WWC.FWA.IPTV:
+  name: |
+    5G WWC Fixed Wireless Access IPTV
+
+  requirements:
+    1: |
+      The RG MUST support retrieve IPTV service via 5G network as specified in
+      3GPP TS 23.316 3GPP TS 23.316 [@3GPP-TS.23.316] clause 7.7.1.1. Examples including the interactions
+      between STB and 5G-RG are given in APPENDIX VII.
+
+      The RG MUST distinguish the traffic belongs to Internet or IPTV network
+      via the pre-configured traffic filters for IPTV and/or Internet in the
+      RG and send the traffic to corresponding network.

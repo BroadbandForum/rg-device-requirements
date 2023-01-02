@@ -1,0 +1,31 @@
+<!-- <h1 class="new-page display-none" id="sec:bbftype-impact">3 Technical Report Impact<a class="headerlink" href="04-index-bbftype-impact.html#sec:bbftype-impact" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h1> -->
+
+<h2 id="sec:energy-efficiency">3.1 Energy Efficiency<a class="headerlink" href="04-index-bbftype-impact.html#sec:energy-efficiency" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>TR-124 contains regional power requirements for Residential Gateway
+(RG) devices. In general, there is an expectation that these devices
+will meet all local regulatory requirements for powering and energy
+consumption.</p>
+
+<h2 id="sec:ipv6">3.2 IPv6<a class="headerlink" href="04-index-bbftype-impact.html#sec:ipv6" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>Issue 2 of this Technical Report was published specifically to provide
+requirements needed for deployment of IPv6 capable RGs. Issue 3 includes
+a number of minor extensions, corrections and clarifications.</p>
+
+<h2 id="sec:security">3.3 Security<a class="headerlink" href="04-index-bbftype-impact.html#sec:security" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>The requirements in TR-124 are intended to provide a reasonably
+secure environment for general consumers, while ensuring that the
+functionality is usable by consumers, such that they do not feel that
+the degree of security is preventing them from accomplishing what they
+want to do.</p>
+
+<p>The requirements are also intended to ensure that the RG does not have a
+negative impact on the security of the access network and other users of
+the access network.</p>
+
+<h2 id="sec:privacy">3.4 Privacy<a class="headerlink" href="04-index-bbftype-impact.html#sec:privacy" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>TR-124 does not explicitly address privacy requirements.</p>
+

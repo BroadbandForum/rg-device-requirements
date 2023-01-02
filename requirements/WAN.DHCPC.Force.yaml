@@ -1,0 +1,18 @@
+---
+WAN.DHCPC.Force:
+  name: |
+    Force renew
+
+  requirements:
+    1: |
+      The RG MUST support the use of DHCP force renew ([@RFC3203])
+      for changing the configuration
+      parameters or the IP address associated with an IP session.
+
+    2: |
+      The RG MUST support sending the FORCERENEW_NONCE_CAPABLE option in the
+      DHCP discover and in the DHCP request messages, as per RFC 6704 [@RFC6704].
+
+    3: |
+      The RG MUST support using the Forcerenew nonce for validating DHCP
+      ForceRenew messages received from the DHCP server, as per RFC 6704 [@RFC6704].

@@ -1,0 +1,44 @@
+---
+WAN.TRANS.DS-Lite:
+  name: |
+    Dual Stack Lite Transition Mechanism
+
+  requirements:
+    1: |
+      The RG MUST support DS-Lite (RFC 6333 [@RFC6333]) with IPv4 in IPv6 encapsulation
+      (RFC 2473 [@RFC2473]).
+
+    2: |
+      *This requirement replaced by requirement WAN.TRANS.DS-Lite.6.*
+
+    3: |
+      The RG MUST configure a static IPv4 default route toward the DS-Lite
+      tunnel.
+
+    4: |
+      The RG MUST deactivate the NAPT function on the DS-Lite interface.
+
+    5: |
+      The RG MUST support enabling and disabling of DS-Lite.
+
+    6: |
+      The RG MUST be able to use the DHCPv6 option to retrieve the FQDN of the
+      AFTR element, as defined in RFC 6334 [@RFC6334].
+
+    7: |
+      Manual configuration on the RG of the FQDN or the IPv6 address of the
+      AFTR element SHOULD be supported.
+
+    8: |
+      Remote configuration from a Controller of the FQDN or the IPv6 address
+      of the AFTR element SHOULD be supported.
+
+    9: |
+      The RG MUST support configurable precedence between the FQDN and the
+      IPv6 address.
+
+    10: |
+      The RG MUST support configurable precedence between dynamic or static
+      configuration of the IPv6 address of the AFTR element when both are
+      available. The RG MUST use DHCPv6 by default or use an operator-specific
+      configuration.

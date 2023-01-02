@@ -1,0 +1,69 @@
+{
+  "testspecs": {
+    "parse-yaml": {
+      "regex": "parse\\-yaml:(.*?)(.*?):\\ (.*?)",
+      "severity": "E"
+    },
+    "parse-yaml-argument-must-be-a-single-item-dict-not": {
+      "regex": "parse\\-yaml:(.*?)argument\\ must\\ be\\ a\\ single\\-item\\ dict,\\ not\\ (.*?)",
+      "severity": "W"
+    },
+    "parse-yaml-cant-load-from-already-loaded-from": {
+      "regex": "parse\\-yaml:(.*?)can't\\ load\\ (.*?)\\ from\\ (.*?);\\ already\\ loaded\\ from\\ (.*?)",
+      "severity": "W"
+    },
+    "parse-yaml-cant-specify-both-dict-valued-categories-and-categories-dict": {
+      "regex": "parse\\-yaml:(.*?)can't\\ specify\\ both\\ dict\\-valued\\ 'categories'\\ and\\ 'categories\\-dict'",
+      "severity": "W"
+    },
+    "parse-yaml-cant-specify-both-list-valued-categories-and-categories-list": {
+      "regex": "parse\\-yaml:(.*?)can't\\ specify\\ both\\ list\\-valued\\ 'categories'\\ and\\ 'categories\\-list'",
+      "severity": "W"
+    },
+    "parse-yaml-category-doesnt-match-key": {
+      "regex": "parse\\-yaml:(.*?)category\\ (.*?)\\ doesn't\\ match\\ key\\ (.*?)",
+      "severity": "W"
+    },
+    "parse-yaml-duplicate-node-path": {
+      "regex": "parse\\-yaml:(.*?)duplicate\\ node\\ path\\ (.*?)",
+      "severity": "E"
+    },
+    "parse-yaml-duplicate-requirement-path": {
+      "regex": "parse\\-yaml:(.*?)duplicate\\ requirement\\ path\\ (.*?)",
+      "severity": "E"
+    },
+    "parse-yaml-failed-to-load": {
+      "regex": "parse\\-yaml:(.*?)failed\\ to\\ load\\ (.*?):\\ (.*?)",
+      "severity": "E"
+    },
+    "parse-yaml-file-not-found": {
+      "regex": "parse\\-yaml:(.*?)(.*?)\\ file\\ not\\ found",
+      "severity": "W"
+    },
+    "parse-yaml-invalid-value-should-be-a-dict": {
+      "regex": "parse\\-yaml:(.*?)invalid\\ (.*?)\\ value\\ should\\ be\\ a\\ dict",
+      "severity": "W"
+    },
+    "parse-yaml-key-doesnt-match-filename": {
+      "regex": "parse\\-yaml:(.*?)key\\ (.*?)\\ doesn't\\ match\\ filename\\ (.*?)",
+      "severity": "W"
+    },
+    "parse-yaml-should-use-rather-than-to-reference-requirements": {
+      "regex": "parse\\-yaml:(.*?)should\\ use\\ (.*?)\\ rather\\ than\\ (.*?)\\ to\\ reference\\ requirements",
+      "severity": "W"
+    },
+    "parse-yaml-these-files-werent-loaded": {
+      "regex": "parse\\-yaml:(.*?)these\\ files\\ weren't\\ loaded:\\ (.*?)",
+      "severity": "W"
+    },
+    "parse-yaml-unexpected-parent-need-to-define-category": {
+      "regex": "parse\\-yaml:(.*?)(.*?):\\ unexpected\\ parent\\ (.*?)\\ \\(need\\ to\\ define\\ category\\ (.*?)\\)",
+      "severity": "W"
+    },
+    "unknown-error": {
+      "regex": null,
+      "severity": "E"
+    }
+  },
+  "toolpath": "parse-yaml.py"
+}

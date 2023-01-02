@@ -1,0 +1,27 @@
+---
+WAN.L2tpClient:
+  name: |
+    L2tp VPN Remote Access
+
+  requirements:
+    1: |
+      The device MAY support L2TPv2 VPN, as defined in RFC 2661 [@RFC2661].
+
+    2: |
+      The device SHOULD support L2TPv3 VPN, as defined in IETF RFC 3931 [@RFC3931].
+
+    3: |
+      If the device supports L2TP VPN, it SHOULD support L2TP Disconnect Cause
+      Information, as defined in RFC 3145 [@RFC3145].
+
+    4: |
+      If the device supports L2TP VPN, it MUST support L2TP/IPSec VPN
+      connection.
+
+    5: |
+      If the device supports L2TP VPN, it MUST support LNS functions, as
+      defined in RFC 2661 [@RFC2661] or RFC 3931 [@RFC3931].
+
+    6: |
+      If the device supports L2TP VPN, it MUST support configuring the L2TP
+      VPN via Web GUI or from a Controller.

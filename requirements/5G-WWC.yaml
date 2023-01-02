@@ -1,0 +1,106 @@
+---
+5G-WWC:
+  name: |
+    General 5G WWC
+
+  categories:
+    - !include 5G-WWC.Identifiers.yaml
+    - !include 5G-WWC.FWA.yaml
+    - !include 5G-WWC.WAN.yaml
+    - !include 5G-WWC.LAN.yaml
+
+  description:
+    |
+    The 5G-WWC set of requirements define a WAN behavior that is exclusive of the other behaviors defined in TR-124. For WWC this is referred to as 5G-RG mode of operation, and the non 5G behaviors are referred to as the FN-RG mode of operation. A device may be configured to exclusively use one mode of operation or the other, or may be a hybrid of the two via either VLAN or Ethertype separation of WAN traffic into distinct interfaces presenting a mix of 5G and non 5G interfaces to the device.
+
+    The following table illustrates the set of common and mode specific
+    functionalities between the two modes of operation.
+
+      -----------------------------------------
+      **Mutually exclusive
+      requirements**
+      -------------------- --------------------
+      **5G-RG mode of      **FN-RG mode of
+      operation**          operation**
+
+      5G-WWC               WAN.CONNECT
+
+      5G-WWC.FWA           WAN.CONNECT.ON-DEMAND
+
+      5G-WWC.WAN           WAN.ETHOAM
+
+      5G-WWC.Identifiers   WAN.DHCPC.force
+
+      5G-WWC.WAN.CP        WAN.DHCPC.BFDecho
+
+      5G-WWC.WAN.UP        WAN.IPv6
+
+      5G-WWC.WAN.UP.QOS    WAN.TRANS.6rd
+
+                           WAN.TRANS.DSLite
+
+                           WAN.TRANS.v4-release-control
+
+                           WAN.TRANS.MAP-E
+
+                           WAN.PPP
+
+                           WAN.PPP.IPv6
+
+                           WAN.dot1x
+
+      **Common
+      Requirements**
+
+      WAN.DHCPC
+      requirements
+
+      WAN.IPv6
+      requirements 4, 5,
+      6, 7, 8, 9, 14, & 19
+
+      WAN.QOS requirements
+      3, 4, 9, 10, 11, &
+      12
+
+      WAN.QOS.VLAN
+
+      MGMT.REMOTE.TR-069
+      ----------------------------------------------------------------------------------------------------------
+
+    *Note - WAN.ATM & WAN.ATM.MULTI are out of scope.*
+
+    It is recommended that implementers read TR-470 [@TR-470] 5G FMC
+    Architecture Overview in conjunction with interpreting these
+    requirements; in particular, the section 5G-RG Overview of Operation.
+
+  requirements:
+    1: |
+      An RG that implements both modes of operation SHOULD be able to support
+      both modes of operation simultaneously.
+
+    2: |
+      An RG that implements both modes of operation MUST be able to be
+      configured to disable the 5G-RG mode of operation
+
+    3: |
+      An RG that implements both modes of operation MUST be able to be
+      configured to disable the FN-RG mode of operation
+
+    4: |
+      The RG SHOULD support URSP as specified in 3GPP TS 23.503 [@3GPP-TS.23.503] with
+      modification specified in 3GPP TS 23.316 [@3GPP-TS.23.316].
+
+    5: |
+      The RG MUST support the 3GPP network slicing as defined in
+      3GPP TS.23.501 [@3GPP-TS.23.501] clause 5.15 where the UE is replaced by the 5G-RG.
+
+    6: |
+      The RG MUST support the 3GPP NSSAI configuration and NSSAI storage
+      aspects as defined in TS 3GPP TS.23.501 [@3GPP-TS.23.501] clause 5.15.4 where the UE is
+      replaced by the 5G-RG.
+
+    7: |
+      The RG MUST support to retrieve Configuration and Management from
+      Controller or from ACS via PDU Session as specified in clause 9.6 of
+      3GPP TS 23.316 [@3GPP-TS.23.316].

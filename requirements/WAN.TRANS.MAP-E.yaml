@@ -1,0 +1,33 @@
+---
+WAN.TRANS.MAP-E:
+  name: |
+    IPv6 connectivity with content-based IPv4 release control transition
+    mechanism
+
+  requirements:
+    1: |
+      The RG MUST support mapping of address and port with encapsulation
+      method (MAP-E) as specified in RFC 7597 [@RFC7597].
+
+    2: |
+      The RG MUST support the configuration for MAP-E operation by one or more
+      methods, including Controller provided, DHCPv6 with options as specified
+      in RFC 7598 [@RFC7598].
+
+    3: |
+      The RG MUST support the MAP-E configuration for parameters with
+      consistence as specified in RFC 7598 [@RFC7598].
+
+    4: |
+      The RG MUST support enabling and disabling of MAP-E operation.
+
+    5: |
+      When performing NAT44 function, the RG MUST restrict the port assignment
+      within the range per MAP-E configuration.
+
+    6: |
+      The RG MUST support MAP-E operation in "hub and spoke" mode by
+      forwarding IPv4-in-IPv6 packets to the MAP-E BR for distribution.
+
+    7: |
+      The RG SHOULD be able to connect to more than one MAP-E domain.

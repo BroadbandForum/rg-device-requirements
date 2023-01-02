@@ -1,0 +1,43 @@
+---
+WAN.IPsecClient:
+  name: |
+    IPsec VPN peer to peer
+
+  requirements:
+    1: |
+      The RG MAY support peer to peer IPSec VPN, as defined in IETF RFCs 4301,
+      4303, 5996.
+
+    2: |
+      If the RG supports IPSec VPN, it MUST support encapsulating security
+      payload (ESP), as defined in RFC 4303 [@RFC4303].
+
+    3: |
+      If the RG supports IPSec VPN, it MUST support the IKEv2 key exchange
+      protocol as defined in RFC 5996 [@RFC5996].
+
+    4: |
+      If the RG supports IPSec VPN, it MUST support IPSec VPN in tunnel mode,
+      which is defined in section 3.2 of [@RFC4301].
+
+    5: |
+      If the RG supports IPSec VPN, it MUST support dead peer detection (DPD),
+      which is defined in RFC 5996 [@RFC5996].
+
+    6: |
+      If the RG supports IPSec VPN, it must support configuring the IPSec VPN
+      via web GUI or Controller extension.
+
+    7: |
+      If the RG supports IPSec VPN, it MUST support that the source address in
+      the IPSec is configured to be either an IP address or a TR-181 instance
+      of WAN interface.
+
+    8: |
+      If the RG supports IPSec VPN, it MUST support that the destination
+      address in the IPSec is configured to be either an IP address or a
+      dynamic domain name.
+
+    9: |
+      If the RG supports IPSec VPN, it MUST support querying the status of
+      child security associations (SA) from the Controller extension.

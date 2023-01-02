@@ -1,0 +1,62 @@
+<!-- <h1 class="new-page display-none" id="sec:purpose-and-scope">1 Purpose and Scope<a class="headerlink" href="02-index-purpose-and-scope.html#sec:purpose-and-scope" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h1> -->
+
+<h2 id="sec:purpose">1.1 Purpose<a class="headerlink" href="02-index-purpose-and-scope.html#sec:purpose" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>TR-124 presents a superset of requirements for broadband
+Residential Gateway devices that are capable of supporting a full suite
+of voice, data, broadcast video, video on demand and two-way video
+applications in broadband networks.</p>
+
+<h2 id="sec:scope">1.2 Scope<a class="headerlink" href="02-index-purpose-and-scope.html#sec:scope" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>A Residential Gateway implementing the general requirements of
+TR-124 will incorporate at least one embedded WAN interface,
+routing, bridging, a basic or enhanced firewall, one or multiple LAN
+interfaces and home networking functionality that can be deployed as a
+consumer self-installable device.</p>
+
+<p>TR-124 specifies a baseline of Residential Gateway device and
+application functions needed to support service delivery in routed and
+bridged broadband network architectures. Devices can be specified that
+will operate on any of the different types of Broadband Forum defined
+network architectures. This allows service providers to configure a
+Residential Gateway supporting specified TR-124 modular
+requirements locally via TR-064i2 and Web Graphical User Interface or
+remotely via TR-069.</p>
+
+<p>TR-124 provides optional requirements modules for various physical
+broadband interfaces (e.g. xDSL, Ethernet, GPON) and home networking
+(LAN) interfaces that may be implemented on Residential Gateways to meet
+local service provider needs. Furthermore, to accommodate common
+region-specific service provider requirements that do not apply
+globally, additional regional annexes are included in the TR-124
+requirements that may be included in region-specific product profiles
+(e.g. North American Power and Environmental requirements).</p>
+
+<p>It is intended that these general requirements modules and WAN/LAN
+interface modules can be used as references to define a specific product
+implementation that may be needed in future Broadband Forum Technical
+Reports. This checklist style product profile approach (shown in the
+&ldquo;<a href='21-index-product-profile-template.html#sec:product-profile-template-1' title='' class="heading">Product Profile Template</a>&rdquo; section in
+<a href='21-index-product-profile-template.html#sec:product-profile-template-1' title='' class="heading">APPENDIX VI</a> is intended to provide an
+easy mechanism to define a specific product that is needed by region or
+by service providers. An example of such a product profile is TR-068
+<em>Base Requirements for an ADSL Modem with Routing</em>, which refers to
+TR-124 feature modules and regional annexes.</p>
+
+<p>These requirements are both backward and forward-looking. They attempt
+to address the needs of current DSL services and architectures as well
+as starting to address future needs. Some requirements have been
+included in support of TR-059, TR-064i2, TR-069, TR-101i2 and TR-122.
+Any CPE that claims to be compliant with these technical requirements
+must meet the requirements that reference those documents. It is
+understood that a CPE that does not claim to be compliant with these
+referenced requirements may or may not meet any or all of these
+requirements. On a periodic basis, new general requirements and physical
+interface modules may be added in future revisions of TR-124.</p>
+
+<p>Requirements are sometimes modified when a new TR-124 revision is
+created. It is therefore necessary for any identification of modules
+supported (or to be supported) by a RG also note which TR-124 revision
+was used to generate the module list.</p>
+

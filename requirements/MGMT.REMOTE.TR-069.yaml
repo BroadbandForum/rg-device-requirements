@@ -1,0 +1,21 @@
+---
+MGMT.REMOTE.TR-069:
+  name: |
+    Remote Management (TR-069)
+
+  requirements:
+    1: |
+      The RG MUST support the remote management protocol as defined in
+      Broadband Forum TR-069 [@TR-069] CPE WAN Management protocol.
+
+    2: |
+      The RG MUST support the latest version of Broadband Forum Device:2
+      [@TR-181] data model for CWMP (profile Baseline:3).
+
+    3: |
+      If the RG supports built-in file sharing clients (e.g. Windows
+      networking, CIFS, Samba) or includes integrated storage server
+      functions, the RG MUST NOT allow the use of the TR-069 file transfer
+      mechanisms (i.e. upload and download RPCs) to place or retrieve files
+      that are not explicitly authorized by the user on network shared storage
+      locations to which the RG may have access.

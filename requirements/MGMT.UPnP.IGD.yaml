@@ -1,0 +1,25 @@
+---
+MGMT.UPnP.IGD:
+  name: |
+    UPnP IGD
+
+  categories:
+    - !include MGMT.UPnP.IGD.ACRF.yaml
+
+  requirements:
+    1: |
+      This requirement has been replaced by MGMT.UPnP.IGD.4.
+
+    2: |
+      The RG MUST allow the user to enable logging of all UPnP IGD actions and
+      events.
+
+    3: |
+      The user SHOULD be warned upon enabling UPnP IGD that this may allow
+      applications to configure the box and allow unintended access to local
+      devices.
+
+    4: |
+      At a minimum, the RG MUST support UPnP InternetGatewayDevice:2 device
+      template version 1.01 standardized DCP. This specification is available
+      for download at [http://www.upnp.org](http://www.upnp.org/).

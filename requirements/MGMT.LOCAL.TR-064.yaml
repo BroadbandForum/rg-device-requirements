@@ -1,0 +1,11 @@
+---
+MGMT.LOCAL.TR-064:
+  name: |
+    TR-064 Issue 2
+
+  requirements:
+    1: |
+      The RG MUST support requirements defined in Broadband Forum TR-064i2 [@TR-064i2].
+
+    2: |
+      The RG SHOULD support logging of all Broadband Forum TR-064i2 [@TR-064i2] actions and events.

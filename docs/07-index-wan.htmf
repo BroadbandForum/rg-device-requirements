@@ -1,0 +1,2122 @@
+<!-- <h2 class="new-file new-page display-none" id="sec:req:wan">4.2 WAN – Wide Area Networking<a class="headerlink" href="07-index-wan.html#sec:req:wan" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2> -->
+
+<h3 id="sec:req:wan.atm">4.2.1 WAN.ATM – WAN.ATM<a class="headerlink" href="07-index-wan.html#sec:req:wan.atm" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.1">WAN.ATM.1<a class="headerlink" href="07-index-wan.html#req:wan.atm.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support standard ATM (AAL5) payload format. Note: this
+satisfies Broadband Forum TR-101 R-371.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.2">WAN.ATM.2<a class="headerlink" href="07-index-wan.html#req:wan.atm.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST perform AAL Segmentation and Reassembly (SAR), Convergence
+Sublayer (CS) functions and CRC check.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.3">WAN.ATM.3<a class="headerlink" href="07-index-wan.html#req:wan.atm.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support encapsulation of bridged Ethernet over AAL5 (without
+FCS) as described in RFC 2684 <span class="cite" data-citation-ids="RFC2684"><a href='03-index-references-and-terminology.html#ref-RFC2684' title=''>[74]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.4">WAN.ATM.4<a class="headerlink" href="07-index-wan.html#req:wan.atm.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to use both LLC-SNAP and VC-MUX (null) encapsulation
+over AAL5 with all supported protocols. The default MUST be LLC-SNAP.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.5">WAN.ATM.5<a class="headerlink" href="07-index-wan.html#req:wan.atm.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MAY support encapsulation of IP over AAL5, per RFC 2684 <span class="cite" data-citation-ids="RFC2684"><a href='03-index-references-and-terminology.html#ref-RFC2684' title=''>[74]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.6">WAN.ATM.6<a class="headerlink" href="07-index-wan.html#req:wan.atm.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IP over AAL5, it MAY support classical IP according
+to RFC 2225 <span class="cite" data-citation-ids="RFC2225"><a href='03-index-references-and-terminology.html#ref-RFC2225' title=''>[63]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.7">WAN.ATM.7<a class="headerlink" href="07-index-wan.html#req:wan.atm.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support ATM CoS. UBR, CBR and VBR-rt MUST be supported, as
+defined in AF-TM-0121.000 <span class="cite" data-citation-ids="AF-TM-0121.000"><a href='03-index-references-and-terminology.html#ref-AF-TM-0121.000' title=''>[16]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.8">WAN.ATM.8<a class="headerlink" href="07-index-wan.html#req:wan.atm.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">VBR-nrt and UBR with per VC queuing SHOULD be supported.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.9">WAN.ATM.9<a class="headerlink" href="07-index-wan.html#req:wan.atm.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The default ATM CoS for the primary VC MUST be UBR.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.10">WAN.ATM.10<a class="headerlink" href="07-index-wan.html#req:wan.atm.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support auto configuration as defined in Broadband Forum
+TR-062 <span class="cite" data-citation-ids="TR-062"><a href='03-index-references-and-terminology.html#ref-TR-062' title=''>[157]</a></span> and ILMI 4.0 and its extensions.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.11">WAN.ATM.11<a class="headerlink" href="07-index-wan.html#req:wan.atm.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST always respond to ATM testing, pings and loopbacks according
+to ITU-T I.610 <span class="cite" data-citation-ids="I.610"><a href='03-index-references-and-terminology.html#ref-I.610' title=''>[38]</a></span> (F4, F5).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.12">WAN.ATM.12<a class="headerlink" href="07-index-wan.html#req:wan.atm.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support initiating an ATM loopback and receiving the
+reply. This satisfies Broadband Forum TR-101 R-370.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.13">WAN.ATM.13<a class="headerlink" href="07-index-wan.html#req:wan.atm.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide a default CPID of all 1s (FFFF). This satisfies
+Broadband Forum TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-372.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.14">WAN.ATM.14<a class="headerlink" href="07-index-wan.html#req:wan.atm.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support 0/35 as the default VPI/VCI for the first PVC or use
+an operator-specific configuration.</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.atm.15">WAN.ATM.15<a class="headerlink" href="07-index-wan.html#req:wan.atm.15" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST be able to perform an auto search for the VPI/VCI settings
+for the first PVC based on a definable search list VPI/VCI sequence
+order.</p>
+
+<p>If the RG reaches a state of session establishment (e.g. IP when the RG
+is responsible for session termination) after performing the auto
+search, the default VPI/VCI settings MUST be set to the newly discovered
+values. The new default pair MUST be stored on the RG across power off
+situations. If an ATM connection cannot be established after power is
+restored, the search process starts over again.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.atm.16">WAN.ATM.16<a class="headerlink" href="07-index-wan.html#req:wan.atm.16" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support the following default VPI/VCI auto-search list
+programmed as a factory default setting in the following sequence, or
+use an operator-specific sequence configuration:</p>
+
+<p>0/35, 0/38, 8/35, 0/43, 0/51, 0/59, 8/43, 8/51.</p>
+
+<p>This default list MUST be overwriteable via the methods discussed in
+<a href='07-index-wan.html#req:wan.atm.18' title=''>WAN.ATM.18</a>.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.17">WAN.ATM.17<a class="headerlink" href="07-index-wan.html#req:wan.atm.17" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be configurable so that the auto-search mechanism can be
+disabled.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.18">WAN.ATM.18<a class="headerlink" href="07-index-wan.html#req:wan.atm.18" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST allow the auto-search list to be redefined using TR-064i2
+and interfaces.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.19">WAN.ATM.19<a class="headerlink" href="07-index-wan.html#req:wan.atm.19" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The default VPI/VCI values for all PVCs MUST be configurable. The
+default value MUST be utilized prior to performing an auto-search but
+should exclude the default value in the auto-search.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.20">WAN.ATM.20<a class="headerlink" href="07-index-wan.html#req:wan.atm.20" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support VPI values from 0 to 255</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.21">WAN.ATM.21<a class="headerlink" href="07-index-wan.html#req:wan.atm.21" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support VCI values from 32 to 65535</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.atm.multi">4.2.1.1 WAN.ATM.MULTI – ATM Multi-PVC<a class="headerlink" href="07-index-wan.html#sec:req:wan.atm.multi" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.multi.1">WAN.ATM.MULTI.1<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support eight PVCs. This is in addition to support for any
+implemented ATM UNI control path PVCs (e.g. ILMI auto-configuration PVC,
+etc.).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.multi.2">WAN.ATM.MULTI.2<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST allow the protocol stack (e.g. IP over Ethernet, PPPoE,
+PPPoA, etc.) for each provisioned PVC to be defined separately. If
+necessary, each PVC can use a different stack and set of protocols.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.multi.3">WAN.ATM.MULTI.3<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">There is no default defined VPI/VCI for additional PVCs past the primary
+PVC defined in <a href='07-index-wan.html#sec:req:wan.atm' title=''>WAN.ATM</a> above. The RG MUST support auto-search function
+(see <a href='07-index-wan.html#req:wan.atm.16' title=''>WAN.ATM.16</a> through 19) on all PVCs and will use the same
+auto-search sequence identified (skipping over any already in use).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.multi.4">WAN.ATM.MULTI.4<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST NOT require the same VPI value for all supported PVCs.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.multi.5">WAN.ATM.MULTI.5<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">All supported PVCs MUST be able to be active and sending/receiving
+traffic simultaneously. See requirements <a href='08-index-lan.html#req:lan.fwd.9' title=''>LAN.FWD.9</a>, 10, 11 and 15 for
+more details on interface selection for routing.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.atm.multi.6">WAN.ATM.MULTI.6<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support the minimum ATM granularity applicable to the
+associated DSL protocol in use on a per VC and VP basis.</p>
+
+<p>For example, ATM granularity of 32 kbps MUST be supported for ADSL on a
+per VC and VP basis.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.atm.multi.7">WAN.ATM.MULTI.7<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST use the same Ethernet MAC address for all interfaces over
+the same AAL5/ATM/DSL connection.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.atm.multi.8">WAN.ATM.MULTI.8<a class="headerlink" href="07-index-wan.html#req:wan.atm.multi.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support multiple levels of CoS simultaneously across
+separate VCCs (e.g. UBR for PVC 0/35 and CBR for PVC 0/43 where both
+PVCs are active simultaneously).</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.connect">4.2.2 WAN.CONNECT – Connection Establishment<a class="headerlink" href="07-index-wan.html#sec:req:wan.connect" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<p><em>Note that this module applies to IPv6 connections as well as IPv4, but
+only if the RG has an IPv6 stack.</em></p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.1">WAN.CONNECT.1<a class="headerlink" href="07-index-wan.html#req:wan.connect.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support an &ldquo;always on&rdquo; mode for connections. In this mode
+the RG MUST NOT time out connection sessions (ATM, IP and PPP) and MUST
+automatically re-establish any sessions after disconnection, lease
+expiration or loss and restoration of power.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.2">WAN.CONNECT.2<a class="headerlink" href="07-index-wan.html#req:wan.connect.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Moved to <a href='07-index-wan.html#req:wan.connect.on-demand.1' title=''>WAN.CONNECT.ON-DEMAND.1</a> and 4</em></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.connect.3">WAN.CONNECT.3<a class="headerlink" href="07-index-wan.html#req:wan.connect.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support a &ldquo;manual connect&rdquo; option for connections. In this
+mode the connection to the broadband network is initiated manually
+through the Web GUI or via</p>
+
+<p>TR-064i2 request and, by default, terminates only when done so
+explicitly by the user, due to a power loss or when the connection is
+lost.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.4">WAN.CONNECT.4<a class="headerlink" href="07-index-wan.html#req:wan.connect.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Moved to <a href='07-index-wan.html#req:wan.connect.on-demand.6' title=''>WAN.CONNECT.ON-DEMAND.6</a></em></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.5">WAN.CONNECT.5<a class="headerlink" href="07-index-wan.html#req:wan.connect.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">A manual way of disconnecting without waiting for a connection timeout
+MUST be provided.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.6">WAN.CONNECT.6<a class="headerlink" href="07-index-wan.html#req:wan.connect.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Moved to <a href='07-index-wan.html#req:wan.connect.on-demand.7' title=''>WAN.CONNECT.ON-DEMAND.7</a></em></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.7">WAN.CONNECT.7<a class="headerlink" href="07-index-wan.html#req:wan.connect.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST follow all standards required to perform an orderly tear
+down of the associated connections involved at the associated network
+levels (e.g. issue a DHCP Release message when using DHCPv4, issue LCP
+Terminate-Request/Terminate-Ack and PADT packet when using PPPoE, etc.)
+and then restart the connections.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.8">WAN.CONNECT.8<a class="headerlink" href="07-index-wan.html#req:wan.connect.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST detect the loss of communications with a network identified
+DNS server as indicated by a failed query, and log the event.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.connect.on-demand">4.2.2.1 WAN.CONNECT.ON-DEMAND – On-Demand Connection Establishment<a class="headerlink" href="07-index-wan.html#sec:req:wan.connect.on-demand" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<p>The On-demand Connection function applies only to IPv4 connections.
+However, when IPv6 is present, its behavior must take the presence of
+IPv6 into consideration as described in this module</p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.on-demand.1">WAN.CONNECT.ON-DEMAND.1<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a &ldquo;connect on demand&rdquo; option for IPv4 connections
+that run over PPP. In this mode, the connection to the broadband network
+is initiated when outbound traffic is encountered from the local LAN and
+terminated after a timeout period in which no traffic occurs.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.on-demand.2">WAN.CONNECT.ON-DEMAND.2<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the PPP session only contains IPv4, then the RG MUST terminate the
+PPP session in accordance with <a href='07-index-wan.html#req:wan.connect.on-demand.1' title=''>WAN.CONNECT.ON-DEMAND.1</a>, and any
+associated PPPoE session (if applicable).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.on-demand.3">WAN.CONNECT.ON-DEMAND.3<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the PPP session contains IPv4 and IPv6, then the RG MUST terminate
+only the IPv4 session. This is done using IPCP commands.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.on-demand.4">WAN.CONNECT.ON-DEMAND.4<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a &ldquo;connect on demand&rdquo; option for IPv4 connections
+that run over Ethernet.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.on-demand.5">WAN.CONNECT.ON-DEMAND.5<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">To determine whether a connection has IPv4 activity during a timeout
+interval, the RG MUST consider only traffic with an IPv4 ethertype.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.on-demand.6">WAN.CONNECT.ON-DEMAND.6<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The interval after which a connection timeout occurs MUST be able to be
+configured.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.connect.on-demand.7">WAN.CONNECT.ON-DEMAND.7<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">A default timeout of 20 minutes SHOULD be used for connection timeouts
+or use an operator-specific configuration.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.connect.on-demand.8">WAN.CONNECT.ON-DEMAND.8<a class="headerlink" href="07-index-wan.html#req:wan.connect.on-demand.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG has an active IPv6 connection, and does not have addresses for
+DNS recursive name servers to be accessed over IPv6, then the &ldquo;connect
+on demand&rdquo; option MUST be disabled.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.ethoam">4.2.3 WAN.ETHOAM – Ethernet OAM<a class="headerlink" href="07-index-wan.html#sec:req:wan.ethoam" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.1">WAN.ETHOAM.1<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a maintenance end point (MEP) at the customer and
+access link levels on a per VLAN basis. Note: The multi-PVC case is for
+further study. This satisfies Broadband Forum TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-285, R-294.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ethoam.2">WAN.ETHOAM.2<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a default ME level value of 5 for the customer
+level. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-286.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.3">WAN.ETHOAM.3<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support a loopback message (LBM) function at the customer
+level that can generate a multicast LBM toward its peer MEP(s). This
+satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-287.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ethoam.4">WAN.ETHOAM.4<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a loopback reply (LBR) function at the customer
+level toward its peer MEP(s) in response to both unicast and multicast
+LBMs. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-288.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.5">WAN.ETHOAM.5<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a linktrace reply (LTR) function at the customer
+level toward its peer MEP(s). This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-289.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ethoam.6">WAN.ETHOAM.6<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">For business customers and/or premium customers requiring proactive
+monitoring, the RG SHOULD support generating continuity check messages
+(CCMs) at the customer level. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-290.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.7">WAN.ETHOAM.7<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support turning off sending of CCMs at the customer level,
+while keeping the associated MEP active. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-291.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ethoam.8">WAN.ETHOAM.8<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support receiving AIS messages at the customer level. This
+satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-292.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.9">WAN.ETHOAM.9<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD trigger the appropriate alarms for loss of continuity at
+the customer level. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-293.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ethoam.10">WAN.ETHOAM.10<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a default ME level value of 1 for the access link
+level. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-295.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.11">WAN.ETHOAM.11<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support a loopback message (LBM) function at the access
+link level that can generate a multicast LBM toward its peer MEP(s).
+This requirement allows the RG to dynamically learn the MAC address of
+the AN MEP, and test the connectivity to that MEP. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span>
+R-296.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ethoam.12">WAN.ETHOAM.12<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a loopback reply (LBR) function at the access link
+level toward its peer MEP(s), in response to both unicast and multicast
+LBMs. This satisfies TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-297.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ethoam.13">WAN.ETHOAM.13<a class="headerlink" href="07-index-wan.html#req:wan.ethoam.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST issue a DHCP renewal message following a random delay
+between 1 and 30 seconds after it detects a restoration of Ethernet
+continuity at the customer ME level.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.bridge">4.2.4 WAN.BRIDGE – Bridging<a class="headerlink" href="07-index-wan.html#sec:req:wan.bridge" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<p><em>Note that the IPv6 parts of this module apply only if the RG supports
+IPv6.</em></p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.bridge.1">WAN.BRIDGE.1<a class="headerlink" href="07-index-wan.html#req:wan.bridge.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to bridge IPv4 over Ethernet.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.bridge.2">WAN.BRIDGE.2<a class="headerlink" href="07-index-wan.html#req:wan.bridge.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be a learning bridge as defined in IEEE 802.1D for all
+logical and physical Ethernet interfaces, supporting a minimum of 272
+MAC addresses.</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.bridge.3">WAN.BRIDGE.3<a class="headerlink" href="07-index-wan.html#req:wan.bridge.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>If bridge mode is enabled for IPv4 on the RG by default for LAN
+connected devices, the RG MUST be able to support additional connections
+to a Controller for remote management addressability (using direct
+DHCPv4 or static IPv4, PPP, etc.), and connections for any locally
+terminated service that require IP (v4 or v6) addressability
+(e.g. gateway integrated voice ATA ports, etc.).</p>
+
+<p>Note that this special bridge mode that includes a device remote
+management session connection requires an additional WAN connection from
+the network. This requirement is considered conditional as a result of
+the network side dependency, but the RG must support this type of
+configuration.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.bridge.4">WAN.BRIDGE.4<a class="headerlink" href="07-index-wan.html#req:wan.bridge.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to bridge IPv6 over Ethernet (Ethertype 0x86DD).
+This includes bridging of multicast frames.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.bridge.5">WAN.BRIDGE.5<a class="headerlink" href="07-index-wan.html#req:wan.bridge.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to configure IPv6 bridging for a WAN interface,
+separate from IPv4 treatment.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.bridge.6">WAN.BRIDGE.6<a class="headerlink" href="07-index-wan.html#req:wan.bridge.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to configure IPv6 bridging separately for each WAN
+interface (if there are multiple WAN interfaces).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.bridge.7">WAN.BRIDGE.7<a class="headerlink" href="07-index-wan.html#req:wan.bridge.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When IPv6 bridging is enabled on a WAN interface, the RG MUST be
+configurable to act as a host on that WAN interface (doing SLAAC, etc.).
+It will not request IA_PD, since that is not a host function.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.dhcpc">4.2.5 WAN.DHCPC – DHCP Client (DHCPv4)<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpc" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.dhcpc.1">WAN.DHCPC.1<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST be able to obtain IPv4 network information dynamically on
+its WAN interface. This information includes IPv4 address, primary and
+secondary DNS addresses and default gateway address.</p>
+
+<p>Dynamically obtaining IPv4 network information is accomplished using
+DHCP (v4) and / or IPCP (IPv4).</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.2">WAN.DHCPC.2<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG is not configured to use a static IPv4 address and the RG
+fails to detect a PPPoE or DHCPv4 server, then the RG MUST set its WAN
+IPv4 address to an undefined value, in order to prevent it from
+retaining its prior IPv4 address.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.3">WAN.DHCPC.3<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If a RG is functioning as a DHCPv4 client, it MUST identify itself in
+option 61 (client-identifier) in every DHCPv4 message in accordance with
+RFC 4361 <span class="cite" data-citation-ids="RFC4361"><a href='03-index-references-and-terminology.html#ref-RFC4361' title=''>[107]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.dhcpc.4">WAN.DHCPC.4<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>For the DUID portion of option 61 in DHCPv4 as described in RFC 4361 <span class="cite" data-citation-ids="RFC4361"><a href='03-index-references-and-terminology.html#ref-RFC4361' title=''>[107]</a></span>
+, the RG MUST follow the DUID-EN format specified in ID 9.3 of RFC 3315 <span class="cite" data-citation-ids="RFC3315"><a href='03-index-references-and-terminology.html#ref-RFC3315' title=''>[84]</a></span>.
+The RG MUST use Broadband Forum enterprise-number value 3561 in
+the DUID-EN enterprise-number field.</p>
+
+<p>For the identifier field of the DUID-EN, the RG MUST use an ASCII string
+containing the same content and formatted according to the same rules as
+defined for the HTTP username in ID 3.4.4 of TR-069 <span class="cite" data-citation-ids="TR-069"><a href='03-index-references-and-terminology.html#ref-TR-069' title=''>[160]</a></span>, if CWMP is used for
+remote management.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.dhcpc.5">WAN.DHCPC.5<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG IAID value in DHCPv4 and DHCPv6 MUST be a 32 bit number encoded
+in network byte order. In cases where the RG is functioning with a
+single DHCP client identity, it MUST use value 1 for IAID for all DHCP
+interactions. IAID is defined in RFC 3315 <span class="cite" data-citation-ids="RFC3315"><a href='03-index-references-and-terminology.html#ref-RFC3315' title=''>[84]</a></span>.</p>
+
+<p>In cases where the RG is functioning with multiple DHCP client
+identities, the values of IAID have to start at 1 for the first identity
+and be incremented for each subsequent identity. The RG’s mapping of
+IAID to its physical aspects or logical configuration SHOULD be as
+non-volatile as possible. For example, the RG MAY use IAID value 1 for
+the first physical interface and value 2 for the second. Alternatively,
+the RG MAY use IAID value 1 for the virtual circuit corresponding to the
+first connection object in the data model and value 2 for the second
+connection object in the data model.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.6">WAN.DHCPC.6<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The DUID-EN field value MAY be printed on the RG label.</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.dhcpc.7">WAN.DHCPC.7<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>A RG functioning as a DHCPv4 client MUST identify its manufacturer OUI,
+product class, model name and serial number using vendor-specific
+options as defined in RFC 3925 <span class="cite" data-citation-ids="RFC3925"><a href='03-index-references-and-terminology.html#ref-RFC3925' title=''>[94]</a></span>. Specifically, it MUST use
+option 125.</p>
+
+<p>Note that with exception of ModelName, the data contained in this option
+will be redundant with what is included in the Device ID in option 61.
+However, this is desirable because these two options serve different
+purposes.</p>
+
+<p>The data in option 125 allows the DHCPv4 server to be pre-configured
+with policy for handling classes of devices in a certain way without
+requiring the DHCPv4 server to be able to parse the unique format used
+in client-identifier option (which can also vary in TR-181 depending on
+presence of a ProductClass value). On the other hand, the
+client-identifier serves as an opaque but predictable identifier. It is
+predictable because it is the same identifier as used by the RG for
+interactions with other services. The same identifier is used for HTTP
+authentication and in SSL client certificates.</p>
+
+<p>Each sub-option value to be provided in option 125 MUST be treated as a
+string encoded into binary using UTF-8. The data MUST be encapsulated in
+option 125 under enterprise code 3561 decimal (0x0DE9), corresponding to
+the IANA &ldquo;ADSL Forum&rdquo; entry in the Private Enterprise Numbers registry.
+A specific sub-option is defined for each value. The value must match
+the corresponding TR-181 <span class="cite" data-citation-ids="TR-181"><a href='03-index-references-and-terminology.html#ref-TR-181' title=''>[167]</a></span> parameter
+as defined in the following table:</p>
+
+<table>
+<tr class="header">
+<th align="left">Sub-option</th>
+<th align="left">Value Description</th>
+<th align="left">Corresponding Device:2 parameter</th>
+</tr>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">Manufacturer OUI</td>
+<td align="left">.DeviceInfo.ManufacturerOUI</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">Product Class</td>
+<td align="left">.DeviceInfo.ProductClass</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">Model Name</td>
+<td align="left">.DeviceInfo.ModelName</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">Serial Number</td>
+<td align="left">.DeviceInfo.SerialNumber</td>
+</tr>
+</table>
+
+<p>If the value of a parameter is empty, the sub-option MUST be omitted.</p></td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.dhcpc.force">4.2.5.1 WAN.DHCPC.Force – Force renew<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpc.force" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.force.1">WAN.DHCPC.Force.1<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.force.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the use of DHCP force renew (<span class="cite" data-citation-ids="RFC3203"><a href='03-index-references-and-terminology.html#ref-RFC3203' title=''>[80]</a></span>)
+for changing the configuration
+parameters or the IP address associated with an IP session.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.force.2">WAN.DHCPC.Force.2<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.force.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support sending the FORCERENEW_NONCE_CAPABLE option in the
+DHCP discover and in the DHCP request messages, as per RFC 6704 <span class="cite" data-citation-ids="RFC6704"><a href='03-index-references-and-terminology.html#ref-RFC6704' title=''>[133]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.force.3">WAN.DHCPC.Force.3<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.force.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support using the Forcerenew nonce for validating DHCP
+ForceRenew messages received from the DHCP server, as per RFC 6704 <span class="cite" data-citation-ids="RFC6704"><a href='03-index-references-and-terminology.html#ref-RFC6704' title=''>[133]</a></span>.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.dhcpc.bfdecho">4.2.5.2 WAN.DHCPC.BFDecho – BFD echo<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpc.bfdecho" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdecho.1">WAN.DHCPC.BFDecho.1<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdecho.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support configuration of the BFD echo functionality, as
+per RFC 5881 <span class="cite" data-citation-ids="RFC5881"><a href='03-index-references-and-terminology.html#ref-RFC5881' title=''>[122]</a></span>, for both IPv4 and
+IPv6.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdecho.2">WAN.DHCPC.BFDecho.2<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdecho.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support sending BFD echo packet(s) on its WAN interface at
+regular intervals using a recommended default of 30s. The destination IP
+address of such packets MUST be taken from the list of IP addresses
+assigned to or via the WAN interface, including the Subnet-Router
+address of an IPv6 DHCPv6 delegated prefix.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdecho.3">WAN.DHCPC.BFDecho.3<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdecho.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support receiving self-originated BFD echo packets
+addressed to its assigned address or the Subnet-Router IPv6 delegated
+prefix.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdecho.4">WAN.DHCPC.BFDecho.4<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdecho.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Unless overridden by configuration, by default after a failure of 3
+successive BFD echo intervals, the RG MUST issue a DHCP renew message
+following a random jitter interval between 1 and 30 seconds.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.dhcpc.bfdka">4.2.5.3 WAN.DHCPC.BFDKA – BFD Keep-alive<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpc.bfdka" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.1">WAN.DHCPC.BFDKA.1<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">RG MUST support the BFD protocol for IP Session Keep-alive. The BFD
+implementation MUST be compliant with the BFD standard as described in
+the RFC 5880 <span class="cite" data-citation-ids="RFC5880"><a href='03-index-references-and-terminology.html#ref-RFC5880' title=''>[121]</a></span> .</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.2">WAN.DHCPC.BFDKA.2<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">BFD MUST be initiated after both the RG and the IP Edge’s IP addresses
+are available on the RG.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.3">WAN.DHCPC.BFDKA.3<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST take on the Passive role during BFD session initiation.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.4">WAN.DHCPC.BFDKA.4<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support BFD Demand mode</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.5">WAN.DHCPC.BFDKA.5<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support BFD Asynchronous mode.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.6">WAN.DHCPC.BFDKA.6<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to process BFD echo packets in the data plane as
+specified in RFC 5881 <span class="cite" data-citation-ids="RFC5881"><a href='03-index-references-and-terminology.html#ref-RFC5881' title=''>[122]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.7">WAN.DHCPC.BFDKA.7<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to configure the DSCP bits of BFD packets.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.8">WAN.DHCPC.BFDKA.8<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to configure the Ethernet Priority bits of BFD
+packets.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.9">WAN.DHCPC.BFDKA.9<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD respond to IP Edge initiated BFD polls using the same DSCP
+and Ethernet Priority values received in the packet</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.10">WAN.DHCPC.BFDKA.10<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST ignore IP packets arriving on the BFD UDP port other than
+those originating on the IP Edge.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.11">WAN.DHCPC.BFDKA.11<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The BFD configuration on the RG MUST be configurable using Broadband Forum TR-069 <span class="cite" data-citation-ids="TR-069"><a href='03-index-references-and-terminology.html#ref-TR-069' title=''>[160]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.12">WAN.DHCPC.BFDKA.12<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When using BFD Demand mode, the RG MUST run an inactivity timer based on
+the Detect Interval negotiated with the IP Edge.</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.dhcpc.bfdka.13">WAN.DHCPC.BFDKA.13<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>When a BFD session on the RG receives a poll with a Diag code set to
+&ldquo;Path Down&rdquo; it MUST perform the following actions:</p>
+
+<ul>
+<li><p>Transition into the Down state;</p></li>
+<li><p>Respond to the poll with the Diag code set to 3 (&ldquo;Neighbor Signaled
+BFD Session Down&rdquo;)</p></li>
+<li><p>Prompt the DHCP client to transition into the Init-Reboot state for
+DHCPv4 initiated IP Sessions.</p></li>
+<li><p>Prompt the DHCP client to send a CONFIRM message for DHCPv6 initiated
+IP Sessions.</p></li>
+</ul></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpc.bfdka.14">WAN.DHCPC.BFDKA.14<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG DHCP client MUST be able to enter DHCPv4 Init-Reboot state or
+DHCPv6 Confirm state upon detecting that BFD has transitioned into
+&ldquo;Down&rdquo; state.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpc.bfdka.15">WAN.DHCPC.BFDKA.15<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.15" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST use the IP Edge address as the destination for BFD Control
+packets.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.dhcpc.bfdka.16">WAN.DHCPC.BFDKA.16<a class="headerlink" href="07-index-wan.html#req:wan.dhcpc.bfdka.16" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST be able to be pre-provisioned with the following Broadband
+Forum specified default configuration:</p>
+
+<ul>
+<li><p>Version (1)</p></li>
+<li><p>Control Plane Independent (0)</p></li>
+<li><p>Authentication Present (0)</p></li>
+<li><p>Demand (1)</p></li>
+<li><p>Detect Multiplier (3)</p></li>
+<li><p>Local Discriminator (a random 32-bit value)</p></li>
+<li><p>Desired Minimum Transmit Interval (1,000,000)</p></li>
+<li><p>Required Minimum Receive Interval (1,000,000)</p></li>
+<li><p>Required Minimum Echo Receive Interval (0)</p></li>
+<li><p>State (Down)</p></li>
+</ul></td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.dhcpv4">4.2.6 WAN.DHCPv4 – DHCP Client (DHCPv4)<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpv4" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<h4 id="sec:req:wan.dhcpv4.erp">4.2.6.1 WAN.DHCPv4.ERP – EAP Re-authentication (ERP) for DHCPv4<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpv4.erp" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpv4.erp.1">WAN.DHCPv4.ERP.1<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv4.erp.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the DHCP Relay Agent Information Option RFC 3046 <span class="cite" data-citation-ids="RFC3046"><a href='03-index-references-and-terminology.html#ref-RFC3046' title=''>[78]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpv4.erp.2">WAN.DHCPv4.ERP.2<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv4.erp.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support receiving a DHCPv4 request message from a UE client,
+which includes a Parameter Request List Option requesting the DHCPv4 ERP
+Local Domain Name, i.e. the domain name of the ERP server of the local
+domain to which that client is attached. The DHCPv4 request message may
+be Discovery or Request.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpv4.erp.3">WAN.DHCPv4.ERP.3<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv4.erp.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG has the ERP Local Domain Name from authentication server for a
+client during a previous AAA exchange, it SHOULD include it in the
+DHCPv4 LDN sub-option in a Relay Agent Information Option RFC 3046 <span class="cite" data-citation-ids="RFC3046"><a href='03-index-references-and-terminology.html#ref-RFC3046' title=''>[78]</a></span>
+and forward to the DHCPv4 server.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpv4.erp.4">WAN.DHCPv4.ERP.4<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv4.erp.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support relaying a DHCPv4 Reply Message with the DHCPv4 ERP
+Local Domain Name option from the DHCPv4 server to the client.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpv4.erp.5">WAN.DHCPv4.ERP.5<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv4.erp.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support configuration of the parameters for it to connect
+to the RADIUS or Diameter server via Web GUI or Controller extension.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.dhcpv6">4.2.7 WAN.DHCPv6 – DHCP Client (DHCPv6)<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpv6" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<h4 id="sec:req:wan.dhcpv6.erp">4.2.7.1 WAN.DHCPv6.ERP – EAP Re-authentication (ERP) for DHCPv6<a class="headerlink" href="07-index-wan.html#sec:req:wan.dhcpv6.erp" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpv6.erp.1">WAN.DHCPv6.ERP.1<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv6.erp.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the ERP Local Domain Name (LDN) DHCPv6 Option
+(<span class="cite" data-citation-ids="RFC6440"><a href='03-index-references-and-terminology.html#ref-RFC6440' title=''>[131]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpv6.erp.2">WAN.DHCPv6.ERP.2<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv6.erp.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support receiving a DHCPv6 request message from a UE client,
+which includes an Option Request option requesting the DHCPv6 ERP Local
+Domain Name option (<span class="cite" data-citation-ids="RFC6440"><a href='03-index-references-and-terminology.html#ref-RFC6440' title=''>[131]</a></span>).
+The DHCPv6 request message may be Solicit, Request, or Information
+Request.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpv6.erp.3">WAN.DHCPv6.ERP.3<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv6.erp.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG has pre-existing knowledge of the ERP local domain name for a
+client (for example, from a previous AAA exchange), it SHOULD include it
+in an instance of the DHCPv6 ERP Local Domain Name option of the DHCPv6
+message and forward it to the DHCPv6 server as a sub-option of the
+Relay-Supplied Options option (<span class="cite" data-citation-ids="RFC6422"><a href='03-index-references-and-terminology.html#ref-RFC6422' title=''>[129]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dhcpv6.erp.4">WAN.DHCPv6.ERP.4<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv6.erp.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support relaying a DHCPv6 Reply Message with the DHCPv6 ERP
+Local Domain Name option from the DHCPv6 server to the client.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dhcpv6.erp.5">WAN.DHCPv6.ERP.5<a class="headerlink" href="07-index-wan.html#req:wan.dhcpv6.erp.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support configuration of the parameters for it to connect to
+the RADIUS or Diameter server via Web GUI or Controller extension.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.ipv6">4.2.8 WAN.IPv6 – IPv6 WAN Connection<a class="headerlink" href="07-index-wan.html#sec:req:wan.ipv6" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.1">WAN.IPv6.1<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support automated establishment of an IPv6 connection
+according to the flow in Annex A.2.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.2">WAN.IPv6.2<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support a dual stack of IPv4 and IPv6 running
+simultaneously, as described in section 2 of RFC 4213 <span class="cite" data-citation-ids="RFC4213"><a href='03-index-references-and-terminology.html#ref-RFC4213' title=''>[102]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.3">WAN.IPv6.3<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST allow the IPv6 stack to be enabled / disabled.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.4">WAN.IPv6.4<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support DHCPv6 client messages and behavior per IETF RFC
+<span id="section"><a class="headerlink" href="07-index-wan.html#section" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span> 3315. See <a href='07-index-wan.html#req:wan.dhcpc.5' title=''>WAN.DHCPC.5</a> for further specifics on IAID value.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.5">WAN.IPv6.5<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the role of the CPE requesting router in RFC 3633 <span class="cite" data-citation-ids="RFC3633"><a href='03-index-references-and-terminology.html#ref-RFC3633' title=''>[90]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.6">WAN.IPv6.6<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support specifying in its DHCPv6 prefix delegation request
+an indication of the length of prefix it requires. If the RG supports
+multiple LANs, or has PD requests from its LAN, it MUST indicate a
+preferred prefix length that would at least enable the RG to assign a
+/64 prefix to each LAN it supports. Note that the delegated prefix may
+vary from the requested length.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.7">WAN.IPv6.7<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When sending DHCPv6 messages, the RG MUST identify itself in
+OPTION_CLIENTID (1) (client-identifier) using the same client identifier
+as for IPv4 (see <a href='07-index-wan.html#req:wan.dhcpc.3' title=''>WAN.DHCPC.3</a> and .4).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.8">WAN.IPv6.8<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support IPv6 node requirements as a host node, per RFC 6434
+<span class="cite" data-citation-ids="RFC6434"><a href='03-index-references-and-terminology.html#ref-RFC6434' title=''>[130]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.9">WAN.IPv6.9<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support stateless address auto-configuration (SLAAC) as a
+host, per RFC 4862 <span class="cite" data-citation-ids="RFC4862"><a href='03-index-references-and-terminology.html#ref-RFC4862' title=''>[115]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.10">WAN.IPv6.10<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support receipt of route information per RFC 4191 <span class="cite" data-citation-ids="RFC4191"><a href='03-index-references-and-terminology.html#ref-RFC4191' title=''>[100]</a></span>. If the RG
+only has one WAN connection, it does not need to place this information
+in its routing table, but it does need to save it (for possible
+forwarding on the LAN interface).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.11">WAN.IPv6.11<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If route information is provided (RFC 4191 <span class="cite" data-citation-ids="RFC4191"><a href='03-index-references-and-terminology.html#ref-RFC4191' title=''>[100]</a></span>) and the RG has multiple WAN
+connections, it MUST place the route information in its routing table.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.ipv6.12">WAN.IPv6.12<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>If the RG does not have a globally-scoped address on its WAN interface
+after having been delegated a prefix, it MUST create addresses for
+itself from the delegated prefix. It MUST have at least one address and
+MAY have more.</p>
+
+<p>There is currently no algorithm defined for address creation. It should
+be assumed that different service providers will want different rules
+for how to create the address, how many addresses to create, and in the
+case of multiple addresses, how the different addresses are used.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.13">WAN.IPv6.13<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Requirement deleted; redundant with <a href='07-index-wan.html#req:wan.ipv6.3' title=''>WAN.IPv6.3</a></em></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.14">WAN.IPv6.14<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to request the following DHCPv6 options: IA_NA (RFC
+3315), reconfigure accept (RFC 3315 <span class="cite" data-citation-ids="RFC3315"><a href='03-index-references-and-terminology.html#ref-RFC3315' title=''>[84]</a></span>), IA_PD (RFC 3633 <span class="cite" data-citation-ids="RFC3633"><a href='03-index-references-and-terminology.html#ref-RFC3633' title=''>[90]</a></span>), and DNS_SERVERS
+(<span class="cite" data-citation-ids="RFC3646"><a href='03-index-references-and-terminology.html#ref-RFC3646' title=''>[91]</a></span>).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.15">WAN.IPv6.15<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.15" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to request the following DHCPv6 options:
+SNTP_SERVERS (<span class="cite" data-citation-ids="RFC4075"><a href='03-index-references-and-terminology.html#ref-RFC4075' title=''>[99]</a></span>), domain search list (<span class="cite" data-citation-ids="RFC3646"><a href='03-index-references-and-terminology.html#ref-RFC3646' title=''>[91]</a></span>), and Client FQDN
+(<span class="cite" data-citation-ids="RFC4704"><a href='03-index-references-and-terminology.html#ref-RFC4704' title=''>[113]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.16">WAN.IPv6.16<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.16" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be configurable as to which DHCPv6 options it requests via
+DHCPv6.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.17">WAN.IPv6.17<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.17" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The connectivity parameters (obtained via RA and DHCPv6) MUST persist
+across loss of WAN connection (or lack of response from WAN connection).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.18">WAN.IPv6.18<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.18" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST continue to use the connectivity parameters (obtained via RA
+or DHCP) and consider them valid until either they expire or the RG is
+explicitly told to use different values.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.19">WAN.IPv6.19<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.19" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST NOT advertise any address prefixes on the WAN using the IPv6
+neighbor discovery protocol, or advertise itself as a default router.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.20">WAN.IPv6.20<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.20" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide up to 4 instances of option-data within a single
+OPTION_VENDOR_OPTS (17) (RFC 3315 <span class="cite" data-citation-ids="RFC3315"><a href='03-index-references-and-terminology.html#ref-RFC3315' title=''>[84]</a></span>) with IANA &ldquo;ADSL Forum&rdquo; Enterprise
+Number as the enterprise-number. Each instance will have one of the 4
+sub-options from <a href='07-index-wan.html#req:wan.dhcpc.7' title=''>WAN.DHCPC.7</a> as the vendor-specific opt-code, with the
+corresponding value in the vendor-specific option-data. If the value of
+a parameter is empty for the RG, then the sub-option MUST be omitted. If
+there are no values to provide, the entire option MUST be omitted.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.21">WAN.IPv6.21<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.21" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to request the following DHCPv6 options: address
+selection policy (<span class="cite" data-citation-ids="RFC7078"><a href='03-index-references-and-terminology.html#ref-RFC7078' title=''>[137]</a></span>) and DNS selection policy (<span class="cite" data-citation-ids="RFC6731"><a href='03-index-references-and-terminology.html#ref-RFC6731' title=''>[134]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipv6.22">WAN.IPv6.22<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.22" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If route information is provided (draft-ietf-mif-dhcpv6-route-option)
+and the RG has multiple WAN connections, it MUST place the route
+information in its routing table.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipv6.23">WAN.IPv6.23<a class="headerlink" href="07-index-wan.html#req:wan.ipv6.23" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD generate address selection policy based on policies
+obtained from each WAN link by DHCPv6 option
+(draft-ietf-6man-addr-select-opt) or manually configured policy.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.trans">4.2.9 WAN.TRANS – Transitional IPv6 WAN Connection<a class="headerlink" href="07-index-wan.html#sec:req:wan.trans" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<h4 id="sec:req:wan.trans.6rd">4.2.9.1 WAN.TRANS.6rd – 6rd Transition Mechanism<a class="headerlink" href="07-index-wan.html#sec:req:wan.trans.6rd" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.6rd.1">WAN.TRANS.6rd.1<a class="headerlink" href="07-index-wan.html#req:wan.trans.6rd.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the 6rd transition mechanism as described in
+RFC 5969 <span class="cite" data-citation-ids="RFC5969"><a href='03-index-references-and-terminology.html#ref-RFC5969' title=''>[123]</a></span>. This includes being able to
+configure the necessary parameters from the Controller and via DHCPv4,
+creation of the prefix, using the created prefix as a &ldquo;delegated prefix&rdquo;
+for purpose of including one of its /64s in RA messages, and modifying
+the IP header for traffic that goes between the WAN and LAN devices.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.6rd.2">WAN.TRANS.6rd.2<a class="headerlink" href="07-index-wan.html#req:wan.trans.6rd.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support enabling and disabling of the 6rd feature on the
+&ldquo;default&rdquo; routed IPv4 connection. 6rd is not applicable to bridged WAN
+interfaces.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.6rd.3">WAN.TRANS.6rd.3<a class="headerlink" href="07-index-wan.html#req:wan.trans.6rd.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports configuration mechanisms other than the 6rd DHCPv4
+option 212 (user-entered, Controller configured, etc.), the RG MUST
+support 6rd in &ldquo;hub and spoke&rdquo; mode. 6rd in &ldquo;hub and spoke&rdquo; mode
+requires all IPv6 traffic to go to the 6rd border relay. In effect, this
+requirement removes the &ldquo;direct connect to 6rd&rdquo; route defined in section
+7.1.1 of RFC 5969 <span class="cite" data-citation-ids="RFC5969"><a href='03-index-references-and-terminology.html#ref-RFC5969' title=''>[123]</a></span>.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.trans.ds-lite">4.2.9.2 WAN.TRANS.DS-Lite – Dual Stack Lite Transition Mechanism<a class="headerlink" href="07-index-wan.html#sec:req:wan.trans.ds-lite" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.ds-lite.1">WAN.TRANS.DS-Lite.1<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support DS-Lite (RFC 6333 <span class="cite" data-citation-ids="RFC6333"><a href='03-index-references-and-terminology.html#ref-RFC6333' title=''>[127]</a></span>) with IPv4 in IPv6 encapsulation
+(RFC 2473 <span class="cite" data-citation-ids="RFC2473"><a href='03-index-references-and-terminology.html#ref-RFC2473' title=''>[67]</a></span>).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.ds-lite.2">WAN.TRANS.DS-Lite.2<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>This requirement replaced by requirement <a href='07-index-wan.html#req:wan.trans.ds-lite.6' title=''>WAN.TRANS.DS-Lite.6</a>.</em></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.ds-lite.3">WAN.TRANS.DS-Lite.3<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST configure a static IPv4 default route toward the DS-Lite
+tunnel.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.ds-lite.4">WAN.TRANS.DS-Lite.4<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST deactivate the NAPT function on the DS-Lite interface.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.ds-lite.5">WAN.TRANS.DS-Lite.5<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support enabling and disabling of DS-Lite.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.ds-lite.6">WAN.TRANS.DS-Lite.6<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to use the DHCPv6 option to retrieve the FQDN of the
+AFTR element, as defined in RFC 6334 <span class="cite" data-citation-ids="RFC6334"><a href='03-index-references-and-terminology.html#ref-RFC6334' title=''>[128]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.ds-lite.7">WAN.TRANS.DS-Lite.7<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Manual configuration on the RG of the FQDN or the IPv6 address of the
+AFTR element SHOULD be supported.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.ds-lite.8">WAN.TRANS.DS-Lite.8<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Remote configuration from a Controller of the FQDN or the IPv6 address
+of the AFTR element SHOULD be supported.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.ds-lite.9">WAN.TRANS.DS-Lite.9<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support configurable precedence between the FQDN and the
+IPv6 address.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.ds-lite.10">WAN.TRANS.DS-Lite.10<a class="headerlink" href="07-index-wan.html#req:wan.trans.ds-lite.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support configurable precedence between dynamic or static
+configuration of the IPv6 address of the AFTR element when both are
+available. The RG MUST use DHCPv6 by default or use an operator-specific
+configuration.</td>
+</tr>
+</table>
+
+<h4 id="sec:wan.trans.v4-release-control-ipv6-connectivity-with-content-based-ipv4-release-control-transition">4.2.9.3 WAN.TRANS.v4-release-control – IPv6 connectivity with content-based IPv4 release control transition<a class="headerlink" href="07-index-wan.html#sec:wan.trans.v4-release-control-ipv6-connectivity-with-content-based-ipv4-release-control-transition" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<p>mechanism {#req:wan.trans.v4-release-control}</p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.v4-release-control.1">WAN.TRANS.v4-release-control.1<a class="headerlink" href="07-index-wan.html#req:wan.trans.v4-release-control.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide a mechanism that monitors IPv4 session/traffic.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.v4-release-control.2">WAN.TRANS.v4-release-control.2<a class="headerlink" href="07-index-wan.html#req:wan.trans.v4-release-control.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide a timer-based trigger for releasing an IPv4 address.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.v4-release-control.3">WAN.TRANS.v4-release-control.3<a class="headerlink" href="07-index-wan.html#req:wan.trans.v4-release-control.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide signaling to the BNG according to RFC 1332 <span class="cite" data-citation-ids="RFC1332"><a href='03-index-references-and-terminology.html#ref-RFC1332' title=''>[53]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.v4-release-control.4">WAN.TRANS.v4-release-control.4<a class="headerlink" href="07-index-wan.html#req:wan.trans.v4-release-control.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide the (re)assignment of an IPv4 address inside a PPP
+session according to RFC 1332 <span class="cite" data-citation-ids="RFC1332"><a href='03-index-references-and-terminology.html#ref-RFC1332' title=''>[53]</a></span>, independent of the IPv6CP status
+according to section 2.1 of RFC 4241 <span class="cite" data-citation-ids="RFC4241"><a href='03-index-references-and-terminology.html#ref-RFC4241' title=''>[103]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.v4-release-control.5">WAN.TRANS.v4-release-control.5<a class="headerlink" href="07-index-wan.html#req:wan.trans.v4-release-control.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The timer that triggers the release of the IPv4 address MUST be
+configurable.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.v4-release-control.6">WAN.TRANS.v4-release-control.6<a class="headerlink" href="07-index-wan.html#req:wan.trans.v4-release-control.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The timer that triggers the release of the IPv4 address MUST be
+configurable from a Controller.</td>
+</tr>
+</table>
+
+<h4 id="sec:wan.trans.map-e-ipv6-connectivity-with-content-based-ipv4-release-control-transition">4.2.9.4 WAN.TRANS.MAP-E – IPv6 connectivity with content-based IPv4 release control transition<a class="headerlink" href="07-index-wan.html#sec:wan.trans.map-e-ipv6-connectivity-with-content-based-ipv4-release-control-transition" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<p>mechanism {#req:wan.trans.map-e}</p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.map-e.1">WAN.TRANS.MAP-E.1<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support mapping of address and port with encapsulation
+method (MAP-E) as specified in RFC 7597 <span class="cite" data-citation-ids="RFC7597"><a href='03-index-references-and-terminology.html#ref-RFC7597' title=''>[139]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.map-e.2">WAN.TRANS.MAP-E.2<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the configuration for MAP-E operation by one or more
+methods, including Controller provided, DHCPv6 with options as specified
+in RFC 7598 <span class="cite" data-citation-ids="RFC7598"><a href='03-index-references-and-terminology.html#ref-RFC7598' title=''>[140]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.map-e.3">WAN.TRANS.MAP-E.3<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the MAP-E configuration for parameters with
+consistence as specified in RFC 7598 <span class="cite" data-citation-ids="RFC7598"><a href='03-index-references-and-terminology.html#ref-RFC7598' title=''>[140]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.map-e.4">WAN.TRANS.MAP-E.4<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support enabling and disabling of MAP-E operation.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.map-e.5">WAN.TRANS.MAP-E.5<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When performing NAT44 function, the RG MUST restrict the port assignment
+within the range per MAP-E configuration.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.trans.map-e.6">WAN.TRANS.MAP-E.6<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support MAP-E operation in &ldquo;hub and spoke&rdquo; mode by
+forwarding IPv4-in-IPv6 packets to the MAP-E BR for distribution.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.trans.map-e.7">WAN.TRANS.MAP-E.7<a class="headerlink" href="07-index-wan.html#req:wan.trans.map-e.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to connect to more than one MAP-E domain.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.ppp">4.2.10 WAN.PPP – PPP Client<a class="headerlink" href="07-index-wan.html#sec:req:wan.ppp" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.1">WAN.PPP.1<a class="headerlink" href="07-index-wan.html#req:wan.ppp.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support PPP and the associated protocols as defined in IETF
+RFCs 1332, 1334, 1661, 1877, 1994.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.2">WAN.PPP.2<a class="headerlink" href="07-index-wan.html#req:wan.ppp.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Upon receipt of non-standard or unrecognized PPP extensions according to
+IETF RFCs 1570 and 2153 from the broadband network (e.g. vendor or
+proprietary), the RG MUST operate without fault.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.3">WAN.PPP.3<a class="headerlink" href="07-index-wan.html#req:wan.ppp.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support PPPoE as defined in RFC 2516 <span class="cite" data-citation-ids="RFC2516"><a href='03-index-references-and-terminology.html#ref-RFC2516' title=''>[70]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.4">WAN.PPP.4<a class="headerlink" href="07-index-wan.html#req:wan.ppp.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support RFC 4638 <span class="cite" data-citation-ids="RFC4638"><a href='03-index-references-and-terminology.html#ref-RFC4638' title=''>[111]</a></span> in order to accommodate MTU/MRU values
+greater than 1492 bytes in PPPoE.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.5">WAN.PPP.5<a class="headerlink" href="07-index-wan.html#req:wan.ppp.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports ATM, the RG SHOULD support PPP over AAL5 (PPPoA) as
+defined in RFC 2364 <span class="cite" data-citation-ids="RFC2364"><a href='03-index-references-and-terminology.html#ref-RFC2364' title=''>[64]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.6">WAN.PPP.6<a class="headerlink" href="07-index-wan.html#req:wan.ppp.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to save all logins and passwords for PPP sessions
+originated by the RG. Passwords MUST NOT be available outside the RG
+(that is, they cannot be queried or displayed).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.7">WAN.PPP.7<a class="headerlink" href="07-index-wan.html#req:wan.ppp.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST NOT immediately terminate PPPoE sessions and upper layer
+protocol connections when the physical connection is lost. It should
+defer the teardown process for two minutes. If the physical connection
+is restored during that time, the RG MUST first attempt to use its
+previous PPPoE session settings. If these are rejected, then the
+original PPPoE session is to be terminated and a new PPPoE session
+attempted.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.8">WAN.PPP.8<a class="headerlink" href="07-index-wan.html#req:wan.ppp.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD incorporate a random timing delay prior to starting each
+IP (v4 or v6) and PPP session. This random timing delay helps to reduce
+connection failures when a group of users attempts to establish
+connections to a service provider at the same time (e.g. after power is
+restored to a neighborhood that had a blackout).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.9">WAN.PPP.9<a class="headerlink" href="07-index-wan.html#req:wan.ppp.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG receives an authentication failure when attempting an
+automated PPP connection attempt, it SHOULD re-try immediately to
+establish the connection. After three unsuccessful attempts, the RG
+SHOULD wait for five minutes, then repeat the connection attempt three
+times. If authentication still fails, the RG SHOULD back off to thirty
+minute intervals between groups of three attempts.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.10">WAN.PPP.10<a class="headerlink" href="07-index-wan.html#req:wan.ppp.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG is using the PPPoE client function actively, the RG MUST be
+able to forward PPPoE sessions initiated from LAN devices as additional
+PPPoE sessions to the WAN interface (this is sometimes known as PPPoE
+pass-through). Specifically, these LAN initiated PPPoE sessions MUST NOT
+be tunneled inside the RG’s primary PPPoE client session.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.11">WAN.PPP.11<a class="headerlink" href="07-index-wan.html#req:wan.ppp.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When fragmentation is required, the RG MUST fragment all PPP sessions
+that it originates on an access VC using MLPPP interleaving as defined
+in RFC 1990 <span class="cite" data-citation-ids="RFC1990"><a href='03-index-references-and-terminology.html#ref-RFC1990' title=''>[57]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.ppp.12">WAN.PPP.12<a class="headerlink" href="07-index-wan.html#req:wan.ppp.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>If PPP is used, the RG MAY obtain an IPv4 subnet mask on its WAN
+interface using IPCP (IPv4) extensions. If this is done, the IPv4 subnet
+masks will be communicated with IPCP (IPv4) using the PPP IPCP (IPv4)
+option with option code 144, the length of the option being 6 and the
+mask being expressed as a 32-bit mask (e.g. 0xFFFFFF80), not as a number
+indicating the consecutive number of 1s in the mask (from 0 to 32).</p>
+
+<p>The learned network information MAY, but need not, be used to populate
+the LAN side embedded DHCP server for the RG.</p>
+
+<p>The learned network information is treated as a subnet and not as a
+collection of individual addresses. That is, the first and last
+addresses in the subnet should not be used.</p>
+
+<p>The IPv4 address negotiated SHOULD, but need not, be the one assigned to
+the RG.</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.13">WAN.PPP.13<a class="headerlink" href="07-index-wan.html#req:wan.ppp.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST make the access concentrator name used with PPPoE
+connections available via the Web GUI, TR-064i2, and for a Controller
+for diagnostic purposes.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.14">WAN.PPP.14<a class="headerlink" href="07-index-wan.html#req:wan.ppp.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support RFC 3544 <span class="cite" data-citation-ids="RFC3544"><a href='03-index-references-and-terminology.html#ref-RFC3544' title=''>[86]</a></span>, &ldquo;<em>IP Header Compression over PPP</em>&rdquo;.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.ppp.ipv6">4.2.10.1 WAN.PPP.IPv6 – PPP Client for establishment of IPv6 connection<a class="headerlink" href="07-index-wan.html#sec:req:wan.ppp.ipv6" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.ipv6.1">WAN.PPP.IPv6.1<a class="headerlink" href="07-index-wan.html#req:wan.ppp.ipv6.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support IPv6 over PPP per RFC 5072 <span class="cite" data-citation-ids="RFC5072"><a href='03-index-references-and-terminology.html#ref-RFC5072' title=''>[116]</a></span> and RFC 5172 <span class="cite" data-citation-ids="RFC5172"><a href='03-index-references-and-terminology.html#ref-RFC5172' title=''>[117]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.ipv6.2">WAN.PPP.IPv6.2<a class="headerlink" href="07-index-wan.html#req:wan.ppp.ipv6.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support establishment of an IPv6 over PPPoE connection
+according to the flow in Annex A.1.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.ipv6.3">WAN.PPP.IPv6.3<a class="headerlink" href="07-index-wan.html#req:wan.ppp.ipv6.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST allow any particular PPP connection to be configurable for
+IPv4 only, IPv6 only, or both.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ppp.ipv6.4">WAN.PPP.IPv6.4<a class="headerlink" href="07-index-wan.html#req:wan.ppp.ipv6.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG is configured for multiple PPPoE connections, it MUST be
+possible to configure it to use the same login and password for all, so
+that only the domain is unique per connection.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ppp.ipv6.5">WAN.PPP.IPv6.5<a class="headerlink" href="07-index-wan.html#req:wan.ppp.ipv6.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST NOT tear down a shared (IPv4 and IPv6) PPP session if error
+conditions prevent only one IP stack (either IPv4 or IPv6) from working.
+The session MUST be torn down if error conditions apply to both stacks.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.dot1x">4.2.11 WAN.dot1x – 802.1X Client<a class="headerlink" href="07-index-wan.html#sec:req:wan.dot1x" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.1">WAN.dot1x.1<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support IEEE 802.1X acting as a supplicant.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dot1x.2">WAN.dot1x.2<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to respond to an appropriate IEEE 802.1X request and
+provide certificate information using Extensible Authentication
+Protocol-Transport Layer Security (EAP/TLS).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.3">WAN.dot1x.3<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD support EAP-MD5 username and password type authentication.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dot1x.4">WAN.dot1x.4<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support receiving IEEE 802.1X EAPOL frames with an
+individual MAC address (i.e. unicast) as well as frames with a group MAC
+address (i.e. multicast).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.5">WAN.dot1x.5<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST perform mutual authentication by authenticating certificate
+information of the requesting authenticator.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dot1x.6">WAN.dot1x.6<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to store certificate information used to
+authenticate the authenticator.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.7">WAN.dot1x.7<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to update the information used to validate the
+authenticator by either a firmware upgrade or via updated certificates.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dot1x.8">WAN.dot1x.8<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to update the information used to validate the
+authenticator by updated certificates without a firmware upgrade.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.9">WAN.dot1x.9<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to authenticate a minimum of eight authenticators.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dot1x.10">WAN.dot1x.10<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When used with IPv4 over Ethernet and DHCPv4, if the RG already has a
+connection when receiving an IEEE 802.1X request, the RG SHOULD
+subsequently perform a DHCPv4 lease renewal upon successful 802.1X
+authentication.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.11">WAN.dot1x.11<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Each RG MUST have a unique factory-installed private/public key pair and
+an embedded ITU-T X.509 version 3 / RFC 5280 <span class="cite" data-citation-ids="RFC5280"><a href='03-index-references-and-terminology.html#ref-RFC5280' title=''>[119]</a></span>
+certificate that has been signed by the RG vendor’s certificate authority.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dot1x.12">WAN.dot1x.12<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG certificate MUST have a validity period greater than the
+operational lifetime of the RG.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dot1x.13">WAN.dot1x.13<a class="headerlink" href="07-index-wan.html#req:wan.dot1x.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When used with IPv6 over Ethernet and DHCPv6, if the RG already has a
+connection when receiving an IEEE 802.1X request, the RG SHOULD
+subsequently perform a DHCPv6 CONFIRM upon successful 802.1X
+authentication.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.dos">4.2.12 WAN.DoS – Denial of Service Prevention<a class="headerlink" href="07-index-wan.html#sec:req:wan.dos" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<p><em>Note: The IPv6 parts of this module apply only if the RG has an IPv6
+stack.</em></p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dos.1">WAN.DoS.1<a class="headerlink" href="07-index-wan.html#req:wan.dos.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide denial of service (DOS) protection for itself and
+all LAN CPE including protection from ping of death, SYN flood, LAND and
+variant attacks. The extent of this protection will be limited when the
+RG is configured as a bridge in which only PPPoE traffic is bridged.
+This protection MUST be available when the RG terminates IP (v4 or v6)
+or bridges IPv4.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dos.2">WAN.DoS.2<a class="headerlink" href="07-index-wan.html#req:wan.dos.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST reject packets from the WAN with source MAC addresses of
+devices on the local LAN or invalid IP (v4 or v6) addresses
+(e.g. broadcast addresses or IP (v4 or v6) addresses matching those
+assigned to the LAN segment).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dos.3">WAN.DoS.3<a class="headerlink" href="07-index-wan.html#req:wan.dos.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST reject any unidentified Ethernet packets (i.e. any packet
+that is not associated with IP (v4 or v6) or PPPoE protocols).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.dos.4">WAN.DoS.4<a class="headerlink" href="07-index-wan.html#req:wan.dos.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST perform anti-spoofing filtering for IPv6. All IPv6 traffic
+sent to the WAN from the LAN MUST have an IPv6 source address with a
+prefix assigned to the LAN by the RG, that was delegated from the WAN
+(through DHCPv6 or configuration).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.dos.5">WAN.DoS.5<a class="headerlink" href="07-index-wan.html#req:wan.dos.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Because the RG must perform anti-spoofing filtering for IPv6, until it
+has an IPv6 LAN prefix delegation it MUST filter all upstream IPv6
+traffic from the home.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.qos">4.2.13 WAN.QoS – Quality of Service<a class="headerlink" href="07-index-wan.html#sec:req:wan.qos" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<p><em>Note: The IPv6 parts of this module apply only if the RG has an IPv6
+stack.</em></p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.qos.1">WAN.QoS.1<a class="headerlink" href="07-index-wan.html#req:wan.qos.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support classification of WAN directed LAN traffic and
+placement into appropriate queues (or discard) based on any one or more
+of the following pieces of information:</p>
+
+<ol>
+<li><p>destination IP (v4 or v6) address(es) with subnet mask,</p></li>
+<li><p>originating IP (v4 or v6) address(es) with subnet mask,</p></li>
+<li><p>source MAC address,</p></li>
+<li><p>destination MAC address,</p></li>
+<li><p>protocol (TCP, UDP, ICMP, IGMP, …)</p></li>
+<li><p>source TCP/UDP port and port range,</p></li>
+<li><p>destination TCP/UDP port and port range,</p></li>
+<li><p>IEEE 802.1Q Ethernet priority,</p></li>
+<li><p>FQDN (fully qualified domain name) of WAN session,</p></li>
+<li><p>Diffserv codepoint (<span class="cite" data-citation-ids="RFC3260"><a href='03-index-references-and-terminology.html#ref-RFC3260' title=''>[82]</a></span>),</p></li>
+<li><p>Ethertype (IEEE 802.3) length/type field),</p></li>
+<li><p>traffic handled by an ALG,</p></li>
+<li><p>IEEE 802.1Q VLAN identification.</p></li>
+<li><p>Wi-Fi SSID and,</p></li>
+<li><p>LAN type (Ethernet, WiFi, etc.).</p></li>
+</ol></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.qos.2">WAN.QoS.2<a class="headerlink" href="07-index-wan.html#req:wan.qos.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG SHOULD support classification of WAN directed LAN traffic and
+placement into appropriate queues (or discard) based on any one or more
+of the following pieces of information:</p>
+
+<ol>
+<li><p>packet length (note: to be used with caution to avoid re-ordering
+packets), and</p></li>
+<li><p>LAN-side physical port.</p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.3">WAN.QoS.3<a class="headerlink" href="07-index-wan.html#req:wan.qos.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the differentiated services field (DS field) in IP
+(v4 or v6) headers as defined in RFC 2474 <span class="cite" data-citation-ids="RFC2474"><a href='03-index-references-and-terminology.html#ref-RFC2474' title=''>[68]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.qos.4">WAN.QoS.4<a class="headerlink" href="07-index-wan.html#req:wan.qos.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST by default recognize and provide appropriate treatment to
+packets marked with recommended Diffserv codepoints, whose values and
+behavior are defined in RFC 2474 <span class="cite" data-citation-ids="RFC2474"><a href='03-index-references-and-terminology.html#ref-RFC2474' title=''>[68]</a></span>, RFC 2475 <span class="cite" data-citation-ids="RFC2475"><a href='03-index-references-and-terminology.html#ref-RFC2475' title=''>[69]</a></span>,
+RFC 2597 <span class="cite" data-citation-ids="RFC2597"><a href='03-index-references-and-terminology.html#ref-RFC2597' title=''>[71]</a></span>, RFC 3246 <span class="cite" data-citation-ids="RFC3246"><a href='03-index-references-and-terminology.html#ref-RFC3246' title=''>[81]</a></span>, and RFC 3260 <span class="cite" data-citation-ids="RFC3260"><a href='03-index-references-and-terminology.html#ref-RFC3260' title=''>[82]</a></span>.</p>
+
+<p>Specifically, the values shown in the DSCP column of the table below
+MUST be supported, except Cs0-7, which are optional.</p>
+
+<table>
+<col width="13%" />
+<col width="20%" />
+<col width="29%" />
+<col width="39%" />
+<tr class="header">
+<th align="left"><strong>Class</strong></th>
+<th align="left"><strong>Description</strong></th>
+<th align="left"><strong>DSCP marking (name)</strong></th>
+<th align="left"><strong>DSCP marking (decimal value)</strong></th>
+</tr>
+<tr class="odd">
+<td align="left">EF</td>
+<td align="left">Realtime</td>
+<td align="left">ef</td>
+<td align="left">46</td>
+</tr>
+<tr class="even">
+<td align="left">AF4 – in-contract</td>
+<td align="left">Premium class4 (in)</td>
+<td align="left">af41</td>
+<td align="left">34</td>
+</tr>
+<tr class="odd">
+<td align="left">AF4 – out-of-contract</td>
+<td align="left">Premium class4 (out)</td>
+<td align="left">af42, af43</td>
+<td align="left">36, 38</td>
+</tr>
+<tr class="even">
+<td align="left">AF3 – in-contract</td>
+<td align="left">Premium class3 (in)</td>
+<td align="left">af31</td>
+<td align="left">26</td>
+</tr>
+<tr class="odd">
+<td align="left">AF3 – out-of-contract</td>
+<td align="left">Premium class3 (out)</td>
+<td align="left">af32, af33</td>
+<td align="left">28, 30</td>
+</tr>
+<tr class="even">
+<td align="left">AF2 – in-contract</td>
+<td align="left">Premium class2 (in)</td>
+<td align="left">af21</td>
+<td align="left">18</td>
+</tr>
+<tr class="odd">
+<td align="left">AF2 – out-of-contract</td>
+<td align="left">Premium class2 (out)</td>
+<td align="left">af22, af23</td>
+<td align="left">20, 22</td>
+</tr>
+<tr class="even">
+<td align="left">AF1 – in-contract</td>
+<td align="left">Premium class1 (in)</td>
+<td align="left">af11</td>
+<td align="left">10</td>
+</tr>
+<tr class="odd">
+<td align="left">AF1 – out-of-contract</td>
+<td align="left">Premium class1 (out)</td>
+<td align="left">af12, af13</td>
+<td align="left">12, 14</td>
+</tr>
+<tr class="even">
+<td align="left">DE/BE</td>
+<td align="left">Default / Best Effort</td>
+<td align="left">be</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left">Cs0 (optional)</td>
+<td align="left">Class Selector 0</td>
+<td align="left">cs0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">Cs1 (optional)</td>
+<td align="left">Class Selector 1</td>
+<td align="left">cs1</td>
+<td align="left">8</td>
+</tr>
+<tr class="odd">
+<td align="left">Cs2 (optional)</td>
+<td align="left">Class Selector 2</td>
+<td align="left">cs2</td>
+<td align="left">16</td>
+</tr>
+<tr class="even">
+<td align="left">Cs3 (optional)</td>
+<td align="left">Class Selector 3</td>
+<td align="left">cs3</td>
+<td align="left">24</td>
+</tr>
+<tr class="odd">
+<td align="left">Cs4 (optional)</td>
+<td align="left">Class Selector 4</td>
+<td align="left">cs4</td>
+<td align="left">32</td>
+</tr>
+<tr class="even">
+<td align="left">Cs5 (optional)</td>
+<td align="left">Class Selector 5</td>
+<td align="left">cs5</td>
+<td align="left">40</td>
+</tr>
+<tr class="odd">
+<td align="left">Cs6 (optional)</td>
+<td align="left">Class Selector 6</td>
+<td align="left">cs6</td>
+<td align="left">48</td>
+</tr>
+<tr class="even">
+<td align="left">Cs7 (optional)</td>
+<td align="left">Class Selector 7</td>
+<td align="left">cs7</td>
+<td align="left">56</td>
+</tr>
+</table></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.5">WAN.QoS.5<a class="headerlink" href="07-index-wan.html#req:wan.qos.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to mark or remark the Diffserv codepoint or IEEE
+802.1Q Ethernet priority of traffic identified based on any of the
+classifiers supported by the RG.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.6">WAN.QoS.6<a class="headerlink" href="07-index-wan.html#req:wan.qos.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Requirement relocated to <a href='07-index-wan.html#req:wan.qos.vlan.1' title=''>WAN.QoS.VLAN.1</a></em></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.7">WAN.QoS.7<a class="headerlink" href="07-index-wan.html#req:wan.qos.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Requirement relocated to <a href='07-index-wan.html#req:wan.qos.vlan.2' title=''>WAN.QoS.VLAN.2</a></em></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.8">WAN.QoS.8<a class="headerlink" href="07-index-wan.html#req:wan.qos.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left"><em>Requirement relocated to <a href='07-index-wan.html#req:wan.qos.vlan.3' title=''>WAN.QoS.VLAN.3</a></em></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.9">WAN.QoS.9<a class="headerlink" href="07-index-wan.html#req:wan.qos.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support one best effort (BE) queue, one expedited forwarding
+(EF) queue and a minimum of four assured forwarding (AF) queues.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.10">WAN.QoS.10<a class="headerlink" href="07-index-wan.html#req:wan.qos.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST duplicate the set of queues for each access session (e.g. L2
+PVC, VLAN). This can be done logically or physically.</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.qos.11">WAN.QoS.11<a class="headerlink" href="07-index-wan.html#req:wan.qos.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG SHOULD support the appropriate mechanism to effectively implement
+Diffserv per-hop scheduling behaviors. The RG SHOULD be able to
+configure each queue defined in <a href='07-index-wan.html#req:wan.qos.9' title=''>WAN.QoS.9</a> for strict priority or
+weighted round robin scheduling.</p>
+
+<p>SP queues are served with priority over all other queues. A strict
+priority scheduler is preferred for EF.</p>
+
+<p>WRR queues are served on the basis of configurable weights, provided
+with a mechanism to prevent starvation (WRR queue minimum bandwidth)</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.12">WAN.QoS.12<a class="headerlink" href="07-index-wan.html#req:wan.qos.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support aggregate shaping of upstream traffic across all
+access sessions (e.g. L2 PVC, VLAN).</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.qos.13">WAN.QoS.13<a class="headerlink" href="07-index-wan.html#req:wan.qos.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support per-class shaping of upstream traffic.</p>
+
+<p>Classes are defined in <a href='07-index-wan.html#req:wan.qos.4' title=''>WAN.QoS.4</a>.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.14">WAN.QoS.14<a class="headerlink" href="07-index-wan.html#req:wan.qos.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support the capability to fragment IP traffic on sessions
+that it originates, in order to limit the effect of large packets on
+traffic delay.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.15">WAN.QoS.15<a class="headerlink" href="07-index-wan.html#req:wan.qos.15" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The packet size threshold before fragmenting AF and BE packets MUST be
+configurable.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.16">WAN.QoS.16<a class="headerlink" href="07-index-wan.html#req:wan.qos.16" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST handle all telephone service-related network traffic by a
+high priority queue to avoid congestion, delay, jitter, or packet loss.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.17">WAN.QoS.17<a class="headerlink" href="07-index-wan.html#req:wan.qos.17" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MAY handle all telephone service-related network traffic by a
+dedicated WAN interface to avoid congestion, delay, jitter, or packet
+loss.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.18">WAN.QoS.18<a class="headerlink" href="07-index-wan.html#req:wan.qos.18" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide counters in terms of dropped and emitted
+packets/bytes for each queue. Statistics SHOULD be collected from the
+time of last counter reset or on a configurable sample interval.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.19">WAN.QoS.19<a class="headerlink" href="07-index-wan.html#req:wan.qos.19" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST provide information about queue occupancy in terms of
+packets and peak percentage. Statistics SHOULD be collected from the
+time of last counter reset or on a configurable sample interval.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.qos.20">WAN.QoS.20<a class="headerlink" href="07-index-wan.html#req:wan.qos.20" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support classification of WAN-directed internally-generated
+traffic and placement into appropriate queues based on any one or more
+of the following pieces of information:</p>
+
+<ol>
+<li><p>destination IP address(es) with subnet mask,</p></li>
+<li><p>originating IP address(es) with subnet mask,</p></li>
+<li><p>protocol (TCP, UDP, ICMP, …),</p></li>
+<li><p>source TCP/UDP port and port range,</p></li>
+<li><p>destination TCP/UDP port and port range,</p></li>
+<li><p>Diffserv codepoint (<span class="cite" data-citation-ids="RFC3260"><a href='03-index-references-and-terminology.html#ref-RFC3260' title=''>[82]</a></span>),</p></li>
+<li><p>physical port, in case of voice packets.</p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:wan.qos.21">WAN.QoS.21<a class="headerlink" href="07-index-wan.html#req:wan.qos.21" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG SHOULD support classification of WAN directed internally
+generated traffic and placement into appropriate queues based on any one
+or more of the following pieces of information:</p>
+
+<ol>
+<li>packet length.</li>
+</ol></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.qos.22">WAN.QoS.22<a class="headerlink" href="07-index-wan.html#req:wan.qos.22" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST be able to learn classification keys (MAC address and IP
+address) through the following option of the DHCP client requests on the
+LAN that it serves:</p>
+
+<ol>
+<li><p>DHCP Option 60 (Vendor Class ID),</p></li>
+<li><p>DHCP Option 61 (Client Identifier),</p></li>
+<li><p>DHCP Option 77 (User Class ID), and</p></li>
+<li><p>DHCP Option 125 (Vendor Specific Information).</p></li>
+</ol></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.23">WAN.QoS.23<a class="headerlink" href="07-index-wan.html#req:wan.qos.23" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to learn classification keys (MAC address and IP
+address) for trusted DLNA devices as they are recognized on the LAN.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.qos.vlan">4.2.13.1 WAN.QoS.VLAN – VLAN based QoS<a class="headerlink" href="07-index-wan.html#sec:req:wan.qos.vlan" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.vlan.1">WAN.QoS.VLAN.1<a class="headerlink" href="07-index-wan.html#req:wan.qos.vlan.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support sending the following frame types: untagged frames,
+priority-tagged frames, and VLAN-tagged frames in the upstream
+direction. This satisfies Broadband Forum TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-01.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.vlan.2">WAN.QoS.VLAN.2<a class="headerlink" href="07-index-wan.html#req:wan.qos.vlan.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support setting the priority tag and VLAN ID values. This
+satisfies Broadband Forum TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-03.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.vlan.3">WAN.QoS.VLAN.3<a class="headerlink" href="07-index-wan.html#req:wan.qos.vlan.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support receiving untagged and VLAN-tagged Ethernet frames
+in the downstream direction, and MUST be able to strip the VLAN tagging
+from the ones received tagged. This satisfies Broadband Forum TR-101 <span class="cite" data-citation-ids="TR-101"><a href='03-index-references-and-terminology.html#ref-TR-101' title=''>[161]</a></span> R-04.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.qos.tunnel">4.2.13.2 WAN.QoS.TUNNEL – Quality of Service for Tunneled Traffic<a class="headerlink" href="07-index-wan.html#sec:req:wan.qos.tunnel" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<p>This module only applies when the RG is an endpoint for a tunnel to the
+WAN. This module applies to IPv6 if it is used as either the tunneled or
+the tunneling protocol.</p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.tunnel.1">WAN.QoS.TUNNEL.1<a class="headerlink" href="07-index-wan.html#req:wan.qos.tunnel.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to mark or remark the Diffserv codepoint of traffic
+that will be placed over a tunnel, based on classification of that
+traffic (prior to placing it on the tunnel) using any of the classifiers
+supported by the RG. This only applies when the traffic is going from
+LAN to WAN.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.tunnel.2">WAN.QoS.TUNNEL.2<a class="headerlink" href="07-index-wan.html#req:wan.qos.tunnel.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to mark the Diffserv codepoint of the underlying
+tunnel or the IEEE 802.1Q Ethernet priority of Ethernet that is
+transporting the tunnel, based on classification of the tunneled traffic
+using any of the classifiers supported by the RG. This only applies when
+the traffic is going from LAN to WAN.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.tunnel.3">WAN.QoS.TUNNEL.3<a class="headerlink" href="07-index-wan.html#req:wan.qos.tunnel.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When the RG receives tunneled traffic from the WAN, it MUST be able to
+mark or remark the Diffserv codepoint of that traffic, based on
+classification of the tunneled traffic using any of the IP-layer or
+higher layer classifiers supported by the RG.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.tunnel.4">WAN.QoS.TUNNEL.4<a class="headerlink" href="07-index-wan.html#req:wan.qos.tunnel.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When the RG receives tunneled traffic from the WAN, it MUST be able to
+mark the IEEE 802.1Q Ethernet priority of the LAN Ethernet frame, based
+on classification of the tunneled traffic using any of the IP-layer or
+higher layer classifiers supported by the RG.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.qos.tunnel.5">WAN.QoS.TUNNEL.5<a class="headerlink" href="07-index-wan.html#req:wan.qos.tunnel.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When the RG receives tunneled traffic from the WAN, it MUST be able to
+mark or remark the Diffserv codepoint or mark the IEEE 802.1Q Ethernet
+priority of the LAN Ethernet frame, based on classification of the WAN
+Ethernet, using any of the Ethernet-layer classifiers supported by the
+RG.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.qos.tunnel.6">WAN.QoS.TUNNEL.6<a class="headerlink" href="07-index-wan.html#req:wan.qos.tunnel.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">When the RG receives tunneled traffic from the WAN, it SHOULD be able to
+mark or remark the Diffserv codepoint or mark the IEEE 802.1Q Ethernet
+priority of the LAN Ethernet frame, based on classification of the
+underlying tunnel, using any of the IP-layer classifiers supported by
+the RG.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.ipsecclient">4.2.14 WAN.IPsecClient – IPsec VPN peer to peer<a class="headerlink" href="07-index-wan.html#sec:req:wan.ipsecclient" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipsecclient.1">WAN.IPsecClient.1<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MAY support peer to peer IPSec VPN, as defined in IETF RFCs 4301,
+4303, 5996.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipsecclient.2">WAN.IPsecClient.2<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support encapsulating security
+payload (ESP), as defined in RFC 4303 <span class="cite" data-citation-ids="RFC4303"><a href='03-index-references-and-terminology.html#ref-RFC4303' title=''>[105]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipsecclient.3">WAN.IPsecClient.3<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support the IKEv2 key exchange
+protocol as defined in RFC 5996 <span class="cite" data-citation-ids="RFC5996"><a href='03-index-references-and-terminology.html#ref-RFC5996' title=''>[124]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipsecclient.4">WAN.IPsecClient.4<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support IPSec VPN in tunnel mode,
+which is defined in section 3.2 of <span class="cite" data-citation-ids="RFC4301"><a href='03-index-references-and-terminology.html#ref-RFC4301' title=''>[104]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipsecclient.5">WAN.IPsecClient.5<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support dead peer detection (DPD),
+which is defined in RFC 5996 <span class="cite" data-citation-ids="RFC5996"><a href='03-index-references-and-terminology.html#ref-RFC5996' title=''>[124]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipsecclient.6">WAN.IPsecClient.6<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it must support configuring the IPSec VPN
+via web GUI or Controller extension.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipsecclient.7">WAN.IPsecClient.7<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support that the source address in
+the IPSec is configured to be either an IP address or a TR-181 instance
+of WAN interface.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.ipsecclient.8">WAN.IPsecClient.8<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support that the destination
+address in the IPSec is configured to be either an IP address or a
+dynamic domain name.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.ipsecclient.9">WAN.IPsecClient.9<a class="headerlink" href="07-index-wan.html#req:wan.ipsecclient.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG supports IPSec VPN, it MUST support querying the status of
+child security associations (SA) from the Controller extension.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.l2tpclient">4.2.15 WAN.L2tpClient – L2tp VPN Remote Access<a class="headerlink" href="07-index-wan.html#sec:req:wan.l2tpclient" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.l2tpclient.1">WAN.L2tpClient.1<a class="headerlink" href="07-index-wan.html#req:wan.l2tpclient.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The device MAY support L2TPv2 VPN, as defined in RFC 2661 <span class="cite" data-citation-ids="RFC2661"><a href='03-index-references-and-terminology.html#ref-RFC2661' title=''>[72]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.l2tpclient.2">WAN.L2tpClient.2<a class="headerlink" href="07-index-wan.html#req:wan.l2tpclient.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The device SHOULD support L2TPv3 VPN, as defined in IETF RFC 3931 <span class="cite" data-citation-ids="RFC3931"><a href='03-index-references-and-terminology.html#ref-RFC3931' title=''>[95]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.l2tpclient.3">WAN.L2tpClient.3<a class="headerlink" href="07-index-wan.html#req:wan.l2tpclient.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the device supports L2TP VPN, it SHOULD support L2TP Disconnect Cause
+Information, as defined in RFC 3145 <span class="cite" data-citation-ids="RFC3145"><a href='03-index-references-and-terminology.html#ref-RFC3145' title=''>[79]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.l2tpclient.4">WAN.L2tpClient.4<a class="headerlink" href="07-index-wan.html#req:wan.l2tpclient.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the device supports L2TP VPN, it MUST support L2TP/IPSec VPN
+connection.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.l2tpclient.5">WAN.L2tpClient.5<a class="headerlink" href="07-index-wan.html#req:wan.l2tpclient.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the device supports L2TP VPN, it MUST support LNS functions, as
+defined in RFC 2661 <span class="cite" data-citation-ids="RFC2661"><a href='03-index-references-and-terminology.html#ref-RFC2661' title=''>[72]</a></span> or RFC 3931 <span class="cite" data-citation-ids="RFC3931"><a href='03-index-references-and-terminology.html#ref-RFC3931' title=''>[95]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.l2tpclient.6">WAN.L2tpClient.6<a class="headerlink" href="07-index-wan.html#req:wan.l2tpclient.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the device supports L2TP VPN, it MUST support configuring the L2TP
+VPN via Web GUI or from a Controller.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.pcp">4.2.16 WAN.PCP – Port Control Protocol<a class="headerlink" href="07-index-wan.html#sec:req:wan.pcp" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.pcp.1">WAN.PCP.1<a class="headerlink" href="07-index-wan.html#req:wan.pcp.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support Port Control Protocol (PCP) Client as specified in
+RFC 6887 <span class="cite" data-citation-ids="RFC6887"><a href='03-index-references-and-terminology.html#ref-RFC6887' title=''>[135]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.pcp.2">WAN.PCP.2<a class="headerlink" href="07-index-wan.html#req:wan.pcp.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support Port Control Protocol (PCP) Extension for Port Set
+Allocation as specified in RFC 7753 <span class="cite" data-citation-ids="RFC7753"><a href='03-index-references-and-terminology.html#ref-RFC7753' title=''>[143]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.pcp.3">WAN.PCP.3<a class="headerlink" href="07-index-wan.html#req:wan.pcp.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support configuring the PCP Client via web GUI or from a
+Controller.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.pcp.4">WAN.PCP.4<a class="headerlink" href="07-index-wan.html#req:wan.pcp.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be able to use the DHCP option to retrieve Server name(s) as
+defined in RFC 7291 <span class="cite" data-citation-ids="RFC7291"><a href='03-index-references-and-terminology.html#ref-RFC7291' title=''>[138]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.pcp.5">WAN.PCP.5<a class="headerlink" href="07-index-wan.html#req:wan.pcp.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">For the DS-Lite case, if PCP is enabled and no PCP server is configured,
+the RG MUST consider that the AFTR is the PCP server.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.pcp.6">WAN.PCP.6<a class="headerlink" href="07-index-wan.html#req:wan.pcp.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The PCP client of the RG MUST support invocations from applications on
+the RG, from the Web GUI or from a Controller.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.pcp.7">WAN.PCP.7<a class="headerlink" href="07-index-wan.html#req:wan.pcp.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST embed an interworking function to ensure interworking
+between the UPnP IGD (Internet Gateway Device) used by CPE LAN devices
+in the LAN and PCP as defined in RFC 6970 <span class="cite" data-citation-ids="RFC6970"><a href='03-index-references-and-terminology.html#ref-RFC6970' title=''>[136]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.pcp.8">WAN.PCP.8<a class="headerlink" href="07-index-wan.html#req:wan.pcp.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST embed a PCP proxy function as defined in the IETF document
+&ldquo;Port Control Protocol (PCP) Proxy Function&rdquo; RFC 7648 (<span class="cite" data-citation-ids="RFC7648"><a href='03-index-references-and-terminology.html#ref-RFC7648' title=''>[141]</a></span>).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.pcp.9">WAN.PCP.9<a class="headerlink" href="07-index-wan.html#req:wan.pcp.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Static (i.e. configured) PCP mappings MUST be stored on the RG across
+reboot or power off situations.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:wan.tun">4.2.17 WAN.TUN – WAN Tunnel<a class="headerlink" href="07-index-wan.html#sec:req:wan.tun" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.1">WAN.TUN.1<a class="headerlink" href="07-index-wan.html#req:wan.tun.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG Should support one or more tunnel protocol, such as
+Vxlan、GRE,L2TP</td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.tun.vxlan">4.2.17.1 WAN.TUN.VXLAN – VxLAN Tunnel<a class="headerlink" href="07-index-wan.html#sec:req:wan.tun.vxlan" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.vxlan.1">WAN.TUN.VXLAN.1<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support VXLAN tunnels</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.tun.vxlan.2">WAN.TUN.VXLAN.2<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support VXLAN tunnels using IPv4 encapsulation.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.vxlan.3">WAN.TUN.VXLAN.3<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support VXLAN tunnels using IPv6 encapsulation.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.tun.vxlan.4">WAN.TUN.VXLAN.4<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support bridging Ethernet frames into a VXLAN tunnel.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.vxlan.5">WAN.TUN.VXLAN.5<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support using the LSL settings in
+Broadband Forum TR-328 <span class="cite" data-citation-ids="TR-328"><a href='03-index-references-and-terminology.html#ref-TR-328' title=''>[168]</a></span>, table 4.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.tun.vxlan.6">WAN.TUN.VXLAN.6<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support static provisioning of VXLAN LSL settings</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.vxlan.7">WAN.TUN.VXLAN.7<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support obtaining VXLAN LSL settings via DHCP</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:wan.tun.vxlan.8">WAN.TUN.VXLAN.8<a class="headerlink" href="07-index-wan.html#req:wan.tun.vxlan.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>Upon receiving downstream encapsulated traffic from the Network side,
+the RG May:</p>
+
+<ul>
+<li><p>Decapsulate VXLAN</p></li>
+<li><p>If the Protocol Type in IP header is UDP (0x11) and the UDP
+Destination Port is 4789, then it must process the 802.3 frame following
+the VXLAN header.</p></li>
+<li><p>The frame should be forwarded per the MAC forwarding table, if
+matching the VNI configured for the LSL.</p></li>
+</ul></td>
+</tr>
+</table>
+
+<h4 id="sec:req:wan.tun.l2">4.2.17.2 WAN.TUN.L2 – L2Tunnel<a class="headerlink" href="07-index-wan.html#sec:req:wan.tun.l2" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.l2.1">WAN.TUN.L2.1<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May be able to retrieve the IP configuration of its network
+interface, through DHCP, outside of any tunnel</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.tun.l2.2">WAN.TUN.L2.2<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May be able to be provided the configuration information of a L2
+tunnel over IP, through DHCP option 125</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.l2.3">WAN.TUN.L2.3<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May be able to setup a L2 tunnel over IP</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.tun.l2.4">WAN.TUN.L2.4<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May be able to initiate LSL tunnel set up using information
+received from DHCP.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.l2.5">WAN.TUN.L2.5<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May support GRE tunneling The RG MUST be able to be provided the
+configuration information of a L2 tunnel over IP, through DHCP option
+125</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:wan.tun.l2.6">WAN.TUN.L2.6<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May be able to setup a L2 tunnel over IP</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:wan.tun.l2.7">WAN.TUN.L2.7<a class="headerlink" href="07-index-wan.html#req:wan.tun.l2.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG May be able to initiate LSL tunnel set up using information
+received from DHCP.</td>
+</tr>
+</table>
+

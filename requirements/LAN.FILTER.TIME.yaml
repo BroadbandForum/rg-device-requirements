@@ -1,0 +1,9 @@
+---
+LAN.FILTER.TIME:
+  name: |
+    Time of Day Filtering
+
+  requirements:
+    1: |
+      The RG MAY support filtering based on time of day on a per LAN device
+      basis.

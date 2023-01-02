@@ -1,0 +1,38 @@
+---
+IF.LAN.VOICE.ATA:
+  name: |
+    Voice ATA Ports
+
+  requirements:
+    1: |
+      If the RG supports VoIP ports integrated directly into the RG, it MUST
+      comply with Broadband Forum
+      TR-122 [@TR-122] requirements specific to RG Integrated ATA Ports.
+
+    2: |
+      If the RG supports VoIP ports integrated directly into the RG, it MUST
+      provide one LED on the front panel of the RG per unique line instance
+      supported to indicate status and be located between the last LAN LED
+      indicator and the Broadband LED indicator. For behavior specifications
+      and labeling requirements of the VoIP port LEDs, refer to Broadband Forum
+      TR-122 [@TR-122].
+
+    3: |
+      The RG MUST support the VoiceService (TR-104 Issue 1) EndPoint:1 profile
+      if a Voice IP service is supported.
+
+    4: |
+      The RG MUST support the VoiceService (TR-104 Issue 1) SIPEndPoint:1
+      profile if the device supports SIP.
+
+    5: |
+      The RG MUST support the VoiceService (TR-104 Issue 1) MGCPEndPoint:1
+      profile if the device supports MGCP.
+
+    6: |
+      The RG MUST support the VoiceService (TR-104 Issue 1) H323EndPoint:1
+      profile if the device supports H323.
+
+    7: |
+      The RG MUST support the VoiceService (TR-104 Issue 1) TAEndPoint:1
+      profile if the CPE has POTS.

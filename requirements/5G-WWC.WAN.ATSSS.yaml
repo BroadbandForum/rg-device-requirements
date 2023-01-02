@@ -1,0 +1,90 @@
+---
+5G-WWC.WAN.ATSSS:
+  name: |
+    5G WWC ATSSS
+
+  description: |
+    Access traffic steering switching and splitting (ATSSS) is used to
+    permit a 5G-RG to simultaneously utilize both a 3GPP radio interface and
+    non-3GPP wireline interface. The 3GPP radio interface may be with either
+    a E-UTRAN (4G) or NG-RAN (5G). Requirements are specified for 5G
+    operation, and 4G operation via EPC interworking.
+
+    Note that for the BBF WWC work, roaming on either interface is
+    considered to be out of scope. What is in scope is referred to as
+    Non-roaming and Roaming with Local Breakout architecture for ATSSS
+    support in 3GPP TS.23.501 [@3GPP-TS.23.501].
+
+    3GPP TS 23.502 [@3GPP-TS.23.502] defines the procedures and 3GPP TS 24.193 [@3GPP-TS.24.193] provides the stage 3
+    definition. Impacts to the NAS protocol for ATSSS is described in TS
+    24.501.
+
+    A rough narrative of operation is that:
+
+    1. 5G-RG registers with a common PLMN on both the 3GPP and non-3GPP interfaces.
+    In case the non-3GPP connectivity is available, the 5G-RG attempts to
+    register via the non-3GPP interface first, because the Multi-Access PDU
+    session from the 5G-RG can be initiated via the 3GPP interface, which
+    requests the WAgfInfo availability in AMF and SMF to enable the co-located
+    UPF selection. A security context is established with the first
+    registration that is simply referenced by the second association via the
+    5G-GUTI.
+
+    2. The 5G-RG establishes a multi-access (MA) PDU session. Note that both
+    the 3GPP radio and wireline interfaces may be 5G, or the 3GPP radio
+    interface may be via LTE and employing EPS interworking. When both
+    interfaces are 5G, this can be done with a single MA-PDU session
+    establish request, assuming that the 5G-RG is already registered in both
+    accesses before initiating the PDU Session Establishment procedure. When
+    the radio interface is a E-UTRA interface, the 'legs' of the MA-PDU
+    session must be separately established. During session establishment the
+    5G-RG is provided with ATSSS Rules that contain traffic distribution
+    policies.
+
+    3. The 5G RG distributes traffic across the set of upstream interfaces
+    according to ATSSS Rules received from the 5G System.
+
+  requirements:
+    1: |
+      The RG MUST support ATSSS as is described in 3GPP TS.23.501 [@3GPP-TS.23.501]
+
+    2: |
+      The RG MUST support at least one of ATSSS-LL and MP-TCP proxy operation
+
+    3: |
+      The RG MUST support the following MA-PDU session lifecycle maintenance
+      procedures described in 3GPP TS 23.502 [@3GPP-TS.23.502] and specified in 3GPP TS 24.501 [@3GPP-TS.24.501] and TS
+      24.193 with UE replaced by RG. The clauses referenced below refer to TS
+      23.502.
+
+      * UE requested MA-PDU session establishment (Non roaming or roaming
+      with local breakout) as per clause 4.22.2.1
+
+      * UE Requested PDU Session Establishment with Network Modification to
+      MA PDU Session as per clause 4.22.3
+
+      * Access Network Performance Measurements as per clause 4.22.4
+
+      * Reporting of Access Availability as per clause 4.22.5
+
+      * Adding / Re-activating / De-activating User-Plane Resources as per
+      clause 4.22.7
+
+      * UE or network requested MA PDU Session Modification as per clause
+      4.22.8
+
+      * Connection, Registration and Mobility Management procedures as per
+      clause 4.22.9
+
+      * UE or network requested MA PDU Session Release (non-roaming and
+      roaming with local breakout) per clause 4.22.10.2
+
+    4: |
+      The RG MUST support EPC Interworking procedures for ATSSS as described
+      in clause 4.22.6 of 3GPP TS 23.502 [@3GPP-TS.23.502] and specified in 3GPP TS 24.193 [@3GPP-TS.24.193], in both cases
+      with UE replaced by RG.
+
+    5: |
+      The RG MUST attempt to register via the wireline access first. (note:
+      this will ensure the SMF can have the wAgfInfo available for the
+      co-located UPF selection.)

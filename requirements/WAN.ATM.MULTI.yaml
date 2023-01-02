@@ -1,0 +1,45 @@
+---
+WAN.ATM.MULTI:
+  name: |
+    ATM Multi-PVC
+
+  requirements:
+    1: |
+      The RG MUST support eight PVCs. This is in addition to support for any
+      implemented ATM UNI control path PVCs (e.g. ILMI auto-configuration PVC,
+      etc.).
+
+    2: |
+      The RG MUST allow the protocol stack (e.g. IP over Ethernet, PPPoE,
+      PPPoA, etc.) for each provisioned PVC to be defined separately. If
+      necessary, each PVC can use a different stack and set of protocols.
+
+    3: |
+      There is no default defined VPI/VCI for additional PVCs past the primary
+      PVC defined in WAN.ATM above. The RG MUST support auto-search function
+      (see WAN.ATM.16 through 19) on all PVCs and will use the same
+      auto-search sequence identified (skipping over any already in use).
+
+    4: |
+      The RG MUST NOT require the same VPI value for all supported PVCs.
+
+    5: |
+      All supported PVCs MUST be able to be active and sending/receiving
+      traffic simultaneously. See requirements LAN.FWD.9, 10, 11 and 15 for
+      more details on interface selection for routing.
+
+    6: |
+      The RG MUST support the minimum ATM granularity applicable to the
+      associated DSL protocol in use on a per VC and VP basis.
+
+      For example, ATM granularity of 32 kbps MUST be supported for ADSL on a
+      per VC and VP basis.
+
+    7: |
+      The RG MUST use the same Ethernet MAC address for all interfaces over
+      the same AAL5/ATM/DSL connection.
+
+    8: |
+      The RG MUST support multiple levels of CoS simultaneously across
+      separate VCCs (e.g. UBR for PVC 0/35 and CBR for PVC 0/43 where both
+      PVCs are active simultaneously).

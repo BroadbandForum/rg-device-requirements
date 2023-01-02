@@ -1,0 +1,8 @@
+---
+REGIONAL.NA:
+  name: |
+    North American
+
+  categories:
+    - !include REGIONAL.NA.POWER.yaml
+    - !include REGIONAL.NA.LED.yaml

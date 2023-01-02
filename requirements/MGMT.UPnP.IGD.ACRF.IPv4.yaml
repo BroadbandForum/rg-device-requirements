@@ -1,0 +1,46 @@
+---
+MGMT.UPnP.IGD.ACRF.IPv4:
+  name: |
+    UPnP IGD to allow Connection Request Forwarding through the NAT of the
+    device
+
+  requirements:
+    1: |
+      When the external IP address (ExternalIPAddress parameter) of the RG
+      changes, the RG MUST continue to forward packets received on the new
+      external IP as defined by the existing NAT port mappings rules
+
+    2: |
+      The RG MUST have a WANIPConnection:2 service when supporting a WAN IP
+      Connection. The specification is available for download at
+      <http://upnp.org/specs/gw/UPnP-gw-WANIPConnection-v2-Service.pdf>
+
+    3: |
+      The RG MUST have a WANPPPConnection:1 service
+      when supporting a WAN PPP
+      Connection. The specification is available for download at
+      <http://upnp.org/specs/gw/UPnP-gw-WANPPPConnection-v1-Service.pdf>
+
+    4: |
+      When supporting a WAN PPP Connection, the RG MUST support internal and
+      external port values being different (the RG MUST NOT return
+      SamePortValuesRequired on AddPortMapping).
+
+    5: |
+      When supporting a WAN PPP Connection, the RG MUST support non permanent
+      leases on port mappings (the RG MUST NOT return
+      OnlyPermanentLeasesSupported on AddPortMapping).
+
+    6: |
+      When supporting a WAN PPP Connection, the RG MUST support specific IP
+      address for RemoteHost (the RG MUST NOT return
+      RemoteHostOnlySupportsWildcard on AddPortMapping).
+
+    7: |
+      When supporting a WAN PPP Connection, the RG MUST support specific port
+      value for external port (the RG MUST NOT return
+      ExternalPortOnlySupportsWildcard on AddPortMapping).
+
+    8: |
+      The RG MUST support NAT (UPnP NATEnabled state variable set to "1" as
+      well as UPnP ConnectionType state variable set to "IP_Routed").

@@ -1,0 +1,69 @@
+---
+GEN.NET:
+  name: |
+    Networking Protocols
+
+  requirements:
+    1: |
+      The RG MUST support Ethernet (IEEE 802.3).
+
+    2: |
+      The RG MUST support IP Version 4.
+
+    3: |
+      If the RG does not support IPV6, it SHOULD be software configurable or
+      upgradeable to support IP Version 6 in the future. This means that the
+      processing power, memory and networking components be designed
+      appropriately and be sufficiently robust to provide this support.
+
+    4: |
+      The RG MUST support the TCP, IP, UDP, routing and associated IETF protocols
+      identified here:
+
+      * RFC 768 [@RFC768] User Datagram Protocol
+
+      * RFC 791 [@RFC791] Internet Protocol
+
+      * RFC 792 [@RFC792] Internet Control Message Protocol
+
+      * RFC 793 [@RFC793] Transmission Control Protocol
+
+      * RFC 826 [@RFC826] Ethernet Address Resolution Protocol (ARP)
+
+      * RFC 894 [@RFC894] Standards for the Transmission of IP Datagrams over
+      Ethernet Networks
+
+      * RFC 922 [@RFC922] Broadcasting Internet Datagrams in the Presence of
+      Subnets
+
+      * RFC 950 [@RFC950] Internet Standard Subnetting Procedure
+
+      * RFC 1042 [@RFC1042] Standard for the Transmission of IP Datagrams over IEEE
+      802 Networks
+
+      * RFC 1112 [@RFC1112] Host Extensions for IP Multicasting
+
+      * RFC 1122 [@RFC1122] Requirements for Internet Hosts - Communication Layers
+
+      * RFC 1123 [@RFC1123] Requirements for Internet Hosts - Application and
+      Support
+
+      * RFC 1256 [@RFC1256] ICMP Router Discovery Messages (Router Specification
+      only)
+
+      * RFC 1812 [@RFC1812] Requirements for IP Version 4 Routers
+
+      * RFC 1918 [@RFC1918] Address Allocation for Private Internets
+
+      * RFC 4632 [@RFC4632] Classless Inter-domain Routing (CIDR): The Internet
+      Address Assignment and Aggregation Plan
+
+      IANA Directory of General Assigned Numbers
+      (<http://www.iana.org/numbers.html>)
+
+    5: |
+      The RG MUST support IP over Ethernet.
+
+    6: |
+      The RG MUST support, at a minimum, a 256 MAC address table for LAN
+      devices.

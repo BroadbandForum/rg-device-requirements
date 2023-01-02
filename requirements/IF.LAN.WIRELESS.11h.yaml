@@ -1,0 +1,10 @@
+---
+IF.LAN.WIRELESS.11h:
+  name: |
+    Wireless: 802.11h Access Point
+
+  requirements:
+    1: |
+      The RG MUST support an IEEE 802.11h [@802.11] wireless access point. Note that no
+      radio requirements have been specified in detail for 802.11h when
+      operating in dual-mode with 2.4GHz 802.11b/g.

@@ -1,0 +1,174 @@
+---
+LAN.DHCPS:
+  name: |
+    DHCPv4 Server
+
+  requirements:
+    1: |
+      The RG MUST provide application layer support for host name mapping,
+      booting, and management including DHCPv4 and the Domain Name System
+      (DNS) protocol. This includes support for the standards below:
+
+      * RFC 1034 [@RFC1034] Domain Names -- Concepts and Facilities
+
+      * RFC 1035 [@RFC1035] Domain Names -- Implementation and Specification
+
+      * RFC 2131 [@RFC2131] Dynamic Host Configuration Protocol
+
+      * RFC 2132 [@RFC2132] DHCP Options and BOOTP Vendor Extensions
+
+      * RFC 2181 [@RFC2181] Clarifications to the DNS Specification
+
+      * RFC 2939 [@RFC2939] Procedures and IANA Guidelines for Definition of New
+      DHCP Options and Message Types
+
+    2: |
+      The RG MUST be a DHCPv4 server to local LAN devices, supporting all LAN
+      devices.
+
+    3: |
+      The embedded DHCPv4 server function of the RG MUST be able to operate
+      while in bridged mode. The default state should be on in bridged and
+      routed mode.
+
+    4: |
+      The RG MUST support a minimum of 253 LAN devices.
+
+    5: |
+      The RG MUST support turning off the embedded DHCPv4 server via a
+      configuration change via the Web GUI, TR-064i2 interfaces and from a
+      Controller.
+
+    6: |
+      The RG MAY incorporate auto-detection of other DHCPv4 servers on the
+      local LAN and, if configured to do so, disable the internal DHCPv4
+      server functionality of the RG in this situation.
+
+      In this situation, the RG would try to obtain a configuration for its
+      LAN port through DHCPv4. If a DHCPv4 response was received, the RG would
+      then use the information in the DHCPv4 response (e.g. IPv4 address,
+      subnet and DNS information) and disable its internal DHCPv4 server. If
+      implemented and a DHCPv4 response is received, this requirement takes
+      precedence over requirement LAN.DHCPS.15.
+
+    7: |
+      The embedded DHCPv4 server functionality of the RG MUST verify that an
+      address is not in use prior to making it available in a lease (e.g. via
+      ping or ARP table validation) even when lease information shows that it
+      is not in use.
+
+    8: |
+      If the RG is in a routed configuration (i.e. full NAPT router), the RG
+      MUST use the default start address 192.168.1.64 and the default stop
+      address 192.168.1.253 for assignment to DHCPv4 leases for local device
+      addressing, or use an operator-specific configuration.
+
+    9: |
+      If the RG is in a routed configuration (i.e. full NAPT router), the RG
+      MUST use a default netmask of 255.255.255.0 for assignment to DHCPv4
+      leases for local device addressing, or use an operator-specific
+      configuration.
+
+    10: |
+      If the RG is in a bridged configuration for LAN device traffic
+      (i.e. NAT/NAPT is not enabled), the RG MUST support the enabling and
+      configuration of the local RG DHCPv4 server (address range and subnet
+      mask) remotely from a Controller. This address range may be either
+      public or private addresses (assuming that the service provider is
+      providing the NAT/NAPT function in the network).
+
+      Note that this assumes that a separate management IP (v4 or v6)
+      interface has been established to the RG expressly for the purpose of
+      CWMP or USP remote management.
+
+    11: |
+      The default lease time for DHCPv4 information provided to LAN CPE that
+      do not share the WAN side IPv4 address MUST be configurable. The default
+      value MUST be 24 hours, or use an operator-specific configuration.
+
+    12: |
+      The default lease time for DHCPv4 information provided to LAN CPE that
+      share the WAN side IPv4 address MUST be configurable. The default value
+      MUST be 10 minutes, or use an operator-specific configuration.
+
+    13: |
+      When the domain name that the embedded DHCPv4 server passes to LAN CPE
+      has not been set, the value "domain_not_set.invalid" SHOULD be used.
+
+    14: |
+      If the RG is in a routed configuration (i.e. full NAPT router) and the
+      RG's embedded DHCPv4 server is enabled, the RG itself MUST default to
+      the address 192.168.1.254 (with a netmask of 255.255.255.0), or use an
+      operator-specific configuration.
+
+    15: |
+      When the RG's embedded DHCPv4 server is disabled, the RG MUST ARP for
+      the following addresses, in order, and assign itself the first one that
+      is not taken: 192.168.1.254, 192.168.1.63, and then starting from
+      192.168.1.253 and descending.
+
+    16: |
+      The RG MAY allow the embedded DHCPv4 server to be configured so that
+      specific MAC addresses can be identified as being served or not served.
+
+    17: |
+      The RG MAY allow the embedded DHCPv4 server to be configured with a
+      default setting (provide IPv4 addresses or not provide IPv4 addresses)
+      for devices whose MAC addresses have not been specified in accordance
+      with LAN.DHCPS.16.
+
+    18: |
+      The embedded DHCPv4 server functionality of the RG SHOULD provide a
+      mechanism by which an IPv4 address can be assigned to a particular LAN
+      device by MAC address. The user interface to establish this association
+      may use an alternate mechanism to identify this assignment (e.g. by
+      selecting the device using its current IPv4 address or device name) and
+      the MAC address may be transparent to the user. These addresses may
+      include addresses within the default subnet or addresses from additional
+      public/private subnets that may be provisioned.
+
+      For example, the RG might have a default WAN side IPv4 address that is
+      used for NAPT to a subset of devices and an additional set of WAN side
+      IPv4 addresses that are bridged. The embedded DHCPv4 server might be
+      used to assign this second set of IPv4 addresses to specific LAN CPE.
+
+    19: |
+      The RG MUST support a single PC mode of operation. In this mode of
+      operation only a single LAN device is supported. Note that this is not
+      the default mode of operation.
+
+      In this configured mode, all network traffic, except for configured
+      management traffic destined for the RG itself (e.g. temporary remote
+      access to the Web GUI) MUST be passed between the access network and the
+      designated LAN device as if the RG was not present.
+
+      One possible implementation is for the embedded DHCPv4 server to issue
+      one and only one private address in this situation, with the start and
+      stop addresses for the embedded DHCPv4 server being the same.
+
+      The LAN devices can be assigned either a private IPv4 address
+      (i.e. using 1:1 NAT) or the public IPv4 address of the RG (i.e. using IP
+      pass-through as identified in requirement LAN.ADDRESS.6). The type of
+      IPv4 address to be used (private or public) is configured through the
+      Web GUI, TR-064i2 interfaces and from a Controller. The default is a
+      public IPv4 address.
+
+      If a WAN connection is not available when the RG is configured to use a
+      public IPv4 address, the RG provides a private IPv4 address to the LAN
+      device via DHCPv4. Once a WAN connection is established, the public IPv4
+      address provided by the broadband network is passed to the LAN device
+      during the next DHCPv4 lease renewal.
+
+      The RG acts as the default gateway to the LAN devices when private IPv4
+      addressing is in use. When public IPv4 addressing is in use, the gateway
+      identified to the LAN device should be that identified in requirement
+      LAN.ADDRESS.6 above.
+
+      No other restrictions (e.g. restricted routing for other devices) need
+      to be implemented to meet this requirement (e.g. no routing restrictions
+      on traffic from secondary devices on the LAN).
+
+    20: |
+      If the RG is configured in a routed configuration (i.e. full NAPT
+      router), the RG MUST operate by default in the multiple PC mode of
+      operation, or use an operator-specific configuration.

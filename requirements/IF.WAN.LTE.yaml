@@ -1,0 +1,9 @@
+---
+IF.WAN.LTE:
+  name: |
+    IF.WAN.LTE E-UTRA
+
+  requirements:
+    1: |
+      The RG MUST include an Evolved Universal Terrestrial Radio Access
+      (E-UTRA) interface. The top-level description is in 3GPP TS.36.300 [@3GPP-TS.36.300].

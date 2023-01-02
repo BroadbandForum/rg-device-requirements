@@ -1,0 +1,29 @@
+---
+WAN.DHCPv4.ERP:
+  name: |
+    EAP Re-authentication (ERP) for DHCPv4
+
+  requirements:
+    1: |
+      The RG MUST support the DHCP Relay Agent Information Option RFC 3046 [@RFC3046].
+
+    2: |
+      The RG MUST support receiving a DHCPv4 request message from a UE client,
+      which includes a Parameter Request List Option requesting the DHCPv4 ERP
+      Local Domain Name, i.e. the domain name of the ERP server of the local
+      domain to which that client is attached. The DHCPv4 request message may
+      be Discovery or Request.
+
+    3: |
+      If the RG has the ERP Local Domain Name from authentication server for a
+      client during a previous AAA exchange, it SHOULD include it in the
+      DHCPv4 LDN sub-option in a Relay Agent Information Option RFC 3046 [@RFC3046]
+       and forward to the DHCPv4 server.
+
+    4: |
+      The RG MUST support relaying a DHCPv4 Reply Message with the DHCPv4 ERP
+      Local Domain Name option from the DHCPv4 server to the client.
+
+    5: |
+      The RG MUST support configuration of the parameters for it to connect
+      to the RADIUS or Diameter server via Web GUI or Controller extension.

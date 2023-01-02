@@ -1,0 +1,32 @@
+---
+WAN.TUN.L2:
+  name: |
+    L2Tunnel
+
+  requirements:
+    1: |
+      The RG May be able to retrieve the IP configuration of its network
+      interface, through DHCP, outside of any tunnel
+
+    2: |
+      The RG May be able to be provided the configuration information of a L2
+      tunnel over IP, through DHCP option 125
+
+    3: |
+      The RG May be able to setup a L2 tunnel over IP
+
+    4: |
+      The RG May be able to initiate LSL tunnel set up using information
+      received from DHCP.
+
+    5: |
+      The RG May support GRE tunneling The RG MUST be able to be provided the
+      configuration information of a L2 tunnel over IP, through DHCP option
+      125
+
+    6: |
+      The RG May be able to setup a L2 tunnel over IP
+
+    7: |
+      The RG May be able to initiate LSL tunnel set up using information
+      received from DHCP.

@@ -1,0 +1,10 @@
+---
+WAN.TRANS:
+  name: |
+    Transitional IPv6 WAN Connection
+
+  categories:
+    - !include WAN.TRANS.6rd.yaml
+    - !include WAN.TRANS.DS-Lite.yaml
+    - !include WAN.TRANS.v4-release-control.yaml
+    - !include WAN.TRANS.MAP-E.yaml

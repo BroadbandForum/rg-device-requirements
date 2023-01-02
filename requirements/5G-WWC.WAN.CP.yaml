@@ -1,0 +1,157 @@
+---
+5G-WWC.WAN.CP:
+  name: |
+    5G WWC WAN Control Plane
+
+  requirements:
+    1: |
+      The RG MUST support the transport of NAS and AS information with the AGF
+      as documented in "NAS and AS transport and information elements" section
+      of Broadband Forum TR-456 [@TR-456].
+
+    2: |
+      The RG SHOULD incorporate a random timing delay prior to attempting to
+      initiate establishing 5G control connectivity. This random timing delay
+      helps to reduce connection failures when a group of users attempts to
+      establish connections to a service provider at the same time (e.g. after
+      power is restored to a neighborhood that had a blackout).
+
+    3: |
+      The RG MUST use the RG's WAN I/F Ethernet MAC address for the PPPoE 5G
+      control plane connection.
+
+    4: |
+      The RG that is configured to support both modes of operation MUST be
+      able to initiate a PPPoE 5G control plane connection using a NULL length
+      service-name tag.
+
+    5: |
+      The RG that is configured to only support the 5G-RG mode of operation
+      MUST use a PADI with a service-name of 5G (encoded as defined in Broadband Forum TR-456 [@TR-456]
+      Section 5.2) when initiating a control plane connection.
+
+    6: |
+      An RG that does not receive a PADO in response to a PADI solicitation
+      SHOULD re-try immediately to establish the connection. After three
+      unsuccessful attempts, the RG SHOULD wait for five minutes, then repeat
+      the connection attempt three times. If the PADI still fails, the RG
+      SHOULD back off to thirty minute intervals between groups.
+
+    7: |
+      The RG attempting to initiate a PPPoE 5G control plane connection MUST
+      include the LCP 5G VSO in the LCP Configure-Request.
+
+    8: |
+      The RG that receives a Configure-REJ to an LCP configure request
+      containing the LCP 5G VSO MUST be able to revert to the FN-RG mode of
+      operation and if it is configured to use PPPoE in that mode, continue
+      the negotiation accordingly.
+
+    9: |
+      The RG that receives a Configure-REJ to an LCP configure request
+      containing the LCP 5G VSO that intends to revert to IPoE operation MUST
+      issue a PADT to terminate the PPPoE session.
+
+    10: |
+      The RG configured to only use the 5G-RG mode of operation, upon receipt
+      of a Configure-REJ to a configure request containing the LCP 5G VSO MUST
+      resort to an exponential backoff process to reinitiate a PPPoE 5G
+      control plane connection.
+
+    11: |
+      An RG that is only configured to only use 5G procedures, and is unable
+      to establish a 5G control plane connection (LCP Configure-REJ received)
+      will issue a PADT to fully terminate the current attempt and then retry
+      immediately. If that attempt fails it will delay 5 minutes prior to
+      terminating the attempt and retrying. If that attempt fails, after each
+      failure it will terminate the current attempt and select a random
+      interval between 5 and 20 minutes until the next retry.
+
+    12: |
+      Removed.
+
+    13: |
+      The RG MUST support NAS protocol to interact with AMF as specified in
+      3GPP TS 24.501 [@3GPP-TS.24.501] with modification specified in 3GPP TS 23.316 [@3GPP-TS.23.316]
+
+      Note: The applicability of parameters in NAS messages and the
+      applicability of specific NAS message is further defined in this
+      document as well as 3GPP TS 23.316 [@3GPP-TS.23.316], and 3GPP TS 24.501 [@3GPP-TS.24.501].
+
+    14: |
+      The RG MUST maintain a registration management state and a connection
+      management state. The possible values for the registration management
+      state are RM-DEREGISTERED and RM-REGISTERED. The possible values for the
+      connection management state are CM-IDLE and CM-CONNECTED. The initial RG
+      state is RM-DEREGISTERED and CM-IDLE.
+
+    15: |
+      The 5G-RG must start a NAS initial Registration procedure, as documented
+      in 3GPP TS 23.316 [@3GPP-TS.23.316] Section 7.2.1.1 and Broadband Forum TR-456 [@TR-456] Section "Registration
+      Management Procedure for 5G-RG". Upon completion of these procedures the
+      RG will be in the RM-REGISTERED, CM-CONNECTED state.
+
+    16: |
+      The RG MUST use LCP-ECHO with a default periodicity of 10 seconds to
+      monitor NAS channel liveliness.
+
+    17: |
+      Upon detection of connectivity failure an RG in the
+      RM-REGISTERED/CM-CONNECTED state MUST transition the connection
+      management state to CM-IDLE and initiate a deregistration timer to
+      either the default value or the value communicated in the in NAS
+      Registration Accept message as documented in 3GPP TS 24.501 [@3GPP-TS.24.501]
+      clause 8.2.7.17
+
+    18: |
+      Upon expiry of the deregistration timer the RG MUST transition the
+      registration management state to RM-DEREGISTERED and clean up all 5G
+      context state.
+
+    19: |
+      An RG that has detected connectivity failure with the network MUST
+      attempt to reconnect using the procedures outlined in requirement
+      5G-WWC.WAN.CP.16.
+
+    20: |
+      An RG that reconnects with the network while in the RM-REGISTERED state
+      MUST use a NAS Service Request procedure, as documented int
+      3GPP TS 23.316 [@3GPP-TS.23.316] Section 7.2.2.1 and Broadband Forum TR-456 [@TR-456] Section
+      "5G-RG Service Request Procedure via W-5GAN", to reestablish service.
+
+    21: |
+      An RG that reconnects with the network in the RM-DEREGISTERED state will
+      re-establish service using the procedures outlined in requirements 1
+      through 15 above AND will cancel the deregistration timer.
+
+    22: |
+      An RG that receives a LCP Terminate-Request for the 5G Control plane
+      connection will remove all PDU session state, all user plane state and
+      terminate the control plane connection.
+
+    23: |
+      The RG MUST support RFC 4638 [@RFC4638] procedures for negotiating PPP MTUs larger
+      than 1492 bytes.
+
+    24: |
+      The RG MUST indicate the maximum PPP MTU it can support in the RFC 4638 [@RFC4638]
+      PPP-Max-Payload tag.
+
+    25: |
+      The RG MUST initiate LCP negotiations with the value it provided in the
+      PPP-Max-Payload tag if echoed by the AGF, else falls back to 1492 as per
+      RFC 2516 [@RFC2516].
+
+    26: |
+      The RG MUST use the MIN of negotiated PPP MTU and IPv4 Link MTU
+      Parameter received via PCO at PDU Session Establishment time as the MTU
+      for 5WE encapsulated IPv4 packets
+
+    27: |
+      The RG MUST use the MIN of negotiated PPP MTU and MTU option in the IPv6
+      RA received at PDU Session Establishment time for 5WE encapsulated IPv6
+      packets
+
+  after: |
+    Note: PLMN selection defined in 3GPP TS 22.011 [@3GPP-TS.22.011] and in [@3GPP-TS.23.122]
+    are not applicable as described in clause 4.2.1 3GPP TS 23.316 [@3GPP-TS.23.316].

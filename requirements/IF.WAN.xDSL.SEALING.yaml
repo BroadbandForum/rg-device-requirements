@@ -1,0 +1,58 @@
+---
+IF.WAN.xDSL.SEALING:
+  name: |
+    DC Sealing Current
+
+  requirements:
+    1: |
+      The RG MUST provide for the termination of sealing current on either, or
+      both, DSL line pairs. A sample circuit implementation reference diagram
+      is provided in Appendix V.
+
+    2: |
+      The DC termination for sealing current MUST be capable of conducting at
+      least 20mA of current.
+
+    3: |
+      The DC termination MUST meet the requirements as specified in Annex I of
+      ITU-T G.992.3 [@G.992.3].
+
+    4: |
+      A low-pass filter MUST be in place between the DC termination and the
+      DSL line. The filter MUST meet the following requirements, which are
+      based on xDSL in-line filter requirements in ANSI T1.421 [@T1.421-2001]:
+
+      * It MUST introduce less than 25 Ohms DC resistance tip-ring when the
+      DC termination side is shorted.
+
+      * It MUST have an impedance, from either conductor to ground, greater
+      than 5 MΩ.
+
+      * The capacitance, from either conductor to ground, MUST be less than 1
+      nF on the loop side
+
+      * The attenuation MUST be at least 65 dB between 25 kHz -- 12.0 MHz.
+
+      * The input impedance, looking from network side into the LPF when
+      terminated in the ON state on the termination side, MUST result in a
+      bridging loss on the DSL line of not more than 0.25 dB, when measured at
+      any frequency between 25 kHz and 12.0 MHz.
+
+      * The DC resistance between tip and ring, when the DC termination side
+      is open, MUST be at least 3.5 MΩ.
+
+      * The input impedance, looking from the network side into the LPF when
+      terminated in the ON state on the termination side, MUST result in a
+      bridging loss in the voice band of not more than 0.5 dB, when measured
+      at any frequency between 200 Hz and 4.0 kHz.
+
+    5: |
+      The RG MUST support enabling and disabling of the DC termination
+      capability through its local Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from the
+      Controller.
+
+    6: |
+      The RG SHOULD be able to detect the presence of POTS service on a line.
+
+    7: |
+      If POTS is detected by the RG, the termination MUST NOT be applied.

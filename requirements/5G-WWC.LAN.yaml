@@ -1,0 +1,8 @@
+---
+5G-WWC.LAN:
+  name: |
+    5G WWC LAN
+
+  categories:
+    - !include 5G-WWC.LAN.DHCPS.yaml
+    - !include 5G-WWC.LAN.ADDRESSv6.yaml

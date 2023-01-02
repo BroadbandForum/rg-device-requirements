@@ -1,0 +1,9 @@
+---
+IF.WAN.NR:
+  name: |
+    IF.WAN.NR New Radio
+
+  requirements:
+    1: |
+      The RG MUST include a New Radio (NR) interface. The top-level
+      description is in 3GPP TS 38.300 [@3GPP-TS.38.300]

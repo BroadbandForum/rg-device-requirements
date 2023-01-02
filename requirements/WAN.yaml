@@ -1,0 +1,23 @@
+---
+WAN:
+  name: |
+    Wide Area Networking
+
+  categories:
+    - !include WAN.ATM.yaml
+    - !include WAN.CONNECT.yaml
+    - !include WAN.ETHOAM.yaml
+    - !include WAN.BRIDGE.yaml
+    - !include WAN.DHCPC.yaml
+    - !include WAN.DHCPv4.yaml
+    - !include WAN.DHCPv6.yaml
+    - !include WAN.IPv6.yaml
+    - !include WAN.TRANS.yaml
+    - !include WAN.PPP.yaml
+    - !include WAN.dot1x.yaml
+    - !include WAN.DoS.yaml
+    - !include WAN.QoS.yaml
+    - !include WAN.IPsecClient.yaml
+    - !include WAN.L2tpClient.yaml
+    - !include WAN.PCP.yaml
+    - !include WAN.TUN.yaml

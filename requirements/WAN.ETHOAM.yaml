@@ -1,0 +1,66 @@
+---
+WAN.ETHOAM:
+  name: |
+    Ethernet OAM
+
+  requirements:
+    1: |
+      The RG MUST support a maintenance end point (MEP) at the customer and
+      access link levels on a per VLAN basis. Note: The multi-PVC case is for
+      further study. This satisfies Broadband Forum TR-101 [@TR-101] R-285, R-294.
+
+    2: |
+      The RG MUST support a default ME level value of 5 for the customer
+      level. This satisfies TR-101 [@TR-101] R-286.
+
+    3: |
+      The RG SHOULD support a loopback message (LBM) function at the customer
+      level that can generate a multicast LBM toward its peer MEP(s). This
+      satisfies TR-101 [@TR-101] R-287.
+
+    4: |
+      The RG MUST support a loopback reply (LBR) function at the customer
+      level toward its peer MEP(s) in response to both unicast and multicast
+      LBMs. This satisfies TR-101 [@TR-101] R-288.
+
+    5: |
+      The RG MUST support a linktrace reply (LTR) function at the customer
+      level toward its peer MEP(s). This satisfies TR-101 [@TR-101] R-289.
+
+    6: |
+      For business customers and/or premium customers requiring proactive
+      monitoring, the RG SHOULD support generating continuity check messages
+      (CCMs) at the customer level. This satisfies TR-101 [@TR-101] R-290.
+
+    7: |
+      The RG MUST support turning off sending of CCMs at the customer level,
+      while keeping the associated MEP active. This satisfies TR-101 [@TR-101] R-291.
+
+    8: |
+      The RG MUST support receiving AIS messages at the customer level. This
+      satisfies TR-101 [@TR-101] R-292.
+
+    9: |
+      The RG SHOULD trigger the appropriate alarms for loss of continuity at
+      the customer level. This satisfies TR-101 [@TR-101] R-293.
+
+    10: |
+      The RG MUST support a default ME level value of 1 for the access link
+      level. This satisfies TR-101 [@TR-101] R-295.
+
+    11: |
+      The RG SHOULD support a loopback message (LBM) function at the access
+      link level that can generate a multicast LBM toward its peer MEP(s).
+      This requirement allows the RG to dynamically learn the MAC address of
+      the AN MEP, and test the connectivity to that MEP. This satisfies TR-101 [@TR-101]
+      R-296.
+
+    12: |
+      The RG MUST support a loopback reply (LBR) function at the access link
+      level toward its peer MEP(s), in response to both unicast and multicast
+      LBMs. This satisfies TR-101 [@TR-101] R-297.
+
+    13: |
+      The RG MUST issue a DHCP renewal message following a random delay
+      between 1 and 30 seconds after it detects a restoration of Ethernet
+      continuity at the customer ME level.

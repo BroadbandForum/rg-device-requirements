@@ -1,0 +1,26 @@
+---
+WAN.TRANS.6rd:
+  name: |
+    6rd Transition Mechanism
+
+  requirements:
+    1: |
+      The RG MUST support the 6rd transition mechanism as described in
+      RFC 5969 [@RFC5969]. This includes being able to
+      configure the necessary parameters from the Controller and via DHCPv4,
+      creation of the prefix, using the created prefix as a "delegated prefix"
+      for purpose of including one of its /64s in RA messages, and modifying
+      the IP header for traffic that goes between the WAN and LAN devices.
+
+    2: |
+      The RG MUST support enabling and disabling of the 6rd feature on the
+      "default" routed IPv4 connection. 6rd is not applicable to bridged WAN
+      interfaces.
+
+    3: |
+      If the RG supports configuration mechanisms other than the 6rd DHCPv4
+      option 212 (user-entered, Controller configured, etc.), the RG MUST
+      support 6rd in "hub and spoke" mode. 6rd in "hub and spoke" mode
+      requires all IPv6 traffic to go to the 6rd border relay. In effect, this
+      requirement removes the "direct connect to 6rd" route defined in section
+      7.1.1 of RFC 5969 [@RFC5969].

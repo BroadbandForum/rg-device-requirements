@@ -1,0 +1,108 @@
+name: WT-124
+
+title: Functional Requirements for Broadband Residential Gateway Devices
+
+reponame: rg-device-requirements
+
+combine: true
+
+# tag line (should be a fragment, with no terminating period)
+tagline: |
+  Guidelines and profiles for development and RFPs of broadband gateways
+  and Wi-Fi routers
+
+# project summary, suitable for inclusion in changelog files
+summary: |
+  See <https://rg-device-requirements.broadband-forum.org> for the
+  current TR-124 specification.
+
+# project description, suitable for inclusion in readme files (expected to be
+# more extensive than the summary; any headings should start at level 2)
+description: |
+  TR-124 specifies a superset of requirements for broadband
+  Residential Gateway (RG) devices that are capable of supporting a full
+  suite of voice, data, broadcast video, video on demand and two-way video
+  applications in broadband networks.
+
+  The requirements are grouped into modules. This means that an RG can be
+  specified by listing the modules that the RG is expected to support. No
+  single device is expected to support all modules.
+
+versions:
+  v8.0.0:
+    date: 2022-12-27
+    editors:
+      - Jason Walls, QA Cafe
+    changes: |
+      * Converted document to markdown
+      * Updates to WWC requirements
+      * Updates based on TR-142i2
+      * Additional SEC requirement for WAN facing services
+
+  v7.0.0:
+    date: 2021-12
+    editors:
+      - Jason Walls, QA Cafe
+    changes: |
+      * Updates sections of 5G-WWC requirements and adds new IF requirements
+        for LTE and NR
+      * Adds SEC.FIRMWARE requirements
+
+  v6.0.0:
+    date: 2020-11
+    editors:
+      - Jason Walls, QA Cafe
+    changes: |
+      * Adds security requirements for RGs
+      * Adds requirements for G.fast enabled RGs
+      * Adds requirements for TWAMP performance measurement
+      * Adds requirements for 5G-RG in Wireless-Wireline Convergence (WWC)
+        architecture
+
+  v5.0.0:
+    date: 2016-08-05
+    editors:
+      - Jean-Didier Ott, Orange
+    changes: |
+      * Continued evolution.  Changes described in Executive Summary
+
+  v4.0.0:
+    date: 2014-10-27
+    editors:
+      - Jean-Didier Ott, Orange
+      - Yilan Ding, Huawei Technologies
+    changes: |
+      * Continued evolution.  Changes described in Executive Summary
+
+  v3.0.0:
+    date: 2012-08-22
+    editors:
+      - Dave Hood, Ericsson
+    changes: |
+      * Continued evolution.  Changes described in Executive Summary
+
+  v2.0.0:
+    date: 2012-05
+    editors:
+      - Barbara Stark, AT&T
+      - Ole Trøan, Cisco
+    changes: |
+      - Added IPv6 functionality
+
+  v1.0.0:
+    date: 2006-12
+    editors:
+      - Jaime Fink, 2Wire
+      - Jack Manbeck, Texas Instruments
+    changes: |
+      * Original
+
+# XXX commented this out because per-revision editors are already noted
+#editors:
+#  - Jason Walls, QA Cafe
+
+WA: |
+  Broadband User Services
+WADs:
+  - Jason Walls, QA Cafe
+  - John Blackford, CommScope

@@ -1,0 +1,97 @@
+---
+WAN.DHCPC:
+  name: |
+    DHCP Client (DHCPv4)
+
+  categories:
+    - !include WAN.DHCPC.Force.yaml
+    - !include WAN.DHCPC.BFDecho.yaml
+    - !include WAN.DHCPC.BFDKA.yaml
+
+  requirements:
+    1: |
+      The RG MUST be able to obtain IPv4 network information dynamically on
+      its WAN interface. This information includes IPv4 address, primary and
+      secondary DNS addresses and default gateway address.
+
+      Dynamically obtaining IPv4 network information is accomplished using
+      DHCP (v4) and / or IPCP (IPv4).
+
+    2: |
+      If the RG is not configured to use a static IPv4 address and the RG
+      fails to detect a PPPoE or DHCPv4 server, then the RG MUST set its WAN
+      IPv4 address to an undefined value, in order to prevent it from
+      retaining its prior IPv4 address.
+
+    3: |
+      If a RG is functioning as a DHCPv4 client, it MUST identify itself in
+      option 61 (client-identifier) in every DHCPv4 message in accordance with
+      RFC 4361 [@RFC4361].
+
+    4: |
+      For the DUID portion of option 61 in DHCPv4 as described in RFC 4361 [@RFC4361]
+      , the RG MUST follow the DUID-EN format specified in ID 9.3 of RFC 3315 [@RFC3315].
+      The RG MUST use Broadband Forum enterprise-number value 3561 in
+      the DUID-EN enterprise-number field.
+
+      For the identifier field of the DUID-EN, the RG MUST use an ASCII string
+      containing the same content and formatted according to the same rules as
+      defined for the HTTP username in ID 3.4.4 of TR-069 [@TR-069], if CWMP is used for
+      remote management.
+
+    5: |
+      The RG IAID value in DHCPv4 and DHCPv6 MUST be a 32 bit number encoded
+      in network byte order. In cases where the RG is functioning with a
+      single DHCP client identity, it MUST use value 1 for IAID for all DHCP
+      interactions. IAID is defined in RFC 3315 [@RFC3315].
+
+      In cases where the RG is functioning with multiple DHCP client
+      identities, the values of IAID have to start at 1 for the first identity
+      and be incremented for each subsequent identity. The RG's mapping of
+      IAID to its physical aspects or logical configuration SHOULD be as
+      non-volatile as possible. For example, the RG MAY use IAID value 1 for
+      the first physical interface and value 2 for the second. Alternatively,
+      the RG MAY use IAID value 1 for the virtual circuit corresponding to the
+      first connection object in the data model and value 2 for the second
+      connection object in the data model.
+
+    6: |
+      The DUID-EN field value MAY be printed on the RG label.
+
+    7: |
+      A RG functioning as a DHCPv4 client MUST identify its manufacturer OUI,
+      product class, model name and serial number using vendor-specific
+      options as defined in RFC 3925 [@RFC3925]. Specifically, it MUST use
+      option 125.
+
+      Note that with exception of ModelName, the data contained in this option
+      will be redundant with what is included in the Device ID in option 61.
+      However, this is desirable because these two options serve different
+      purposes.
+
+      The data in option 125 allows the DHCPv4 server to be pre-configured
+      with policy for handling classes of devices in a certain way without
+      requiring the DHCPv4 server to be able to parse the unique format used
+      in client-identifier option (which can also vary in TR-181 depending on
+      presence of a ProductClass value). On the other hand, the
+      client-identifier serves as an opaque but predictable identifier. It is
+      predictable because it is the same identifier as used by the RG for
+      interactions with other services. The same identifier is used for HTTP
+      authentication and in SSL client certificates.
+
+      Each sub-option value to be provided in option 125 MUST be treated as a
+      string encoded into binary using UTF-8. The data MUST be encapsulated in
+      option 125 under enterprise code 3561 decimal (0x0DE9), corresponding to
+      the IANA "ADSL Forum" entry in the Private Enterprise Numbers registry.
+      A specific sub-option is defined for each value. The value must match
+      the corresponding TR-181 [@TR-181] parameter
+      as defined in the following table:
+
+      | Sub-option | Value Description | Corresponding Device:2 parameter |
+      |------------|-------------------|----------------------------------|
+      | 1 | Manufacturer OUI | .DeviceInfo.ManufacturerOUI |
+      | 2 | Product Class | .DeviceInfo.ProductClass |
+      | 3 | Model Name | .DeviceInfo.ModelName |
+      | 4 | Serial Number | .DeviceInfo.SerialNumber |
+
+      If the value of a parameter is empty, the sub-option MUST be omitted.

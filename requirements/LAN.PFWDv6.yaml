@@ -1,0 +1,25 @@
+---
+LAN.PFWDv6:
+  name: |
+    LAN.PFWDv6- Port Forwarding (IPv6)
+
+  requirements:
+    1: |
+      The RG MUST support security mechanisms described in RFC 6092 [@RFC6092].
+
+    2: |
+      Individual port forwarding rules MUST be associated with a LAN device,
+      not the IPv6 address of the LAN device, and follow the LAN device should
+      its IPv6 address change.
+
+    3: |
+      The port forwarding mechanism of the RG SHOULD be easy to configure for
+      common applications and user protocols (e.g. ftp, http, etc.) by
+      specifying a protocol name or application name in a "Common Applications
+      Names List" instead of a port number and protocol type. A partial list
+      of applications for potential inclusion appears in Appendix I.
+
+    4: |
+      The RG SHOULD NOT apply RFC 6092 [@RFC6092] security mechanisms to traffic
+      associated with prefixes it has delegated to other routers inside the
+      LAN.

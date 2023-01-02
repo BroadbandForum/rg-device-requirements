@@ -1,0 +1,75 @@
+---
+5G-WWC.WAN.UP.QOS:
+  name: |
+    5G WWC WAN User Plane QoS
+
+  requirements:
+    1: |
+      The RG MUST support an "upstream QOS classifier table" maintained at the
+      granularity of PDU session, that stores QOS rules and is used to perform
+      filter matching on upstream traffic in order to associate specific flows
+      with QFI.
+
+    2: |
+      The RG MUST support population of the "upstream QOS
+
+      classifier table" by NAS.
+
+    3: |
+      The RG MUST support population of the "upstream QOS classifier table"
+      (including initializing an age out timer to the RQ timeout value for the
+      session) with UE derived QOS rules with the filter information gleaned
+      from the IP header and 5WE encoded QFI for packets received that have
+      the RQI bit set in the 5WE header
+
+    4: |
+      When the RG receives a packet with RQI set where there already is a UE
+      derived QOS rule for the gleaned filter information in the "upstream QOS
+      classifier table" it MUST update the age out timer value to the RQ
+      timeout value for the session and the QFI value to that gleaned from the
+      current packet's 5WE header.
+
+    5: |
+      When the RG forwards a packet upstream where it does not find a QOS rule
+      filter match in the "upstream QOS classifier table", it MUST mark the
+      packet according to the default QFI for the PDU session.
+
+    6: |
+      When the RG forwards a packet upstream where it does find a filter match
+      in the upstream QOS classifier table", it MUST mark the packet according
+      to the QFI associated with the QOS rule.
+
+    7: |
+      The RG MUST age out UE derived QOS rules populated as a result of
+      downstream UP signaling (received RQI indication) upon expiry of the age
+      out timer
+
+    8: |
+      The RG MUST remove all entries in the "upstream QOS classification
+      table" associated with a PDU session at the time of session release.
+
+    9: |
+      The RG MUST use the QFI to DSCP/PCP mappings for the PDU session
+      received in the AS session parameters information. If the information is
+      not present, the RG will revert to local configuration.
+
+      Note: That mapping is unique per session, and the same QFI value used in
+      two separate sessions may have a different mapping per session.
+
+    10: |
+      When marking upstream packets according to the QFI to PCP/DSCP
+      information received in the AS session parameters TLV, the RG MUST mark
+      the Ethernet PCP according to the PCP information in the AS subscription
+      parameters marking control sub-TLV:
+
+      * Include the PCP in the tag control information of a tagged UNI
+
+      Include the PCP information in a priority tag if the use of priority
+      tagging is indicated via the P-bit being set in the marking controls or
+      in local configuration, no marking for an untagged UNI if not indicated
+
+    11: |
+      When remarking upstream packets according to the QFI to PCP/DSCP
+      information received in the AS session parameters TLV, the RG MUST
+      remark the IP DSCP if upstream remarking is indicated in the
+      subscription parameters marking control sub-TLV.

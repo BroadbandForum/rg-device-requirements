@@ -1,0 +1,102 @@
+---
+WAN.ATM:
+  name: |
+    WAN.ATM
+
+  categories:
+    - !include WAN.ATM.MULTI.yaml
+
+  requirements:
+    1: |
+      The RG MUST support standard ATM (AAL5) payload format. Note: this
+      satisfies Broadband Forum TR-101 R-371.
+
+    2: |
+      The RG MUST perform AAL Segmentation and Reassembly (SAR), Convergence
+      Sublayer (CS) functions and CRC check.
+
+    3: |
+      The RG MUST support encapsulation of bridged Ethernet over AAL5 (without
+      FCS) as described in RFC 2684 [@RFC2684].
+
+    4: |
+      The RG MUST be able to use both LLC-SNAP and VC-MUX (null) encapsulation
+      over AAL5 with all supported protocols. The default MUST be LLC-SNAP.
+
+    5: |
+      The RG MAY support encapsulation of IP over AAL5, per RFC 2684 [@RFC2684].
+
+    6: |
+      If the RG supports IP over AAL5, it MAY support classical IP according
+      to RFC 2225 [@RFC2225].
+
+    7: |
+      The RG MUST support ATM CoS. UBR, CBR and VBR-rt MUST be supported, as
+      defined in AF-TM-0121.000 [@AF-TM-0121.000].
+
+    8: |
+      VBR-nrt and UBR with per VC queuing SHOULD be supported.
+
+    9: |
+      The default ATM CoS for the primary VC MUST be UBR.
+
+    10: |
+      The RG SHOULD support auto configuration as defined in Broadband Forum
+      TR-062 [@TR-062] and ILMI 4.0 and its extensions.
+
+    11: |
+      The RG MUST always respond to ATM testing, pings and loopbacks according
+      to ITU-T I.610 [@I.610] (F4, F5).
+
+    12: |
+      The RG SHOULD support initiating an ATM loopback and receiving the
+      reply. This satisfies Broadband Forum TR-101 R-370.
+
+    13: |
+      The RG MUST provide a default CPID of all 1s (FFFF). This satisfies
+      Broadband Forum TR-101 [@TR-101] R-372.
+
+    14: |
+      The RG MUST support 0/35 as the default VPI/VCI for the first PVC or use
+      an operator-specific configuration.
+
+    15: |
+      The RG MUST be able to perform an auto search for the VPI/VCI settings
+      for the first PVC based on a definable search list VPI/VCI sequence
+      order.
+
+      If the RG reaches a state of session establishment (e.g. IP when the RG
+      is responsible for session termination) after performing the auto
+      search, the default VPI/VCI settings MUST be set to the newly discovered
+      values. The new default pair MUST be stored on the RG across power off
+      situations. If an ATM connection cannot be established after power is
+      restored, the search process starts over again.
+
+    16: |
+      The RG MUST support the following default VPI/VCI auto-search list
+      programmed as a factory default setting in the following sequence, or
+      use an operator-specific sequence configuration:
+
+      0/35, 0/38, 8/35, 0/43, 0/51, 0/59, 8/43, 8/51.
+
+      This default list MUST be overwriteable via the methods discussed in
+      WAN.ATM.18.
+
+    17: |
+      The RG MUST be configurable so that the auto-search mechanism can be
+      disabled.
+
+    18: |
+      The RG MUST allow the auto-search list to be redefined using TR-064i2
+      and interfaces.
+
+    19: |
+      The default VPI/VCI values for all PVCs MUST be configurable. The
+      default value MUST be utilized prior to performing an auto-search but
+      should exclude the default value in the auto-search.
+
+    20: |
+      The RG MUST support VPI values from 0 to 255
+
+    21: |
+      The RG MUST support VCI values from 32 to 65535

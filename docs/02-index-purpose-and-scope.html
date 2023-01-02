@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<!-- BBF GitHub Pages pandoc template; modified from default.html template -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="generator" content="pandoc"/>
+  <meta name="description" content="TR-124 – Functional Requirements for
+Broadband Residential Gateway Devices: Guidelines and profiles for
+development and RFPs of broadband gateways and Wi-Fi routers"/>
+  <meta name="theme-color" content="#157878"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"/>
+  <title>BBF – 1 Purpose and Scope</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="github.css"/>
+  <link rel="stylesheet" href="extra.css"/>
+  <link rel="stylesheet" href="toc.css"/>
+  <link rel="stylesheet" href="release.css"/>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <!-- XXX header includes are included just before the ToC (below) -->
+</head>
+
+<body>
+  <section class="page-header">
+    <h1 class="project-name">
+      <a href="index.html" style="text-decoration: none; color: white;">
+        <img src="bbflogo-reverse-dark.png"/><br>
+        Functional Requirements for Broadband Residential Gateway
+        Devices
+      </a>
+    </h1>
+    <h2 class="project-tagline">Guidelines and profiles for development
+and RFPs of broadband gateways and Wi-Fi routers</h2>
+    <p>TR-124 Issue 8</p>
+    <p></p>
+    <div class="project-buttons">
+      <a class="btn" href="index.htm">HTML</a>
+      <a class="btn" href="index.pdf">PDF</a>
+    </div>
+  </section>
+
+  <section class="main-content">
+<nav>
+<p>
+   <a href="00-index-contents.html#contents">Cover Page</a>
+ | <a href="01-index-executive-summary.html#sec:executive-summary">Executive Summary</a>
+ | <a href="02-index-purpose-and-scope.html#sec:purpose-and-scope">1 Purpose and Scope</a>
+ | <a href="03-index-references-and-terminology.html#sec:references-and-terminology">2 References and Terminology</a>
+ | <a href="04-index-bbftype-impact.html#sec:bbftype-impact">3 Technical Report Impact</a>
+ | <a href="05-index-requirements.html#sec:req:requirements">4 Residential Gateway Requirements</a>
+ | <a href="06-index-gen.html#sec:req:gen">4.1 GEN – General Device Requirements</a>
+ | <a href="07-index-wan.html#sec:req:wan">4.2 WAN – Wide Area Networking</a>
+ | <a href="08-index-lan.html#sec:req:lan">4.3 LAN – Local Area Networking</a>
+ | <a href="09-index-mgmt.html#sec:req:mgmt">4.4 MGMT – Management &amp; Diagnostics</a>
+ | <a href="10-index-if.html#sec:req:if">4.5 IF – Interface Modules</a>
+ | <a href="11-index-sec.html#sec:req:sec">4.6 SEC – Security</a>
+ | <a href="12-index-rgsmart.html#sec:req:rgsmart">4.7 RGSMART – Smart Residential Gateway</a>
+ | <a href="13-index-regional.html#sec:req:regional">4.8 REGIONAL – Regional Annexes</a>
+ | <a href="14-index-5g-wwc.html#sec:req:5g-wwc">4.9 5G-WWC – General 5G WWC</a>
+ | <a href="15-index-ipv6-flow-diagrams.html#sec:ipv6-flow-diagrams">Annex A: IPv6 Flow Diagrams</a>
+ | <a href="16-index-application-level-gateway-alg-and-port-forwarding-list.html#sec:application-level-gateway-alg-and-port-forwarding-list">Appendix I: Application Level Gateway (ALG) and Port Forwarding List</a>
+ | <a href="17-index-example-queuing-for-an-rg.html#sec:example-queuing-for-an-rg">Appendix II: Example Queuing for an RG</a>
+ | <a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:routed-architecture-examples-of-potential-configurations">Appendix III: Routed Architecture – Examples of Potential Configurations</a>
+ | <a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:bridged-architecture-examples-of-potential-configurations">Appendix IV: Bridged Architecture – Examples of Potential Configurations</a>
+ | <a href="20-index-sealing-current-references.html#sec:sealing-current-references">Appendix V: Sealing Current References</a>
+ | <a href="21-index-product-profile-template.html#sec:product-profile-template">Appendix VI: Product Profile Template</a>
+ | <a href="99-index-footnotes.html#footnotes">Footnotes</a>
+</p>
+</nav>
+
+<nav id="TOCFULL">
+<ul>
+  <li><a href="00-index-contents.html#contents">Cover Page</a></li>
+  <li><a href="02-index-purpose-and-scope.html#sec:purpose-and-scope">1 Purpose and Scope</a></li>
+  <ul>
+    <li><a href="02-index-purpose-and-scope.html#sec:purpose">1.1 Purpose</a></li>
+    <li><a href="02-index-purpose-and-scope.html#sec:scope">1.2 Scope</a></li>
+  </ul>
+  <li><a href="03-index-references-and-terminology.html#sec:references-and-terminology">2 References and Terminology</a></li>
+  <ul>
+    <li><a href="03-index-references-and-terminology.html#sec:conventions">2.1 Conventions</a></li>
+    <li><a href="03-index-references-and-terminology.html#sec:references">2.2 References</a></li>
+    <li><a href="03-index-references-and-terminology.html#sec:definitions">2.3 Definitions</a></li>
+    <li><a href="03-index-references-and-terminology.html#sec:abbreviations">2.4 Abbreviations</a></li>
+  </ul>
+  <li><a href="04-index-bbftype-impact.html#sec:bbftype-impact">3 Technical Report Impact</a></li>
+  <ul>
+    <li><a href="04-index-bbftype-impact.html#sec:energy-efficiency">3.1 Energy Efficiency</a></li>
+    <li><a href="04-index-bbftype-impact.html#sec:ipv6">3.2 IPv6</a></li>
+    <li><a href="04-index-bbftype-impact.html#sec:security">3.3 Security</a></li>
+    <li><a href="04-index-bbftype-impact.html#sec:privacy">3.4 Privacy</a></li>
+  </ul>
+  <li><a href="05-index-requirements.html#sec:req:requirements">4 Residential Gateway Requirements</a></li>
+  <ul>
+    <li><a href="06-index-gen.html#sec:req:gen">4.1 GEN – General Device Requirements</a></li>
+    <ul>
+      <li><a href="06-index-gen.html#sec:req:gen.design">4.1.1 GEN.DESIGN – Design</a></li>
+      <li><a href="06-index-gen.html#sec:req:gen.ops">4.1.2 GEN.OPS – Device Operation</a></li>
+      <li><a href="06-index-gen.html#sec:req:gen.net">4.1.3 GEN.NET – Networking Protocols</a></li>
+      <li><a href="06-index-gen.html#sec:req:gen.netv6">4.1.4 GEN.NETv6 – IPv6 Networking Protocols</a></li>
+    </ul>
+    <li><a href="07-index-wan.html#sec:req:wan">4.2 WAN – Wide Area Networking</a></li>
+    <ul>
+      <li><a href="07-index-wan.html#sec:req:wan.atm">4.2.1 WAN.ATM – WAN.ATM</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.connect">4.2.2 WAN.CONNECT – Connection Establishment</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.ethoam">4.2.3 WAN.ETHOAM – Ethernet OAM</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.bridge">4.2.4 WAN.BRIDGE – Bridging</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.dhcpc">4.2.5 WAN.DHCPC – DHCP Client (DHCPv4)</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.dhcpv4">4.2.6 WAN.DHCPv4 – DHCP Client (DHCPv4)</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.dhcpv6">4.2.7 WAN.DHCPv6 – DHCP Client (DHCPv6)</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.ipv6">4.2.8 WAN.IPv6 – IPv6 WAN Connection</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.trans">4.2.9 WAN.TRANS – Transitional IPv6 WAN Connection</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.ppp">4.2.10 WAN.PPP – PPP Client</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.dot1x">4.2.11 WAN.dot1x – 802.1X Client</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.dos">4.2.12 WAN.DoS – Denial of Service Prevention</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.qos">4.2.13 WAN.QoS – Quality of Service</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.ipsecclient">4.2.14 WAN.IPsecClient – IPsec VPN peer to peer</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.l2tpclient">4.2.15 WAN.L2tpClient – L2tp VPN Remote Access</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.pcp">4.2.16 WAN.PCP – Port Control Protocol</a></li>
+      <li><a href="07-index-wan.html#sec:req:wan.tun">4.2.17 WAN.TUN – WAN Tunnel</a></li>
+    </ul>
+    <li><a href="08-index-lan.html#sec:req:lan">4.3 LAN – Local Area Networking</a></li>
+    <ul>
+      <li><a href="08-index-lan.html#sec:req:lan.gen">4.3.1 LAN.GEN – General LAN Protocols</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.address">4.3.2 LAN.ADDRESS – Private IPv4 Addressing</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.addressv6">4.3.3 LAN.ADDRESSv6 – LAN.ADDRESSv6- LAN IPv6 Addressing</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.dhcps">4.3.4 LAN.DHCPS – DHCPv4 Server</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.dhcpv6s">4.3.5 LAN.DHCPv6S – DHCPv6 Server</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.dns">4.3.6 LAN.DNS – Naming Services (IPv4 and general requirements)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.dnsv6">4.3.7 LAN.DNSv6 – LAN.DNSv6- Naming Services (IPv6)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.nat">4.3.8 LAN.NAT – LAN.NAT- NAT/NAPT</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.pfwd">4.3.9 LAN.PFWD – Port Forwarding (IPv4)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.pfwdv6">4.3.10 LAN.PFWDv6 – LAN.PFWDv6- Port Forwarding (IPv6)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.alg">4.3.11 LAN.ALG – ALG Functions (IPv4)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.fwd">4.3.12 LAN.FWD – Connection Forwarding</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.igmp">4.3.13 LAN.IGMP – IGMP</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.mld">4.3.14 LAN.MLD – Multicast Listener Discovery (MLD)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.fw">4.3.15 LAN.FW – Firewall (Basic)</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.filter">4.3.16 LAN.FILTER – Filtering</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.diagnostics">4.3.17 LAN.DIAGNOSTICS – Automated User Diagnostics</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.captive">4.3.18 LAN.CAPTIVE – Captive Portal with Web Redirection</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.qos">4.3.19 LAN.QoS – LAN quality of service requirements</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.sipserver">4.3.20 LAN.SIPserver – SIP Server</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.sipmixer">4.3.21 LAN.SIPmixer – SIP Mixer</a></li>
+      <li><a href="08-index-lan.html#sec:req:lan.interworking">4.3.22 LAN.Interworking – 3GPP Interworking</a></li>
+    </ul>
+    <li><a href="09-index-mgmt.html#sec:req:mgmt">4.4 MGMT – Management &amp; Diagnostics</a></li>
+    <ul>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.gen">4.4.1 MGMT.GEN – General</a></li>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.upnp">4.4.2 MGMT.UPnP – UPnP</a></li>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.local">4.4.3 MGMT.LOCAL – Local Management</a></li>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.remote">4.4.4 MGMT.REMOTE – Remote Management</a></li>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.ntp">4.4.5 MGMT.NTP – Network Time Client</a></li>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.twamp">4.4.6 MGMT.TWAMP – Two Way Active Measurement Protocol</a></li>
+      <li><a href="09-index-mgmt.html#sec:req:mgmt.datcol">4.4.7 MGMT.DATCOL – Data collection Requirements</a></li>
+    </ul>
+    <li><a href="10-index-if.html#sec:req:if">4.5 IF – Interface Modules</a></li>
+    <ul>
+      <li><a href="10-index-if.html#sec:req:if.wan">4.5.1 IF.WAN – WAN Interface Modules</a></li>
+      <li><a href="10-index-if.html#sec:req:if.lan">4.5.2 IF.LAN – LAN Interface Modules</a></li>
+    </ul>
+    <li><a href="11-index-sec.html#sec:req:sec">4.6 SEC – Security</a></li>
+    <ul>
+      <li><a href="11-index-sec.html#sec:req:sec.gen">4.6.1 SEC.GEN – General security</a></li>
+      <li><a href="11-index-sec.html#sec:req:sec.userinterface">4.6.2 SEC.USERINTERFACE – User Interface security</a></li>
+      <li><a href="11-index-sec.html#sec:req:sec.firmware">4.6.3 SEC.FIRMWARE – Firmware integrity and security</a></li>
+    </ul>
+    <li><a href="12-index-rgsmart.html#sec:req:rgsmart">4.7 RGSMART – Smart Residential Gateway</a></li>
+    <ul>
+      <li><a href="12-index-rgsmart.html#sec:req:rgsmart.oplat">4.7.1 RGSMART.OPLAT – Open platform Support</a></li>
+    </ul>
+    <li><a href="13-index-regional.html#sec:req:regional">4.8 REGIONAL – Regional Annexes</a></li>
+    <ul>
+      <li><a href="13-index-regional.html#sec:req:regional.na">4.8.1 REGIONAL.NA – North American</a></li>
+    </ul>
+    <li><a href="14-index-5g-wwc.html#sec:req:5g-wwc">4.9 5G-WWC – General 5G WWC</a></li>
+    <ul>
+      <li><a href="14-index-5g-wwc.html#sec:req:5g-wwc.identifiers">4.9.1 5G-WWC.Identifiers – 5G WWC Identifiers</a></li>
+      <li><a href="14-index-5g-wwc.html#sec:req:5g-wwc.fwa">4.9.2 5G-WWC.FWA – 5G WWC Fixed Wireless Access</a></li>
+      <li><a href="14-index-5g-wwc.html#sec:req:5g-wwc.wan">4.9.3 5G-WWC.WAN – 5G WWC Wide Area Network</a></li>
+      <li><a href="14-index-5g-wwc.html#sec:req:5g-wwc.lan">4.9.4 5G-WWC.LAN – 5G WWC LAN</a></li>
+    </ul>
+  </ul>
+  <li><a href="15-index-ipv6-flow-diagrams.html#sec:ipv6-flow-diagrams">Annex A: IPv6 Flow Diagrams</a></li>
+  <ul>
+    <li><a href="15-index-ipv6-flow-diagrams.html#sec:wan-ipv6-automated-connection-flow">A.1 WAN IPv6 Automated Connection Flow</a></li>
+    <li><a href="15-index-ipv6-flow-diagrams.html#sec:receive-router-advertisement-subroutine-flow">A.2 Receive Router Advertisement Subroutine Flow</a></li>
+  </ul>
+  <li><a href="16-index-application-level-gateway-alg-and-port-forwarding-list.html#sec:application-level-gateway-alg-and-port-forwarding-list">Appendix I: Application Level Gateway (ALG) and Port Forwarding List</a></li>
+  <li><a href="17-index-example-queuing-for-an-rg.html#sec:example-queuing-for-an-rg">Appendix II: Example Queuing for an RG</a></li>
+  <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:routed-architecture-examples-of-potential-configurations">Appendix III: Routed Architecture – Examples of Potential Configurations</a></li>
+  <ul>
+    <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:introduction">III.1 Introduction</a></li>
+    <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:basic-rg-as-router-initiating-one-or-more-pppoe-sessions">III.2 Basic RG as Router Initiating One or More PPPoE Sessions</a></li>
+    <ul>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:no-wan-connection">III.2.1 No WAN Connection</a></li>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-sets-up-pppoe-to-an-isp">III.2.2 Router Sets Up PPPoE to an ISP</a></li>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:pc3-sets-up-its-own-pppoe-session">III.2.3 PC3 Sets Up Its Own PPPoE Session</a></li>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-sets-up-a-second-pppoe-session">III.2.4 Router Sets Up a Second PPPoE Session</a></li>
+    </ul>
+    <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:rfc-2684-bridged-mode">III.3 &ldquo;RFC 2684 Bridged&rdquo; Mode</a></li>
+    <ul>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-in-ip-routed-rfc-2684-bridged-mode-embedded-dhcp-server-on">III.3.1 Router in IP-routed &ldquo;RFC 2684 Bridged&rdquo; Mode, Embedded DHCP Server On</a></li>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-in-bridged-mode-embedded-dhcp-server-on">III.3.2 Router in Bridged Mode, Embedded DHCP Server On</a></li>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-in-bridged-mode-embedded-dhcp-server-off">III.3.3 Router in Bridged Mode, Embedded DHCP Server Off</a></li>
+    </ul>
+    <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:single-pc-mode-of-operation">III.4 Single PC Mode of Operation</a></li>
+    <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:simultaneous-ip-and-pppoe-wan-sessions">III.5 Simultaneous IP and PPPoE WAN Sessions</a></li>
+    <ul>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-in-ip-routed-2684-bridged-mode-embedded-dhcp-server-on">III.5.1 Router in IP-routed &ldquo;2684 Bridged&rdquo; Mode, Embedded DHCP Server On</a></li>
+      <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-sets-up-ip-as-a-second-session">III.5.2 Router Sets Up IP as a Second Session</a></li>
+    </ul>
+    <li><a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:router-embedded-dhcp-server-gives-out-public-ip-addresses-from-use-of-ipcp-extension">III.6 Router Embedded DHCP Server Gives Out Public IP Addresses (from use of IPCP extension)</a></li>
+  </ul>
+  <li><a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:bridged-architecture-examples-of-potential-configurations">Appendix IV: Bridged Architecture – Examples of Potential Configurations</a></li>
+  <ul>
+    <li><a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:introduction-1">IV.1 Introduction</a></li>
+    <li><a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:managed-bridge">IV.2 Managed Bridge</a></li>
+    <ul>
+      <li><a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:local-management">IV.2.1 Local Management</a></li>
+    </ul>
+    <li><a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:unmanaged-bridge">IV.3 Unmanaged Bridge</a></li>
+    <ul>
+      <li><a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:local-management-1">IV.3.1 Local Management</a></li>
+    </ul>
+  </ul>
+  <li><a href="20-index-sealing-current-references.html#sec:sealing-current-references">Appendix V: Sealing Current References</a></li>
+  <li><a href="21-index-product-profile-template.html#sec:product-profile-template">Appendix VI: Product Profile Template</a></li>
+  <ul>
+    <li><a href="21-index-product-profile-template.html#sec:introduction-2">VI.1 Introduction</a></li>
+    <li><a href="21-index-product-profile-template.html#sec:instructions-for-completing-a-product-profile-template">VI.2 Instructions for Completing a Product Profile Template</a></li>
+    <li><a href="21-index-product-profile-template.html#sec:product-profile-template-1">VI.3 Product Profile Template</a></li>
+  </ul>
+  <li><a href="99-index-footnotes.html#footnotes">Footnotes</a></li>
+</ul>
+</nav>
+
+    <header id="title-block-header">
+      <h1 class="title" id="sec:purpose-and-scope">1 Purpose and
+Scope<a href="#sec:purpose-and-scope" class="headerlink" title="Permalink to this header"> <img src="permalink.png" style="width: 0.8em"/></a></h1>
+    </header>
+    <nav id="_TOC" role="doc-toc">
+<ul>
+<li><a href="#sec:purpose" id="toc-sec:purpose">1.1 Purpose <img
+src="permalink.png" style="width:0.8em" /></a></li>
+<li><a href="#sec:scope" id="toc-sec:scope">1.2 Scope <img
+src="permalink.png" style="width:0.8em" /></a></li>
+</ul>
+    </nav>
+<h2 id="sec:purpose">1.1 Purpose <a
+href="02-index-purpose-and-scope.html#sec:purpose" class="headerlink"
+title="Permalink to this header"><img src="permalink.png"
+style="width:0.8em" /></a></h2>
+<p>TR-124 presents a superset of requirements for broadband Residential
+Gateway devices that are capable of supporting a full suite of voice,
+data, broadcast video, video on demand and two-way video applications in
+broadband networks.</p>
+<h2 id="sec:scope">1.2 Scope <a
+href="02-index-purpose-and-scope.html#sec:scope" class="headerlink"
+title="Permalink to this header"><img src="permalink.png"
+style="width:0.8em" /></a></h2>
+<p>A Residential Gateway implementing the general requirements of TR-124
+will incorporate at least one embedded WAN interface, routing, bridging,
+a basic or enhanced firewall, one or multiple LAN interfaces and home
+networking functionality that can be deployed as a consumer
+self-installable device.</p>
+<p>TR-124 specifies a baseline of Residential Gateway device and
+application functions needed to support service delivery in routed and
+bridged broadband network architectures. Devices can be specified that
+will operate on any of the different types of Broadband Forum defined
+network architectures. This allows service providers to configure a
+Residential Gateway supporting specified TR-124 modular requirements
+locally via TR-064i2 and Web Graphical User Interface or remotely via
+TR-069.</p>
+<p>TR-124 provides optional requirements modules for various physical
+broadband interfaces (e.g. xDSL, Ethernet, GPON) and home networking
+(LAN) interfaces that may be implemented on Residential Gateways to meet
+local service provider needs. Furthermore, to accommodate common
+region-specific service provider requirements that do not apply
+globally, additional regional annexes are included in the TR-124
+requirements that may be included in region-specific product profiles
+(e.g. North American Power and Environmental requirements).</p>
+<p>It is intended that these general requirements modules and WAN/LAN
+interface modules can be used as references to define a specific product
+implementation that may be needed in future Broadband Forum Technical
+Reports. This checklist style product profile approach (shown in the “<a
+href="21-index-product-profile-template.html#sec:product-profile-template-1"
+class="heading">Product Profile Template</a>” section in <a
+href="21-index-product-profile-template.html#sec:product-profile-template-1"
+class="heading">APPENDIX VI</a> is intended to provide an easy mechanism
+to define a specific product that is needed by region or by service
+providers. An example of such a product profile is TR-068 <em>Base
+Requirements for an ADSL Modem with Routing</em>, which refers to TR-124
+feature modules and regional annexes.</p>
+<p>These requirements are both backward and forward-looking. They
+attempt to address the needs of current DSL services and architectures
+as well as starting to address future needs. Some requirements have been
+included in support of TR-059, TR-064i2, TR-069, TR-101i2 and TR-122.
+Any CPE that claims to be compliant with these technical requirements
+must meet the requirements that reference those documents. It is
+understood that a CPE that does not claim to be compliant with these
+referenced requirements may or may not meet any or all of these
+requirements. On a periodic basis, new general requirements and physical
+interface modules may be added in future revisions of TR-124.</p>
+<p>Requirements are sometimes modified when a new TR-124 revision is
+created. It is therefore necessary for any identification of modules
+supported (or to be supported) by a RG also note which TR-124 revision
+was used to generate the module list.</p>
+    <div style="clear: both;"/>
+    <footer class="site-footer">
+<nav>
+<p>
+   <a href="00-index-contents.html#contents">Cover Page</a>
+ | <a href="01-index-executive-summary.html#sec:executive-summary">Executive Summary</a>
+ | <a href="02-index-purpose-and-scope.html#sec:purpose-and-scope">1 Purpose and Scope</a>
+ | <a href="03-index-references-and-terminology.html#sec:references-and-terminology">2 References and Terminology</a>
+ | <a href="04-index-bbftype-impact.html#sec:bbftype-impact">3 Technical Report Impact</a>
+ | <a href="05-index-requirements.html#sec:req:requirements">4 Residential Gateway Requirements</a>
+ | <a href="06-index-gen.html#sec:req:gen">4.1 GEN – General Device Requirements</a>
+ | <a href="07-index-wan.html#sec:req:wan">4.2 WAN – Wide Area Networking</a>
+ | <a href="08-index-lan.html#sec:req:lan">4.3 LAN – Local Area Networking</a>
+ | <a href="09-index-mgmt.html#sec:req:mgmt">4.4 MGMT – Management &amp; Diagnostics</a>
+ | <a href="10-index-if.html#sec:req:if">4.5 IF – Interface Modules</a>
+ | <a href="11-index-sec.html#sec:req:sec">4.6 SEC – Security</a>
+ | <a href="12-index-rgsmart.html#sec:req:rgsmart">4.7 RGSMART – Smart Residential Gateway</a>
+ | <a href="13-index-regional.html#sec:req:regional">4.8 REGIONAL – Regional Annexes</a>
+ | <a href="14-index-5g-wwc.html#sec:req:5g-wwc">4.9 5G-WWC – General 5G WWC</a>
+ | <a href="15-index-ipv6-flow-diagrams.html#sec:ipv6-flow-diagrams">Annex A: IPv6 Flow Diagrams</a>
+ | <a href="16-index-application-level-gateway-alg-and-port-forwarding-list.html#sec:application-level-gateway-alg-and-port-forwarding-list">Appendix I: Application Level Gateway (ALG) and Port Forwarding List</a>
+ | <a href="17-index-example-queuing-for-an-rg.html#sec:example-queuing-for-an-rg">Appendix II: Example Queuing for an RG</a>
+ | <a href="18-index-routed-architecture-examples-of-potential-configurations.html#sec:routed-architecture-examples-of-potential-configurations">Appendix III: Routed Architecture – Examples of Potential Configurations</a>
+ | <a href="19-index-bridged-architecture-examples-of-potential-configurations.html#sec:bridged-architecture-examples-of-potential-configurations">Appendix IV: Bridged Architecture – Examples of Potential Configurations</a>
+ | <a href="20-index-sealing-current-references.html#sec:sealing-current-references">Appendix V: Sealing Current References</a>
+ | <a href="21-index-product-profile-template.html#sec:product-profile-template">Appendix VI: Product Profile Template</a>
+ | <a href="99-index-footnotes.html#footnotes">Footnotes</a>
+</p>
+</nav>
+
+      <span class="site-footer-owner">
+        TR-124 is developed and maintained
+        by <a href="https://www.broadband-forum.org">The Broadband Forum</a>.
+        &copy; The Broadband Forum 2022</a>. All Rights Reserved.
+      </span>
+      <span class="site-footer-credits">
+        This page was generated by <a href="https://pandoc.org">pandoc</a>
+        and <a href="https://pages.github.com">GitHub Pages</a>.
+        View the <a href="https://github.com/BroadbandForum/rg-device-requirements">specification
+source on GitHub</a>.
+        <span class="release"/>
+      </span>
+    </footer>
+  </section>
+</body>
+</html>

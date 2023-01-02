@@ -1,0 +1,46 @@
+---
+REGIONAL.NA.POWER:
+  name: |
+    North American Power and Environmental
+
+  requirements:
+    1: |
+      The RG MUST be UL 60950 listed.
+
+    2: |
+      The RG MUST display proof of CSA (Canadian Standards Association) or ULC
+      (Underwriters Laboratories Canada) certification for CAN/CSA C22.2
+      No. 60950. This is the Canadian equivalent to, and is identical to,
+      UL 60950.
+
+    3: |
+      The RG MUST meet all requirements when operating with the following line
+      voltages:
+
+      Brownout: 96 to 127 Vac @ 60 +/- 0.1 Hz
+
+      Reserve: 105 to 129 Vac @ 60 +/- 3.0 Hz
+
+    4: |
+      If the power supply is external to the RG, it MUST be UL 1310 or UL
+      60950 listed and certified.
+
+    5: |
+      The RG MUST comply with FCC Part 15 rules for Class B devices.
+
+    6: |
+      The RG MUST comply with Industry Canada ICES-003 Class B requirements.
+
+    7: |
+      The RG MUST comply with the requirements of Telcordia® GR-1089-CORE,
+      Electromagnetic Compatibility and Electrical Safety -- Generic Criteria
+      for Network Telecommunications Equipment. Class A3 source voltages are
+      not permitted.
+
+    8: |
+      The RG MUST support the following environmental conditions:
+
+      | **Environment** | **Temperature** | **Altitude** | **Relative Humidity** | **MWB** |
+      |-----------------|-----------------|--------------|-----------------------|---------|
+      | Operating System Ambient | 0o C to 40°C | -60 to 2134 m (-197 to 7000 ft) | 8% to 95% non-condensing | 23°C |
+      | Shipping | -25°C to 65°C | | Low humidity for low temperatures, 90% at 45°C, 30% at 65°C | 29 °C |

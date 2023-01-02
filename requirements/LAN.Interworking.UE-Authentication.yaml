@@ -1,0 +1,24 @@
+---
+LAN.Interworking.UE-Authentication:
+  name: |
+    3GPP User Equipment Authentication Support
+
+  requirements:
+    1: |
+      The RG MUST be able to act as an 802.1X authenticator using a RADIUS
+      client (as defined in RFC 3579 [@RFC3579]).
+      connected to a fixed access AAA server.
+
+    2: |
+      The RG MUST support proxying EAP-AKA/EAP-AKA' messages over RADIUS,
+      using an internal RADIUS client.
+
+    3: |
+      The RG MUST be able to receive policies from the AAA server during User
+      Equipment authentication and during an ongoing session using RADIUS CoA
+      as per RFC 5176 [@RFC5176].
+
+    4: |
+      The RG MUST be able to have pre-configured policies to handle User
+      Equipment traffic or to download such policies via RADIUS from the AAA
+      server during authentication or by using RADIUS CoA.

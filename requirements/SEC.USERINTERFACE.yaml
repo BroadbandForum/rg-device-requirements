@@ -1,0 +1,44 @@
+---
+SEC.USERINTERFACE:
+  name: |
+    User Interface security
+
+  requirements:
+    1: |
+      The RG MUST use HTTPS over TLS 1.2 or later for access to its graphical
+      user interface (GUI).
+
+    2: |
+      The RG MUST reject attempts to connect to its user interface(s) using
+      incorrect credentials.
+
+    3: |
+      The RG MUST NOT ever use the same username or password for remote (WAN)
+      access to its user interface(s) and local (LAN) access to its user
+      interface(s).
+
+    4: |
+      The RG MUST use password unique to the unit for default access to its
+      user interface(s).
+
+    5: |
+      The RG MUST prompt the user to change the default password upon first
+      access.
+
+    6: |
+      The RG MUST use exponential rate limiting of login attempts upon failed
+      login attempts.
+
+    7: |
+      The RG MUST time-out exposed remote (WAN) access to its user
+      interface(s) after a default period of time.
+
+    8: |
+      The RG MAY allow access to its command line interface(s) via SSH. SSH
+      access, if supported, MUST NOT be enabled by default. The RG MUST NOT
+      allow access to its command line interface(s) via any other protocol.
+
+    9: |
+      Login to the RG's user interface(s) SHOULD use a 2-pass challenge
+      mechanism. If used, it MUST NOT be dependent on connections to WAN
+      resources.

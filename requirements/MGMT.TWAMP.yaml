@@ -1,0 +1,20 @@
+---
+MGMT.TWAMP:
+  name: |
+    Two Way Active Measurement Protocol
+
+  description: |
+    This module applies to IPv6 as well as IPv4, but only if the RG has an
+    IPv6 stack.
+
+  requirements:
+    1: |
+      The RG MUST support acting as a TWL Session-Reflector as defined in RFC
+      5357 \[194\] Two-Way Active Measurement Protocol Light (TWL).
+
+    2: |
+      The RG MUST support static provisioning of the TWL Session-Reflector.
+
+    3: |
+      The RG MUST disable the TWL Session-Reflector by default and MUST only
+      allow it to be enabled by the management system.

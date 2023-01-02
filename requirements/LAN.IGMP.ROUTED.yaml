@@ -1,0 +1,136 @@
+---
+LAN.IGMP.ROUTED:
+  name: |
+    IGMP and Multicast in Routed Configurations (IPv4)
+
+  requirements:
+    1: |
+      The RG MUST support an IGMP proxy-routing function as defined in RFC 4605
+      [@RFC4605]. This satisfies Broadband Forum TR-101 [@TR-101] R-225.
+
+    2: |
+      The RG MUST support IGMPv3 as defined in IETF [@RFC3376]. This satisfies
+      TR-101 [@TR-101] R-226.
+
+    3: |
+      The RG MUST support IGMP proxy-routing with local NAT and firewall
+      features including establishing any pin-holes in the firewall for the
+      multicast streams received (after join). This satisfies TR-101 [@TR-101] R-227.
+
+    4: |
+      When the RG is configured with multiple WAN-facing IPv4 interfaces
+      (e.g. PPP or IPoE), the IGMP proxy-routing function MUST be able to
+      configure a filter for multicasting upstream IGMP messages to one or
+      more interfaces. This satisfies [@TR-101] requirements R-228 and R-229.
+
+    5: |
+      When the RG receives an IGMP membership query on a given WAN-facing IPv4
+      interface, the IGMP proxy-routing function MUST only send a
+      corresponding membership report on this specific interface. This
+      satisfies TR-101 [@TR-101] R-230.
+
+    6: |
+      The RG SHOULD be able to classify IGMP requests according to source
+      IPv4/MAC address or incoming LAN physical port to distinguish between
+      multicast services (e.g. IPTV and some other best effort Internet
+      multicast application). This satisfies TR-101 [@TR-101] R-231.
+
+    7: |
+      The RG MUST have a way to suppress the flooding of multicast to all LAN
+      devices by only sending the traffic to selected ports/interfaces, either
+      through configuration of dedicated ports connecting to multicast hosts
+      or IGMP proxy-routing (where the traffic is only sent to host devices
+      that have joined the multicast group). This satisfies TR-101 [@TR-101] R-232.
+
+    8: |
+      It MUST be possible to configure a WAN-facing IPv4 interface with an
+      IPoE encapsulation and no IPv4 address visible by the access network. It
+      MUST be possible to receive multicast traffic on such an interface,
+      independent of whether upstream IGMP is sent on this interface or not.
+      The RG's IGMP proxy-routing function MUST be able to send upstream IGMP
+      traffic on such an interface, using an unspecified (0.0.0.0/::) IPv4
+      source address. This satisfies TR-101 [@TR-101] requirements R-269, R-270 and
+      R-271.
+
+    9: |
+      All RG LAN ports and interfaces MUST be capable of processing IGMP
+      messages.
+
+    10: |
+      The RG SHOULD be able to allow (default) or discard IGMP join requests
+      based on the source interface, port and host. This satisfies the
+      requirement stated in TR-101 [@TR-101] R-233.
+
+    11: |
+      The RG MUST support IGMP snooping per IPv4 bridge to an individual LAN
+      addressable port or interface level (each Ethernet port, USB (PC),
+      Wi-Fi, etc.). A recommended reference implementation can be found in
+      [@RFC4541].
+
+    12: |
+      The RG MUST be configurable to prevent sending IGMP messages to the WAN
+      interfaces for specified multicast groups or ranges (such as 239.0.0.0
+      through 239.255.255.255 for IPv4, which are limited scope or
+      administratively scoped addresses).
+
+    13: |
+      The RG MUST default to not sending IGMP messages for IPv4 addresses
+      239.0.0.0 through 239.255.255.255 to the WAN interfaces. This satisfies
+      TR-101 [@TR-101] R-235.
+
+    14: |
+      The RG MUST have a join and leave latency less than 20 ms.
+
+      This means that when the RG receives a leave, it must stop sending the
+      stream to that device (although it is expected to continue sending to
+      other devices that have not left) in less than 20 ms. The RG must not
+      wait for the results of a membership query before it stops sending the
+      stream. Rather, it must rely on its membership database to know whether
+      there are other devices receiving that stream. When the RG receives a
+      join, its allocation of the overall time for starting to forward that
+      stream must not exceed 20 ms.
+
+      This latency definition handles southbound join/leave; however a
+      definition for the northbound join/leave latency will also be useful.
+      Also, the northbound as well as southbound latency definition involves a
+      tradeoff between multicast system dynamics (lower latency -\> higher
+      dynamics) and bandwidth efficiency (low latency -\> better bandwidth
+      efficiency). A statistical analysis will be helpful, based on empirical
+      TV channel switching dynamics, when available.
+
+    15: |
+      The RG MUST support IGMP immediate leave (also known as fast leave) with
+      explicit host tracking. This satisfies TR-101 [@TR-101] R-234.
+
+    16: |
+      The RG MUST support a minimum of 32 multicast groups.
+
+    17: |
+      The RG SHOULD support a minimum of 64 multicast groups.
+
+    18: |
+      The RG MUST be configurable to log (on demand) all IGMP messages on both
+      the LAN and WAN interfaces.
+
+    19: |
+      The RG MUST be able to provide a summary of the current state of IGMP
+      group memberships as managed by the RG (e.g. multicast groups and LAN
+      devices currently associated with each multicast group).
+
+    20: |
+      The RG MUST be able to provide a summary of IGMP activity over specific
+      time periods (e.g. previous hour, previous day, since reboot, etc.), per
+      multicast stream and per LAN device.
+
+    21: |
+      The RG MUST be able to report IGMP statistics and logs through the Web
+      GUI, TR-064i2 interfaces and to a Controller.
+
+    22: |
+      The RG MUST be capable of supporting LAN to LAN multicast between
+      devices on a shared medium, and between devices on separate switched LAN
+      interfaces.
+
+    23: |
+      The RG MUST be configurable as to how many simultaneous multicast
+      streams are allowed from WAN to LAN.

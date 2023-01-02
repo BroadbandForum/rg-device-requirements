@@ -1,0 +1,83 @@
+---
+RGSMART.OPLAT.OSGI:
+  name: |
+    OSGI Open platform
+
+  requirements:
+    1: |
+      The Smart RG MUST support the OSGi platform and the execution
+      environment (JVM) on which the OSGi platform runs as open platform.
+
+      *Note: The native language cannot run across different platforms. It is
+      recommended that the Smart RG should provide a Java runtime environment
+      that supports OSGi Plug-in bundle expansion capabilities*
+
+    2: |
+      The JVM of the Smart RG OSGI platform MUST at a minimum use JAVA SE8*.*
+
+    3: |
+      The JVM must at least include the Java SE Embedded compact1 profile.
+
+      **Detailed API packages list for compact1:**
+
+      *Java.io java.lang* *java.lang.annotation* *java.lang.invoke*
+      *java.lang.ref* *java.lang.reflect* *java.math java.net java.nio*
+      *java.nio.channels* *java.nio.channels.spi* *java.nio.charset*
+      *java.nio.charset.spi* *java.nio.file* *java.nio.file.attribute*
+      *java.nio.file.spi* *java.security* *java.security.cert*
+      *java.security.interfaces* *java.security.spec* *java.text*
+      *java.text.spi* *java.time* *java.time.chrono* *java.time.format*
+      *java.time.temporal* *java.time.zone* *java.util* *java.util.concurrent*
+      *java.util.concurrent.atomic* *java.util.concurrent.locks*
+      *java.util.function java.util.jar java.util.logging* *java.util.regex*
+      *java.util.spi* *java.util.stream java.util.zip javax.crypto*
+      *javax.crypto.interfaces* *javax.crypto.spec javax.net javax.net.ssl*
+      *javax.script* *javax.security.auth* *javax.security.auth.callback*
+      *javax.security.auth.login* *javax.security.auth.spi
+      javax.security.auth.x500 javax.security.cert*
+
+    4: |
+      The JVM MUST run with a non-root minimum privilege level.
+
+    5: |
+      The Smart RG SHOULD allow to limit the JVM resources used by the OSGi
+      environment and applications including CPU time, number of threads, RAM,
+      Sockets used.
+
+    6: |
+      The OSGi framework MUST include Security Layer, Module Layer, Life Cycle
+      Layer, Service Layer.
+
+    7: |
+      The OSGi framework MUST be compatible with OSGI CORE 6 [@OSGI-CORE-6] or later. For
+      OSGi Release 6 the OSGi framework MUST implement chapters 2-10 and 53-57
+      of OSGI CORE 6 [@OSGI-CORE-6].
+
+    8: |
+      The OSGi framework MUST implement the Log Service compatible with the
+      OSGi Compendium specification. For OSGi Release 6 the service MUST be
+      compatible to chapter 101, of OSGI Companion 6 [@OSGI-CORE-6].
+
+    9: |
+      The OSGi framework MUST implement the HTTP Service compatible with the
+      OSGi Compendium specification. For OSGi Release 6 the service MUST be
+      compatible to chapter 102, of OSGI Companion 6 [@OSGI-CORE-6].
+
+    10: |
+      The OSGi framework MUST implement the Configuration Admin Service
+      compatible with the OSGi Compendium specification. For OSGi Release 6
+      the service MUST be compatible to chapter 104, of OSGI Companion 6 [@OSGI-CORE-6].
+
+    11: |
+      The OSGi framework MUST implement the Event Admin Service compatible
+      with the OSGi Compendium specification. For OSGi Release 6 the service
+      MUST be compatible to chapter 113, of OSGI Companion 6 [@OSGI-CORE-6].
+
+    12: |
+      If TR-069 is used the OSGi module layer management SHOULD be compatible
+      with functions in Broadband Forum TR-069 [@TR-069], Appendix VI "Software Module Management".
+
+    13: |
+      If USP is used the OSGi module layer management SHOULD be compatible
+      with functions in Broadband Forum TR-369 [@TR-369], Appendix I
+      "Software Module Management".

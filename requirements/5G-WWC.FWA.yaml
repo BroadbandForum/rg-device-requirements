@@ -1,0 +1,7 @@
+---
+5G-WWC.FWA:
+  name: |
+    5G WWC Fixed Wireless Access
+
+  categories:
+    - !include 5G-WWC.FWA.IPTV.yaml

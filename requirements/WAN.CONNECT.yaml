@@ -1,0 +1,51 @@
+---
+WAN.CONNECT:
+  name: |
+    Connection Establishment
+
+  description: |
+    *Note that this module applies to IPv6 connections as well as IPv4, but
+    only if the RG has an IPv6 stack.*
+
+  categories:
+    - !include WAN.CONNECT.ON-DEMAND.yaml
+
+  requirements:
+    1: |
+      The RG MUST support an "always on" mode for connections. In this mode
+      the RG MUST NOT time out connection sessions (ATM, IP and PPP) and MUST
+      automatically re-establish any sessions after disconnection, lease
+      expiration or loss and restoration of power.
+
+    2: |
+      *Moved to WAN.CONNECT.ON-DEMAND.1 and 4*
+
+    3: |
+      The RG MUST support a "manual connect" option for connections. In this
+      mode the connection to the broadband network is initiated manually
+      through the Web GUI or via
+
+      TR-064i2 request and, by default, terminates only when done so
+      explicitly by the user, due to a power loss or when the connection is
+      lost.
+
+    4: |
+      *Moved to WAN.CONNECT.ON-DEMAND.6*
+
+    5: |
+      A manual way of disconnecting without waiting for a connection timeout
+      MUST be provided.
+
+    6: |
+      *Moved to WAN.CONNECT.ON-DEMAND.7*
+
+    7: |
+      The RG MUST follow all standards required to perform an orderly tear
+      down of the associated connections involved at the associated network
+      levels (e.g. issue a DHCP Release message when using DHCPv4, issue LCP
+      Terminate-Request/Terminate-Ack and PADT packet when using PPPoE, etc.)
+      and then restart the connections.
+
+    8: |
+      The RG MUST detect the loss of communications with a network identified
+      DNS server as indicated by a failed query, and log the event.

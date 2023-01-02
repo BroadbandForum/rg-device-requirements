@@ -1,0 +1,19 @@
+---
+LAN.GEN:
+  name: |
+    General LAN Protocols
+
+  requirements:
+    1: |
+      The RG MAY support SOCKS as defined in RFC 1928 [@RFC1928] for non-ALG access
+      to the public address.
+
+    2: |
+      Both NetBios and zero config naming mechanisms MAY be used to populate
+      the DNS tables.
+
+    3: |
+      The RG MAY act as a NETBIOS master browser for that name service.
+
+    4: |
+      The RG MUST support multiple subnets being used on the local LAN.

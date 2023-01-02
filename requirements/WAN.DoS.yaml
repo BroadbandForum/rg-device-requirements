@@ -1,0 +1,38 @@
+---
+WAN.DoS:
+  name: |
+    Denial of Service Prevention
+
+  description: |
+    *Note: The IPv6 parts of this module apply only if the RG has an IPv6
+    stack.*
+
+  requirements:
+    1: |
+      The RG MUST provide denial of service (DOS) protection for itself and
+      all LAN CPE including protection from ping of death, SYN flood, LAND and
+      variant attacks. The extent of this protection will be limited when the
+      RG is configured as a bridge in which only PPPoE traffic is bridged.
+      This protection MUST be available when the RG terminates IP (v4 or v6)
+      or bridges IPv4.
+
+    2: |
+      The RG MUST reject packets from the WAN with source MAC addresses of
+      devices on the local LAN or invalid IP (v4 or v6) addresses
+      (e.g. broadcast addresses or IP (v4 or v6) addresses matching those
+      assigned to the LAN segment).
+
+    3: |
+      The RG MUST reject any unidentified Ethernet packets (i.e. any packet
+      that is not associated with IP (v4 or v6) or PPPoE protocols).
+
+    4: |
+      The RG MUST perform anti-spoofing filtering for IPv6. All IPv6 traffic
+      sent to the WAN from the LAN MUST have an IPv6 source address with a
+      prefix assigned to the LAN by the RG, that was delegated from the WAN
+      (through DHCPv6 or configuration).
+
+    5: |
+      Because the RG must perform anti-spoofing filtering for IPv6, until it
+      has an IPv6 LAN prefix delegation it MUST filter all upstream IPv6
+      traffic from the home.

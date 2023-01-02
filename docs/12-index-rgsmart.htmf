@@ -1,0 +1,242 @@
+<!-- <h2 class="new-file new-page display-none" id="sec:req:rgsmart">4.7 RGSMART – Smart Residential Gateway<a class="headerlink" href="12-index-rgsmart.html#sec:req:rgsmart" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2> -->
+
+<h3 id="sec:req:rgsmart.oplat">4.7.1 RGSMART.OPLAT – Open platform Support<a class="headerlink" href="12-index-rgsmart.html#sec:req:rgsmart.oplat" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<p><em>Note</em>: <em>With the evolution of home networks, The Smart RG needs to
+support more and more third-party applications. Each Smart RG vendor has
+different hardware and software operating environments. An open platform
+allows to update the Smart RG with standardized additional software
+applications, without the need to maintain different versions.</em></p>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.1">RGSMART.OPLAT.1<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The Smart RG MUST provide a generic open platform, which allows to
+execute modular Software Applications in a virtual environment.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.2">RGSMART.OPLAT.2<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The open platform MUST provide APIs, which allow software applications
+to interact with the smart gateway for requesting/configuring access
+services, data flow services, common services (e.g. query device
+information).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.3">RGSMART.OPLAT.3<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The open platform MUST provide APIs, which allow software applications
+to interact with the home network and services in the home network (LAN
+addressing services).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.4">RGSMART.OPLAT.4<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The open platform MUST provide APIs, which allow software applications
+to access the uplink and interact with cloud services.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.5">RGSMART.OPLAT.5<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The open platform MUST provide a mechanism, to authenticate software
+modules and applications and restrict the execution to certified
+software applications.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.6">RGSMART.OPLAT.6<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The Smart RG open platform MUST support software module management to
+load and unload software modules.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.7">RGSMART.OPLAT.7<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The Smart RG open platform MUST support software module management to
+start and stop software applications.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.8">RGSMART.OPLAT.8<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">All installed software modules MUST be persistent during upgrades of the
+Smart RG, or a mechanism MUST be provided which reinstalls the previous
+installed software modules.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.9">RGSMART.OPLAT.9<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If TR-069 is used the open platform SHOULD support the functions in
+TR-069a6, Appendix VI &ldquo;Software Module Management&rdquo; to manage and control
+the software applications and software modules.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.10">RGSMART.OPLAT.10<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If USP is used the open platform SHOULD support the functions in TR-369,
+Appendix I &ldquo;Software Module Management&rdquo; to manage and control the
+software applications and software modules.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.11">RGSMART.OPLAT.11<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The open platform SHOULD support to limit the resources used by open
+platform environments and applications including CPU time, number of
+threads, RAM, and Sockets used.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:rgsmart.oplat.osgi">4.7.1.1 RGSMART.OPLAT.OSGI – OSGI Open platform<a class="headerlink" href="12-index-rgsmart.html#sec:req:rgsmart.oplat.osgi" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:rgsmart.oplat.osgi.1">RGSMART.OPLAT.OSGI.1<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The Smart RG MUST support the OSGi platform and the execution
+environment (JVM) on which the OSGi platform runs as open platform.</p>
+
+<p><em>Note: The native language cannot run across different platforms. It is
+recommended that the Smart RG should provide a Java runtime environment
+that supports OSGi Plug-in bundle expansion capabilities</em></p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.osgi.2">RGSMART.OPLAT.OSGI.2<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The JVM of the Smart RG OSGI platform MUST at a minimum use JAVA SE8<em>.</em></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:rgsmart.oplat.osgi.3">RGSMART.OPLAT.OSGI.3<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The JVM must at least include the Java SE Embedded compact1 profile.</p>
+
+<p><strong>Detailed API packages list for compact1:</strong></p>
+
+<p><em>Java.io java.lang</em> <em>java.lang.annotation</em> <em>java.lang.invoke</em>
+<em>java.lang.ref</em> <em>java.lang.reflect</em> <em>java.math java.net java.nio</em>
+<em>java.nio.channels</em> <em>java.nio.channels.spi</em> <em>java.nio.charset</em>
+<em>java.nio.charset.spi</em> <em>java.nio.file</em> <em>java.nio.file.attribute</em>
+<em>java.nio.file.spi</em> <em>java.security</em> <em>java.security.cert</em>
+<em>java.security.interfaces</em> <em>java.security.spec</em> <em>java.text</em>
+<em>java.text.spi</em> <em>java.time</em> <em>java.time.chrono</em> <em>java.time.format</em>
+<em>java.time.temporal</em> <em>java.time.zone</em> <em>java.util</em> <em>java.util.concurrent</em>
+<em>java.util.concurrent.atomic</em> <em>java.util.concurrent.locks</em>
+<em>java.util.function java.util.jar java.util.logging</em> <em>java.util.regex</em>
+<em>java.util.spi</em> <em>java.util.stream java.util.zip javax.crypto</em>
+<em>javax.crypto.interfaces</em> <em>javax.crypto.spec javax.net javax.net.ssl</em>
+<em>javax.script</em> <em>javax.security.auth</em> <em>javax.security.auth.callback</em>
+<em>javax.security.auth.login</em> <em>javax.security.auth.spi
+javax.security.auth.x500 javax.security.cert</em></p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.osgi.4">RGSMART.OPLAT.OSGI.4<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The JVM MUST run with a non-root minimum privilege level.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.osgi.5">RGSMART.OPLAT.OSGI.5<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The Smart RG SHOULD allow to limit the JVM resources used by the OSGi
+environment and applications including CPU time, number of threads, RAM,
+Sockets used.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.osgi.6">RGSMART.OPLAT.OSGI.6<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The OSGi framework MUST include Security Layer, Module Layer, Life Cycle
+Layer, Service Layer.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.osgi.7">RGSMART.OPLAT.OSGI.7<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The OSGi framework MUST be compatible with OSGI CORE 6 <span class="cite" data-citation-ids="OSGI-CORE-6"><a href='03-index-references-and-terminology.html#ref-OSGI-CORE-6' title=''>[43]</a></span> or later. For
+OSGi Release 6 the OSGi framework MUST implement chapters 2-10 and 53-57
+of OSGI CORE 6 <span class="cite" data-citation-ids="OSGI-CORE-6"><a href='03-index-references-and-terminology.html#ref-OSGI-CORE-6' title=''>[43]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.osgi.8">RGSMART.OPLAT.OSGI.8<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The OSGi framework MUST implement the Log Service compatible with the
+OSGi Compendium specification. For OSGi Release 6 the service MUST be
+compatible to chapter 101, of OSGI Companion 6 <span class="cite" data-citation-ids="OSGI-CORE-6"><a href='03-index-references-and-terminology.html#ref-OSGI-CORE-6' title=''>[43]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.osgi.9">RGSMART.OPLAT.OSGI.9<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The OSGi framework MUST implement the HTTP Service compatible with the
+OSGi Compendium specification. For OSGi Release 6 the service MUST be
+compatible to chapter 102, of OSGI Companion 6 <span class="cite" data-citation-ids="OSGI-CORE-6"><a href='03-index-references-and-terminology.html#ref-OSGI-CORE-6' title=''>[43]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.osgi.10">RGSMART.OPLAT.OSGI.10<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The OSGi framework MUST implement the Configuration Admin Service
+compatible with the OSGi Compendium specification. For OSGi Release 6
+the service MUST be compatible to chapter 104, of OSGI Companion 6 <span class="cite" data-citation-ids="OSGI-CORE-6"><a href='03-index-references-and-terminology.html#ref-OSGI-CORE-6' title=''>[43]</a></span>.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.osgi.11">RGSMART.OPLAT.OSGI.11<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The OSGi framework MUST implement the Event Admin Service compatible
+with the OSGi Compendium specification. For OSGi Release 6 the service
+MUST be compatible to chapter 113, of OSGI Companion 6 <span class="cite" data-citation-ids="OSGI-CORE-6"><a href='03-index-references-and-terminology.html#ref-OSGI-CORE-6' title=''>[43]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.osgi.12">RGSMART.OPLAT.OSGI.12<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If TR-069 is used the OSGi module layer management SHOULD be compatible
+with functions in Broadband Forum TR-069 <span class="cite" data-citation-ids="TR-069"><a href='03-index-references-and-terminology.html#ref-TR-069' title=''>[160]</a></span>, Appendix VI &ldquo;Software Module Management&rdquo;.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.osgi.13">RGSMART.OPLAT.OSGI.13<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.osgi.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If USP is used the OSGi module layer management SHOULD be compatible
+with functions in Broadband Forum TR-369 <span class="cite" data-citation-ids="TR-369"><a href='03-index-references-and-terminology.html#ref-TR-369' title=''>[169]</a></span>, Appendix I
+&ldquo;Software Module Management&rdquo;.</td>
+</tr>
+</table>
+
+<h4 id="sec:req:rgsmart.oplat.ee">4.7.1.2 RGSMART.OPLAT.EE – Execution Environment<a class="headerlink" href="12-index-rgsmart.html#sec:req:rgsmart.oplat.ee" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h4>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:rgsmart.oplat.ee.1">RGSMART.OPLAT.EE.1<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The native operator system on a RG MUST provide an execution environment
+(EE), which allows the execution of applications (containers).</p>
+
+<p><em>Note: It is recommended that the RG provides a LXC runtime environment
+that supports C Plug-in bundle expansion capabilities</em></p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.ee.2">RGSMART.OPLAT.EE.2<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The execution environment MUST support the isolation of all executed
+applications from each other and from other application on RG.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.ee.3">RGSMART.OPLAT.EE.3<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The applications SHOULD run with a non-root minimum privilege level with
+as few rights as possible. (Principle of least privilege).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:rgsmart.oplat.ee.4">RGSMART.OPLAT.EE.4<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The execution environment MUST provide access to socket based outgoing
+communication and TLS encryption for the applications and allow them to
+communicate with cloud services.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:rgsmart.oplat.ee.5">RGSMART.OPLAT.EE.5<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The execution environment MUST allow configuring the deployed
+applications using centralized RG configuration data and interfaces.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:rgsmart.oplat.ee.6">RGSMART.OPLAT.EE.6<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The execution environment MUST provide controlled access to the RG
+managed configuration parameters, for application use. The access rights
+have to be configurable.</p>
+
+<p><em>Note: For example, a Wi-Fi control application has to be able to read
+and write the SSID.</em></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:rgsmart.oplat.ee.7">RGSMART.OPLAT.EE.7<a class="headerlink" href="12-index-rgsmart.html#req:rgsmart.oplat.ee.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The execution environment SHOULD provide an inter-application
+communication mechanism, which allows the communication between
+different applications.</p>
+
+<p><em>Note: It is recommended that communication mechanism is based on an
+event publish and subscribe model.</em></p></td>
+</tr>
+</table>
+

@@ -1,0 +1,31 @@
+---
+WAN.DHCPv6.ERP:
+  name: |
+    EAP Re-authentication (ERP) for DHCPv6
+
+  requirements:
+    1: |
+      The RG MUST support the ERP Local Domain Name (LDN) DHCPv6 Option
+      ([@RFC6440]).
+
+    2: |
+      The RG MUST support receiving a DHCPv6 request message from a UE client,
+      which includes an Option Request option requesting the DHCPv6 ERP Local
+      Domain Name option ([@RFC6440]).
+      The DHCPv6 request message may be Solicit, Request, or Information
+      Request.
+
+    3: |
+      If the RG has pre-existing knowledge of the ERP local domain name for a
+      client (for example, from a previous AAA exchange), it SHOULD include it
+      in an instance of the DHCPv6 ERP Local Domain Name option of the DHCPv6
+      message and forward it to the DHCPv6 server as a sub-option of the
+      Relay-Supplied Options option ([@RFC6422]).
+
+    4: |
+      The RG MUST support relaying a DHCPv6 Reply Message with the DHCPv6 ERP
+      Local Domain Name option from the DHCPv6 server to the client.
+
+    5: |
+      The RG MUST support configuration of the parameters for it to connect to
+      the RADIUS or Diameter server via Web GUI or Controller extension.

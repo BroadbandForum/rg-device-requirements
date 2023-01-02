@@ -1,0 +1,18 @@
+---
+IF.LAN.WIRELESS.AP.ERP-Authenticator:
+  name: |
+    Wireless: ERP Authenticator
+
+  requirements:
+    1: |
+      The RG MUST support ERP Authenticator function RFC 6696 [@RFC6696]) to get ERP
+      keying material from ERP peer (known as the supplicant).
+
+    2: |
+      The RG MUST support either a RADIUS client function (RFC 3579 [@RFC3579]) or a
+      Diameter client function RFC 4072 [@RFC4072], to carry the ERP frames over the
+      RADIUS or Diameter protocol toward a RADIUS or Diameter server.
+
+    3: |
+      The RG MUST support configuration of the parameters for it to connect to
+      the RADIUS or Diameter server via Web GUI or from a Controller.

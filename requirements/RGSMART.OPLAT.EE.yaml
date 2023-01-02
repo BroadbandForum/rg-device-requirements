@@ -1,0 +1,45 @@
+---
+RGSMART.OPLAT.EE:
+  name: |
+    Execution Environment
+
+  requirements:
+    1: |
+      The native operator system on a RG MUST provide an execution environment
+      (EE), which allows the execution of applications (containers).
+
+      *Note: It is recommended that the RG provides a LXC runtime environment
+      that supports C Plug-in bundle expansion capabilities*
+
+    2: |
+      The execution environment MUST support the isolation of all executed
+      applications from each other and from other application on RG.
+
+    3: |
+      The applications SHOULD run with a non-root minimum privilege level with
+      as few rights as possible. (Principle of least privilege).
+
+    4: |
+      The execution environment MUST provide access to socket based outgoing
+      communication and TLS encryption for the applications and allow them to
+      communicate with cloud services.
+
+    5: |
+      The execution environment MUST allow configuring the deployed
+      applications using centralized RG configuration data and interfaces.
+
+    6: |
+      The execution environment MUST provide controlled access to the RG
+      managed configuration parameters, for application use. The access rights
+      have to be configurable.
+
+      *Note: For example, a Wi-Fi control application has to be able to read
+      and write the SSID.*
+
+    7: |
+      The execution environment SHOULD provide an inter-application
+      communication mechanism, which allows the communication between
+      different applications.
+
+      *Note: It is recommended that communication mechanism is based on an
+      event publish and subscribe model.*

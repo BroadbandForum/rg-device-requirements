@@ -1,0 +1,18 @@
+---
+LAN.SIPmixer:
+  name: |
+    SIP Mixer
+
+  requirements:
+    1: |
+      The RG MUST support the SIP mixer function ([@RFC3550]) to mix incoming 
+      multiple streams to adapt to the participant's network condition.
+
+    2: |
+      The RG MUST have the capability to change the encoding format of
+      incoming multiple streams.
+
+    3: |
+      The RG MUST terminate any RTCP messages sent to (or received from)
+      clients, but generate its own RTCP messages and send them to (or send
+      them out on behalf of) clients.

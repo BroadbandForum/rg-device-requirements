@@ -1,0 +1,8 @@
+---
+LAN.FILTER:
+  name: |
+    Filtering
+
+  categories:
+    - !include LAN.FILTER.TIME.yaml
+    - !include LAN.FILTER.CONTENT.yaml

@@ -1,0 +1,40 @@
+---
+WAN.TUN.VXLAN:
+  name: |
+    VxLAN Tunnel
+
+  requirements:
+    1: |
+      The RG May support VXLAN tunnels
+
+    2: |
+      The RG May support VXLAN tunnels using IPv4 encapsulation.
+
+    3: |
+      The RG May support VXLAN tunnels using IPv6 encapsulation.
+
+    4: |
+      The RG May support bridging Ethernet frames into a VXLAN tunnel.
+
+    5: |
+      The RG May support using the LSL settings in
+      Broadband Forum TR-328 [@TR-328], table 4.
+
+    6: |
+      The RG May support static provisioning of VXLAN LSL settings
+
+    7: |
+      The RG May support obtaining VXLAN LSL settings via DHCP
+
+    8: |
+      Upon receiving downstream encapsulated traffic from the Network side,
+      the RG May:
+
+      * Decapsulate VXLAN
+
+      * If the Protocol Type in IP header is UDP (0x11) and the UDP
+      Destination Port is 4789, then it must process the 802.3 frame following
+      the VXLAN header.
+
+      * The frame should be forwarded per the MAC forwarding table, if
+      matching the VNI configured for the LSL.

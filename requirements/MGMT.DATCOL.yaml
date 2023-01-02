@@ -1,0 +1,7 @@
+---
+MGMT.DATCOL:
+  name: |
+    Data collection Requirements
+
+  categories:
+    - !include MGMT.DATCOL.WIFIDIAG.yaml

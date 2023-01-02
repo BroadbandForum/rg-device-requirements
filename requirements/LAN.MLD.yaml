@@ -1,0 +1,7 @@
+---
+LAN.MLD:
+  name: |
+    Multicast Listener Discovery (MLD)
+
+  categories:
+    - !include LAN.MLD.ROUTED.yaml

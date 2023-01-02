@@ -1,0 +1,87 @@
+---
+IF.WAN.xDSL.BOND:
+  name: |
+    xDSL Bonding
+
+  requirements:
+    1: |
+      If the RG supports ATM-based bonding, it MUST comply with ANSI T1.427.01
+      [@T1.427.01] and ITU-T G.998.1 [@G.998.1].
+
+    2: |
+      If the RG supports Ethernet-based bonding, it MUST comply with
+      ANSI T1.427.02 [@T1.427.02] and ITU-T G.998.2 [@G.998.2].
+
+    3: |
+      If the RG supports DSL bonding, the RG MAY support the following
+      parameters in the Web GUI and in vendor-specific extensions to Broadband Forum TR-064i2 [@TR-064i2]
+      and TR-181:
+
+      -- Group parameters (per group instance):
+
+      * Group ID (group number assigned from ATM based xTU-C)
+
+      * Status (valid values include: Operational, Unavailable)
+
+      * Number of links (number of DSL links in the group)
+
+      * RX cell loss (total number of cells lost in the receive direction for
+      all ATM links)
+
+      -- Link parameters (per link instance):
+
+      * Group ID (to which the link is a member for all ATM links)
+
+      * Link status (valid values include: Not in use, Standby, Available)
+
+      * Data rate (Should return the TC-layer data rate in bits/sec (in case
+      of ATM, the ATM cell rate at the ATM layer after removal of
+      idle/incorrect cells)
+
+    4: |
+      The RG MUST support the bonding mechanism (as described in requirements
+      IF.WAN.xDSL.BOND.1 and .2) associated with the underlying TPS-TC of the
+      RG's xDSL link.
+
+    5: |
+      When the RG has been configured to perform xDSL bonding of 2 pairs and
+      uses a single mini-modular jack to connect to the xDSL lines, it MUST
+      search for the signals on the inner pair (pins 3 & 4 for 6-pin, pins 4 &
+      5 for 8-pin) and outer pair (pins 2 & 5 for 6-pin, pins 3 & 6 for 8-pin)
+      of the jack.
+
+    6: |
+      When the RG has been configured to perform xDSL bonding of 2 pairs and
+      uses two separate mini-modular jacks to connect to the xDSL lines, the
+      pair used to detect the xDSL signal on both jacks MUST be the inner pair
+      (pins 3 & 4 for 6-pin, pins 4 & 5 for 8-pin).
+
+    7: |
+      If one of the xDSL connections drops, the remaining xDSL connection(s)
+      MUST NOT be dropped, provided that the minimum provisioned data rate is
+      met.
+
+    8: |
+      The RG MUST be clearly labeled indicating that it supports xDSL bonding.
+
+    9: |
+      The RG MUST allow manual configuration of the following bonding
+      options:
+
+      * DSL line 1 only (single xDSL link on inner pair only if a single
+      jack, or jack 1 if presented on separate jacks)
+
+      * DSL line 2 only (single xDSL link on outer pair only if a single
+      jack, or jack 2 if presented on separate jacks)
+
+      * xDSL bonding (both xDSL links) using pairs for bonding described in
+      IF.WAN.xDSL.BOND.5 and 6).
+
+    10: |
+      The Web GUI on the RG MUST indicate when bonding is in use in terms of
+      the connection type.
+
+    11: |
+      When bonding has been enabled on the RG, the Web GUI, Broadband Forum TR-064i2 [@TR-064i2]
+      interfaces and Agent MUST indicate the state of the bonded lines even if
+      one is not up.

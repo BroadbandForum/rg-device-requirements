@@ -1,0 +1,55 @@
+---
+LAN.ALG:
+  name: |
+    ALG Functions (IPv4)
+
+  requirements:
+    1: |
+      The RG MUST allow for pass-through of IPv4 traffic in which the payload
+      is compressed or encrypted (e.g. VPN traffic).
+
+      This means that, as well as the RG, it must be possible that LAN CPE
+      originate PPTP and L2TP sessions to an external network (over IPv4).
+
+    2: |
+      The RG MUST allow LAN CPE to originate IPv4 IPsec sessions to an
+      external network. This function MUST work properly through the NAPT
+      function of the RG.
+
+    3: |
+      *This requirement is encompassed by .4*
+
+    4: |
+      The RG MUST allow multiple devices on the LAN to launch independent and
+      simultaneous IPv4 IPsec sessions. These sessions can be to the same or
+      separate destinations.
+
+    5: |
+      The RG MUST support LAN device UDP encapsulation of IPv4 IPsec packets
+      as defined in RFC 3948 [@RFC3948].
+
+    6: |
+      The RG MUST support LAN device negotiation of NAT traversal with IKE as
+      identified in RFC 3947 [@RFC3947].
+
+    7: |
+      The RG should support a minimum of 4 concurrent LAN IPv4 IPsec sessions
+      per LAN device. These sessions can be to the same or separate
+      destinations.
+
+    8: |
+      The RG MUST seamlessly handle RTSP traffic to LAN devices with no user
+      intervention required.
+
+    9: |
+      The RG MUST allow the service provider to disable SIP ALG functionality.
+
+    10: |
+      The RG MUST be aware of the presence of active SIP clients on the LAN
+      side using some rules (e.g. matching IP address, port, or protocol
+      number through interception of SIP REGISTER messages).
+
+    11: |
+      The SIP ALG function MUST keep track of SIP events (e.g. REGISTER reply
+      from the registrar) and maintain allocated resources within the event
+      timeout period.

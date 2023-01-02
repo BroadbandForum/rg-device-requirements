@@ -1,0 +1,13 @@
+---
+IF.LAN.WIRELESS:
+  name: |
+    Wireless
+
+  categories:
+    - !include IF.LAN.WIRELESS.AP.yaml
+    - !include IF.LAN.WIRELESS.11g.yaml
+    - !include IF.LAN.WIRELESS.11a.yaml
+    - !include IF.LAN.WIRELESS.11h.yaml
+    - !include IF.LAN.WIRELESS.11n.yaml
+    - !include IF.LAN.WIRELESS.11ac.yaml
+    - !include IF.LAN.WIRELESS.11ax.yaml

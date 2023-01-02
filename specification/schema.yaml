@@ -1,0 +1,74 @@
+---
+$schema: https://json-schema.org/draft/2020-12/schema
+$id: https://json-schema.broadband-forum.org/tr-124-requirements-1-0
+title: WT-124 requirements JSON schema
+$ref: '#/$defs/node'
+
+$defs:
+  node:
+    description: Requirements node (dict containing single category)
+    minProperties: 1
+    maxProperties: 1
+    $ref: '#/$defs/nodes'
+
+  nodes:
+    description: Requirements nodes (dict keyed by category name)
+    type: object
+    additionalProperties: false
+    patternProperties:
+      ^[\w.-]+$:
+        description: Either node details or inclusion of external file
+        oneOf:
+          - description: Node details
+            type: object
+            required: [name]
+            additionalProperties: false
+            properties:
+              name:
+                description: Node name (one-line)
+                type: string
+              description:
+                description: Node description (markdown)
+                type: string
+              categories:
+                description: Child categories (dict or list)
+                oneOf:
+                  - description: Child categories (dict)
+                    $ref: '#/$defs/nodes'
+                  - description: Child categories (list)
+                    type: array
+                    items:
+                      oneOf:
+                        - $ref: '#/$defs/node'
+                        - $ref: '#/$defs/include'
+              categories-dict:
+                description: Child categories (dict)
+                $ref: '#/$defs/nodes'
+              categories-list:
+                description: Child categories (list)
+                type: array
+                items:
+                  oneOf:
+                    - $ref: '#/$defs/node'
+                    - $ref: '#/$defs/include'
+              requirements:
+                $ref: '#/$defs/requirements'
+              after:
+                description: Text to be added after the requirements
+                type: string
+          - description: Include external file
+            $ref: '#/$defs/include'
+
+  requirements:
+    description: Node requirements
+    type: object
+    minProperties: 1
+    additionalProperties: false
+    patternProperties:
+      ^[1-9][0-9]*\w?$:
+        description: Requirement text (markdown)
+        type: string
+
+  include:
+    description: Include external file
+    type: string

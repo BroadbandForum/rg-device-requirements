@@ -1,0 +1,9 @@
+---
+MGMT.REMOTE:
+  name: |
+    Remote Management
+
+  categories:
+    - !include MGMT.REMOTE.TR-069.yaml
+    - !include MGMT.REMOTE.USP.yaml
+    - !include MGMT.REMOTE.WEB.yaml

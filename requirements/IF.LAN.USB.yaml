@@ -1,0 +1,7 @@
+---
+IF.LAN.USB:
+  name: |
+    USB
+
+  categories:
+    - !include IF.LAN.USB.PC.yaml

@@ -1,0 +1,141 @@
+---
+LAN.FWD:
+  name: |
+    Connection Forwarding
+
+  description: |
+    The IPv6 parts of this module apply only if the RG has an IPv6 stack.
+
+  requirements:
+    1: |
+      The RG MUST be able to route IP (v4 or v6) over Ethernet to LAN CPE.
+
+    2: |
+      PPPoE forwarding and associated operation in the RG MUST NOT fail nor
+      operate improperly in the presence of vendor-specific PPPoE extensions
+      that may be in use by LAN devices (i.e. the RG MUST interoperate with
+      well known PPPoE client software).
+
+    3: |
+      The RG MUST support a minimum of eight LAN device-initiated PPPoE
+      sessions from each LAN device being forwarded to a logical WAN
+      connection.
+
+    4: |
+      The RG MUST be able to forward up to eight PPPoE sessions per logical
+      WAN interface (PVC, RFC 2684 [@RFC2684] connection, VLAN, etc.).
+
+    5: |
+      The RG MUST be able to forward PPPoE sessions at all times when
+      encapsulating Ethernet over AAL5. This applies when the RG has set up
+      zero or more PPPoE sessions and/or when the RG is also running IP over
+      Ethernet. The default setting MUST be for this pass-through to be on.
+
+    6: |
+      The RG MUST support manually setting (via the Web GUI and TR-064i2
+      interfaces) an MTU to be used in negotiating MTU, overriding the default
+      MTU. This applies to MTU negotiated in IPv4 or IPv6.
+
+    7: |
+      The RG MUST support path MTU discovery as defined in IETF RFC 1191 [@RFC1191] so
+      that a LAN device can be told what to set its MTU to for IPv4 traffic.
+
+    8: |
+      The RG MUST support accepting IP (v4 and v6) forwarding/routing
+      information from a Controller.
+
+    9: |
+      The RG MUST maintain route table entries for all connections it
+      maintains on the WAN (e.g. per PVC, IP (v4 and v6) and PPP sessions) and
+      for all LAN networks (including subnets).
+
+    10: |
+      The RG MUST allow for the selection of which traffic to forward over
+      which connection (in the case of multiple PVCs, multiple PPPoE sessions,
+      GPON Port ID, etc...) according to any one or more of the following
+      pieces of information:
+
+      (1) destination IP (v4 or v6) address(es) with subnet mask,
+
+      (2) originating IP (v4 or v6) address(es) with subnet mask,
+
+      (3) source MAC address,
+
+      (4) destination MAC address,
+
+      (5) protocol (TCP, UDP, ICMP, ...)
+
+      (6) source port,
+
+      (7) destination port,
+
+      (8) IEEE 802.1Q user priority,
+
+      (9) FQDN (fully qualified domain name) of WAN session,
+
+      (10) DiffServ codepoint ([@RFC3260]),
+
+      (11) Ethertype (IEEE 802.3 length/type field), and
+
+      (12) traffic handled by an ALG.
+
+    11: |
+      The RG MUST allow for the selection of which traffic to forward over
+      which connection (in the case of multiple PVCs, multiple PPPoE sessions,
+      etc.) according to any one or more of the following pieces of
+      information:
+
+      (1) IEEE 802.1Q VLAN identification, and
+
+      (2) packet length (Note: to be used judiciously to avoid out of order
+      packet delivery).
+
+    12: |
+      The RG MUST NOT bridge or route between WAN connections (i.e. WAN to
+      WAN) except when explicitly configured to do so.
+
+    13: |
+      The RG MUST NOT forward UPnP traffic (including UPnP multicast messages)
+      to the WAN interface. This applies to both bridged and routed style
+      configurations. This satisfies TR-101 R-235.
+
+    14: |
+      The RG SHOULD be able to restrict the routing information for each WAN
+      connection to specific LAN devices.
+
+      For example, a user might have four PCs in the home, have a WAN
+      connection to the Internet and have a WAN connection to an employer's
+      network. The RG could be configured to allow all PCs access to the
+      Internet, but only one specific PC might be allowed to send traffic over
+      the WAN interface to the employer's network.
+
+    15: |
+      The RG MUST support the possibility that all LAN devices concurrently
+      access one or more WAN connections.
+
+    16: |
+      The RG SHOULD support the ability to accept IPv4 routes dynamically
+      pushed from the WAN. This allows it to set up routing tables to support
+      routing traffic over multiple connections (PVCs, PPPoE sessions, etc.).
+      In particular, the RG SHOULD be configurable to accept RIP version 2
+      (RIP-2) messages as defined in RFC 2453 [@RFC2453] to fulfill this task.
+
+    17: |
+      If RIP-2 is supported, it SHOULD be software configurable.
+
+    18: |
+      If RIP-2 is supported, by default, the RG MUST NOT transmit RIP-2
+      information to WAN connections.
+
+    19: |
+      If RIP-2 is supported, the RG MUST be configurable to accept triggered
+      RIP messages, as defined in RFC 2091 [@RFC2091].
+
+    20: |
+      The RG MUST be able to bridge IPv4 or route IPv4 or IPv6 over an
+      Ethernet session concurrently with at least one RG-originated PPPoE
+      session on each PVC that is running bridged Ethernet over the AAL.
+
+    21: |
+      The RG SHOULD be capable of initiating at least two PPPoE sessions per
+      PVC and forwarding the IP (v4 or v6) traffic above PPPoE to the LAN CPE.

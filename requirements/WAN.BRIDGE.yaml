@@ -1,0 +1,48 @@
+---
+WAN.BRIDGE:
+  name: |
+    Bridging
+
+  description: |
+    *Note that the IPv6 parts of this module apply only if the RG supports
+    IPv6.*
+
+  requirements:
+    1: |
+      The RG MUST be able to bridge IPv4 over Ethernet.
+
+    2: |
+      The RG MUST be a learning bridge as defined in IEEE 802.1D for all
+      logical and physical Ethernet interfaces, supporting a minimum of 272
+      MAC addresses.
+
+    3: |
+      If bridge mode is enabled for IPv4 on the RG by default for LAN
+      connected devices, the RG MUST be able to support additional connections
+      to a Controller for remote management addressability (using direct
+      DHCPv4 or static IPv4, PPP, etc.), and connections for any locally
+      terminated service that require IP (v4 or v6) addressability
+      (e.g. gateway integrated voice ATA ports, etc.).
+
+      Note that this special bridge mode that includes a device remote
+      management session connection requires an additional WAN connection from
+      the network. This requirement is considered conditional as a result of
+      the network side dependency, but the RG must support this type of
+      configuration.
+
+    4: |
+      The RG MUST be able to bridge IPv6 over Ethernet (Ethertype 0x86DD).
+      This includes bridging of multicast frames.
+
+    5: |
+      The RG MUST be able to configure IPv6 bridging for a WAN interface,
+      separate from IPv4 treatment.
+
+    6: |
+      The RG MUST be able to configure IPv6 bridging separately for each WAN
+      interface (if there are multiple WAN interfaces).
+
+    7: |
+      When IPv6 bridging is enabled on a WAN interface, the RG MUST be
+      configurable to act as a host on that WAN interface (doing SLAAC, etc.).
+      It will not request IA_PD, since that is not a host function.

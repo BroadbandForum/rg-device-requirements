@@ -1,0 +1,14 @@
+---
+IF.WAN.FAST.BOND:
+  name: |
+    G.fast Bonding
+
+  requirements:
+    1: |
+      The RG MUST comply with ANSI T1.427.02 [@T1.427.02] and ITU-T G.998.2 [@G.998.2] to support 2
+      pair of lines bonding.
+
+    2: |
+      If one of the Gfast connections drops, the remaining Gfast connection
+      MUST NOT be dropped, provided that the minimum provisioned data rate is
+      met.

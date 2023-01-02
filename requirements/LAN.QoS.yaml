@@ -1,0 +1,99 @@
+---
+LAN.QoS:
+  name: |
+    LAN quality of service requirements
+
+  requirements:
+    1: |
+      The RG MUST support classification of LAN directed WAN traffic and
+      placement into appropriate queues (or discard) based on any one or more
+      of the following pieces of information:
+
+      #. destination IP address(es) with subnet mask,
+
+      #. originating IP address(es) with subnet mask,
+
+      #. Diffserv codepoint ([@RFC3260]),
+
+      #. protocol (TCP, UDP, ICMP, IGMP ...),
+
+      #. source TCP/UDP port and port range,
+
+      #. destination TCP/UDP port and port range
+
+      In an ATM based access network:
+
+      #. ATM VPI/VCI
+
+      Where Ethernet is present on the access link:
+
+      #. source MAC address,
+
+      #. destination MAC address,
+
+      #. IEEE 802.1Q Ethernet priority,
+
+      #. Ethertype (IEEE 802.3) length/type field), and
+
+      #. IEEE 802.1Q VLAN identification.
+
+    2: |
+      The RG SHOULD support classification of LAN directed WAN traffic and
+      placement into appropriate queues (or discard) based on any one or more
+      of the following pieces of information:
+
+      #. packet length (note: to be used judiciously to avoid out of order
+      packet delivery).
+
+    3: |
+      The RG MUST support classification of LAN directed traffic and placement
+      into appropriate queues (or discard) based on any one or more of the
+      following pieces of information:
+
+      (1) source MAC address, and
+
+      (2) destination MAC address.
+
+    4: |
+      The RG SHOULD support classification of LAN directed traffic and
+      placement into appropriate queues (or discard) based on any one or more
+      of the pieces of information defined in WAN.QoS. 1, WAN.QoS. 2, WAN.QoS.
+      22 and WAN.QoS. 23.
+
+    5: |
+      The RG MUST support classification of LAN directed internally generated
+      traffic and placement into appropriate queues based on any one or more
+      of information defined in WAN.QoS. 20 and WAN.QoS. 21.
+
+    6: |
+      The RG MUST be able to mark or remark the Diffserv codepoint of traffic
+      identified based on any of the classifiers supported by the RG.
+
+    7: |
+      The RG MUST support a minimum of four downstream queues per LAN port.
+
+    8: |
+      The RG MUST duplicate the set of queues for each LAN egress port. This
+      can be done logically or physically.
+
+    9: |
+      The RG SHOULD be able to configure each queue for strict priority or
+      weighted round robin scheduling.
+
+      Strict priority queues are served with priority over all other queues.
+      WRR queues are served on the basis of configurable weights.
+
+    10: |
+      The RG MUST provide counters in terms of dropped and emitted
+      packets/bytes for each queue. Statistics SHOULD be collected from the
+      time of last counter reset or on a configurable sample interval.
+
+    11: |
+      The RG MUST provide information about queue occupancy in terms of
+      packets and peak percentage. Statistics SHOULD be collected from the
+      time of last counter reset or on a configurable sample interval.
+
+    12: |
+      The RG SHOULD be able to monitor the physical layer rate of the LAN
+      interfaces, maintaining information about the current available
+      bandwidth and measurement history.

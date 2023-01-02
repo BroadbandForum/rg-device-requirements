@@ -1,0 +1,23 @@
+---
+IF.WAN.XG-PON:
+  name: |
+    10G PON
+
+  requirements:
+    1: |
+      The RG MUST include an integrated XG-PON1 ONU interface.
+
+    2: |
+      The RG MUST comply with all mandatory requirements for the ONU as
+      specified in ITU-T G.987.1 [@G.987.1], G.987.2 [@G.987.2], G.987.3
+      [@G.987.3] and G.988 [@G.988] as well as all their valid amendments.
+
+    3: |
+      If the RG supports an integrated XG-PON ONU interface in addition to
+      another physical WAN link type (e.g. ADSL, VDSL2, Ethernet, etc.), the
+      RG SHOULD support enabling and disabling of the ONU function.
+
+    4: |
+      The RG SHOULD support basic XG-PON status and statistics collection and
+      display via Web GUI or from a Controller, based on the architecture
+      framework described in Broadband Forum TR-142 [@TR-142].

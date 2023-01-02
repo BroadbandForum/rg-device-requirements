@@ -1,0 +1,7 @@
+---
+IF.LAN.VOICE:
+  name: |
+    Voice
+
+  categories:
+    - !include IF.LAN.VOICE.ATA.yaml

@@ -1,0 +1,12 @@
+---
+5G-WWC.LAN.ADDRESSv6:
+  name: |
+    5G WWC LAN SLAAC
+
+  requirements:
+    1: |
+      The RG MUST set the MTU option of a Router Advertisement RFC 4691 [@RFC4681]
+      ADDRESSv6 to the MIN of negotiated PPP MTU and MTU option in the IPv6 RA
+      MTU received from the SMF at PDU session initiation
+
+      *Note this supersedes requirement LAN.ADDRESSv6.8*

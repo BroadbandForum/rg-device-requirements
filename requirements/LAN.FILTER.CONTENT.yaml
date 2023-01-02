@@ -1,0 +1,9 @@
+---
+LAN.FILTER.CONTENT:
+  name: |
+    Content Filtering
+
+  requirements:
+    1: |
+      The RG MAY support filtering based on web content or URL string
+      screening techniques on a per LAN device basis.

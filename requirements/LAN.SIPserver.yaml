@@ -1,0 +1,33 @@
+---
+LAN.SIPserver:
+  name: |
+    SIP Server
+
+  requirements:
+    1: |
+      The RG MUST support the SIP registrar server function ([@RFC3261]),
+      accept *register* requests and
+      respond to them with *success* or *failure* indication.
+
+    2: |
+      The RG MUST support the SIP registrar server function ([@RFC3261]), and
+      place the information it
+      receives in *register* requests into the location service for the domain
+      it handles.
+
+    3: |
+      The RG MUST support the SIP redirect server function ([@RFC3261]), receive
+      SIP requests and respond
+      with 3xx (redirection) responses, directing the SIP client to contact an
+      alternate set of SIP addresses.
+
+    4: |
+      The RG MUST support the SIP proxy server function ([@RFC3261]), acting as a
+      proxy for the SIP
+      client to route SIP requests in the direction of the corresponding proxy
+      server, and acting in place of a server to route SIP responses toward
+      the SIP client.
+
+    5: |
+      Acting as proxy, the RG MUST consistently operate in either a stateful
+      or stateless mode for each new SIP request.

@@ -1,0 +1,46 @@
+---
+WAN.CONNECT.ON-DEMAND:
+  name: |
+    On-Demand Connection Establishment
+
+  description: |
+    The On-demand Connection function applies only to IPv4 connections.
+    However, when IPv6 is present, its behavior must take the presence of
+    IPv6 into consideration as described in this module
+
+  requirements:
+    1: |
+      The RG MUST support a "connect on demand" option for IPv4 connections
+      that run over PPP. In this mode, the connection to the broadband network
+      is initiated when outbound traffic is encountered from the local LAN and
+      terminated after a timeout period in which no traffic occurs.
+
+    2: |
+      If the PPP session only contains IPv4, then the RG MUST terminate the
+      PPP session in accordance with WAN.CONNECT.ON-DEMAND.1, and any
+      associated PPPoE session (if applicable).
+
+    3: |
+      If the PPP session contains IPv4 and IPv6, then the RG MUST terminate
+      only the IPv4 session. This is done using IPCP commands.
+
+    4: |
+      The RG MUST support a "connect on demand" option for IPv4 connections
+      that run over Ethernet.
+
+    5: |
+      To determine whether a connection has IPv4 activity during a timeout
+      interval, the RG MUST consider only traffic with an IPv4 ethertype.
+
+    6: |
+      The interval after which a connection timeout occurs MUST be able to be
+      configured.
+
+    7: |
+      A default timeout of 20 minutes SHOULD be used for connection timeouts
+      or use an operator-specific configuration.
+
+    8: |
+      If the RG has an active IPv6 connection, and does not have addresses for
+      DNS recursive name servers to be accessed over IPv6, then the "connect
+      on demand" option MUST be disabled.

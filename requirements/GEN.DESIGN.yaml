@@ -1,0 +1,64 @@
+---
+GEN.DESIGN:
+  name: |
+    Design
+
+  requirements:
+    1: |
+      The RG MUST be compact and have a physical profile suitable for a
+      desktop.
+
+    2: |
+      The RG SHOULD be able to be wall mounted and stand on its side.
+
+    3: |
+      The RG MAY have the ability to be mounted horizontally or vertically.
+
+    4: |
+      If wall mounted, the RG SHOULD be oriented so that the cabling is routed
+      toward the ground in order to reduce strain on the cabling.
+
+    5: |
+      A detachable wall-mounting bracket MAY be added to the RG.
+
+    6: |
+      The power connector at the RG MUST be securely connected to avoid
+      accidental disconnect. This means that the connector MUST be either
+      secured via a clip to the box or be held in place with significant force
+      so that it does not readily pull out by minor pulling on the power cord.
+
+    7: |
+      If the power supply is external to the RG, it SHOULD be labeled with the
+      RG vendor's name and the model number of the RG.
+
+    8: |
+      If the power supply is external to the RG it SHOULD be either small
+      enough, or appropriately positioned on the power cord, so as not to
+      block other power outlets.
+
+    9: |
+      If the power cable includes an AC to DC conversion brick, that brick MAY
+      have a light on it.
+
+    10: |
+      The RG MUST NOT be USB powered.
+
+    11: |
+      The RG MUST NOT use the local phone loop for power.
+
+    12: |
+      The model and serial number of the RG MUST be visible via external
+      markings on the RG.
+
+    13: |
+      The model and serial number of the RG MUST be visible via external
+      markings on the RG packaging.
+
+    14: |
+      If a console port used for local technician configuration is provided on
+      the RG, it SHOULD NOT be physically accessible to end users (e.g. it
+      should not be placed on the outside of the device).
+
+    15: |
+      The RG MUST have a single function reset button in order to reset the
+      device to the default factory settings.

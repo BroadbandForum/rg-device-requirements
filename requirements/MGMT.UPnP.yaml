@@ -1,0 +1,27 @@
+---
+MGMT.UPnP:
+  name: |
+    UPnP
+
+  categories:
+    - !include MGMT.UPnP.IGD.yaml
+
+  requirements:
+    1: |
+      The RG MUST support UPnP device architecture 1.0. This specification is
+      available for download at http://www.upnp.org.
+
+    2: |
+      The RG MUST support UPnP device identification in accordance with the
+      UPnP device architecture. The RG MUST display itself as a network device
+      with the following information:
+
+      - Manufacturer name
+
+      - RG name
+
+      - Model number
+
+      - Description (e.g. VendorName Wireless Gateway)
+
+      - Device address (e.g. http://192.168.1.254)

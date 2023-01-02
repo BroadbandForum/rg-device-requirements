@@ -1,0 +1,28 @@
+---
+WAN.TRANS.v4-release-control:
+  name: |
+    IPv6 connectivity with content-based IPv4 release control transition
+    mechanism
+
+  requirements:
+    1: |
+      The RG MUST provide a mechanism that monitors IPv4 session/traffic.
+
+    2: |
+      The RG MUST provide a timer-based trigger for releasing an IPv4 address.
+
+    3: |
+      The RG MUST provide signaling to the BNG according to RFC 1332 [@RFC1332].
+
+    4: |
+      The RG MUST provide the (re)assignment of an IPv4 address inside a PPP
+      session according to RFC 1332 [@RFC1332], independent of the IPv6CP status
+      according to section 2.1 of RFC 4241 [@RFC4241].
+
+    5: |
+      The timer that triggers the release of the IPv4 address MUST be
+      configurable.
+
+    6: |
+      The timer that triggers the release of the IPv4 address MUST be
+      configurable from a Controller.

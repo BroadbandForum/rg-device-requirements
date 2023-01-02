@@ -1,0 +1,8 @@
+---
+LAN.IGMP:
+  name: |
+    IGMP
+
+  categories:
+    - !include LAN.IGMP.BRIDGED.yaml
+    - !include LAN.IGMP.ROUTED.yaml

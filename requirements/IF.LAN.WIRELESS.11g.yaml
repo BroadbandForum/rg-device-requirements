@@ -1,0 +1,76 @@
+---
+IF.LAN.WIRELESS.11g:
+  name: |
+    Wireless: 802.11g Access Point
+
+  requirements:
+    1: |
+      The RG SHOULD have internal antennas.
+
+    2: |
+      The RG MUST NOT have an antenna that limits coverage to a single
+      direction.
+
+    3: |
+      The RG MUST include an effective multi-antenna (at least 2) design for
+      diversity reception.
+
+    4: |
+      The RG SHOULD include an effective multi-antenna (at least 2) design for
+      diversity transmit.
+
+    5: |
+      The RG SHOULD support use of an external antenna(s) for improved
+      performance beyond the requirements identified here.
+
+    6: |
+      The RG SHOULD have separate antennas for transmit and receive.
+
+    7: |
+      If an external antenna can be used with the RG, the RG SHOULD have a
+      robust connector (e.g. be durable and not accidentally come off) for
+      this connection.
+
+    8: |
+      The RG's Wi-Fi access point MUST have a maximum transmit power (EIRP)
+      equal to or greater than 200 mW (23.01 dBm) when operating in the
+      802.11b mode.
+
+    9: |
+      The RG's Wi-Fi access point MUST have a maximum transmit power (EIRP)
+      equal to or greater than 100 mW (20 dBm) when operating in the 802.11g
+      mode.
+
+    10: |
+      The RG's Wi-Fi access point output power MUST be configurable between a
+      minimum of 30 mW and the maximum capable from the RG.
+
+    11: |
+      The RG Wi-Fi access point MUST meet the following minimum receiver
+      sensitivity, maximum allowable path loss (computed as EIRP-receiver
+      sensitivity) and delay spread tolerance specifications:
+
+      | **Data Rate** | **RX Sensitivity** | **Max. Allowable Path Loss Delay Spread** | **Tolerance at \< 1% FER**
+      |---------------|--------------------|-------------------------------------------|----------------------------|
+      | *802.11b* | | | |
+      | 11 Mbps | -82 dBm | 104 dB | 65 ns |
+      | 5.5 Mbps | -87 dBm | 107 dB | 225 ns |
+      | 2 Mbps | -90 dBm | 110 dB | 400 ns |
+      | 1 Mbps | -93 dBm | 113 dB | 500 ns |
+      | *802.11g* | | | |
+      | 54 Mbps | -71 dBm | 87 dB | 120 ns |
+      | 48 Mbps | -73 dBm | 89 dB | 120 ns |
+      | 36 Mbps | -77 dBm | 93 dB | 240 ns |
+      | 24 Mbps | -80 dBm | 96 dB | 240 ns |
+      | 18 Mbps | -82 dBm | 98 dB | 300 ns |
+      | 12 Mbps | -86 dBm | 102 dB | 300 ns |
+      | 9 Mbps | -87 dBm | 103 dB | 300 ns |
+      | 6 Mbps | -89 dBm | 105 dB | 300 ns |
+
+    12: |
+      The RG Wi-Fi access point MUST have an effective automatic data rate
+      selection algorithm to allow the system to work close to its specified
+      receiver sensitivity so as to maximize the AP coverage and throughput.
+
+    13: |
+      The RG MUST be Wi-Fi CERTIFIED for IEEE 802.11g [@802.11].

@@ -1,0 +1,42 @@
+---
+WAN.PCP:
+  name: |
+    Port Control Protocol
+
+  requirements:
+    1: |
+      The RG MUST support Port Control Protocol (PCP) Client as specified in
+      RFC 6887 [@RFC6887].
+
+    2: |
+      The RG MUST support Port Control Protocol (PCP) Extension for Port Set
+      Allocation as specified in RFC 7753 [@RFC7753].
+
+    3: |
+      The RG MUST support configuring the PCP Client via web GUI or from a
+      Controller.
+
+    4: |
+      The RG MUST be able to use the DHCP option to retrieve Server name(s) as
+      defined in RFC 7291 [@RFC7291].
+
+    5: |
+      For the DS-Lite case, if PCP is enabled and no PCP server is configured,
+      the RG MUST consider that the AFTR is the PCP server.
+
+    6: |
+      The PCP client of the RG MUST support invocations from applications on
+      the RG, from the Web GUI or from a Controller.
+
+    7: |
+      The RG MUST embed an interworking function to ensure interworking
+      between the UPnP IGD (Internet Gateway Device) used by CPE LAN devices
+      in the LAN and PCP as defined in RFC 6970 [@RFC6970].
+
+    8: |
+      The RG MUST embed a PCP proxy function as defined in the IETF document
+      "Port Control Protocol (PCP) Proxy Function" RFC 7648 ([@RFC7648]).
+
+    9: |
+      Static (i.e. configured) PCP mappings MUST be stored on the RG across
+      reboot or power off situations.

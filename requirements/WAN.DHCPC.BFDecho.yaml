@@ -1,0 +1,27 @@
+---
+WAN.DHCPC.BFDecho:
+  name: |
+    BFD echo
+
+  requirements:
+    1: |
+      The RG SHOULD support configuration of the BFD echo functionality, as
+      per RFC 5881 [@RFC5881], for both IPv4 and
+      IPv6.
+
+    2: |
+      The RG SHOULD support sending BFD echo packet(s) on its WAN interface at
+      regular intervals using a recommended default of 30s. The destination IP
+      address of such packets MUST be taken from the list of IP addresses
+      assigned to or via the WAN interface, including the Subnet-Router
+      address of an IPv6 DHCPv6 delegated prefix.
+
+    3: |
+      The RG SHOULD support receiving self-originated BFD echo packets
+      addressed to its assigned address or the Subnet-Router IPv6 delegated
+      prefix.
+
+    4: |
+      Unless overridden by configuration, by default after a failure of 3
+      successive BFD echo intervals, the RG MUST issue a DHCP renew message
+      following a random jitter interval between 1 and 30 seconds.

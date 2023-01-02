@@ -1,0 +1,50 @@
+---
+LAN.DNS:
+  name: |
+    Naming Services (IPv4 and general requirements)
+
+  requirements:
+    1: |
+      The RG MUST be capable of acting as a DNS server to LAN devices, passing
+      its address as the DNS server back to these devices in DHCPv4 requests.
+
+    2: |
+      The RG SHOULD allow the user to specify that either network-learned or
+      user-specified addresses be passed back to LAN devices as the DNS
+      server(s) in DHCPv4 responses, instead of the RG's address.
+
+    3: |
+      When the RG learns DNS name server addresses from multiple WAN
+      connections, the RG MUST follow specified DNS selection policy (if one
+      is configured) to make recursive queries to DNS name servers, or (if
+      there is no DNS selection policy) MUST query a server on each connection
+      simultaneously and provide the requesting LAN client with the first
+      returned positive result from these DNS servers. A negative response
+      will not be transmitted to a LAN device until all WAN DNS servers have
+      either timed out or returned a negative response to a common query.
+
+      Service providers may choose not to provide DNS name server addresses on
+      certain connections in a multiple connection configuration.
+
+    4: |
+      The RG MUST add the DNS entry "dsldevice" for its own address.
+
+    5: |
+      The RG MAY support additional DNS entries, as there could be additional
+      types of CPE.
+
+    6: |
+      The RG MUST maintain local DNS entries for a minimum of 253 local LAN
+      devices. This information can be obtained through auto discovery
+      (e.g. from DHCPv4 requests, such as Client Identifier, and other
+      protocol information). When unknown, the entry MUST be of the form
+      "unknownxxxxxxxxxxxx" where "x" represents the MAC address of the
+      associated LAN device.
+
+    7: |
+      The RG SHOULD provide a manual mechanism for overriding the learned
+      names of all LAN CPE except that of the RG itself.
+
+    8: |
+      If the RG's DNS server is implemented as a forwarding proxy, it MUST be
+      done according to the recommendations in RFC 5625 [@RFC5625].

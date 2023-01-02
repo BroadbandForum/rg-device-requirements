@@ -1,0 +1,7 @@
+---
+WAN.DHCPv4:
+  name: |
+    DHCP Client (DHCPv4)
+
+  categories:
+    - !include WAN.DHCPv4.ERP.yaml

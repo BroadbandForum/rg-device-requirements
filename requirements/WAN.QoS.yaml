@@ -1,0 +1,206 @@
+---
+WAN.QoS:
+  name: |
+    Quality of Service
+
+  description: |
+    *Note: The IPv6 parts of this module apply only if the RG has an IPv6
+    stack.*
+
+  categories:
+    - !include WAN.QoS.VLAN.yaml
+    - !include WAN.QoS.TUNNEL.yaml
+
+  requirements:
+    1: |
+      The RG MUST support classification of WAN directed LAN traffic and
+      placement into appropriate queues (or discard) based on any one or more
+      of the following pieces of information:
+
+      (1) destination IP (v4 or v6) address(es) with subnet mask,
+
+      (2) originating IP (v4 or v6) address(es) with subnet mask,
+
+      (3) source MAC address,
+
+      (4) destination MAC address,
+
+      (5) protocol (TCP, UDP, ICMP, IGMP, ...)
+
+      (6) source TCP/UDP port and port range,
+
+      (7) destination TCP/UDP port and port range,
+
+      (8) IEEE 802.1Q Ethernet priority,
+
+      (9) FQDN (fully qualified domain name) of WAN session,
+
+      (10) Diffserv codepoint ([@RFC3260]),
+
+      (11) Ethertype (IEEE 802.3) length/type field),
+
+      (12) traffic handled by an ALG,
+
+      (13) IEEE 802.1Q VLAN identification.
+
+      (14) Wi-Fi SSID and,
+
+      (15) LAN type (Ethernet, WiFi, etc.).
+
+    2: |
+      The RG SHOULD support classification of WAN directed LAN traffic and
+      placement into appropriate queues (or discard) based on any one or more
+      of the following pieces of information:
+
+      (1) packet length (note: to be used with caution to avoid re-ordering
+      packets), and
+
+      (2) LAN-side physical port.
+
+    3: |
+      The RG MUST support the differentiated services field (DS field) in IP
+      (v4 or v6) headers as defined in RFC 2474 [@RFC2474].
+
+    4: |
+      The RG MUST by default recognize and provide appropriate treatment to
+      packets marked with recommended Diffserv codepoints, whose values and
+      behavior are defined in RFC 2474 [@RFC2474], RFC 2475 [@RFC2475],
+      RFC 2597 [@RFC2597], RFC 3246 [@RFC3246], and RFC 3260 [@RFC3260].
+
+      Specifically, the values shown in the DSCP column of the table below
+      MUST be supported, except Cs0-7, which are optional.
+
+      | **Class** | **Description** | **DSCP marking (name)** | **DSCP marking (decimal value)**
+      |-----------|-----------------|-------------------------|----------------------------------|
+      | EF | Realtime | ef | 46 |
+      | AF4 -- in-contract | Premium class4 (in) | af41 | 34 |
+      | AF4 -- out-of-contract | Premium class4 (out) | af42, af43 | 36, 38 |
+      | AF3 -- in-contract | Premium class3 (in) | af31 | 26 |
+      | AF3 -- out-of-contract | Premium class3 (out) | af32, af33 | 28, 30 |
+      | AF2 -- in-contract | Premium class2 (in) | af21 | 18 |
+      | AF2 -- out-of-contract | Premium class2 (out) | af22, af23 | 20, 22 |
+      | AF1 -- in-contract | Premium class1 (in) | af11 | 10 |
+      | AF1 -- out-of-contract | Premium class1 (out) | af12, af13 | 12, 14 |
+      | DE/BE | Default / Best Effort | be | 0 |
+      | Cs0 (optional) | Class Selector 0 | cs0 | 0 |
+      | Cs1 (optional) | Class Selector 1 | cs1 | 8 |
+      | Cs2 (optional) | Class Selector 2 | cs2 | 16 |
+      | Cs3 (optional) | Class Selector 3 | cs3 | 24 |
+      | Cs4 (optional) | Class Selector 4 | cs4 | 32 |
+      | Cs5 (optional) | Class Selector 5 | cs5 | 40 |
+      | Cs6 (optional) | Class Selector 6 | cs6 | 48 |
+      | Cs7 (optional) | Class Selector 7 | cs7 | 56 |
+
+    5: |
+      The RG MUST be able to mark or remark the Diffserv codepoint or IEEE
+      802.1Q Ethernet priority of traffic identified based on any of the
+      classifiers supported by the RG.
+
+    6: |
+      *Requirement relocated to WAN.QoS.VLAN.1*
+
+    7: |
+      *Requirement relocated to WAN.QoS.VLAN.2*
+
+    8: |
+      *Requirement relocated to WAN.QoS.VLAN.3*
+
+    9: |
+      The RG MUST support one best effort (BE) queue, one expedited forwarding
+      (EF) queue and a minimum of four assured forwarding (AF) queues.
+
+    10: |
+      The RG MUST duplicate the set of queues for each access session (e.g. L2
+      PVC, VLAN). This can be done logically or physically.
+
+    11: |
+      The RG SHOULD support the appropriate mechanism to effectively implement
+      Diffserv per-hop scheduling behaviors. The RG SHOULD be able to
+      configure each queue defined in WAN.QoS.9 for strict priority or
+      weighted round robin scheduling.
+
+      SP queues are served with priority over all other queues. A strict
+      priority scheduler is preferred for EF.
+
+      WRR queues are served on the basis of configurable weights, provided
+      with a mechanism to prevent starvation (WRR queue minimum bandwidth)
+
+    12: |
+      The RG MUST support aggregate shaping of upstream traffic across all
+      access sessions (e.g. L2 PVC, VLAN).
+
+    13: |
+      The RG MUST support per-class shaping of upstream traffic.
+
+      Classes are defined in WAN.QoS.4.
+
+    14: |
+      The RG MUST support the capability to fragment IP traffic on sessions
+      that it originates, in order to limit the effect of large packets on
+      traffic delay.
+
+    15: |
+      The packet size threshold before fragmenting AF and BE packets MUST be
+      configurable.
+
+    16: |
+      The RG MUST handle all telephone service-related network traffic by a
+      high priority queue to avoid congestion, delay, jitter, or packet loss.
+
+    17: |
+      The RG MAY handle all telephone service-related network traffic by a
+      dedicated WAN interface to avoid congestion, delay, jitter, or packet
+      loss.
+
+    18: |
+      The RG MUST provide counters in terms of dropped and emitted
+      packets/bytes for each queue. Statistics SHOULD be collected from the
+      time of last counter reset or on a configurable sample interval.
+
+    19: |
+      The RG MUST provide information about queue occupancy in terms of
+      packets and peak percentage. Statistics SHOULD be collected from the
+      time of last counter reset or on a configurable sample interval.
+
+    20: |
+      The RG MUST support classification of WAN-directed internally-generated
+      traffic and placement into appropriate queues based on any one or more
+      of the following pieces of information:
+
+      (1) destination IP address(es) with subnet mask,
+
+      (2) originating IP address(es) with subnet mask,
+
+      (3) protocol (TCP, UDP, ICMP, ...),
+
+      (4) source TCP/UDP port and port range,
+
+      (5) destination TCP/UDP port and port range,
+
+      (6) Diffserv codepoint ([@RFC3260]),
+
+      (7) physical port, in case of voice packets.
+
+    21: |
+      The RG SHOULD support classification of WAN directed internally
+      generated traffic and placement into appropriate queues based on any one
+      or more of the following pieces of information:
+
+      (1) packet length.
+
+    22: |
+      The RG MUST be able to learn classification keys (MAC address and IP
+      address) through the following option of the DHCP client requests on the
+      LAN that it serves:
+
+      (1) DHCP Option 60 (Vendor Class ID),
+
+      (2) DHCP Option 61 (Client Identifier),
+
+      (3) DHCP Option 77 (User Class ID), and
+
+      (4) DHCP Option 125 (Vendor Specific Information).
+
+    23: |
+      The RG SHOULD be able to learn classification keys (MAC address and IP
+      address) for trusted DLNA devices as they are recognized on the LAN.

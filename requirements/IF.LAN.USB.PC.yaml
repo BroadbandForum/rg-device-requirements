@@ -1,0 +1,43 @@
+---
+IF.LAN.USB.PC:
+  name: |
+    USB (PC)
+
+  requirements:
+    1: |
+      The RG SHOULD have a client USB port (series "B" receptacle), allowing
+      it to be a non-powered remote device (i.e. the RG has its own power
+      source and does not get power across the USB interface) for a host
+      computer.
+
+    2: |
+      If the RG has a client USB port, its USB interface MUST appear to the PC
+      or other host device to be an Ethernet port (i.e. the PC drivers are
+      Ethernet drivers), and not appear as a DSL modem (i.e. the RG MUST NOT
+      require device modem drivers on LAN CPE).
+
+    3: |
+      If the RG has a client USB port, the USB port MUST be based on the USB
+      1.1 (or later) technical specification.
+
+    4: |
+      If the RG has a client USB port and USB 2.0 is supported, the USB
+      interface MUST still work with a USB 1.1 based USB host controller based
+      on the USB 2.0 standard.
+
+    5: |
+      Over the USB interface, the RG SHOULD support USB drivers for
+      commercially available operating systems for home computers that have
+      been released over the past seven years.
+
+    6: |
+      If the RG has only one Ethernet port and only one client USB port, the
+      RG SHOULD be configurable through the Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a
+      Controller so that only the Ethernet or client USB port is to be active
+      at any one time. In this configuration, whenever one of the ports is in
+      use, the other is disabled. If neither is in use, both are enabled. The
+      default configuration of the RG SHOULD be that both ports are active at
+      the same time.
+
+    7: |
+      If the RG has a client USB port, the USB port SHOULD support USB 3.x.

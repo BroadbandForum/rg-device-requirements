@@ -1,0 +1,64 @@
+---
+MGMT.REMOTE.WEB:
+  name: |
+    Remote Management (Web Browser)
+
+  description: |
+    This module applies to IPv6 as well as IPv4, but only if the RG has an
+    IPv6 stack.
+
+  requirements:
+    1: |
+      The RG MUST be able to allow temporary manual remote access to its web
+      GUI remotely from the WAN interface.
+
+    2: |
+      When temporary WAN side remote access is enabled to the RG, the remote
+      access session MUST be started within 20 minutes and the activated
+      session MUST time out after 20 minutes of inactivity.
+
+    3: |
+      The user MUST be able to specify that the temporary WAN side remote
+      access is a read only connection or one that allows for updates. The
+      default MUST be read only.
+
+    4: |
+      Temporary WAN side remote access MUST NOT allow for changing the RG
+      password.
+
+    5: |
+      Temporary WAN side remote access MUST be disabled by default.
+
+    6: |
+      Temporary WAN side remote access SHOULD be through HTTP over TLS
+      (i.e. https using TLS).
+
+    7: |
+      The RG SHOULD use a randomly selected port for temporary WAN side remote
+      access to prevent hacking of a well-known port.
+
+    8: |
+      If a default port is used for temporary WAN side remote access, it MUST
+      be 51003.
+
+    9: |
+      The user MUST specify a non-blank password to be used for each temporary
+      WAN side remote access session. This information MUST NOT be saved
+      across sessions.
+
+    10: |
+      The User ID for all temporary WAN side remote access sessions, if
+      required based on the method of implementation, MUST be "tech" by
+      default.
+
+    11: |
+      The user MUST be able to change the User ID for all subsequent temporary
+      WAN-side remote access sessions.
+
+    12: |
+      The RG MUST allow only one temporary WAN side remote access session to
+      be active at a time.
+
+    13: |
+      Aside from the requirements in this profile, all other direct access to
+      the RG from the WAN side MUST be disabled and blocked by default.

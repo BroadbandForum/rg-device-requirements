@@ -1,0 +1,61 @@
+---
+WAN.dot1x:
+  name: |
+    802.1X Client
+
+  requirements:
+    1: |
+      The RG MUST support IEEE 802.1X acting as a supplicant.
+
+    2: |
+      The RG MUST be able to respond to an appropriate IEEE 802.1X request and
+      provide certificate information using Extensible Authentication
+      Protocol-Transport Layer Security (EAP/TLS).
+
+    3: |
+      The RG SHOULD support EAP-MD5 username and password type authentication.
+
+    4: |
+      The RG MUST support receiving IEEE 802.1X EAPOL frames with an
+      individual MAC address (i.e. unicast) as well as frames with a group MAC
+      address (i.e. multicast).
+
+    5: |
+      The RG MUST perform mutual authentication by authenticating certificate
+      information of the requesting authenticator.
+
+    6: |
+      The RG MUST be able to store certificate information used to
+      authenticate the authenticator.
+
+    7: |
+      The RG MUST be able to update the information used to validate the
+      authenticator by either a firmware upgrade or via updated certificates.
+
+    8: |
+      The RG SHOULD be able to update the information used to validate the
+      authenticator by updated certificates without a firmware upgrade.
+
+    9: |
+      The RG MUST be able to authenticate a minimum of eight authenticators.
+
+    10: |
+      When used with IPv4 over Ethernet and DHCPv4, if the RG already has a
+      connection when receiving an IEEE 802.1X request, the RG SHOULD
+      subsequently perform a DHCPv4 lease renewal upon successful 802.1X
+      authentication.
+
+    11: |
+      Each RG MUST have a unique factory-installed private/public key pair and
+      an embedded ITU-T X.509 version 3 / RFC 5280 [@RFC5280]
+      certificate that has been signed by the RG vendor's certificate authority.
+
+    12: |
+      The RG certificate MUST have a validity period greater than the
+      operational lifetime of the RG.
+
+    13: |
+      When used with IPv6 over Ethernet and DHCPv6, if the RG already has a
+      connection when receiving an IEEE 802.1X request, the RG SHOULD
+      subsequently perform a DHCPv6 CONFIRM upon successful 802.1X
+      authentication.

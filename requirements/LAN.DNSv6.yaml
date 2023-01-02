@@ -1,0 +1,54 @@
+---
+LAN.DNSv6:
+  name: |
+    LAN.DNSv6- Naming Services (IPv6)
+
+  requirements:
+    1: |
+      The RG MUST act as a DNS server for IPv6-capable LAN devices by
+      supporting IPv6 (AAAA) records in its DNS server (per [@RFC3596]) and
+      allowing these records to be queried using either IPv4 or IPv6 transport
+      ([@RFC3901]).
+
+    2: |
+      The RG MUST attach all known (for the host device) globally scoped IPv6
+      addresses to the DNS record for a particular host device (see
+      LAN.DNS.6), as AAAA records for that device.
+
+    3: |
+      The RG SHOULD support dynamic DNS (DDNS) for devices to provide their
+      own DNS information. This would override any DNS entries the RG might
+      have created for the IP addresses included in the DDNS request.
+
+    4: |
+      The RG MUST be able to query for A and AAAA records using either IPv4 or
+      IPv6 transport to DNS recursive name servers in the WAN.
+
+    5: |
+      The RG SHOULD use a DNS recursive name server obtained through DHCPv6
+      option 23 (OPTION_DNS_SERVERS) to query for AAAA records to the WAN, as
+      its first choice.
+
+    6: |
+      When the RG is proxying DNS queries for LAN devices, it SHOULD use IPv6
+      transport regardless of the transport mode used by the LAN device, when
+      querying to the WAN. This is only possible if the RG has IPv6 addresses
+      for DNS recursive name servers on the WAN.
+
+    7: |
+      The RG MUST support receiving at least 2 DNS recursive name server IPv6
+      addresses from the network through DHCPv6 option 23 (OPTION_DNS_SERVERS)
+      ([@RFC3646]).
+
+    8: |
+      The RG SHOULD allow the user to specify that the network-learned or
+      user-specified DNS recursive name server addresses be passed back to the
+      LAN devices in DHCPv6 responses instead of the RG's address itself as
+      the DNS recursive name server(s).
+
+    9: |
+      When the RG learns DNS name server addresses from multiple WAN
+      connections, the RG SHOULD make recursive query to the DNS name server
+      specified with DNS selection policy that is obtained through DHCPv6
+      (draft-ietf-mif-dns-server-selection) or manually configured DNS
+      selection policy.

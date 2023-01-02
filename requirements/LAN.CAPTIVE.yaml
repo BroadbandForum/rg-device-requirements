@@ -1,0 +1,80 @@
+---
+LAN.CAPTIVE:
+  name: |
+    Captive Portal with Web Redirection
+
+  description: |
+    This module applies to IPv6 as well as IPv4, but only if the RG has an
+    IPv6 stack.
+
+  requirements:
+    1: |
+      The RG MUST support a redirect function, which, when enabled, intercepts
+      WAN destination IP (v4 or v6) HTTP requests and responds to these by
+      substituting a specified URL in place of the web page request.
+
+      The URL, as well as a list of locations for which this redirect would be
+      bypassed (i.e. white list), MUST be settable from a Controller.
+
+      The actual captive portal to be redirected to may be established at the
+      time the white list is defined or the white list may be defined first
+      and the captive portal specified at a later time.
+
+    2: |
+      The redirection function and associated fields MUST NOT be modifiable by
+      the subscriber.
+
+    3: |
+      The RG MUST support turning on and off the redirect function when the
+      captive portal URL field is populated and cleared respectively by the
+      Controller.
+
+    4: |
+      All port 80 traffic, excluding that associated with the white list, MUST
+      be redirected when the redirect function is turned on in the RG.
+
+    5: |
+      To specify the captive portal, the RG must accept an IPv4 or IPv6
+      address or a URL whose length does not exceed 2000 characters.
+
+    6: |
+      The redirect white list MUST support 512 separate list entries, each of
+      which can be an individual IP (v4 or v6) address, a range of IPv4
+      addresses, an IPv6 prefix, or any combination thereof. For a range of
+      IPv4 addresses a subnet mask is required.
+
+    7: |
+      Variable length subnet masking (VLSM) MUST be supported in the redirect
+      white list. For example:
+
+      * Individual IPv4 address:
+
+        * ipaddress or
+
+        * ipaddress/32 or
+
+        * ipaddress 255.255.255.255
+
+      * Range of 64 IPv4 addresses:
+
+        * ipaddress/26 or
+
+        * ipaddress 255.255.192.0
+
+    8: |
+      The RG MUST support only one set of captive portal and redirect settings
+      at a time. If new settings are needed, the Controller will overwrite
+      existing values within the RG.
+
+    9: |
+      A valid set of redirect settings MUST be enabled in an RG within five
+      seconds of the redirect URL being sent from the Controller.
+
+    10: |
+      The redirect function MUST be disabled on the RG within five seconds of
+      the captive portal string being cleared in a RG by an empty redirect URL
+      being sent from the Controller.
+
+    11: |
+      Incremental packet delay through the RG due to white list lookup MUST
+      NOT exceed 5 ms.

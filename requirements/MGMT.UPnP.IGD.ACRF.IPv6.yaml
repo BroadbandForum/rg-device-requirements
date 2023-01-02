@@ -1,0 +1,15 @@
+---
+MGMT.UPnP.IGD.ACRF.IPv6:
+  name: |
+    UPnP IGD to allow Connection Request Forwarding through the Firewall
+    of the device
+
+  requirements:
+    1: |
+      The RG MUST have a WANIPv6FirewallControl:1 service. The specification is
+      available for download at
+      <http://upnp.org/specs/gw/UPnP-gw-WANIPv6FirewallControl-v1-Service.pdf>
+
+    2: |
+      The RG MUST allow Inbound Pinhole management (InboundPinholeAllowed set
+      to "1").

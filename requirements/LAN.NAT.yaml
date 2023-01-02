@@ -1,0 +1,13 @@
+---
+LAN.NAT:
+  name: |
+    LAN.NAT- NAT/NAPT
+
+  requirements:
+    1: |
+      The RG MUST support Network Address Port Translation (NAPT; also known
+      as Port Address Translation) as defined in RFC 2663 [@RFC2663], RFC 3022
+      [@RFC3022], and RFC 3027 [@RFC3027].
+
+    2: |
+      The RG MUST support disabling NAPT.

@@ -1,0 +1,11 @@
+---
+SEC.FIRMWARE:
+  name: |
+    Firmware integrity and security
+
+  requirements:
+    1: |
+      RG's firmware MUST support Digital Signature authentication.
+
+    2: |
+      RG's firmware MUST support an encryption mechanism.

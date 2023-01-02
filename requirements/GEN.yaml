@@ -1,0 +1,10 @@
+---
+GEN:
+  name: |
+    General Device Requirements
+
+  categories:
+    - !include GEN.DESIGN.yaml
+    - !include GEN.OPS.yaml
+    - !include GEN.NET.yaml
+    - !include GEN.NETv6.yaml

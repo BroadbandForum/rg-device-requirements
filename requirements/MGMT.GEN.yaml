@@ -1,0 +1,110 @@
+---
+MGMT.GEN:
+  name: |
+    General
+
+  requirements:
+    1: |
+      Configuration and installation of the RG SHOULD minimize the number of
+      restarts of the RG when enabling changes.
+
+    2: |
+      If software is loaded on LAN CPE for installation or configuration of
+      the RG, this software MUST NOT require the associated LAN CPE to
+      restart, except in the case of the installation of networking drivers
+      (e.g. USB, wireless, etc.) or a change in IP address assignment
+      (e.g. static to DHCP, public to private, private to public or assignment
+      of a specific IP address using DHCP).
+
+    3: |
+      The RG MUST maintain an internal log of WAN side connection flows
+      (e.g. WAN link layer, DHCP, IP and PPP sessions). At a minimum, the log
+      MUST record the last 250 events. This includes WAN physical interface
+      events initiated locally or by the access network. The purpose of the
+      log is to provide a troubleshooting aid in resolving line and connection
+      problems.
+
+    4: |
+      The RG MUST timestamp each log entry.
+
+    5: |
+      The factory default timestamp value for log entries SHOULD indicate the
+      elapsed time since the unit was first powered on. The log entry
+      timestamp SHOULD be formatted, consistent with ISO 8601, as follows:
+
+      * PYYYY-MM-DDThh:mm:ss
+
+      where:
+
+      * P = the letter "P" used to indicate that what follows is a time interval
+      (period) data element
+
+      * YYYY = number of years (digits)
+
+      * MM = number of months (digits, 00 -- 11; 1 month is the equivalent of 30
+      days for time interval purposes)
+
+      * DD = number of days (digits, 00 -- 29)
+
+      * hh = number of hours (digits, 00 -- 23)
+
+      * mm = number of minutes (digits, 00 -- 59)
+
+      * ss = number of seconds (digits, 00 -- 59)
+
+      Once the RG has established connectivity to an Internet based time
+      server, all log entry timestamps SHOULD be formatted for GMT or user
+      specified time zone (24 hour military format), consistent with ISO 8601,
+      as follows:
+
+      * YYYY-MM-DDThh:mm:ss±hh:mm or
+
+      * YYYY-MM-DDThh:mm:ssZ ,
+
+      where:
+
+      * YYYY = year (digits)
+
+      * MM = month (digits, 01 -- 12)
+
+      * DD = day of month (digits, 01 -- 31)
+
+      * T = the letter "T", used to indicate the start of the time of day
+
+      * Z = the letter "Z", used to indicate that the time is UTC (Coordinated
+      Universal Time)
+
+      * hh = hours (digits, 00 -- 23)
+
+      * mm = minutes (digits, 00 -- 59)
+
+      * ss = seconds (digits, 00 -- 59)
+
+      * ±hh:mm = the difference between local time and UTC in hours and minutes (e.g. -05:00 would indicate Eastern Standard Time, 5 hours behind UTC)
+
+    6: |
+      The RG MUST have diagnostic information available that allows the user
+      to identify the precise nature of any connection or performance problem.
+      It MUST be able to indicate if the problem is at the physical layer,
+      ATM, Ethernet, PPP, or IP layer. This information MUST be accessible
+      from the Web GUI, TR-064i4 interfaces and from a Controller.
+
+    7: |
+      The RG MUST have an embedded ICMP ping client capable of being initiated
+      via the Web GUI interfaces and from a Controller to ping to WAN and LAN
+      side IP addressable devices.
+
+    8: |
+      The RG log SHOULD reside on the RG and persist across power loss.
+
+    9: |
+      The RG log SHOULD NOT interfere with the normal performance of the RG.
+      That is, writing log entries to non-volatile storage SHOULD NOT be done
+      at a priority or in a manner that would degrade the user experience nor
+      the connection throughput.
+
+    10: |
+      The RG MUST be able to start training, establish a network connection
+      and respond to network tests by default upon power up prior to any
+      additional configuration or software installation on the associated PC.
+      The absence of a PC MUST have no effect on these operations.

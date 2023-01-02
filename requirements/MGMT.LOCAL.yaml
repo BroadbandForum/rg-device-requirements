@@ -1,0 +1,148 @@
+---
+MGMT.LOCAL:
+  name: |
+    Local Management
+
+  categories:
+    - !include MGMT.LOCAL.TR-064.yaml
+
+  requirements:
+    1: |
+      If the RG is in a bridged configuration the RG MUST be able to disable
+      all LAN side configuration mechanisms (i.e. the Web GUI, Broadband Forum
+      TR-064i2 [@TR-064i2], etc.).
+
+    2: |
+      The RG MUST support a configuration mechanism from the PC as defined in
+      Broadband Forum TR-064i2 [@TR-064i2].
+
+    3: |
+      This requirement has been obsoleted.
+
+    4: |
+      The RG MUST be configurable via embedded, easy-to-use Web GUI pages.
+
+    5: |
+      Broadband Forum TR-064i2 [@TR-064i2] and Web GUI authorization MUST time out after 30 minutes of
+      disuse.
+
+    6: |
+      The Web GUI pages MUST be available when the RG is in bridged mode.
+
+    7: |
+      The RG MUST NOT require browser support of Java, ActiveX nor VBSCRIPT in
+      its web pages.
+
+    8: |
+      The Web GUI pages SHOULD minimize internal page complexity
+      (e.g. excessive use of frames, pop-ups, style sheets, JavaScript, etc.)
+      that places demands on browser resources or causes interoperability
+      problems with different browsers. In general, all pages SHOULD load
+      within five seconds.
+
+    9: |
+      The web interface MUST be OS independent and browser independent
+      (e.g. must work with versions of Internet Explorer, Firefox, Chrome,
+      Safari and Opera that were released within the past five years).
+
+    10: |
+      The RG MUST have a software mechanism by which the user can reset it to
+      default factory settings.
+
+    11: |
+      The RG MUST support an RG access code (i.e. password) that protects it
+      from being updated (firmware, configuration, operational state, etc.)
+      from the local LAN.
+
+    12: |
+      If a default RG access code has been set, the default RG access code
+      MUST be on the bottom of the RG.
+
+    13: |
+      If a default RG access code has been set, the RG MUST force the user to
+      accept the default RG access code or install a new RG access code prior
+      to allowing any initial configuration (e.g. during initial installation
+      or after an RG reset to factory defaults).
+
+    14: |
+      The user MUST be able to disable the use of the RG access code. The user
+      MUST be warned in the Web GUI of the implications of undertaking this
+      action.
+
+    15: |
+      The RG MUST support updating of its firmware via the Web GUI and
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces.
+
+    16: |
+      The RG MUST use standard protocols when using FTP, HTTP and HTTPS as
+      defined in IETF RFCs 959, 2616, 5246, and 2818.
+
+    17: |
+      The RG MUST support restarting the broadband connection (all layers) via
+      the Web GUI and Broadband Forum TR-064i2 [@TR-064i2] interfaces.
+
+    18: |
+      The RG SHOULD be able to copy log files to a PC on the local LAN or
+      network server in ASCII text format, using the Web GUI and Broadband Forum TR-064i2 [@TR-064i2]
+      interfaces.
+
+    19: |
+      The RG MUST have a quick start page in the Web GUI allowing for rapid
+      configuration in a minimum number of steps (e.g. on a single page).
+      Default values for PPPoE and PVC can be used to facilitate this.
+
+    20: |
+      The model and firmware/software versions MUST be easily identifiable via
+      the Web GUI interface.
+
+    21: |
+      The Web GUI interface MUST allow the user to browse and select an update
+      file from a local PC and use HTTP to update the RG using this file (see
+      IETF RFCs 1867, 2388 and HTML 4.1 specifications for more details).
+
+    22: |
+      If the RG has been configured to do so, the Web GUI MUST allow the user
+      to specify that firmware be updated from a predefined web location. The
+      RG MUST allow the web location to be specified via the Web GUI and
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces.
+
+    23: |
+      The web location MAY be predefined by the RG manufacturer. This value is
+      overridden by the mechanisms and information identified in requirement
+      MGMT.LOCAL.21.
+
+    24: |
+      If the RG has been configured to allow updating from a predefined web
+      location, the RG MUST display an update button in the Web GUI. The user
+      can then select the update button to initiate an update using a file
+      retrieved via ftp or http as identified in the associated URL (2 URLs
+      may be hard coded; the second URL will be used if file retrieval is not
+      possible from the first URL).
+
+    25: |
+      If the RG has been configured to allow updating from a predefined web
+      location, the mechanism used to identify the availability of an update,
+      the description of the update and the actual update SHOULD operate
+      solely based on the presence (or absence) of named files returned in a
+      directory list using the web location URL.
+
+      For example, an RG might retrieve the directory list, find the update
+      associated with the RG by the presence of the following file:
+
+      Vendor-model-v100210-n100215.pkg
+
+      This would identify that for device "model" from "vendor" currently
+      running version 10.02.10 there exists an update whose version is
+      10.02.15. The text describing the update, if available, might be located
+      in a file of the name:
+
+      Vendor-model-v100210-n100215.txt
+
+    26: |
+      If the RG has been configured to do so, the Web GUI MUST display a web
+      link to which the user may go to browse for update files and other
+      update information. The RG MUST allow this URL to be specified and
+      overridden by the Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    27: |
+      The web link MAY be set to a default value by the RG manufacturer.

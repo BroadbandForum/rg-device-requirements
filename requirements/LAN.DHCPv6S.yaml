@@ -1,0 +1,59 @@
+---
+LAN.DHCPv6S:
+  name: |
+    DHCPv6 Server
+
+  requirements:
+    1: |
+      The RG MUST support DHCPv6 server messages and behavior per RFC 3315 [@RFC3315].
+
+    2: |
+      The RG MUST support and be configurable to enable/disable address
+      assignment using DHCPv6.
+
+    3: |
+      The RG MUST either have an algorithm or allow configuration (or both) as
+      to which /64 prefix to use, from any received WAN prefixes or its own
+      ULA prefix.
+
+    4: |
+      The RG SHOULD be configurable to support rules as to which host devices
+      will be assigned addresses through DHCPv6. That is, it should be
+      possible for a service provider to place its own host devices at the
+      customer premises and have the RG only support DHCPv6 address assignment
+      to those devices. Note that this does not require use of the RA "M"
+      flag, as the service provider host devices can be configured to always
+      use DHCPv6 for address assignment. The DUID may help to identify host
+      devices.
+
+    5: |
+      The RG MUST be configurable to enable/disable prefix delegation via
+      DHCPv6.
+
+    6: |
+      The RG MUST support delegation of any received WAN prefix and its own
+      ULA prefix, that is shorter than /64, using mechanisms of RFC 3633 [@RFC3633].
+
+    7: |
+      The WAN / ULA prefixes that an RG is allowed to further delegate SHOULD
+      be configurable.
+
+    8: |
+      The RG MUST support DHCPv6 Information_request messages.
+
+    9: |
+      The RG MUST support the following DHCPv6 options: IA_NA ([@RFC3315]),
+      IA_PD ([@RFC3633]), and DNS_SERVERS ([@RFC3646]).
+
+    10: |
+      The RG SHOULD support Reconfigure Accept ([@RFC3315]) and pass the
+      additional set of DHCP options received from the DHCP client on its WAN
+      interface to IPv6 hosts.
+
+    11: |
+      The options that the RG will provide via DHCPv6 MUST be configurable.
+
+    12: |
+      If address selection policy option is requested in a DHCPv6 request from
+      hosts, the RG SHOULD advertise the generated address selection policy
+      (see WAN.IPv6.21).

@@ -1,0 +1,68 @@
+---
+IF.LAN.Ghn:
+  name: |
+    G.hn (LAN)
+
+  requirements:
+    1: |
+      The RG MUST comply with ITU-T Recommendations G.9960 [@G.9960], G.9961 [@G.9961] and
+      G.9964 [@G.9964].
+
+    2: |
+      The RG must support at least one of the following connector options for
+      G.hn:
+
+      a) F-connector coaxial interface
+
+      b) Modular RJ-11 style phone interface (optionally RJ-14 or RJ-45)
+
+      c) Powerline
+
+    3: |
+      The G.hn interface type (coax, powerline or twisted pair) MUST be
+      configurable and persistent across RG restarts and reboots. The G.hn
+      interface parameters configuration MUST be supported through the Web
+      GUI, UPnP (if present) and from a Controller
+
+    4: |
+      The RG MUST support the enabling/disabling of each G.hn interface. The
+      default MUST be enabled or use an operator-specific configuration.
+
+    5: |
+      The RG MUST periodically collect G.hn Ethernet layer and channel
+      performance data and report this data via Web GUI, UPnP (if present) and
+      from a Controller.
+
+    6: |
+      The RG MUST be able to provide physical media performance data related
+      to at least 10 associated G.hn network devices on every G.hn interface
+      and report this data via Web GUI, UPnP (if present) and from a
+      Controller.
+
+    7: |
+      The RG MUST implement sufficient filtering and isolation to the G.hn and
+      any other wireline interfaces to prevent interference. E.g. if the RG
+      supports both xDSL and G.hn, it MUST implement sufficient filtering and
+      isolation between G.hn and xDSL to avoid interfering with each other's
+      spectrum.
+
+    8: |
+      The RG MUST be able to prioritize downstream network traffic based on
+      IEEE 802.1Q user priorities for relative QoS by supporting at least 2
+      egress priority queues on every G.hn port.
+
+    9: |
+      The RG SHOULD be able to reserve bandwidth (media access time) on the
+      G.hn network for services requesting QoS guarantees so as to meet QoS
+      requirements for throughput (rate), latency and jitter, as described in
+      clause 8.6.2 of ITU-T G.9961 [@G.9961].
+
+    10: |
+      The RG SHOULD enable provisioning of QoS classification filters and
+      traffic specifications in the G.hn device, as specified in clause
+      8.6.2.3.1 of ITU-T G.9961 [@G.9961].
+
+    11: |
+      The RG MUST support configuring a custom network security key password
+      to meet service provider requirements, as defined in clause 9.0 of
+      ITU-T G.9961 [@G.9961].

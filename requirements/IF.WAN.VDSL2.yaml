@@ -1,0 +1,51 @@
+---
+IF.WAN.VDSL2:
+  name: |
+    VDSL2
+
+  requirements:
+    1: |
+      The RG MUST include an internal VDSL2 modem.
+
+    2: |
+      The RG MUST be able to terminate the VDSL2 signal through the inner pair
+      of a 6-position (pins 3 and 4) or 8-position (pins 4 and 5) mini-modular
+      jack (e.g. RJ-11, RJ-14, RJ-45).
+
+    3: |
+      The RG MAY be able to terminate VDSL2 over other connections, such as
+      coax.
+
+    4: |
+      The RG MUST comply with ITU-T G.993.2 [@G.993.2].
+
+    5: |
+      The RG MUST include support for the following application reference
+      models from ITU-T G.993.2 [@G.993.2]:
+
+      - G.993.2 clause 5.4.2, Data with POTS service
+
+      - G.993.2 clause 5.4.1, Data service (no POTS or ISDN)
+
+    6: |
+      The RG SHOULD support simultaneous transmission of US0 and US1 in
+      profiles for which the capability of US0 has been indicated.
+
+    7: |
+      The RG MUST pass the functionality test plan of Broadband Forum TR-115 [@TR-115].
+
+    8: |
+      The RG MUST pass the VDSL2 performance and interoperability test plans
+      of Broadband Forum TR-114 [@TR-114].
+
+    9: |
+      \[North America\] The RG MUST comply with ITU-T G.993.2 [@G.993.2] Annex A.
+
+    10: |
+      \[Europe\] The RG MUST comply with ITU-T G.993.2 [@G.993.2] Annex B.
+
+    11: |
+      \[Europe\] The RG MUST include support for the following application
+      reference model from ITU-T G.993.2 [@G.993.2]:
+
+      - G.993.2 clause 5.4.3, Data with ISDN service

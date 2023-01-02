@@ -1,0 +1,26 @@
+# do not edit! this file was created from PROJECT.yaml by project-parser.py
+
+# BBF-specific metadata; cf. Word properties
+bbfNumber: TR-124
+bbfTitle: Functional Requirements for Broadband Residential Gateway Devices
+bbfIssue: Issue
+bbfVersion: '8'
+bbfMonth: December
+bbfYear: 2022
+bbfType: Technical Report
+bbfStatus: ''
+bbfContrib: ''
+bbfMajor: 8
+bbfMinor: 0
+bbfPatch: 0
+bbfDraft: ''
+bbfBuild: ''
+
+# other top-level variables
+notice: tr
+reponame: rg-device-requirements
+"tagline": |-
+  Guidelines and profiles for development and RFPs of broadband gateways
+  and Wi-Fi routers
+bbfWorkArea: Broadband User Services
+bbfProjectStream: ''

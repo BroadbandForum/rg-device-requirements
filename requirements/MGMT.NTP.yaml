@@ -1,0 +1,52 @@
+---
+MGMT.NTP:
+  name: |
+    Network Time Client
+
+  description: |
+    This module applies to IPv6 as well as IPv4, but only if the RG has an
+    IPv6 stack.
+
+  requirements:
+    1: |
+      The RG MUST support an internal clock with a date and time mechanism.
+
+    2: |
+      The RG clock MUST be able to be set via an internal time client from an
+      Internet source using RFC 1305 [@RFC1305].
+
+    3: |
+      The RG MUST support the use of time server identification by both domain
+      name and IP (v4 or v6) address.
+
+    4: |
+      If the RG includes default time server values, they SHOULD be specified
+      by domain name and not by IP (v4 or v6) address.
+
+    5: |
+      The RG SHOULD allow configuration of the primary and alternate time
+      server values in addition to or in place of any default values.
+
+    6: |
+      If the RG includes default time server values or if time server values
+      are identified in documentation, these values SHOULD be selected using
+      industry best practices for NTP and SNTP clients, as published in
+      section 10 of RFC 4330 [@RFC4330].
+
+    7: |
+      The time client SHOULD support DNS responses with CNAMEs or multiple A
+      or AAAA records.
+
+    8: |
+      The default frequency with which the RG updates its time from a time
+      server MUST NOT be less than 60 minutes, or use an operator-specific
+      configuration.
+
+    9: |
+      The default frequency with which the RG updates its time from a time
+      server MUST NOT be greater than 24 hours, or use an operator-specific
+      configuration.
+
+    10: |
+      The frequency with which the RG updates its time from a time server
+      SHOULD be able to be configured.

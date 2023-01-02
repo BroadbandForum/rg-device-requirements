@@ -1,0 +1,50 @@
+---
+WAN.QoS.TUNNEL:
+  name: |
+    Quality of Service for Tunneled Traffic
+
+  description: |
+    This module only applies when the RG is an endpoint for a tunnel to the
+    WAN. This module applies to IPv6 if it is used as either the tunneled or
+    the tunneling protocol.
+
+  requirements:
+    1: |
+      The RG MUST be able to mark or remark the Diffserv codepoint of traffic
+      that will be placed over a tunnel, based on classification of that
+      traffic (prior to placing it on the tunnel) using any of the classifiers
+      supported by the RG. This only applies when the traffic is going from
+      LAN to WAN.
+
+    2: |
+      The RG MUST be able to mark the Diffserv codepoint of the underlying
+      tunnel or the IEEE 802.1Q Ethernet priority of Ethernet that is
+      transporting the tunnel, based on classification of the tunneled traffic
+      using any of the classifiers supported by the RG. This only applies when
+      the traffic is going from LAN to WAN.
+
+    3: |
+      When the RG receives tunneled traffic from the WAN, it MUST be able to
+      mark or remark the Diffserv codepoint of that traffic, based on
+      classification of the tunneled traffic using any of the IP-layer or
+      higher layer classifiers supported by the RG.
+
+    4: |
+      When the RG receives tunneled traffic from the WAN, it MUST be able to
+      mark the IEEE 802.1Q Ethernet priority of the LAN Ethernet frame, based
+      on classification of the tunneled traffic using any of the IP-layer or
+      higher layer classifiers supported by the RG.
+
+    5: |
+      When the RG receives tunneled traffic from the WAN, it MUST be able to
+      mark or remark the Diffserv codepoint or mark the IEEE 802.1Q Ethernet
+      priority of the LAN Ethernet frame, based on classification of the WAN
+      Ethernet, using any of the Ethernet-layer classifiers supported by the
+      RG.
+
+    6: |
+      When the RG receives tunneled traffic from the WAN, it SHOULD be able to
+      mark or remark the Diffserv codepoint or mark the IEEE 802.1Q Ethernet
+      priority of the LAN Ethernet frame, based on classification of the
+      underlying tunnel, using any of the IP-layer classifiers supported by
+      the RG.

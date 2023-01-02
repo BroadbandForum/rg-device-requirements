@@ -1,0 +1,7 @@
+---
+REGIONAL:
+  name: |
+    Regional Annexes
+
+  categories:
+    - !include REGIONAL.NA.yaml

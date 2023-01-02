@@ -1,0 +1,7 @@
+---
+RGSMART:
+  name: |
+    Smart Residential Gateway
+
+  categories:
+    - !include RGSMART.OPLAT.yaml

@@ -1,0 +1,32 @@
+---
+IF.LAN.ETH:
+  name: |
+    Ethernet (LAN)
+
+  categories:
+    - !include IF.LAN.ETH.SWITCH.yaml
+
+  requirements:
+    1: |
+      The RG MUST support use of a straight-through (patch) cable between the
+      Ethernet interface and a PC.
+
+    2: |
+      The RG SHOULD automatically sense the transmit and receive pair on the
+      Ethernet physical connection.
+
+    3: |
+      The RG MUST have at least one 10/100BASE-T Ethernet port (RJ-45 jack)
+      for connecting it to the home data network. A 1000BASE-T port is
+      recommended.
+
+    4: |
+      The RG MUST be able to support both 100BASE-T and 1000BASE-T with auto
+      negotiate for speed and duplex on a port-by-port basis according to
+      IEEE 802.3 [@802.3-2012].
+
+    5: |
+      The Ethernet LAN interface SHOULD allow for adjusting the inter-frame
+      and collision back off timers so that traffic marked with Ethernet
+      priority (as defined in IEEE 802.1Q) can get statistically better
+      treatment on broadcast LAN segments.

@@ -1,0 +1,11 @@
+---
+GEN.NETv6:
+  name: |
+    IPv6 Networking Protocols
+
+  requirements:
+    1: |
+      The RG MUST support IP Version 6, which is defined in RFC 2460 [@RFC2460].
+
+    2: |
+      The RG MUST support enabling and disabling of IPv6.

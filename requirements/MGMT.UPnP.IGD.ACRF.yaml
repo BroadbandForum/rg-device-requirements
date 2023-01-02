@@ -1,0 +1,21 @@
+---
+MGMT.UPnP.IGD.ACRF:
+  name: |
+    UPnP IGD to allow Connection Request Forwarding
+
+  categories:
+    - !include MGMT.UPnP.IGD.ACRF.IPv4.yaml
+    - !include MGMT.UPnP.IGD.ACRF.IPv6.yaml
+
+  requirements:
+    1: |
+      The RG MUST support UPnP Internet Gateway Device:2 root device. This
+      specification is available for download at
+      <http://upnp.org/specs/gw/UPnP-gw-InternetGatewayDevice-v2-Device.pdf>
+
+    2: |
+      The RG MUST support IGD specific security as defined in section 2.3
+      Security Policies of UPnP InternetGatewayDevice:2.
+
+    3: |
+      Across resets or reboots, the RG MUST remove port mappings and pinholes.

@@ -1,0 +1,10 @@
+---
+5G-WWC.LAN.DHCPS:
+  name: |
+    5G WWC LAN DHCPv4
+
+  requirements:
+    1: |
+      The embedded DHCPv4 server MUST include DHCP Option 26 (IP interface
+      MTU) with an MTU value that is the MIN of the negotiated PPP MTU and the
+      IPv4 Link MTU Parameter received from the SMF via PCO.

@@ -1,0 +1,198 @@
+---
+IF.LAN.HomePNA:
+  name: |
+    HomePNA (Phoneline/Coax
+
+  requirements:
+    1: |
+      The RG MUST comply with all requirements in ITU-T G.9954 - Home
+      networking transceivers -- Enhanced physical, media access, and link
+      layer specifications
+
+    2: |
+      The RG MUST support at least one of the following connector options for
+      HomePNA:
+
+      a) F-connector coaxial interface
+
+      b) Modular RJ-11 style phone interface (optionally RJ-14 or RJ-45
+      connectors)
+
+    3: |
+      The HomePNA interface type MUST be configurable and persistent across RG
+      restarts and reboots. This parameter MUST be independent of the
+      configuration settings that may be in use by other HomePNA devices on
+      the local LAN.
+
+    4: |
+      The RG MUST support enable/disable of its HomePNA interface. The default
+      MUST be enabled, or use an operator-specific configuration. This
+      parameter MUST be independent of the configuration settings that may be
+      in use by other HomePNA devices on the local LAN.
+
+    5: |
+      The RG MUST periodically collect Ethernet layer and channel performance
+      data from HomePNA devices in the HomePNA network and report the data via
+      Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    6: |
+      The RG MUST collect HomePNA network utilization information based on RG
+      utilization and network idle time and report the data via Web GUI,
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    7: |
+      The RG MUST be able to collect performance monitoring data from at least
+      10 HomePNA network devices in every HomePNA interface and report the
+      data via Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    8: |
+      The RG MUST enable provisioning of the specific HomePNA devices from
+      which performance monitoring data will be collected via Web GUI,
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    9: |
+      Ethernet layer performance data MUST be associated with the individual
+      device's information:
+
+      * HomePNA MAC address
+
+      * HomePNA station/node ID
+
+      * Master/endpoint device indication
+
+    10: |
+      Channel performance monitoring data MUST include the following:
+
+      * Channel host source and destination MAC addresses
+
+      * Channel HomePNA source and destination MAC addresses
+
+      * Channel HomePNA PHY rate
+
+      * Channel estimated SNR
+
+      * Number of packets sent in channel. This parameter MUST be
+      synchronized at both transmitter and receiver ends.
+
+      * Number of pre-LARQ packets received in channel. This parameter MUST
+      be synchronized at both transmitter and receiver ends for network packet
+      loss calculation purposes.
+
+    11: |
+      Channel performance monitoring data SHOULD include the following:
+
+      * Number of post-LARQ packets received in channel. This parameter MUST
+      be synchronized at both transmitter and receiver ends for network packet
+      loss calculation purposes.
+
+    12: |
+      The RG MUST be able to configure and execute full or partial network
+      diagnostics using HomePNA CERT protocol (defined in ITU-T G.9954 [@G.9954]) and MUST
+      collect diagnostic results from all HomePNA devices under test. The RG
+      MUST collect the following diagnostics results between any two nodes in
+      the network and report them via Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a
+      Controller:
+
+      * Baud and PHY rate
+
+      * SNR
+
+      * Number of received test packets
+
+      * Line attenuation
+
+    13: |
+      The RG MUST be able to read the following configuration parameters from
+      HomePNA devices in the HomePNA network. The device MAY optionally enable
+      provisioning of all parameters or a subset of the configuration
+      parameters to be read from local HPNA devices:
+
+      * Noise margin
+
+      * Desired PER
+
+      * MAC address
+
+      * Device master/endpoint mode
+
+      * LARQ enabling
+
+    14: |
+      The RG MUST support at least one of the following spectral modes:
+
+      * Spectral mode A: 4-20MHz -- twisted pair/coax
+
+      * Spectral mode B: 12-28MHz -- twisted pair/coax
+
+      * Spectral mode C: 36-52MHz -- coax only
+
+      * Spectral mode D: 4-36MHz -- coax only
+
+    15: |
+      The RG MAY support more than one HomePNA network operating in different
+      spectral modes on the same or different physical coax cables.
+
+    16: |
+      If xDSL and HomePNA coexist on the RG, the xDSL and HomePNA signals MUST
+      NOT interfere with each other or affect performance in any valid
+      spectrum band plan combinations described in the table below:
+
+      | | **Band "A"** | **Band "B"** | **Band "C"** | **Band "D"** |
+      |-|--------------|--------------|--------------|--------------|
+      | | **Phone** / **Coax** | **Phone** / **Coax** | **Coax** | **Coax** |
+      | ADSL 1/2/2+ | Yes / Yes | Yes / Yes | Yes | Yes |
+      | VDSL2 8x | No / No | Yes / Yes | Yes | No |
+      | VDSL2 | No / No | No / No | Yes | No |
+
+    17: |
+      The RG MUST NOT support both HomePNA and xDSL simultaneously on the same
+      physical wire if the xDSL and HomePNA spectrum bands used are not
+      indicated as valid in the HomePNA spectrum compatibility table above.
+
+    18: |
+      The RG MUST implement sufficient filtering and isolation so that HomePNA
+      and xDSL interfaces will not interfere with each other's spectrum.
+
+    19: |
+      The RG MUST support layer 2 relative QoS on the HomePNA interface.
+
+    20: |
+      The RG MUST be able to prioritize network traffic based on at least
+      Diffserv code points and IEEE 802.1Q user priorities for relative QoS.
+
+    21: |
+      The RG SHOULD support layer 2 guaranteed QoS on the HomePNA interface.
+
+    22: |
+      The RG SHOULD be able to reserve bandwidth (media access time) on the
+      network for services requesting QoS guarantees so as to meet QoS
+      requirements for throughput (rate), latency and jitter.
+
+    23: |
+      The RG SHOULD enable provisioning of QoS classification filters and
+      traffic specifications in the HomePNA device.
+
+    24: |
+      The RG MUST support classification of LAN directed traffic and placement
+      into appropriate queues on the device side of the HomePNA interface
+      based on any one or more of the following pieces of information:
+
+      * Destination MAC address
+
+      * Destination IP address(es) with subnet mask
+
+      * Source IP address(es) with subnet masks
+
+      * Ethernet type
+
+      * IP ToS
+
+      * Protocol type
+
+      * Source port
+
+      * Destination port
+
+      * 802.1Q user priority
+
+      * VLAN ID

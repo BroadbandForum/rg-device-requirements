@@ -1,0 +1,72 @@
+---
+5G-WWC.WAN.RADIO:
+  name: |
+    5G WWC Fixed Wireless Access Radio
+
+  requirements:
+    1: |
+      The RG MUST support NAS protocol to interact with AMF as described in
+      3GPP TS 23.502 [@3GPP-TS.23.502] specified in 3GPP TS 24.501 [@3GPP-TS.24.501] in both cases with UE
+      replaced with RG. In particular the following procedures (all clause
+      references are 3GPP TS 23.502 [@3GPP-TS.23.502]).
+
+      * Registration (clause 4.2.2.2)
+
+      * De-registration (clause 4.2.2.3)
+
+      * Service request (clause 4.2.3)
+
+      * PDU Session Establishment (clause 4.3.2)
+
+      * PDU Session Initiation/Establishment with ACS Discovery (clause
+      4.3.2.2.1)
+
+      * PDU Session Modification (clause 4.3.3)
+
+      * PDU Session Release (clause 4.3.4)
+
+      * AN Release (clause 7.2.5)
+
+      * CN-initiated selective deactivation of UP connection of an existing
+      PDU session associated with W-5GAN access Service Request
+
+      * Configuration update (clause 4.2.4)
+
+    2: |
+      The RG MUST support 5G-AN Protocol layer, including both control plane
+      and user plane, to interact with NG-RAN which specified in
+      3GPP TS 38.300 [@3GPP-TS.38.300].
+
+    3: |
+      The RG MUST support the following EPC procedures on the E-UTRA interface
+      as described in 3GPP TS 23.401 [@3GPP-TS.23.401] and specified in [@3GPP-TS.24.301],
+      in both cases with UE replaced by RG (note all clause references are to
+      3GPP TS 23.401 [@3GPP-TS.23.401]):
+
+      * UE attach procedure (clause 5.3.2)
+
+      * Detach procedure (clause 5.3.8)
+
+      * Dedicated bearer activation (clause 5.4.1)
+
+      * Bearer modification with bearer QoS update (clause 5.4.2)
+
+      * PDN GW initiated bearer modification without bearer QoS update
+      (clause 5.4.3)
+
+      * Bearer deactivation (clause 5.4.4)
+
+      * UE requested bearer resource modification (clause 5.4.5)
+
+      * E-UTRAN initiated E-RAB modification procedure (clause 5.4.7)
+
+      * E-UTRAN initiated UE Context Modification procedure (clause 5.4.8)
+
+    4: |
+      The RG MUST support E-UTRA Protocol layer, including both control plane
+      and user plane, to interact with E-UTRAN which specified in
+      3GPP TS 36.300 [@3GPP-TS.36.300].
+
+    5: |
+      PLMN selections procedure defined in 3GPP TS 22.011 [@3GPP-TS.22.011] and
+      [@3GPP-TS.23.211] MUST besupported.

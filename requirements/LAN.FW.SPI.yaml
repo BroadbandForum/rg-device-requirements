@@ -1,0 +1,173 @@
+---
+LAN.FW.SPI:
+  name: |
+    Firewall (Advanced)
+
+  description: |
+    This module applies to IPv6 as well as IPv4, but only if the RG has an
+    IPv6 stack.
+
+  requirements:
+    1: |
+      The RG MUST support a more robust firewall, such as one that provides a
+      full OSI 7 layer stack stateful packet inspection and packet filtering
+      function.
+
+    2: |
+      The RG SHOULD provide protection for the following:
+
+      * Port scans
+
+      * Packets with same source and destination addresses
+
+      * Packets with a broadcast source address
+
+      * Downstream packets with a LAN source address
+
+      * Invalid fragmented IP (v4 or v6) packets
+
+      * Fragmented TCP packets
+
+      * Packets with invalid TCP flag settings (NULL, FIN, Xmas, etc.)
+
+      * Fragmented packet headers (TCP, UDP and ICMP)
+
+      * Inconsistent packet header lengths
+
+      * Packet flooding
+
+      * Excessive number of sessions
+
+      * Invalid ICMP requests
+
+      * Irregular sequence differences between TCP packets
+
+      The extent of this protection will be limited when the RG is configured
+      as a bridge in which only PPPoE traffic is bridged. This protection MUST
+      be available when the RG terminates IP (v4 or v6) or bridges IPv4.
+
+    3: |
+      Each type of attack for which protection is provided SHOULD be
+      configurable on the RG and be on by default.
+
+    4: |
+      The RG MUST support passing and blocking of traffic by user-defined and
+      TR-181 configurable rules.
+
+    5: |
+      The RG MUST support setting firewall rules by an Controller that cannot
+      be altered by the user. If firewall rules are set via security policies
+      in TR-181i2 profiles, or via other mechanisms such as Controller file
+      download, the rules MUST NOT be able to be overridden by user firewall
+      rules.
+
+    6: |
+      The RG MUST support the user temporarily disabling specific user-defined
+      rules or all user defined rules, that is, without deleting the rules.
+
+    7: |
+      The RG MUST support the user specifying the order in which firewall
+      rules are processed.
+
+      Note: not all firewall rules need be included under the scope of this
+      requirement.
+
+    8: |
+      The RG SHOULD support specification of any of the following in a
+      firewall rule:
+
+      * destination IP (v4 or v6) address(es) with subnet mask
+
+      * originating IP (v4 or v6) address(es) with subnet mask
+
+      * source MAC address
+
+      * destination MAC address
+
+      * protocol (0-255, or by alias: TCP, UDP, ICMP, IP, IGMP, eigrp, gre,
+      ipinip, pim, nos, ospf, ...)
+
+      * source port
+
+      * destination port
+
+      * IEEE 802.1Q user priority
+
+      * FQDN (fully qualified domain name) of WAN session
+
+      * DiffServ codepoint ([@RFC3260])
+
+      * Ethertype (IEEE 802.3) length/type field)
+
+      * Traffic matching an ALG filter
+
+      * IEEE 802.1Q VLAN identification
+
+      * packet length
+
+      * TCP flags (urg, ack, psh, rst, syn, fin)
+
+      * IP option values (potentially name aliases)
+
+      * logical interface of source
+
+      * logical interface of destination
+
+    9: |
+      The RG MAY support filtering based on other fields unique to specific
+      protocols.
+
+    10: |
+      The RG SHOULD support firewall rules that support generic pattern
+      matching against the header or data payload of traffic. Logically this
+      can be envisioned as:
+
+        * match(header\[offset\[,length\|max\]\], condition)
+
+        * match(payload\[offset\[,length\|max\]\], condition)
+
+        where condition is (relationship, data) such as:
+
+        * (=, ne, all, one, and, or) for a hex field
+
+        * (=, ne, gt, ge, lt, le) for a decimal/hex field
+
+        * (=, ne, contains) for a string field
+
+    11: |
+      The RG SHOULD support a set of predefined rules to which the user can
+      set or reset the firewall settings.
+
+    12: |
+      If a set of predefined rules has been set on the RG, the RG rule set
+      SHOULD be able to be used as the basis for a user maintained set of
+      firewall rules.
+
+    13: |
+      In addition to blocking or passing traffic identified by a firewall
+      filter, the RG MUST support other actions as well, including but not
+      limited to:
+
+      * logging on success or failure,
+
+      * notification on success or failure (to email or pager if supported),
+
+      * sending notification to a PC monitor application (either originator
+      and or centralized source), and
+
+      * requesting verification from a PC monitor application.
+
+    14: |
+      The RG MUST allow for configuration of global firewall values.
+
+    15: |
+      The RG firewall SHOULD be either ICSA certified
+      ([*www.icsalabs.com*](http://www.icsalabs.com/)) or be able to display
+      all the attributes necessary for ICSA certification for the current
+      version of either the Residential category or the Small/Medium Business
+      (SMB) category.
+
+    16: |
+      Unless configured otherwise, DOS, port blocking and stateful packet
+      inspection MUST be provided to all LAN devices receiving traffic from
+      the WAN interface.

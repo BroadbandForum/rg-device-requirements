@@ -1,0 +1,12 @@
+---
+IF.LAN.WIRELESS.AP.WPA2-Enterprise:
+  name: |
+    Wireless: Enterprise WPA2
+
+  requirements:
+    1: |
+      The RG MUST be Wi-Fi certified for WPA2-Enterprise.
+
+    2: |
+      The RG MUST be able to simultaneously support at least two separate
+      SSIDs.

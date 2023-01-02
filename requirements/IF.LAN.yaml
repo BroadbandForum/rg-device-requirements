@@ -1,0 +1,15 @@
+---
+IF.LAN:
+  name: |
+    LAN Interface Modules
+
+  categories:
+    - !include IF.LAN.ETH.yaml
+    - !include IF.LAN.USB.yaml
+    - !include IF.LAN.VOICE.yaml
+    - !include IF.LAN.WIRELESS.yaml
+    - !include IF.LAN.HomePNA.yaml
+    - !include IF.LAN.MoCA.yaml
+    - !include IF.LAN.HomePlugAV.yaml
+    - !include IF.LAN.HomePlugAV2.yaml
+    - !include IF.LAN.Ghn.yaml

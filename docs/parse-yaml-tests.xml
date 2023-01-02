@@ -1,0 +1,22 @@
+<?xml version="1.0" ?>
+<testsuites disabled="0" errors="0" failures="0" tests="16" time="0.0">
+	<testsuite disabled="0" errors="0" failures="0" name="parse-yaml-py" skipped="0" tests="16" time="0">
+		<testcase name="parse-yaml"/>
+		<testcase name="parse-yaml-argument-must-be-a-single-item-dict-not"/>
+		<testcase name="parse-yaml-cant-load-from-already-loaded-from"/>
+		<testcase name="parse-yaml-cant-specify-both-dict-valued-categories-and-categories-dict"/>
+		<testcase name="parse-yaml-cant-specify-both-list-valued-categories-and-categories-list"/>
+		<testcase name="parse-yaml-category-doesnt-match-key"/>
+		<testcase name="parse-yaml-duplicate-node-path"/>
+		<testcase name="parse-yaml-duplicate-requirement-path"/>
+		<testcase name="parse-yaml-failed-to-load"/>
+		<testcase name="parse-yaml-file-not-found"/>
+		<testcase name="parse-yaml-invalid-value-should-be-a-dict"/>
+		<testcase name="parse-yaml-key-doesnt-match-filename"/>
+		<testcase name="parse-yaml-should-use-rather-than-to-reference-requirements"/>
+		<testcase name="parse-yaml-these-files-werent-loaded"/>
+		<testcase name="parse-yaml-unexpected-parent-need-to-define-category"/>
+		<testcase name="unknown-error"/>
+	</testsuite>
+</testsuites>
+

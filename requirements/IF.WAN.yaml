@@ -1,0 +1,17 @@
+---
+IF.WAN:
+  name: |
+    WAN Interface Modules
+
+  categories:
+    - !include IF.WAN.ADSL.yaml
+    - !include IF.WAN.VDSL2.yaml
+    - !include IF.WAN.xDSL.yaml
+    - !include IF.WAN.ETH.yaml
+    - !include IF.WAN.GPON.yaml
+    - !include IF.WAN.XG-PON.yaml
+    - !include IF.WAN.XGS-PON.yaml
+    - !include IF.WAN.MoCA.yaml
+    - !include IF.WAN.FAST.yaml
+    - !include IF.WAN.LTE.yaml
+    - !include IF.WAN.NR.yaml

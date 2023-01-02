@@ -1,0 +1,12 @@
+---
+IF.LAN.ETH.SWITCH:
+  name: |
+    Ethernet Switch
+
+  requirements:
+    1: |
+      If the RG supports additional Ethernet ports for connecting multiple
+      Ethernet devices to the home network, the RG MUST provide at least
+      10BASE-T/100BASE-T switched Ethernet functionality (e.g. not a hub
+      only). Requirements for individual Ethernet port functionality MUST
+      comply with all "MUST" requirements in the IF.LAN.ETH section.

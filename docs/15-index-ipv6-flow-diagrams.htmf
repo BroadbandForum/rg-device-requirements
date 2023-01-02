@@ -1,0 +1,28 @@
+<!-- <h1 class="annex new-page annex1 display-none" id="sec:ipv6-flow-diagrams">Annex A: IPv6 Flow Diagrams<a class="headerlink" href="15-index-ipv6-flow-diagrams.html#sec:ipv6-flow-diagrams" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h1> -->
+
+<p>The flows in this annex are referenced by requirements in the body, and
+are therefore normative.</p>
+
+<p>WAN PPPoE Automated Connection Flow</p>
+
+<figure>
+<img src="images/figure-2.png" id="fig:wan-pppoe" alt=""/>
+<figcaption>Figure 2: WAN PPPoE automated connection flow<a class="headerlink" href="15-index-ipv6-flow-diagrams.html#fig:wan-pppoe" title="Permalink to this figure"> <img src='permalink.png' title='' width="0.8em"/></a></figcaption>
+</figure>
+
+<h2 class="new-page annex2" id="sec:wan-ipv6-automated-connection-flow">A.1 WAN IPv6 Automated Connection Flow<a class="headerlink" href="15-index-ipv6-flow-diagrams.html#sec:wan-ipv6-automated-connection-flow" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>This flow assumes no manually configured prefix or address.</p>
+
+<figure>
+<img src="images/figure-3.png" id="fig:wan-ipv6" alt=""/>
+<figcaption>Figure 3: WAN IPv6 automated connection flow<a class="headerlink" href="15-index-ipv6-flow-diagrams.html#fig:wan-ipv6" title="Permalink to this figure"> <img src='permalink.png' title='' width="0.8em"/></a></figcaption>
+</figure>
+
+<h2 class="new-page annex2" id="sec:receive-router-advertisement-subroutine-flow">A.2 Receive Router Advertisement Subroutine Flow<a class="headerlink" href="15-index-ipv6-flow-diagrams.html#sec:receive-router-advertisement-subroutine-flow" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<figure>
+<img src="images/figure-4.png" id="fig:router-advertisement" alt=""/>
+<figcaption>Figure 4: Receive router advertisement subroutine flow<a class="headerlink" href="15-index-ipv6-flow-diagrams.html#fig:router-advertisement" title="Permalink to this figure"> <img src='permalink.png' title='' width="0.8em"/></a></figcaption>
+</figure>
+

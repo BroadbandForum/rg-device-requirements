@@ -1,0 +1,47 @@
+---
+LAN.PFWD:
+  name: |
+    Port Forwarding (IPv4)
+
+  requirements:
+    1: |
+      The RG MUST support port forwarding. That is, the RG MUST be able to be
+      configured to direct traffic based on any combination of source IPv4
+      address, source protocol (TCP or UDP) and port (or port range) to a
+      particular LAN device and port (or port range on that device).
+
+      Individual port forwarding rules MUST be associated with a LAN device,
+      not the IPv4 address of the LAN device, and follow the LAN device should
+      its IPv4 address change.
+
+    2: |
+      The port forwarding mechanism MUST be able to be configured to direct
+      all inbound unidentified or unsolicited port traffic originating from a
+      user-selected public IPv4 address to any user selected LAN device.
+
+      The LAN device may be using either a private IPv4 address or the public
+      WAN IPv4 address as identified in requirement LAN.ADDRESS.6 and
+      LAN.ADDRESS.7.
+
+    3: |
+      The port forwarding mechanism of the RG SHOULD be easy to configure for
+      common applications and user protocols (e.g. ftp, http, etc.) by
+      specifying a protocol name or application name in a "Common Applications
+      Names List" instead of a port number and protocol type. A partial list
+      of applications for potential inclusion appears in Appendix I.
+
+    4: |
+      The "Common Applications Names List" mechanism MUST be integrated with
+      the port forwarding mechanism.
+
+    5: |
+      The RG MUST include port forwarding configurations and "Common
+      Applications Name Listings" for the following applications and protocols
+      that do not function properly with NAT or NAPT: FTP client, H.323, SIP,
+      IPsec, PPTP, MSN Messenger, AOL Instant Messenger, Yahoo Messenger and
+      ICQ.
+
+    6: |
+      The RG SHOULD include port forwarding configurations and "Common
+      Applications Name Listings" for other major applications and protocols
+      that do not function properly with NAT or NAPT.

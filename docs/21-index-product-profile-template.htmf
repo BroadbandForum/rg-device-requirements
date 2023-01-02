@@ -1,0 +1,697 @@
+<!-- <h1 class="appendix new-page appendix1 display-none" id="sec:product-profile-template">Appendix VI: Product Profile Template<a class="headerlink" href="21-index-product-profile-template.html#sec:product-profile-template" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h1> -->
+
+<h2 class="appendix2" id="sec:introduction-2">VI.1 Introduction<a class="headerlink" href="21-index-product-profile-template.html#sec:introduction-2" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>To accommodate the many different residential gateway implementations
+that will be needed due to various localized market needs, LAN/WAN
+interfaces, and different services that will be delivered in operators’
+networks, TR-124 endeavors to define a superset of general
+requirements and optional modules that can be implemented on a
+residential gateway.</p>
+
+<p>In order to create a specific product based on the TR-124
+modularized requirements, it is necessary for either the Broadband Forum
+(in the form of new TR documents) or for individual network operators to
+specify the following details to define a specific desired product
+implementation:</p>
+
+<ol>
+<li><p>A filled out product profile matrix template as shown in the example
+below to indicate required modules</p></li>
+<li><p>Any line item edits to requirements (changes to current TR-124
+requirements).</p></li>
+<li><p>Any additional new requirements that are needed in the product.</p></li>
+<li><p>Any configuration defaults needed. These should refer to TR-124
+requirements that establish a different or new default value
+required in the implementation.</p></li>
+<li><p>Localized regulatory, certifications, powering and product labeling
+requirements as necessary.</p></li>
+</ol>
+
+<h2 class="appendix2" id="sec:instructions-for-completing-a-product-profile-template">VI.2 Instructions for Completing a Product Profile Template<a class="headerlink" href="21-index-product-profile-template.html#sec:instructions-for-completing-a-product-profile-template" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<p>The following instructions apply to filling out the product profile
+template below:</p>
+
+<ul>
+<li><p>Any modules marked with a check mark will be considered
+required, meaning that all MUST requirements in that section are to
+be satisfied (with the exception of any specific line item edits
+that have been made as discussed in section
+<a href='21-index-product-profile-template.html#sec:introduction-2' title='' class="heading">VI.1</a>).</p></li>
+<li><p>Any modules that are <em>not</em> marked with a check MAY be implemented on
+the product, but are not considered required. Any vendor
+implementing any module, regardless of being considered required or
+not, MUST comply with all MUST requirements in the module
+(i.e. partial implementations of a module MUST NOT be provided).</p></li>
+<li><p>If a module is explicitly not to be included in the product, it must
+be marked with an x mark to indicate that it MUST NOT be included.</p></li>
+<li><p>For the optional LAN/WAN modules, where appropriate it may be
+necessary to specify the number or ports/lines to be implemented
+(e.g. &ldquo;Qty. 4&rdquo; under the IF.LAN.ETH.SWITCH to indicate 4 ports).</p></li>
+</ul>
+
+<h2 class="appendix2" id="sec:product-profile-template-1">VI.3 Product Profile Template<a class="headerlink" href="21-index-product-profile-template.html#sec:product-profile-template-1" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2>
+
+<table>
+<col width="38%" />
+<col width="44%" />
+<col width="16%" />
+<tr class="header">
+<th align="left">Section</th>
+<th align="left">Title</th>
+<th align="left">Required?<br/>(check,x , or
+blank)</th>
+</tr>
+<tr class="odd">
+<td align="left"><strong>GEN</strong></td>
+<td align="left"><strong>General Device Requirements</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DESIGN</td>
+<td align="left">Design</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">OPS</td>
+<td align="left">Device Operation</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">NET</td>
+<td align="left">Networking Protocols</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">NETv6</td>
+<td align="left">IPv6 Networking Protocols</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>WAN</strong></td>
+<td align="left"><strong>Wide Area Networking (WAN)</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ATM</td>
+<td align="left">ATM</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ATM.MULTI</td>
+<td align="left">ATM Multi-PVC</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">CONNECT</td>
+<td align="left">Connection Establishment</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">CONNECT.ON-DEMAND</td>
+<td align="left">On-Demand Connection Establishment</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ETHOAM</td>
+<td align="left">Ethernet OAM</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">BRIDGE</td>
+<td align="left">Bridging</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DHCPC</td>
+<td align="left">DHCP Client (DHCPv4)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DHCPC.FORCE</td>
+<td align="left">Force renew</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DHCPC.BFDecho</td>
+<td align="left">BFD echo</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DHCPC.BFDKA</td>
+<td align="left">BFD Keep-alive</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DHCPv4</td>
+<td align="left">DHCP Client (DHCPv4)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DHCPv4.ERP</td>
+<td align="left">EAP Reauthentication (ERP) for DHCPv4</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DHCPv6</td>
+<td align="left">DHCP Client (DHCPv6)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DHCPv6.ERP</td>
+<td align="left">EAP Reauthentication (ERP) for DHCPv6</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">IPv6</td>
+<td align="left">IPv6 WAN Connection</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">TRANS.6rd</td>
+<td align="left">6rd Transition Mechanism</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">TRANS.DS-LITE</td>
+<td align="left">Dual Stack Lite Transition Mechanism</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">TRANS.V4-release-control</td>
+<td align="left">IPv6 connectivity with content-based
+IPv4 release control transition
+mechanism</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">TRANS.MAP-E</td>
+<td align="left">IPv6 connectivity with content-based
+IPv4 release control transition
+mechanism</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">PPP</td>
+<td align="left">PPP Client</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">PPP.IPv6</td>
+<td align="left">PPP Client for establishment of IPv6
+connection</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">dot1x</td>
+<td align="left">802.1x Client</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DoS</td>
+<td align="left">Denial of Service Prevention</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">QoS</td>
+<td align="left">Quality of Service</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">QoS.VLAN</td>
+<td align="left">VLAN based QoS</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">QoS.TUNNEL</td>
+<td align="left">Quality of Service for Tunneled
+Traffic</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">IPsecClient</td>
+<td align="left">IPsec VPN peer to peer</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">L2tpClient</td>
+<td align="left">L2tp VPN Remote Access</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">PCP</td>
+<td align="left">Port Control Protocol</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WAN.TUN</td>
+<td align="left">WAN Tunnel</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>LAN</strong></td>
+<td align="left"><strong>Local Area Networking (LAN)</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">GEN</td>
+<td align="left">General LAN Protocols</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ADDRESS</td>
+<td align="left">Private IPv4 Addressing</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ADDRESSv6</td>
+<td align="left">LAN IPv6 Addressing</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DHCPS</td>
+<td align="left">DHCPv4 Server</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DHCPv6S</td>
+<td align="left">DHCPv6 Server</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DNS</td>
+<td align="left">Naming Services (IPv4 and general
+requirements)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">DNSv6</td>
+<td align="left">Naming Services (IPv6)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">NAT</td>
+<td align="left">NAT/NAPT</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">PFWD</td>
+<td align="left">Port Forwarding (IPv4)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">PFWDv6</td>
+<td align="left">Port Forwarding (IPv6)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ALG</td>
+<td align="left">ALG Functions (IPv4)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">FWD</td>
+<td align="left">Connection Forwarding</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">IGMP.BRIDGED</td>
+<td align="left">IGMP and Multicast in Bridged
+Configurations (IPv4)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">IGMP.ROUTED</td>
+<td align="left">IGMP and Multicast in Routed
+Configurations (IPv4)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">MLD.ROUTED</td>
+<td align="left">MLD and Multicast in Routed
+Configurations (IPv6)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">FW</td>
+<td align="left">Firewall (Basic)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">FW.SPI</td>
+<td align="left">Firewall (Advanced)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">FILTER.TIME</td>
+<td align="left">Time of Day Filtering</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">FILTER.CONTENT</td>
+<td align="left">Content Filtering</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">DIAGNOSTICS</td>
+<td align="left">Automated User Diagnostics</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">CAPTIVE</td>
+<td align="left">Captive Portal with Web Redirection</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">QOS</td>
+<td align="left">LAN quality of service requirements</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">SIPserver</td>
+<td align="left">SIP Server</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">SIPmixer</td>
+<td align="left">SIP Mixer</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Interworking.UE-Authentication</td>
+<td align="left">3GPP User Equipment Authentication
+Support</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>MGMT</strong></td>
+<td align="left"><strong>Management &amp; Diagnostics</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">GEN</td>
+<td align="left">General</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">UPnP</td>
+<td align="left">UPnP</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">UPnP.IGD</td>
+<td align="left">UPnP IGD</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">UPnP.IGD.ACRF</td>
+<td align="left">UPnP IGD to allow Connection Request
+Forwarding</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">LOCAL</td>
+<td align="left">Local Management</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">LOCAL.TR-064</td>
+<td align="left">TR-064 Issue 2</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">REMOTE.TR-069</td>
+<td align="left">Remote Management (TR-069)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">REMOTE.USP</td>
+<td align="left">Remote Management (USP)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">REMOTE.WEB</td>
+<td align="left">Remote Management (Web Browser)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">NTP</td>
+<td align="left">Network Time Client</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">MGMT.DATCOL</td>
+<td align="left">Data collection Requirements</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">MGMT.DATCOL.WIFIDIAG</td>
+<td align="left">Wi-Fi Diagnostics Data Collection</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>IF.WAN</strong></td>
+<td align="left"><strong>WAN Interface Modules</strong></td>
+<td align="left"><strong>Enter
+Quantity</strong></td>
+</tr>
+<tr class="odd">
+<td align="left">ADSL</td>
+<td align="left">ADSL and ADSL2+</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">VDSL2</td>
+<td align="left">VDSL2</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">xDSL</td>
+<td align="left">xDSL General Requirements</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">xDSL.INP</td>
+<td align="left">xDSL INP Values</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">xDSL.BOND</td>
+<td align="left">xDSL Bonding</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">xDSL.REPORT</td>
+<td align="left">xDSL Reporting of Physical Layer
+Issues</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">xDSL.SEALING</td>
+<td align="left">DC Sealing Current</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">xDSL.SURGE</td>
+<td align="left">AC Power Surge Protection</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">ETH</td>
+<td align="left">Ethernet (WAN)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">GPON</td>
+<td align="left">GPON</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">XG-PON</td>
+<td align="left">10G PON</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">XGS-PON</td>
+<td align="left">XGS PON</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">MoCA</td>
+<td align="left">MoCA (WAN)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>IF.LAN</strong></td>
+<td align="left"><strong>LAN Interface Modules</strong></td>
+<td align="left"><strong>Enter
+Quantity</strong></td>
+</tr>
+<tr class="odd">
+<td align="left">ETH</td>
+<td align="left">Ethernet (LAN)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">ETH.SWITCH</td>
+<td align="left">Ethernet Switch</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">USB.PC</td>
+<td align="left">USB (PC)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">VOICE.ATA</td>
+<td align="left">Voice ATA Ports</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.AP</td>
+<td align="left">Wireless: General Access Point
+Functions</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WIRELESS.AP.WEP</td>
+<td align="left">Wireless: Wired Equivalent Privacy</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.AP.WPA2</td>
+<td align="left">Wireless: WPA2-Personal</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WIRELESS.AP.WPA3</td>
+<td align="left">Wireless: WPA3-Personal</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.AP.WPA2-Enterprise</td>
+<td align="left">Wireless: WPA2-Enterprise</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WIRELESS.AP.WPA3-Enterprise</td>
+<td align="left">Wireless: WPA3-Enterprise</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.AP.ERP-Authenticator</td>
+<td align="left">Wireless: ERP Authenticator</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WIRELESS.11g</td>
+<td align="left">Wireless: 802.11g Access Point</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.11a</td>
+<td align="left">Wireless: 802.11a Access Point</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WIRELESS.11h</td>
+<td align="left">Wireless: 802.11h Access Point</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.11n</td>
+<td align="left">Wireless: 802.11n Access Point</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">WIRELESS.11ac</td>
+<td align="left">Wireless: 802.11ac Access Point</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">WIRELESS.11ax</td>
+<td align="left">Wireless: 802.11ax Access Point</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">HomePNA</td>
+<td align="left">HomePNA (Phoneline/Coax)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">MoCA</td>
+<td align="left">MoCA (LAN)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">HomePlugAV</td>
+<td align="left">HomePlug AV (LAN)</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">HomePlugAV2</td>
+<td align="left">HomePlug AV2 (LAN)</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">Ghn</td>
+<td align="left">G.hn</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>SEC</strong></td>
+<td align="left"><strong>Security</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">GEN</td>
+<td align="left">General security</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">USERINTERFACE</td>
+<td align="left">User Interface security</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>RGSMART</strong></td>
+<td align="left"><strong>Smart Residential Gateway</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">OPLAT</td>
+<td align="left">Open platform Support</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">OPLAT.OSGI</td>
+<td align="left">Open platform Support : OSGI Open
+platform</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">OPLAT.EE</td>
+<td align="left">Open platform Support : Execution
+Environment</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"><strong>REGIONAL</strong></td>
+<td align="left"><strong>Regional Annexes</strong></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">NA.Power</td>
+<td align="left">North American Power and Environmental</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left">NA.LED</td>
+<td align="left">North American LED Indicators</td>
+<td align="left"></td>
+</tr>
+</table>
+
+<div class="note">
+<p>End of Broadband Forum Technical Report TR-124</p></div>

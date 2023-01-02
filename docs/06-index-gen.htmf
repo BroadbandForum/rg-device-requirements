@@ -1,0 +1,322 @@
+<!-- <h2 class="new-file display-none" id="sec:req:gen">4.1 GEN – General Device Requirements<a class="headerlink" href="06-index-gen.html#sec:req:gen" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h2> -->
+
+<h3 id="sec:req:gen.design">4.1.1 GEN.DESIGN – Design<a class="headerlink" href="06-index-gen.html#sec:req:gen.design" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.1">GEN.DESIGN.1<a class="headerlink" href="06-index-gen.html#req:gen.design.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST be compact and have a physical profile suitable for a
+desktop.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.2">GEN.DESIGN.2<a class="headerlink" href="06-index-gen.html#req:gen.design.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to be wall mounted and stand on its side.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.3">GEN.DESIGN.3<a class="headerlink" href="06-index-gen.html#req:gen.design.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MAY have the ability to be mounted horizontally or vertically.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.4">GEN.DESIGN.4<a class="headerlink" href="06-index-gen.html#req:gen.design.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If wall mounted, the RG SHOULD be oriented so that the cabling is routed
+toward the ground in order to reduce strain on the cabling.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.5">GEN.DESIGN.5<a class="headerlink" href="06-index-gen.html#req:gen.design.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">A detachable wall-mounting bracket MAY be added to the RG.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.6">GEN.DESIGN.6<a class="headerlink" href="06-index-gen.html#req:gen.design.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The power connector at the RG MUST be securely connected to avoid
+accidental disconnect. This means that the connector MUST be either
+secured via a clip to the box or be held in place with significant force
+so that it does not readily pull out by minor pulling on the power cord.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.7">GEN.DESIGN.7<a class="headerlink" href="06-index-gen.html#req:gen.design.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the power supply is external to the RG, it SHOULD be labeled with the
+RG vendor’s name and the model number of the RG.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.8">GEN.DESIGN.8<a class="headerlink" href="06-index-gen.html#req:gen.design.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the power supply is external to the RG it SHOULD be either small
+enough, or appropriately positioned on the power cord, so as not to
+block other power outlets.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.9">GEN.DESIGN.9<a class="headerlink" href="06-index-gen.html#req:gen.design.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the power cable includes an AC to DC conversion brick, that brick MAY
+have a light on it.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.10">GEN.DESIGN.10<a class="headerlink" href="06-index-gen.html#req:gen.design.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST NOT be USB powered.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.11">GEN.DESIGN.11<a class="headerlink" href="06-index-gen.html#req:gen.design.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST NOT use the local phone loop for power.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.12">GEN.DESIGN.12<a class="headerlink" href="06-index-gen.html#req:gen.design.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The model and serial number of the RG MUST be visible via external
+markings on the RG.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.13">GEN.DESIGN.13<a class="headerlink" href="06-index-gen.html#req:gen.design.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The model and serial number of the RG MUST be visible via external
+markings on the RG packaging.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.design.14">GEN.DESIGN.14<a class="headerlink" href="06-index-gen.html#req:gen.design.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If a console port used for local technician configuration is provided on
+the RG, it SHOULD NOT be physically accessible to end users (e.g. it
+should not be placed on the outside of the device).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.design.15">GEN.DESIGN.15<a class="headerlink" href="06-index-gen.html#req:gen.design.15" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST have a single function reset button in order to reset the
+device to the default factory settings.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:gen.ops">4.1.2 GEN.OPS – Device Operation<a class="headerlink" href="06-index-gen.html#sec:req:gen.ops" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.1">GEN.OPS.1<a class="headerlink" href="06-index-gen.html#req:gen.ops.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">All RG firmware and associated system files MUST be pre-installed.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.2">GEN.OPS.2<a class="headerlink" href="06-index-gen.html#req:gen.ops.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST operate 24 hours a day, 7 days a week without the need to
+reboot.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.3">GEN.OPS.3<a class="headerlink" href="06-index-gen.html#req:gen.ops.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The MTBF (Mean Time Between Failures) of the RG and operating system
+SHOULD be equal to or exceed 1 year (e.g. it should not need a reboot
+more than one time per year).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.4">GEN.OPS.4<a class="headerlink" href="06-index-gen.html#req:gen.ops.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The life expectancy of the RG SHOULD be at least seven years.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.5">GEN.OPS.5<a class="headerlink" href="06-index-gen.html#req:gen.ops.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD tolerate power fluctuations and brown-outs, continuing to
+operate normally and maintaining its configuration after these events.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.6">GEN.OPS.6<a class="headerlink" href="06-index-gen.html#req:gen.ops.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be able to detect faults and reset appropriately upon
+detection.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.7">GEN.OPS.7<a class="headerlink" href="06-index-gen.html#req:gen.ops.7" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD include sufficient non-volatile memory to accommodate
+future control and data plane protocol upgrades over a minimum of four
+years. The potential upgrades may include: initiating and terminating
+signaling protocols at IP and ATM layers; logic for packet
+classification, policing, forwarding, traffic shaping and QoS support at
+IP, Ethernet and ATM layers.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.8">GEN.OPS.8<a class="headerlink" href="06-index-gen.html#req:gen.ops.8" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST preserve local configuration information during power-off
+and power interruption.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.9">GEN.OPS.9<a class="headerlink" href="06-index-gen.html#req:gen.ops.9" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST complete power up in 60 seconds or less.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.10">GEN.OPS.10<a class="headerlink" href="06-index-gen.html#req:gen.ops.10" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG SHOULD be self-installable by an end user in under 20 minutes
+assuming the default configuration and mode of operation. This is the
+time from when the box is opened to when the user is using the service
+including any driver installation (assuming no network complications and
+excluding micro-filter installation and customer ordering/registration).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.11">GEN.OPS.11<a class="headerlink" href="06-index-gen.html#req:gen.ops.11" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Other than networking drivers (e.g. USB, wireless, etc…), other
+software or drivers MUST NOT be required on computers and other devices
+for proper and full use of the RG.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.12">GEN.OPS.12<a class="headerlink" href="06-index-gen.html#req:gen.ops.12" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG, its drivers and any packaged software SHOULD support Macintosh
+OS 8.6 and above.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.13">GEN.OPS.13<a class="headerlink" href="06-index-gen.html#req:gen.ops.13" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG, its drivers and any packaged software SHOULD support all
+Microsoft PC based operating systems that have not yet reached &ldquo;End of
+Support&rdquo; status (see <a href='http://support.microsoft.com/lifecycle' title='' class="uri">http://support.microsoft.com/lifecycle</a> for more
+details).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.14">GEN.OPS.14<a class="headerlink" href="06-index-gen.html#req:gen.ops.14" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG, its drivers and any packaged software MAY support Linux. It is
+especially desirable to do so with an open interface.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.15">GEN.OPS.15<a class="headerlink" href="06-index-gen.html#req:gen.ops.15" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST preserve its configuration across firmware updates.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.16">GEN.OPS.16<a class="headerlink" href="06-index-gen.html#req:gen.ops.16" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">All software revisions SHOULD be backward compatible with all previous
+versions. There SHOULD be no loss of existing functionality.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.17">GEN.OPS.17<a class="headerlink" href="06-index-gen.html#req:gen.ops.17" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">Software revisions MUST NOT require service provider network changes to
+maintain proper operation of previous features.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.18">GEN.OPS.18<a class="headerlink" href="06-index-gen.html#req:gen.ops.18" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG firmware MUST be identified by a revision number. This revision
+number MUST be formatted using an X.Y.Z incremental numbering format
+where X indicates the major release number, Y indicates the minor
+release number, and Z represents the revision number (e.g. 2.4.1).</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.19">GEN.OPS.19<a class="headerlink" href="06-index-gen.html#req:gen.ops.19" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG vendor SHOULD have a web site where firmware updates and
+documentation are available.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.20">GEN.OPS.20<a class="headerlink" href="06-index-gen.html#req:gen.ops.20" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The firmware at the RG vendor’s web site SHOULD include all error
+correcting updates for the RG.</td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span id="req:gen.ops.21">GEN.OPS.21<a class="headerlink" href="06-index-gen.html#req:gen.ops.21" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST NOT allow &ldquo;back door&rdquo; entry to the unit (e.g. there must be
+no hidden telnet or web access using secret passwords).</p>
+
+<p>This requirement is not intended to preclude physically secured craft
+access in accordance with <a href='06-index-gen.html#req:gen.design.14' title=''>GEN.DESIGN.14</a>.</p></td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.ops.22">GEN.OPS.22<a class="headerlink" href="06-index-gen.html#req:gen.ops.22" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">All firmware updates MUST be verified using security mechanisms. A
+checksum mechanism is a minimum requirement for achieving this.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.ops.23">GEN.OPS.23<a class="headerlink" href="06-index-gen.html#req:gen.ops.23" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">All firmware updates SHOULD be signed with a cryptographic &ldquo;fingerprint&rdquo;
+of at least 256 bits.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:gen.ops.24">GEN.OPS.24<a class="headerlink" href="06-index-gen.html#req:gen.ops.24" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>In the event of a failure occurring during an update, the RG MUST be
+able to back off to the prior version of the firmware installed on the
+RG. That is, the prior version of the RG’s firmware MUST continue to be
+useable in the event that a firmware update fails to complete.</p>
+
+<p>This is not a requirement for a dual image, although that is one manner
+in which this requirement might be satisfied.</p></td>
+</tr>
+</table>
+
+<h3 id="sec:req:gen.net">4.1.3 GEN.NET – Networking Protocols<a class="headerlink" href="06-index-gen.html#sec:req:gen.net" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.net.1">GEN.NET.1<a class="headerlink" href="06-index-gen.html#req:gen.net.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support Ethernet (IEEE 802.3).</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.net.2">GEN.NET.2<a class="headerlink" href="06-index-gen.html#req:gen.net.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support IP Version 4.</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.net.3">GEN.NET.3<a class="headerlink" href="06-index-gen.html#req:gen.net.3" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">If the RG does not support IPV6, it SHOULD be software configurable or
+upgradeable to support IP Version 6 in the future. This means that the
+processing power, memory and networking components be designed
+appropriately and be sufficiently robust to provide this support.</td>
+</tr>
+<tr class="even">
+<td align="left"><p><span id="req:gen.net.4">GEN.NET.4<a class="headerlink" href="06-index-gen.html#req:gen.net.4" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></p></td>
+<td align="left"><p>The RG MUST support the TCP, IP, UDP, routing and associated IETF protocols
+identified here:</p>
+
+<ul>
+<li><p>RFC 768 <span class="cite" data-citation-ids="RFC768"><a href='03-index-references-and-terminology.html#ref-RFC768' title=''>[142]</a></span> User Datagram Protocol</p></li>
+<li><p>RFC 791 <span class="cite" data-citation-ids="RFC791"><a href='03-index-references-and-terminology.html#ref-RFC791' title=''>[144]</a></span> Internet Protocol</p></li>
+<li><p>RFC 792 <span class="cite" data-citation-ids="RFC792"><a href='03-index-references-and-terminology.html#ref-RFC792' title=''>[145]</a></span> Internet Control Message Protocol</p></li>
+<li><p>RFC 793 <span class="cite" data-citation-ids="RFC793"><a href='03-index-references-and-terminology.html#ref-RFC793' title=''>[146]</a></span> Transmission Control Protocol</p></li>
+<li><p>RFC 826 <span class="cite" data-citation-ids="RFC826"><a href='03-index-references-and-terminology.html#ref-RFC826' title=''>[147]</a></span> Ethernet Address Resolution Protocol (ARP)</p></li>
+<li><p>RFC 894 <span class="cite" data-citation-ids="RFC894"><a href='03-index-references-and-terminology.html#ref-RFC894' title=''>[149]</a></span> Standards for the Transmission of IP Datagrams over
+Ethernet Networks</p></li>
+<li><p>RFC 922 <span class="cite" data-citation-ids="RFC922"><a href='03-index-references-and-terminology.html#ref-RFC922' title=''>[150]</a></span> Broadcasting Internet Datagrams in the Presence of
+Subnets</p></li>
+<li><p>RFC 950 <span class="cite" data-citation-ids="RFC950"><a href='03-index-references-and-terminology.html#ref-RFC950' title=''>[151]</a></span> Internet Standard Subnetting Procedure</p></li>
+<li><p>RFC 1042 <span class="cite" data-citation-ids="RFC1042"><a href='03-index-references-and-terminology.html#ref-RFC1042' title=''>[46]</a></span> Standard for the Transmission of IP Datagrams over IEEE
+802 Networks</p></li>
+<li><p>RFC 1112 <span class="cite" data-citation-ids="RFC1112"><a href='03-index-references-and-terminology.html#ref-RFC1112' title=''>[47]</a></span> Host Extensions for IP Multicasting</p></li>
+<li><p>RFC 1122 <span class="cite" data-citation-ids="RFC1122"><a href='03-index-references-and-terminology.html#ref-RFC1122' title=''>[48]</a></span> Requirements for Internet Hosts - Communication Layers</p></li>
+<li><p>RFC 1123 <span class="cite" data-citation-ids="RFC1123"><a href='03-index-references-and-terminology.html#ref-RFC1123' title=''>[49]</a></span> Requirements for Internet Hosts - Application and
+Support</p></li>
+<li><p>RFC 1256 <span class="cite" data-citation-ids="RFC1256"><a href='03-index-references-and-terminology.html#ref-RFC1256' title=''>[51]</a></span> ICMP Router Discovery Messages (Router Specification
+only)</p></li>
+<li><p>RFC 1812 <span class="cite" data-citation-ids="RFC1812"><a href='03-index-references-and-terminology.html#ref-RFC1812' title=''>[54]</a></span> Requirements for IP Version 4 Routers</p></li>
+<li><p>RFC 1918 <span class="cite" data-citation-ids="RFC1918"><a href='03-index-references-and-terminology.html#ref-RFC1918' title=''>[55]</a></span> Address Allocation for Private Internets</p></li>
+<li><p>RFC 4632 <span class="cite" data-citation-ids="RFC4632"><a href='03-index-references-and-terminology.html#ref-RFC4632' title=''>[110]</a></span> Classless Inter-domain Routing (CIDR): The Internet
+Address Assignment and Aggregation Plan</p></li>
+</ul>
+
+<p>IANA Directory of General Assigned Numbers
+(<a href='http://www.iana.org/numbers.html' title='' class="uri">http://www.iana.org/numbers.html</a>)</p></td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.net.5">GEN.NET.5<a class="headerlink" href="06-index-gen.html#req:gen.net.5" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support IP over Ethernet.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.net.6">GEN.NET.6<a class="headerlink" href="06-index-gen.html#req:gen.net.6" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support, at a minimum, a 256 MAC address table for LAN
+devices.</td>
+</tr>
+</table>
+
+<h3 id="sec:req:gen.netv6">4.1.4 GEN.NETv6 – IPv6 Networking Protocols<a class="headerlink" href="06-index-gen.html#sec:req:gen.netv6" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h3>
+
+<table>
+<col width="20%" />
+<col width="80%" />
+<tr class="header">
+<th align="left">ID</th>
+<th align="left">Requirement</th>
+</tr>
+<tr class="odd">
+<td align="left"><span id="req:gen.netv6.1">GEN.NETv6.1<a class="headerlink" href="06-index-gen.html#req:gen.netv6.1" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support IP Version 6, which is defined in RFC 2460 <span class="cite" data-citation-ids="RFC2460"><a href='03-index-references-and-terminology.html#ref-RFC2460' title=''>[66]</a></span>.</td>
+</tr>
+<tr class="even">
+<td align="left"><span id="req:gen.netv6.2">GEN.NETv6.2<a class="headerlink" href="06-index-gen.html#req:gen.netv6.2" title="Permalink to this span"> <img src='permalink.png' title='' width="0.8em"/></a></span></td>
+<td align="left">The RG MUST support enabling and disabling of IPv6.</td>
+</tr>
+</table>
+

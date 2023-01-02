@@ -1,0 +1,53 @@
+<!-- <h1 class="unnumbered unlisted new-page display-none" id="sec:executive-summary">Executive Summary<a class="headerlink" href="01-index-executive-summary.html#sec:executive-summary" title="Permalink to this header"> <img src='permalink.png' title='' width="0.8em"/></a></h1> -->
+
+<p>TR-124 specifies a superset of requirements for broadband
+Residential Gateway (RG) devices that are capable of supporting a full
+suite of voice, data, broadcast video, video on demand and two-way video
+applications in broadband networks.</p>
+
+<p>The requirements are grouped into modules. This means that an RG can be
+specified by listing the modules that the RG is expected to support. No
+single device is expected to support all modules.</p>
+
+<p>Requirements are sometimes modified when a new TR-124 revision is
+created. It is therefore necessary for any identification of modules
+supported (or to be supported) by a RG also note which TR-124 revision
+was used to generate the module list.</p>
+
+<p>TR-124 Issue 2 updated TR-124 Issue 1 to include requirements for IPv6.</p>
+
+<p>TR-124 Issue 3 clarifies and corrects TR-124 Issue 2 and defines new
+profiles.</p>
+
+<p>TR-124 Issue 4 defines several new profiles.</p>
+
+<p>TR-124 Issue 5:</p>
+
+<ul>
+<li><p>takes into account the deprecation of TR-064 Issue 1 in favor of
+Issue 2 (adding the MGMT.LOCAL.TR-064 profile and fixing text in
+several places),</p></li>
+<li><p>takes into account the deprecation by UPnP Forum of UPnP IGD V1.0 in
+favor of UPnP IGD V2.0,</p></li>
+<li><p>defines the new WAN.TRANS.MAP-E profile for MAP-E support.</p></li>
+</ul>
+
+<p>TR-124 Issue 6:</p>
+
+<ul>
+<li>Adds security requirements for RGs</li>
+<li>Adds requirements for G.fast enabled RGs</li>
+<li>Adds requirements for TWAMP performance measurement</li>
+<li>Adds requirements for 5G-RG in Wireless-Wireline Convergence (WWC)
+architecture</li>
+</ul>
+
+<p>TR-124 Issue 7:</p>
+
+<ul>
+<li>Updates the 5G-WWC requirements and adds two new IF requirements for
+fixed RGs with LTE or NR interfaces.</li>
+<li>Adds SEC.FIRMWARE for firmware authentication and encryption
+requirements.</li>
+</ul>
+

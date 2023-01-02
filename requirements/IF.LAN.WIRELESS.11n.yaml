@@ -1,0 +1,56 @@
+---
+IF.LAN.WIRELESS.11n:
+  name: |
+    Wireless: 802.11n Access Point
+
+  requirements:
+    1: |
+      The RG MUST work in one of the following modes:
+
+      * 2.4GHz,
+
+      * 5GHz,
+
+      * 2.4GHz or 5GHz selectable
+
+      * 2.4GHz and 5GHz concurrently.
+
+    2: |
+      The RG MUST implement MIMO technology and support MCS index 15 or
+      above.
+
+      Note: MCS defines Modulation and Coding Schemes; MCS-15 supports two
+      spatial streams in both directions. While using 40MHz wide channel and
+      400ns guard interval, it can achieve 300Mbps through 64-QAM modulation.
+
+    3: |
+      The RG MUST support 802.11n 20/40MHz channel mode in the 5GHz frequency
+      band.
+
+    4: |
+      The RG SHOULD support 802.11n 20/40MHz channel mode in the 2.4GHz
+      frequency band.
+
+      Note: WFA mandates not to configure 40MHz channel mode by default in the
+      2.4GHz band
+
+    5: |
+      The RG MUST support an aggregated MAC service data unit (AMSDU)
+      mechanism for Rx mode.
+
+    6: |
+      The RG MUST support an aggregated MAC protocol data unit (AMPDU)
+      mechanism for Rx and Tx mode.
+
+    7: |
+      The RG MUST be able to adjust the size of A-MSDU and A-MPDU according to
+      the quality of the channel.
+
+    8: |
+      The RG MUST support a short guard interval (GI) of 400ns.
+
+    9: |
+      The RG MUST support dynamic MIMO power saving mode.
+
+    10: |
+      The RG MAY support greenfield mode.

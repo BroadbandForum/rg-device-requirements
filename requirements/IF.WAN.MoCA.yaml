@@ -1,0 +1,135 @@
+---
+IF.WAN.MoCA:
+  name: |
+    MoCA
+
+  requirements:
+    1: |
+      The RG MUST support a MoCA WAN interface compliant with the MoCA
+      Alliance specification. Information regarding the specification is
+      available only to members of the MoCA Alliance, further details can be
+      obtained from the consortium at http://www.mocalliance.org.
+
+    2: |
+      The RG MUST present the MoCA WAN link on an F-connector type coaxial
+      connector.
+
+    3: |
+      The RG MUST provide a facility to enable or disable the MoCA WAN port
+      via the Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+      Note: The ability to remotely disable the port is intended for RGs with
+      more than one WAN port.
+
+    4: |
+      If the RG supports a MoCA WAN interface and additional WAN physical
+      interfaces (e.g. xDSL, Ethernet, etc.), the RG SHOULD be able to
+      automatically detect and connect through the active interface if only
+      one such interface is connected.
+
+    5: |
+      If multiple WAN interface types are supported, the RG MUST allow
+      configuration via the Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller
+      of the default WAN interface that must be used as the active interface.
+      This is intended to prevent inadvertent auto-switching between
+      interfaces due to user wiring issues or temporary service outages.
+
+    6: |
+      If the RG supports a MoCA WAN port and additional WAN physical
+      interfaces (e.g. xDSL, Ethernet, etc.), simultaneous use of more than
+      one WAN port MUST NOT be supported.
+
+    7: |
+      If the RG supports both WAN and LAN MoCA connection, it MUST NOT use the
+      same channel for both connections.
+
+    8: |
+      The RG port MAY have limited support for only two MoCA devices on the
+      MoCA WAN link.
+
+    9: |
+      The MoCA WAN port MUST support PER (Packet Error Rate) less than 1E-6 on
+      the MoCA link. In this requirement, PER is a measurement of link layer
+      error. Any additional PER caused by the dropping of packets as a result
+      of the RG saturating the MoCA link is not included in the link layer PER
+      specified in this requirement.
+
+    10: |
+      The MoCA WAN port MUST support the following configurable parameters:
+
+      * Channel
+
+      * Privacy
+
+      * Security key password (used to generate security keys for the MoCA
+      link).
+
+      * Manual or auto-selection of Network Coordinator through interfaces
+      such as the Web GUI.
+
+    11: |
+      The RG default Security key password MUST comply with the MoCA
+      specification.
+
+    12: |
+      The RG MAY support configuring a custom Security key password to meet
+      service provider requirements.
+
+    13: |
+      If the MoCA WAN port can operate on more than one channel the RG MUST
+      support channel selection via the Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from
+      a Controller. The frequency range for MoCA LAN port spans from 850MHz to
+      1.5GHz and each MoCA LAN channel covers 50MHz band.
+
+    14: |
+      The power control function of a MoCA WAN port MUST comply with the
+      following requirements:
+
+      * The adjustable range of output power MUST be at least 25db
+
+      * The target PHY rate is the maximum rate that a MoCA link should
+      support.
+
+      * If the measured PHY rate is less than the target PHY rate, it MUST be
+      within 30Mbps of the target PHY rate unless the output power is already
+      at maximum.
+
+      * The measured PHY rate MAY be greater than the target PHY rate
+
+    15: |
+      The MoCA WAN network MUST support the following sustained aggregate MAC
+      throughput with PER \< 1E-6 with 50 db attenuation (measured aggregate
+      MAC throughput is based on 1500 byte packets, independent of the traffic
+      pattern):
+
+      * 125Mbps with 2 MoCA devices in the network
+
+      * 117.5Mbps with 3 MoCA devices in the network
+
+      * 110.5Mbps with 4 MoCA devices in the network
+
+      * 103.8Mbps with 5 MoCA devices in the network
+
+      * 98Mbps with 6 and above MoCA devices in the network.
+
+    16: |
+      The device to device ping reply time (round trip) across two MoCA
+      devices on the same RF channel MUST be within 7ms on average and 10ms
+      maximum.
+
+    17: |
+      The RG MUST reach optimal MoCA link layer capacity within 5 minutes
+      after power up.
+
+    18: |
+      The RG SHOULD reach optimal MoCA link layer capacity within 3 minutes
+      after power up.
+
+    19: |
+      The RG MUST support sending/receiving packet to/from at least 64 MAC
+      addresses on the MoCA interface.
+
+    20: |
+      The RG MUST support basic MoCA interface statistics collection,
+      parameter provisioning, and diagnostic results display via the Web GUI,
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.

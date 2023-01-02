@@ -1,0 +1,9 @@
+---
+SEC:
+  name: |
+    Security
+
+  categories:
+    - !include SEC.GEN.yaml
+    - !include SEC.USERINTERFACE.yaml
+    - !include SEC.FIRMWARE.yaml

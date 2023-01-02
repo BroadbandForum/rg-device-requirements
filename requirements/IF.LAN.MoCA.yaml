@@ -1,0 +1,111 @@
+---
+IF.LAN.MoCA:
+  name: |
+    MoCA (LAN)
+
+  requirements:
+    1: |
+      The RG MUST support a MoCA LAN interface compliant with the MoCA
+      Alliance specification. Information regarding the specification is
+      available only to members of the MoCA Alliance, further details can be
+      obtained from the consortium at http://www.mocalliance.org.
+
+    2: |
+      The RG MUST present the MoCA LAN link on an F-connector type coaxial
+      connector.
+
+    3: |
+      The RG MUST provide a facility to enable or disable the MoCA LAN port
+      via the Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    4: |
+      The MoCA LAN port MUST support PER (Packet Error Rate) less than 1E-6 on
+      the MoCA link. Note that PER is the measurement of link layer error. Any
+      additional PER caused by the dropping of packets as a result of the RG
+      saturating the MoCA link is not included in the link layer PER specified
+      in this requirement.
+
+    5: |
+      The MoCA LAN port MUST support the following configurable parameters:
+
+      * Channel
+
+      * Privacy
+
+      * Security key password (used to generate security keys for the MoCA
+      link).
+
+      * Manual or auto-selection of Network Coordinator through interfaces
+      such a Web GUI.
+
+    6: |
+      The RG default security key password MUST comply with the MoCA
+      specification.
+
+    7: |
+      The RG MAY support configuring a custom security key password to meet
+      service provider requirements.
+
+    8: |
+      If the MoCA LAN port can operate on more than one channel the RG MUST
+      support manual channel selection in the Web GUI or from a Controller.
+      The frequency range for MoCA LAN port spans from 850MHz to 1.5GHz and
+      each MoCA LAN channel covers a 50MHz band.
+
+    9: |
+      The power control function of a MoCA LAN port MUST comply with the
+      following requirements:
+
+      * The adjustable range of output power MUST be at least 25db
+
+      * The target PHY rate is the maximum rate that a MoCA link should
+      support.
+
+      * If the measured PHY rate is less than the Target PHY rate, it MUST be
+      within 30Mbps of the target PHY rate unless the output power is already
+      at maximum.
+
+      * The measured PHY rate MAY be greater than the target PHY rate.
+
+    10: |
+      The MoCA LAN network MUST support the following sustained aggregate MAC
+      throughput with PER \< 1E-6 with 50db attenuation (measured aggregate
+      MAC throughput is based on 1500 byte packets and independent of the
+      traffic pattern):
+
+      * 125Mbps with 2 MoCA devices in the network
+
+      * 117.5Mbps with 3 MoCA devices in the network
+
+      * 110.5Mbps with 4 MoCA devices in the network
+
+      * 103.8Mbps with 5 MoCA devices in the network
+
+      * 98Mbps with 6 and above MoCA devices in the network.
+
+    11: |
+      The device to device ping reply time (round trip) across two MoCA
+      devices on the same RF channel MUST be within 7ms on average and 10ms
+      maximum.
+
+    12: |
+      The RG MUST reach optimal MoCA link layer capacity within 5 minutes
+      after power up.
+
+    13: |
+      The RG SHOULD reach optimal MoCA link layer capacity within 3 minutes
+      after power up.
+
+    14: |
+      The RG MUST support sending/receiving packet to/from at least 64 MAC
+      addresses on the MoCA interface.
+
+    15: |
+      The RG MUST support MoCA interface statistics collection, parameter
+      provisioning, and diagnostic results display via the Web GUI, Broadband Forum TR-064i2 [@TR-064i2]
+      interfaces and from a Controller.
+
+    16: |
+      The RG SHOULD be able to reserve bandwidth (media access time) on the
+      network for services requesting QoS guarantees so as to meet QoS
+      requirements for throughput (rate), latency and jitter.

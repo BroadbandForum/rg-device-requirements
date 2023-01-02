@@ -1,0 +1,51 @@
+---
+LAN.ADDRESSv6:
+  name: |
+    LAN.ADDRESSv6- LAN IPv6 Addressing
+
+  requirements:
+    1: |
+      The RG MUST create a Link Local (LL) address for its LAN interface, and
+      perform Duplicate Address Discovery (DAD), per RFC 4862 [@RFC4862]. It MUST always
+      use the same LL address, even after reboot or power failure.
+
+    2: |
+      The RG SHOULD try alternate LL addresses, if DAD fails. The RG vendor
+      can define the algorithm to be used in this case.
+
+    3: |
+      The RG MUST have a ULA prefix (RFC 4193 [@RFC4193]). It MUST always maintain the
+      same prefix, even after reboot or power failure, unless this prefix is
+      changed through configuration, in which case it MUST maintain the
+      changed value.
+
+    4: |
+      The RG MAY allow its ULA prefix to be changed through configuration.
+
+    5: |
+      The RG MUST support the ability to enable or disable advertising a /64
+      from its ULA prefix through Router Advertisement. When enabled, this /64
+      will be included in RA messages, with L=1, A=1, and reasonable timer
+      values.
+
+    6: |
+      The RG MUST support RFC 4861 [@RFC4861] section 6.2, Router specification
+      requirements.
+
+    7: |
+      The RG MUST support configuration of the following elements of a Router
+      Advertisement: M and O flags (RFC 4861 [@RFC4861]), route information ([@RFC4191]),
+      and default router preference (Prf) ([@RFC4191]).
+
+    8: |
+      The RG SHOULD support configuration of the following elements of a
+      router advertisement: MTU (RFC 4861 [@RFC4861]).
+
+    9: |
+      The RG MUST advertise (in RA) a /64 prefix from all prefixes delegated
+      via the WAN interface. This will have L=1, A=1, and lifetimes per the
+      received (from the WAN) delegation.
+
+    10: |
+      The RG SHOULD advertise DNS server using the RDNSS option in Router
+      Advertisements (RFC 6106 [@RFC6106]).

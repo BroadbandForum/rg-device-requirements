@@ -1,0 +1,13 @@
+---
+MGMT:
+  name: |
+    Management & Diagnostics
+
+  categories:
+    - !include MGMT.GEN.yaml
+    - !include MGMT.UPnP.yaml
+    - !include MGMT.LOCAL.yaml
+    - !include MGMT.REMOTE.yaml
+    - !include MGMT.NTP.yaml
+    - !include MGMT.TWAMP.yaml
+    - !include MGMT.DATCOL.yaml

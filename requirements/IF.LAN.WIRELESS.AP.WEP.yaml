@@ -1,0 +1,16 @@
+---
+IF.LAN.WIRELESS.AP.WEP:
+  name: |
+    Wireless: Wired Equivalent Privacy
+
+  description: |
+    Note: WEP encryption is no longer secure and SHOULD not be used anymore
+
+  requirements:
+    1: |
+      The RG MUST support WEP using a 40 bit key (WEP-40). This is sometimes
+      referred to as 64 bit WEP.
+
+    2: |
+      The RG MUST support WEP using a 104 bit key (WEP-104) as identified in
+      IEEE 802.11i [@802.11]. This is sometimes referred to as 128 bit WEP.

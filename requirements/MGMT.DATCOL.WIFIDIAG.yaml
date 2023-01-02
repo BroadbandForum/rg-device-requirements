@@ -1,0 +1,126 @@
+---
+MGMT.DATCOL.WIFIDIAG:
+  name: |
+    Wi-Fi Diagnostics Data Collection
+
+  description: |
+    For measuring the WiFi experience in the home, these requirements
+    specify which data is continuously collected about the state and
+    performance of the home Wi-Fi network(s).
+
+  requirements:
+    1: |
+      The RG MUST support the collection of these operation parameters for
+      each AP device it controls (integrated or connected in the home network)
+      :
+
+      * MAC address
+
+      * Number of radios
+
+    2: |
+      The RG SHOULD support the collection of these parameters for each AP
+      device it controls (integrated or in home network) :
+
+      * Name
+
+      * Model/Serial Number
+
+      * HW/SW Version
+
+      * CPU Usage
+
+      * Memory Usage
+
+    3: |
+      The RG MUST support the collection of these operation parameters for
+      each radio per AP device it controls (integrated or connected in the
+      home network) :
+
+      * MAC address
+
+      * State
+
+      * Current operating Channel
+
+      * Current channel bandwidth
+
+      * Current frequency band (2,4GHz, 5Ghz, 60Ghz)
+
+      * WiFi signal strength (% of transmit power)
+
+      The RG SHOULD support the collection of these operation parameters for
+      each radio per AP device it controls (integrated or connected in the
+      home network) :
+
+      * Country code
+
+      * Channel Utilization (Total, Transmit, Receive)
+
+      * Noise
+
+    4: |
+      The RG MUST support the collection of these neighborhood (channel scan)
+      parameters from each radio per AP device it controls (integrated or
+      connected in the home network):
+
+      * Seen Channels and utilization
+
+    5: |
+      The RG SHOULD support the collection of these neighborhood station
+      information from each radio per AP device it controls (integrated or
+      connected in the home network):
+
+      * BSSID
+
+      * SSID
+
+      * SignalStrength
+
+    6: |
+      The RG MUST support the collection of these configuration parameters for
+      each AP per radio on all AP devices it controls:
+
+      * BSSID
+
+      * Encryption Mode (WEP, WPA2, WPA§ etc.)
+
+      * Number of AP
+
+      * SSID Advertisement status (on/off)
+
+    7: |
+      The RG MUST support the collection of these station parameters for each
+      AP it controls:
+
+      * Number of Connected Wireless Devices (STAs)
+
+    8: |
+      The RG MUST support the collection of these Wi-Fi station parameters per
+      AP for each connected device (STA):
+
+      * MAC address
+
+      * Operating standard
+
+      * CurrentUplinkRate
+
+      * CurrentDownLinkRate
+
+    9: |
+      The RG SHOULD support the collection of these Wi-Fi station parameters
+      per AP for each connected device (STA):
+
+      * IP addresses (IPV4/IPv6)
+
+      * Hostname
+
+    10: |
+      The RG SHOULD support the collection of these Wi-Fi station statistics
+      for each connected device (STA):
+
+      * Bytes and Packets send
+
+      * Bytes and Packets received
+
+      * Errors Sent and received

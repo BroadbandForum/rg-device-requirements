@@ -1,0 +1,29 @@
+---
+LAN.DIAGNOSTICS:
+  name: |
+    Automated User Diagnostics
+
+  requirements:
+    1: |
+      If the RG is on the same subnet as any LAN device, when network
+      connectivity problems occur, the RG MUST provide a mechanism that
+      intercepts web browser pages (i.e. port 80 web page requests) and
+      responds to these by directing the web browser to appropriate internal
+      web pages to identify and resolve network connectivity problems
+      including but not limited to:
+
+      * DSL cannot train
+
+      * DSL signal not detected
+
+      * Broadband Ethernet not connected (if applicable)
+
+      * ATM PVC not detected (if applicable)
+
+      * IEEE 802.1x failure (if applicable)
+
+      * PPP server not detected (if applicable)
+
+      * PPP authentication failed (if applicable)
+
+      * DHCP not available

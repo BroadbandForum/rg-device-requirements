@@ -1,0 +1,108 @@
+---
+IF.WAN.GPON:
+  name: |
+    GPON
+
+  requirements:
+    1: |
+      The RG MUST include an integrated GPON ONU interface.
+
+    1a: |
+      The RG MUST comply with all mandatory requirements for the ONU as
+      specified in Broadband Forum TR-156 [@TR-156].
+
+    2: |
+      The RG MUST comply with all mandatory requirements for the ONU as
+      specified in ITU-T G.984.1 [@G.984.1], G.984.2 [@G.984.2] Amd 1, G.984.3
+      [@G.984.3] and G.988 [@G.988] and their amendments.
+
+    3: |
+      The RG MUST support requirements contained in Table 3.2 of ITU-T G.984.2 [@G.984.2]
+      Amd1 (optical budget, source type, transmitter range, mean launched
+      power min/max, extinction ratio, etc.).
+
+      Note: With FEC enabled, the class C+ budget of ITU-T G.984.2 [@G.984.2] Amd 2 is also
+      possible.
+
+    4: |
+      *Requirement deleted*
+
+    5: |
+      *Requirement deleted*
+
+    6: |
+      *Requirement deleted*
+
+    7: |
+      *Requirement deleted*
+
+    8: |
+      *Requirement deleted*
+
+    9: |
+      The RG MUST support a downstream rate of 2488.32 Mbps and an upstream
+      rate of 1244.16 Mbps.
+
+    10: |
+      *Requirement deleted*
+
+    11: |
+      *Requirement deleted*
+
+    12: |
+      *Requirement deleted*
+
+    13: |
+      *Requirement deleted*
+
+    14: |
+      *Requirement deleted*
+
+    15: |
+      *Requirement deleted*
+
+    16: |
+      *Requirement deleted*
+
+    17: |
+      *Requirement deleted*
+
+    18: |
+      *Requirement deleted*
+
+    19: |
+      *Requirement deleted*
+
+    20: |
+      *Requirement deleted*
+
+    21: |
+      The RG MUST support forward error correction RS(255,239) as per
+      [@G.984.3] on the downstream link.
+
+    22: |
+      The RG MUST support forward error correction RS(255,239) as per
+      [@G.984.3] on the upstream link.
+
+    23: |
+      The RG MUST support static bandwidth assignment operation.
+
+    24: |
+      The RG MUST support dynamic bandwidth allocation (DBA) with the SR
+      (status reporting) mode (mode 0) of operation.
+
+    25: |
+      *Requirement deleted; redundant with GPON.2.*
+
+    26: |
+      The RG SHOULD support basic GPON interface statistics collection, and
+      display any applicable diagnostic results in the Web GUI and from a
+      Controller based on the architecture framework described in [@TR-142].
+
+    27: |
+      The RG MUST comply with Appendix II.2 of ITU-T G.988 [@G.988].
+
+    28: |
+      If the RG supports an integrated G-PON ONU interface in addition to
+      another physical WAN link type (e.g. ADSL, VDSL2, Ethernet, etc.), the
+      RG SHOULD support enabling and disabling of the ONU function.

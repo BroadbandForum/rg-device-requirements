@@ -1,0 +1,28 @@
+---
+IF.LAN.WIRELESS.11ax:
+  name: |
+    Wireless: 802.11ax Access Point
+
+  requirements:
+    1: |
+      The RG MUST support and be Wi-Fi CERTIFIED for IEEE 802.11ax [@802.11ax].
+
+    2: |
+      The RG MUST support 802.11ax 20/40 MHz channel mode in the 2.4 GHz
+      frequency band.
+
+    3: |
+      The RG MUST support 802.11ax 20/40/80 MHz channel mode in the 5 GHz
+      frequency band.
+
+    4: |
+      The RG SHOULD support 802.11ax 160MHz channel mode in the 5 GHz
+      frequency band.
+
+    5: |
+      The RG SHOULD support 802.11ax 80+80 MHz channel mode in the 5 GHz
+      frequency band.
+
+    6: |
+      The RG SHOULD support MU-MIMO feature of 802.11ax in the 5 GHz frequency
+      band.

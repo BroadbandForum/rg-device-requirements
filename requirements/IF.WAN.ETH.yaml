@@ -1,0 +1,59 @@
+---
+IF.WAN.ETH:
+  name: |
+    Ethernet (WAN)
+
+  requirements:
+    1: |
+      If the RG supports an optional WAN Ethernet port, it MUST support a
+      100BASE-T or connecting a MDU in FTTB scenario a 100/1000BASE-T Ethernet
+      port.
+
+    2: |
+      If the RG supports a WAN Ethernet port in addition to another physical
+      WAN link type (e.g. ADSL, VDSL2, ONU function, etc.), simultaneous use
+      of both WAN ports MUST NOT be supported.
+
+    3: |
+      The RG SHOULD be able to support 2.5GBase-T and 5GBase-T.
+
+    4: |
+      An automatic WAN port selection function MAY be supported as follows:
+
+      Upon first boot-up or power cycle of the RG, the RG MUST wait until it
+      is fully operational prior to attempting to selecting the source WAN
+      port to use. The RG MUST first search for a DSL signal prior to
+      selecting the Ethernet port as the WAN link. This is intended to avoid
+      race conditions that happen because DSL typically requires a longer time
+      to detect physical layer than Ethernet.
+
+      If both Ethernet and DSL signals are detected simultaneously, the RG
+      MUST by default select the DSL link as the WAN source port.
+
+      Once the source of the physical signal has been detected on a valid
+      source connector, it MUST be used persistently until power is removed
+      from the RG or the selection is overridden via Web GUI or from a
+      Controller. In other words, even if a connection is lost, the RG MUST
+      NOT automatically switch to an alternate link source (e.g. DSL to
+      Ethernet, or Ethernet to DSL). Automatic pair detection schemes are
+      excluded from this requirement -- meaning that DSL line 1/2 auto
+      selection, and Ethernet auto-MDIX/MDX MUST still operate properly to
+      accommodate end-user faulty wiring. For example if DSL line 1 is
+      detected first, and the customer disconnects DSL and reconnects to line
+      2 instead, the RG should allow this type of switching and connect to DSL
+      on line 2 and not by accident switch to a potentially present Ethernet
+      signal instead.
+
+    5: |
+      The RG MUST support configuring the current default WAN port being used
+      via Web GUI or from a Controller.
+
+      This should result in the RG immediately switching to the selected port.
+
+    6: |
+      Any Ethernet port used as a WAN link SHOULD be non-blocking for LAN to
+      LAN and LAN to WAN traffic flows.
+
+      Blocking may occur in some implementations that utilize one port of a
+      multi-port Ethernet switch for WAN use, sometimes as a result requiring
+      LAN to LAN traffic to be forwarded and processed through the RG CPU.

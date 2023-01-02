@@ -1,0 +1,38 @@
+---
+IF.WAN.xDSL.REPORT:
+  name: |
+    xDSL Reporting of Physical Layer Issues
+
+  requirements:
+    1: |
+      The RG MUST be capable of reporting a DSL Re-Initialization Cause Code
+      parameter to the Controller. When the RG re-initializes its DSL
+      connection, it MUST store, in non-volatile memory, a code indicating the
+      cause of the re-initialization. After re-initialization and after a data
+      connection is available to the Controller, the RG MUST report to the
+      server the cause code. At a minimum, the following cause codes MUST be
+      supported:
+
+      1) Autonomous re-initialization of the DSL connection
+
+      2) Loss of local power
+
+      3) External re-initialization, e.g. via a local reset
+
+      4) Cause not determined
+
+    2: |
+      The RG MUST support all requirements in ITU-T G.997.1 [@G.997.1] (PLOAM).
+
+    3: |
+      The RG MUST be capable of generating threshold-crossing alerts reported
+      to the Controller for all mandatory performance-monitoring parameters
+      (defined in ITU-T G.997.1 [@G.997.1]) during a data collection interval for which
+      threshold values have been assigned.
+
+    4: |
+      The RG MUST allow the setting of data collection intervals (per
+      ITU-T G.997.1 [@G.997.1]), and reporting schedules to the Controller for performance
+      monitoring at all monitoring points of the RG. The RG MUST NOT permit
+      modifications to these parameters until the associated data collection
+      is deactivated.

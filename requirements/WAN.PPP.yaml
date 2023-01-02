@@ -1,0 +1,95 @@
+---
+WAN.PPP:
+  name: |
+    PPP Client
+
+  categories:
+    - !include WAN.PPP.IPv6.yaml
+
+  requirements:
+    1: |
+      The RG MUST support PPP and the associated protocols as defined in IETF
+      RFCs 1332, 1334, 1661, 1877, 1994.
+
+    2: |
+      Upon receipt of non-standard or unrecognized PPP extensions according to
+      IETF RFCs 1570 and 2153 from the broadband network (e.g. vendor or
+      proprietary), the RG MUST operate without fault.
+
+    3: |
+      The RG MUST support PPPoE as defined in RFC 2516 [@RFC2516].
+
+    4: |
+      The RG MUST support RFC 4638 [@RFC4638] in order to accommodate MTU/MRU values
+      greater than 1492 bytes in PPPoE.
+
+    5: |
+      If the RG supports ATM, the RG SHOULD support PPP over AAL5 (PPPoA) as
+      defined in RFC 2364 [@RFC2364].
+
+    6: |
+      The RG MUST be able to save all logins and passwords for PPP sessions
+      originated by the RG. Passwords MUST NOT be available outside the RG
+      (that is, they cannot be queried or displayed).
+
+    7: |
+      The RG MUST NOT immediately terminate PPPoE sessions and upper layer
+      protocol connections when the physical connection is lost. It should
+      defer the teardown process for two minutes. If the physical connection
+      is restored during that time, the RG MUST first attempt to use its
+      previous PPPoE session settings. If these are rejected, then the
+      original PPPoE session is to be terminated and a new PPPoE session
+      attempted.
+
+    8: |
+      The RG SHOULD incorporate a random timing delay prior to starting each
+      IP (v4 or v6) and PPP session. This random timing delay helps to reduce
+      connection failures when a group of users attempts to establish
+      connections to a service provider at the same time (e.g. after power is
+      restored to a neighborhood that had a blackout).
+
+    9: |
+      If the RG receives an authentication failure when attempting an
+      automated PPP connection attempt, it SHOULD re-try immediately to
+      establish the connection. After three unsuccessful attempts, the RG
+      SHOULD wait for five minutes, then repeat the connection attempt three
+      times. If authentication still fails, the RG SHOULD back off to thirty
+      minute intervals between groups of three attempts.
+
+    10: |
+      If the RG is using the PPPoE client function actively, the RG MUST be
+      able to forward PPPoE sessions initiated from LAN devices as additional
+      PPPoE sessions to the WAN interface (this is sometimes known as PPPoE
+      pass-through). Specifically, these LAN initiated PPPoE sessions MUST NOT
+      be tunneled inside the RG's primary PPPoE client session.
+
+    11: |
+      When fragmentation is required, the RG MUST fragment all PPP sessions
+      that it originates on an access VC using MLPPP interleaving as defined
+      in RFC 1990 [@RFC1990].
+
+    12: |
+      If PPP is used, the RG MAY obtain an IPv4 subnet mask on its WAN
+      interface using IPCP (IPv4) extensions. If this is done, the IPv4 subnet
+      masks will be communicated with IPCP (IPv4) using the PPP IPCP (IPv4)
+      option with option code 144, the length of the option being 6 and the
+      mask being expressed as a 32-bit mask (e.g. 0xFFFFFF80), not as a number
+      indicating the consecutive number of 1s in the mask (from 0 to 32).
+
+      The learned network information MAY, but need not, be used to populate
+      the LAN side embedded DHCP server for the RG.
+
+      The learned network information is treated as a subnet and not as a
+      collection of individual addresses. That is, the first and last
+      addresses in the subnet should not be used.
+
+      The IPv4 address negotiated SHOULD, but need not, be the one assigned to
+      the RG.
+
+    13: |
+      The RG MUST make the access concentrator name used with PPPoE
+      connections available via the Web GUI, TR-064i2, and for a Controller
+      for diagnostic purposes.
+
+    14: |
+      The RG MUST support RFC 3544 [@RFC3544], "*IP Header Compression over PPP*".

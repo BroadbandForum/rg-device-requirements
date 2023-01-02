@@ -1,0 +1,89 @@
+---
+IF.LAN.HomePlugAV2:
+  name: |
+    IF.LAN.HomePlugAV2- HomePlug AV2 (LAN)
+
+  requirements:
+    1: |
+      The RG MUST comply with the HomePlug AV2 Specification. Information
+      regarding the
+      specification is available only to members of the HomePlug Powerline
+      Alliance; further details can be obtained from the alliance at
+      <http://www.homeplug.org>.
+
+    2: |
+      The RG MUST support one of the following connector options for
+      HomePlug:
+
+      #. Powerline
+
+      #. F-connector type coaxial connector (note this is not formally an
+      option with HomePlug alliance but is supported by vendor
+      implementations)
+
+      #. Both a & b hybrid configuration using coaxial or simultaneous mode by
+      switch or relay
+
+    3: |
+      If option c) is supported in IF.LAN.HomePlugAV2.2, the HomePlug
+      interface connector type MUST be configurable and persistent across RG
+      restarts and reboots. This parameter MUST be independent of the
+      configuration settings that may be in use by other HomePlug devices on
+      the local LAN.
+
+    4: |
+      The RG MUST periodically collect Ethernet layer and channel performance
+      data from HomePlug devices in the HomePlug network and report the data
+      via Web GUI, Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    5: |
+      Ethernet layer performance data MUST be associated with the individual
+      device's information:
+
+      - HomePlug device MAC address
+
+    6: |
+      The RG MUST collect HomePlug network utilization information based on RG
+      utilization and network idle time and report the data via Web GUI,
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    7: |
+      The RG MUST support configuring a custom Security Key Password.
+
+    8: |
+      The RG MUST be able to collect performance monitoring data from other
+      devices on the powerline network and report the data via Web GUI,
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    9: |
+      The RG MUST enable provisioning of the specific HomePlug device from
+      which performance monitoring data will be collected via Web GUI,
+      Broadband Forum TR-064i2 [@TR-064i2] interfaces and from a Controller.
+
+    10: |
+      The RG MUST implement sufficient filtering and isolation so that the
+      HomePlug and xDSL interfaces, and the HomePlug and Ethernet interfaces
+      will not interfere with each other.
+
+    11: |
+      The RG MUST support layer 2 relative QoS on the HomePlug interface.
+
+    12: |
+      The RG MUST be able to prioritize network traffic based on at least
+      Diffserv code points and IEEE 802.1q [@802.1Q] user priorities for relative QoS.
+
+    13: |
+      The RG SHOULD support layer 2 guaranteed QoS on the HomePlug interface.
+
+    14: |
+      The RG SHOULD be able to reserve bandwidth (media access time) on the
+      network for services requesting QoS guarantees so as to meet QoS
+      requirements for throughput (rate), latency and jitter.
+
+    15: |
+      The RG SHOULD enable provisioning of QoS classification filters and
+      traffic specifications in the HomePlug device.
+
+    16: |
+      The RG MUST implement the simple connect functionality of section 13.2.4
+      of the HomeplugAV2 specification.

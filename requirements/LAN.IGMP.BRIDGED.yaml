@@ -1,0 +1,14 @@
+---
+LAN.IGMP.BRIDGED:
+  name: |
+    IGMP and Multicast in Bridged Configurations (IPv4)
+
+  requirements:
+    1: |
+      If the RG is in a bridge type architecture and an IGMP querier is
+      supported in the access network, the RG MUST support IGMP snooping per
+      IP bridge to an individual LAN addressable port or interface level (each
+      Ethernet port, USB (PC), Wi-Fi, etc.). On each interface, the RG MUST
+      forward only the multicast groups explicitly requested by that
+      interface. A recommended reference implementation can be found in IETF
+      RFC 4541 [@RFC4541].

@@ -1,0 +1,14 @@
+---
+IF.WAN.xDSL.INP:
+  name: |
+    xDSL INP Values
+
+  requirements:
+    1: |
+      The RG MUST support ADSL INP values of 0, ½, 1, and 2. Note that certain
+      DSL types such as ADSL 1 (ITU-T G.992.1 [@G.992.1]) do not support setting INP
+      values in the ATU-R.
+
+    2: |
+      The RG MAY support additional INP settings as specified in the
+      appropriate ITU-T recommendations specific to each type of DSL.
