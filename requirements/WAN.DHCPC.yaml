@@ -95,3 +95,11 @@ WAN.DHCPC:
       | 4 | Serial Number | .DeviceInfo.SerialNumber |
 
       If the value of a parameter is empty, the sub-option MUST be omitted.
+    
+    8: |
+      The RG MUST be able to request DHCPv4 option 42 for NTP server information as per RFC 2132 [@RFC2132].
+
+    9: |
+      To obtain the local time zone, the RG SHOULD be able to request one of the following
+      DHCPv4 options: Option 100 (PCode) or Option 101 (TCode) in accordance with RFC 4833 [@RFC4833].
+

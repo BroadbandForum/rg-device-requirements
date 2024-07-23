@@ -1,8 +1,11 @@
 <!-- do not edit! this file was created from PROJECT.yaml by project-parser.py -->
 
-### Issue History {.unnumbered .unlisted .new-page}
+::: {.new-page}
+:::
 
-::: {.list-table .bbf-revision-history aligns=l,l,l,l widths=14,14,14,65} :::
+### Issue History {.unnumbered .unlisted}
+
+::: {.list-table .issue-history aligns=l,l,l,l widths=14,14,14,65}
 
 * - Issue Number
   - Approval Date
@@ -61,12 +64,26 @@
     * Updates based on TR-142i2
     * Additional SEC requirement for WAN facing services
 
+* - [Issue 9][TR-124 Issue 9]
+  - July 2024
+  - * Madhura Paduvalli, Liberty Global
+  - * Updates NTP requirements
+    * Updates user interface security requirement
+    * Adds traffic isolation requirement
+    * Adds requirement for 5G-RG
+
 :::
+
+Comments or questions about this Broadband Forum Technical Report should be directed to <info@broadband-forum.org>.
+
+::: nobreak
 
 ### %bbfWorkArea% Work Area Directors {.unnumbered .unlisted}
 
 * Jason Walls, QA Cafe
-* John Blackford, CommScope
+* John Blackford, Vantiva
+
+:::
 
 [TR-124 Issue 1]: https://www.broadband-forum.org/download/TR-124_Issue-1.pdf
 [TR-124 Issue 2]: https://www.broadband-forum.org/download/TR-124_Issue-2.pdf
@@ -76,3 +93,4 @@
 [TR-124 Issue 6]: https://www.broadband-forum.org/download/TR-124_Issue-6.pdf
 [TR-124 Issue 7]: https://www.broadband-forum.org/download/TR-124_Issue-7.pdf
 [TR-124 Issue 8]: https://www.broadband-forum.org/download/TR-124_Issue-8.pdf
+[TR-124 Issue 9]: https://www.broadband-forum.org/download/TR-124_Issue-9.pdf

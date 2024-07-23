@@ -29,6 +29,16 @@ description: |
   single device is expected to support all modules.
 
 versions:
+  v9.0.0:
+    date: 2024-07-23
+    editors:
+      - Madhura Paduvalli, Liberty Global
+    changes: |
+      * Updates NTP requirements
+      * Updates user interface security requirement
+      * Adds traffic isolation requirement
+      * Adds requirement for 5G-RG
+
   v8.0.0:
     date: 2022-12-27
     editors:
@@ -105,4 +115,4 @@ WA: |
   Broadband User Services
 WADs:
   - Jason Walls, QA Cafe
-  - John Blackford, CommScope
+  - John Blackford, Vantiva

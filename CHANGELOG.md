@@ -5,6 +5,15 @@
 See <https://rg-device-requirements.broadband-forum.org> for the
 current TR-124 specification.
 
+## 2024-07-23: [TR-124 Issue 9]
+
+*Tag: [v9.0.0]*
+
+* Updates NTP requirements
+* Updates user interface security requirement
+* Adds traffic isolation requirement
+* Adds requirement for 5G-RG
+
 ## 2022-12-27: [TR-124 Issue 8]
 
 *Tag: [v8.0.0]*
@@ -70,6 +79,7 @@ current TR-124 specification.
 [TR-124 Issue 6]: https://www.broadband-forum.org/download/TR-124_Issue-6.pdf
 [TR-124 Issue 7]: https://www.broadband-forum.org/download/TR-124_Issue-7.pdf
 [TR-124 Issue 8]: https://www.broadband-forum.org/download/TR-124_Issue-8.pdf
+[TR-124 Issue 9]: https://www.broadband-forum.org/download/TR-124_Issue-9.pdf
 [v1.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v1.0.0
 [v2.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v2.0.0
 [v3.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v3.0.0
@@ -78,3 +88,4 @@ current TR-124 specification.
 [v6.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v6.0.0
 [v7.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v7.0.0
 [v8.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v8.0.0
+[v9.0.0]: https://github.com/BroadbandForum/rg-device-requirements/releases/tag/v9.0.0

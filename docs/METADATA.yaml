@@ -4,23 +4,38 @@
 bbfNumber: TR-124
 bbfTitle: Functional Requirements for Broadband Residential Gateway Devices
 bbfIssue: Issue
-bbfVersion: '8'
-bbfMonth: December
-bbfYear: 2022
+bbfVersion: '9'
+bbfMonth: July
+bbfYear: 2024
 bbfType: Technical Report
 bbfStatus: ''
 bbfContrib: ''
-bbfMajor: 8
+bbfMajor: 9
 bbfMinor: 0
 bbfPatch: 0
+bbfMicro: 0
+bbfExtra: 0
 bbfDraft: ''
 bbfBuild: ''
 
 # other top-level variables
 notice: tr
 reponame: rg-device-requirements
+website: https://rg-device-requirements.broadband-forum.org
 "tagline": |-
   Guidelines and profiles for development and RFPs of broadband gateways
   and Wi-Fi routers
+"summary": |
+  See <https://rg-device-requirements.broadband-forum.org> for the
+  current TR-124 specification.
+"description": |
+  TR-124 specifies a superset of requirements for broadband
+  Residential Gateway (RG) devices that are capable of supporting a full
+  suite of voice, data, broadcast video, video on demand and two-way video
+  applications in broadband networks.
+
+  The requirements are grouped into modules. This means that an RG can be
+  specified by listing the modules that the RG is expected to support. No
+  single device is expected to support all modules.
 bbfWorkArea: Broadband User Services
 bbfProjectStream: ''

@@ -23,7 +23,9 @@ SEC.USERINTERFACE:
 
     5: |
       The RG MUST prompt the user to change the default password upon first
-      access.
+      access. The password requirements MUST include a length of 10 
+      characters and at least one each of an upper-case letter, lower-case 
+      letter, number, and symbol.
 
     6: |
       The RG MUST use exponential rate limiting of login attempts upon failed

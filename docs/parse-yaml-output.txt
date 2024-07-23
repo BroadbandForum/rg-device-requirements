@@ -1,3 +1,3 @@
-make[1]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/BUSDM-DEVREQREL-JOB1/project/bbf/specification'
+make[1]: Entering directory '/mnt/ebs/bamboo-agent-home-alpha/xml-data/build-dir/SUBNET-DEVREQREL-JOB1/project/bbf/specification'
 ./parse-yaml.py ../requirements/requirements.yaml --output ../docs/requirements.md
-make[1]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/BUSDM-DEVREQREL-JOB1/project/bbf/specification'
+make[1]: Leaving directory '/mnt/ebs/bamboo-agent-home-alpha/xml-data/build-dir/SUBNET-DEVREQREL-JOB1/project/bbf/specification'

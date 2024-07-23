@@ -5,7 +5,7 @@ SEC.FIRMWARE:
 
   requirements:
     1: |
-      RG's firmware MUST support Digital Signature authentication.
+      RG's firmware MUST support Digital Signature Authentication (DSA).
 
     2: |
       RG's firmware MUST support an encryption mechanism.

@@ -116,3 +116,13 @@ WAN.IPv6:
       The RG SHOULD generate address selection policy based on policies
       obtained from each WAN link by DHCPv6 option
       (draft-ietf-6man-addr-select-opt) or manually configured policy.
+
+    24: |
+      The RG MUST be able to request DHCPv6 option OPTION_NTP_SERVER(56)
+      for NTP server information as per RFC 5908 [@RFC5908].
+
+    25: |
+      To obtain the local time zone, the RG SHOULD be able to request one of the following
+      DHCPv6 options: OPTION_NEW_POSIX_TIMEZONE(41) or OPTION_NEW_TZDB_TIMEZONE(42)
+      in accordance with RFC 4833 [@RFC4833].
+

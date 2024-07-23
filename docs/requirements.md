@@ -749,6 +749,13 @@ IPv6.*
     
     If the value of a parameter is empty, the sub-option MUST be omitted.
 
+* - [WAN.DHCPC.8]{#req:}
+  - The RG MUST be able to request DHCPv4 option 42 for NTP server information as per RFC 2132 [@RFC2132].
+
+* - [WAN.DHCPC.9]{#req:}
+  - To obtain the local time zone, the RG SHOULD be able to request one of the following
+    DHCPv4 options: Option 100 (PCode) or Option 101 (TCode) in accordance with RFC 4833 [@RFC4833].
+
 :::
 
 #### WAN.DHCPC.Force -- Force renew {#req:wan.dhcpc.force}
@@ -1096,6 +1103,15 @@ IPv6.*
   - The RG SHOULD generate address selection policy based on policies
     obtained from each WAN link by DHCPv6 option
     (draft-ietf-6man-addr-select-opt) or manually configured policy.
+
+* - [WAN.IPv6.24]{#req:}
+  - The RG MUST be able to request DHCPv6 option OPTION_NTP_SERVER(56)
+    for NTP server information as per RFC 5908 [@RFC5908].
+
+* - [WAN.IPv6.25]{#req:}
+  - To obtain the local time zone, the RG SHOULD be able to request one of the following
+    DHCPv6 options: OPTION_NEW_POSIX_TIMEZONE(41) or OPTION_NEW_TZDB_TIMEZONE(42)
+    in accordance with RFC 4833 [@RFC4833].
 
 :::
 
@@ -4072,7 +4088,8 @@ IPv6 stack.
 
 * - [MGMT.NTP.2]{#req:}
   - The RG clock MUST be able to be set via an internal time client from an
-    Internet source using RFC 1305 [@RFC1305].
+    Internet source using NTP. The RG SHOULD support NTPv4 (RFC 5905)
+    [@RFC5905]. The RG MAY support NTPv3 (RFC 1305) [@RFC1305].
 
 * - [MGMT.NTP.3]{#req:}
   - The RG MUST support the use of time server identification by both domain
@@ -4083,32 +4100,52 @@ IPv6 stack.
     by domain name and not by IP (v4 or v6) address.
 
 * - [MGMT.NTP.5]{#req:}
-  - The RG SHOULD allow configuration of the primary and alternate time
-    server values in addition to or in place of any default values.
+  - The RG MUST support configuring a minimum of 3 NTP servers [@RFC8633].
 
 * - [MGMT.NTP.6]{#req:}
-  - If the RG includes default time server values or if time server values
-    are identified in documentation, these values SHOULD be selected using
-    industry best practices for NTP and SNTP clients, as published in
-    section 10 of RFC 4330 [@RFC4330].
+  - _Requirement deleted_
 
 * - [MGMT.NTP.7]{#req:}
   - The time client SHOULD support DNS responses with CNAMEs or multiple A
     or AAAA records.
 
 * - [MGMT.NTP.8]{#req:}
-  - The default frequency with which the RG updates its time from a time
-    server MUST NOT be less than 60 minutes, or use an operator-specific
-    configuration.
+  - The frequency with which the RG updates its time from a time
+    server MUST NOT be less than 64 seconds (2^6) as per RFC 5905 [@RFC5905].
 
 * - [MGMT.NTP.9]{#req:}
-  - The default frequency with which the RG updates its time from a time
-    server MUST NOT be greater than 24 hours, or use an operator-specific
-    configuration.
+  - The frequency with which the RG updates its time from a time
+    server MUST NOT be greater than 36.4 hours (2^17 seconds) as per RFC 5905 [@RFC5905].
 
 * - [MGMT.NTP.10]{#req:}
-  - The frequency with which the RG updates its time from a time server
-    SHOULD be able to be configured.
+  - The frequency with which the RG updates its time from a time server SHOULD be configurable
+    within the specified limits.
+
+* - [MGMT.NTP.11]{#req:}
+  - The RG MUST support the use of NTPv4 in client mode per section 2 of RFC 5905 [@RFC5905], modes of Operation.
+
+* - [MGMT.NTP.12]{#req:}
+  - The RG MUST support the use of NTPv4 in client/server protocol mode per section 3 of RFC 5905 [@RFC5905], Protocol Modes.
+
+* - [MGMT.NTP.13]{#req:}
+  - The RG MAY support the use of SNTP protocol per section 14 of RFC 5905 [@RFC5905], Simple Network Time Protocol.
+
+* - [MGMT.NTP.14]{#req:}
+  - The RG MUST allow configuration of NTP servers using DHCPv4 option 42 and DHCPv6 option 56 in
+    accordance with RFC 2132 [@RFC2132] and RFC 5908 [@RFC5908].
+
+* - [MGMT.NTP.15]{#req:}
+  - The RG SHOULD be able to set the current local time using the local time zone definition encoded 
+    either according to IEEE 1003.1 (POSIX) or by reference to the TZ Database. 
+    The local time zone definitions are provided using DHCPv4 or DHCPv6 options
+    in accordance with RFC 4833 [@RFC4833] or TR-181i2 datamodel parameter (Device.Time.LocalTimeZone).
+
+* - [MGMT.NTP.16]{#req:}
+  - The RG SHOULD support NTP security mechanism and best practices as described in section 4 and section 5 from RFC 8633 [@RFC8633].
+
+* - [MGMT.NTP.17]{#req:}
+  - The RG SHOULD support NTS Key Establishment protocol (NTS-KE) as security mechanism for NTP as described
+    in section 4 RFC 8915 [@RFC8915].
 
 :::
 
@@ -6433,7 +6470,7 @@ Note: WEP encryption is no longer secure and SHOULD not be used anymore
 
 * - [SEC.GEN.7]{#req:}
   - The RG MUST run services or applications by applying the principle of
-    least privilege).
+    least privilege.
 
 * - [SEC.GEN.8]{#req:}
   - The RG MUST NOT respond to protocols or API calls over a port assigned
@@ -6449,6 +6486,9 @@ Note: WEP encryption is no longer secure and SHOULD not be used anymore
   - The RG MUST NOT run services on the WAN interface by default unless
     explicitly required for the end user's service. For example, Domain Name
     Service (DNS) will not be enabled on the WAN interface.
+
+* - [SEC.GEN.12]{#req:}
+  - The RG MUST use a mechanism isolate LAN traffic from WAN traffic for different network services. 
 
 :::
 
@@ -6478,7 +6518,9 @@ Note: WEP encryption is no longer secure and SHOULD not be used anymore
 
 * - [SEC.USERINTERFACE.5]{#req:}
   - The RG MUST prompt the user to change the default password upon first
-    access.
+    access. The password requirements MUST include a length of 10 
+    characters and at least one each of an upper-case letter, lower-case 
+    letter, number, and symbol.
 
 * - [SEC.USERINTERFACE.6]{#req:}
   - The RG MUST use exponential rate limiting of login attempts upon failed
@@ -6508,7 +6550,7 @@ Note: WEP encryption is no longer secure and SHOULD not be used anymore
   - Requirement
 
 * - [SEC.FIRMWARE.1]{#req:}
-  - RG's firmware MUST support Digital Signature authentication.
+  - RG's firmware MUST support Digital Signature Authentication (DSA).
 
 * - [SEC.FIRMWARE.2]{#req:}
   - RG's firmware MUST support an encryption mechanism.
@@ -7383,6 +7425,11 @@ discussed in Appendix 9.1 of Broadband Forum TR-456 [@TR-456].*
   - The RG MUST use the MIN of negotiated PPP MTU and MTU option in the IPv6
     RA received at PDU Session Establishment time for 5WE encapsulated IPv6
     packets
+
+* - [5G-WWC.WAN.CP.28]{#req:}
+  - An RG that supports both mode of operation MUST be able to conf-NAK an LCP request with 
+    authentication and continue the LCP procedure as specified TR-456 Issue 2 [@TR-456] 
+    section 5.3
 
 :::
 

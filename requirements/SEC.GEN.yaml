@@ -26,7 +26,7 @@ SEC.GEN:
 
     7: |
       The RG MUST run services or applications by applying the principle of
-      least privilege).
+      least privilege.
 
     8: |
       The RG MUST NOT respond to protocols or API calls over a port assigned
@@ -42,3 +42,6 @@ SEC.GEN:
       The RG MUST NOT run services on the WAN interface by default unless
       explicitly required for the end user's service. For example, Domain Name
       Service (DNS) will not be enabled on the WAN interface.
+    
+    12: |
+      The RG MUST use a mechanism isolate LAN traffic from WAN traffic for different network services. 

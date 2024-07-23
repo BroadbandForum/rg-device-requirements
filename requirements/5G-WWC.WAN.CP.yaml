@@ -151,6 +151,11 @@
       The RG MUST use the MIN of negotiated PPP MTU and MTU option in the IPv6
       RA received at PDU Session Establishment time for 5WE encapsulated IPv6
       packets
+    
+    28: |
+      An RG that supports both mode of operation MUST be able to conf-NAK an LCP request with 
+      authentication and continue the LCP procedure as specified TR-456 Issue 2 [@TR-456] 
+      section 5.3
 
   after: |
     Note: PLMN selection defined in 3GPP TS 22.011 [@3GPP-TS.22.011] and in [@3GPP-TS.23.122]
